@@ -448,10 +448,10 @@ ideas = {
 			picture = lth_aegis_of_light
 
 			modifier = {
-				war_support_weekly = 0.001
+				war_support_weekly = 0.02
 				unaligned_drift = 0.1
-				send_volunteers_tension = -0.15
-				lend_lease_tension = -0.15
+				send_volunteers_tension = -0.35
+				lend_lease_tension = -0.35
 				army_core_defence_factor = 0.1
 				max_dig_in_factor = 0.1
 			}
@@ -474,8 +474,8 @@ ideas = {
 			modifier = {
 				war_support_weekly = 0.001
 				unaligned_drift = 0.1
-				send_volunteers_tension = -0.15
-				lend_lease_tension = -0.15
+				send_volunteers_tension = -0.35
+				lend_lease_tension = -0.35
 			}
 		}
 
@@ -575,7 +575,7 @@ ideas = {
 
 			rule = {
 				can_join_factions = no
-				can_send_volunteers = no
+				can_send_volunteers = yes
 				can_access_market = no
 			}
 		}
@@ -604,7 +604,7 @@ ideas = {
 
 			rule = {
 				can_join_factions = no
-				can_send_volunteers = no
+				can_send_volunteers = yes
 				can_access_market = no
 			}
 		}

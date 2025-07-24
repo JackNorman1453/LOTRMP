@@ -599,9 +599,7 @@ technologies = {
 			scale_armor_module
 			javelins_special_module
 			extra_supply_pouch_special_module
-			chanfron_special_module
 			bedroll_special_module
-			improved_horseshoe
 			peytral_special_module
 		}
 		enable_subunits = {

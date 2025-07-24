@@ -1523,10 +1523,10 @@ technologies = {
 		}
 
 		research_cost = 2.5
-		start_year = 3018
+		start_year = 3022
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = 4 }
+			position = { x = 0 y = 12 }
 		}
 
 		categories = {
@@ -1569,10 +1569,10 @@ technologies = {
 		land_night_attack = 0.15
 
 		research_cost = 2
-		start_year = 3022
+		start_year = 3024
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = 12 }
+			position = { x = 0 y = 16 }
 		}
 
 		categories = {
@@ -1616,10 +1616,10 @@ technologies = {
 		}
 
 		research_cost = 2.5
-		start_year = 3018
+		start_year = 3020
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = 4 }
+			position = { x = 0 y = 10 }
 		}
 
 		categories = {
@@ -1662,10 +1662,10 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 3022
+		start_year = 3023
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = 12 }
+			position = { x = -1 y = 14 }
 		}
 
 		categories = {
@@ -2002,9 +2002,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		XOR = {
-			partisan_support
-		}
 
 		resistance_growth_on_our_occupied_states = 0.15
 
@@ -2012,7 +2009,7 @@ technologies = {
 		start_year = 3023
 		folder = {
 			name = infantry_folder
-			position = { x = -2 y = 14 }
+			position = { x = 0 y = 14 }
 		}
 
 		categories = {
@@ -2032,7 +2029,7 @@ technologies = {
 		start_year = 3026
 		folder = {
 			name = infantry_folder
-			position = { x = -2 y = 18 }
+			position = { x = 0 y = 18 }
 		}
 
 		categories = {
@@ -2050,10 +2047,6 @@ technologies = {
 		path = {
 			leads_to_tech = partisan_support2
 			research_cost_coeff = 1
-		}
-
-		XOR = {
-			partisan_suppresion
 		}
 
 		resistance_damage_to_garrison_on_our_occupied_states = 0.1
@@ -2247,11 +2240,11 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 3019
+		start_year = 3020
 
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = 6 }
+			position = { x = 0 y = 8}
 		}
 
 		folder = {
@@ -2307,6 +2300,8 @@ technologies = {
 	}
 
 	artillery2 = {
+	
+	
 
 		artillery = {
 			soft_attack = 0.1
@@ -2317,6 +2312,14 @@ technologies = {
 		archer_cavalry = {
 			soft_attack = 0.1
 		}
+		support_catapult = {
+			soft attack = 0.1
+		}
+		catapult = {
+		soft_attack = 0.1
+		}
+	
+		
 
 		path = {
 			leads_to_tech = artillery3
@@ -2325,11 +2328,11 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 3020
+		start_year = 3021
 
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = 8 }
+			position = { x = 0 y = 10 }
 		}
 
 		categories = {
@@ -2379,6 +2382,13 @@ technologies = {
 		archer_cavalry = {
 			soft_attack = 0.05
 		}
+		
+		support_catapult = {
+			soft attack = 0.1
+		}
+		catapult = {
+		soft_attack = 0.1
+		}	
 
 		path = {
 			leads_to_tech = artillery4

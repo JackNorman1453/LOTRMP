@@ -15,7 +15,7 @@ equipment_modules = {
 			air_attack = 0.05
 			build_cost_ic = 0.05
 		}
-		xp_cost = 1
+		xp_cost = 0
 	}
 
 	steel_beak_and_claws_module = {
@@ -30,7 +30,7 @@ equipment_modules = {
 			air_attack = 0.12
 			build_cost_ic = 0.12
 		}
-		xp_cost = 1
+		xp_cost = 0
 	}
 
 	reinforced_steel_beak_and_claws_module = {
@@ -49,7 +49,7 @@ equipment_modules = {
 		build_cost_resources = {
 			steel = 1
 		}
-		xp_cost = 2
+		xp_cost = 0
 	}
 
 	warhawk_talions = {
@@ -68,6 +68,6 @@ equipment_modules = {
 		build_cost_resources = {
 			steel = 1
 		}
-		xp_cost = 2
+		xp_cost = 0
 	}
 }

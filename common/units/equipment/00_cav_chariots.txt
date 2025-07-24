@@ -154,9 +154,9 @@ equipments = {
 		reliability = 0.8
 
 		#Defensive Abilities
-		defense = 26
-		breakthrough = 4
-		hardness = 0.7
+		defense = 5
+		breakthrough = 2
+		hardness = 0.6
 		armor_value = 32
 
 		#Offensive Abilities
@@ -168,7 +168,7 @@ equipments = {
 
 		build_cost_ic = 8
 		resources = {
-			chromium = 2
+			chromium = 1
 			rubber = 1
 		}
 
@@ -219,10 +219,10 @@ equipments = {
 		maximum_speed = 10
 
 		#Defensive Abilities
-		defense = 30
-		breakthrough = 5
-		hardness = 0.75
-		armor_value = 43
+		defense = 8
+		breakthrough = 3
+		hardness = 0.65
+		armor_value = 40
 
 		#Offensive Abilities
 		ap_attack = 16
@@ -256,15 +256,15 @@ equipments = {
 		maximum_speed = 10
 
 		#Defensive Abilities
-		defense = 33
-		breakthrough = 6
+		defense = 12
+		breakthrough = 8
 		hardness = 0.7
 		armor_value = 45
 
 		#Offensive Abilities
 		ap_attack = 16
 
-		build_cost_ic = 10
+		build_cost_ic = 12
 		resources = {
 			chromium = 2
 			rubber = 2
@@ -299,8 +299,8 @@ equipments = {
 		maximum_speed = 12
 
 		#Defensive Abilities
-		defense = 34
-		breakthrough = 6
+		defense = 14
+		breakthrough = 5
 		hardness = 0.8
 		armor_value = 53
 
@@ -337,18 +337,18 @@ equipments = {
 		maximum_speed = 13
 
 		#Defensive Abilities
-		defense = 36
-		breakthrough = 8
+		defense = 14
+		breakthrough = 6
 		hardness = 0.8
 		armor_value = 60
 
 		#Offensive Abilities
 		ap_attack = 25
 
-		build_cost_ic = 13
+		build_cost_ic = 15
 		resources = {
 			chromium = 3
-			rubber = 2
+			rubber = 1
 		}
 	}
 }

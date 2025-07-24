@@ -186,7 +186,7 @@ equipment_modules = {
 		add_stats = {
 			build_cost_ic = 50
 		}
-		xp_cost = 1
+		xp_cost = 0
 		multiply_stats = {
 			air_defence = 0.05
 		}
@@ -201,7 +201,7 @@ equipment_modules = {
 		add_stats = {
 			build_cost_ic = 50
 		}
-		xp_cost = 1
+		xp_cost = 0
 		multiply_stats = {
 			air_defence = 0.05
 		}
@@ -217,7 +217,7 @@ equipment_modules = {
 		add_stats = {
 			build_cost_ic = 100
 		}
-		xp_cost = 1
+		xp_cost = 0
 		multiply_stats = {
 			air_defence = 0.1
 		}

@@ -13,7 +13,7 @@ equipment_modules = {
 			reliability = -0.05
 			soft_attack = 3
 		}
-		xp_cost = 1
+		xp_cost = 0
 		multiply_stats = {
 		}
 	}
@@ -26,7 +26,7 @@ equipment_modules = {
 		add_stats = {
 			build_cost_ic = 1
 		}
-		xp_cost = 1
+		xp_cost = 0
 		multiply_stats = {
 			fuel_consumption = -0.15
 		}
@@ -41,7 +41,7 @@ equipment_modules = {
 		add_stats = {
 			build_cost_ic = 1
 		}
-		xp_cost = 1
+		xp_cost = 0
 		multiply_stats = {
 			fuel_consumption = -0.25
 		}
@@ -59,7 +59,7 @@ equipment_modules = {
 			hardness = 0.05
 		}
 		dismantle_cost_ic = 1
-		xp_cost = 10
+		xp_cost = 0
 		multiply_stats = {
 
 		}
@@ -77,7 +77,7 @@ equipment_modules = {
 			hardness = 0.05
 		}
 		dismantle_cost_ic = 1
-		xp_cost = 10
+		xp_cost = 0
 		multiply_stats = {
 
 		}
@@ -92,7 +92,7 @@ equipment_modules = {
 			build_cost_ic = 0.5
 			suppression = 0.5
 		}
-		xp_cost = 1
+		xp_cost = 0
 		multiply_stats = {
 			defense = 0.1
 			breakthrough = 0.1
@@ -107,7 +107,7 @@ equipment_modules = {
 		add_stats = {
 			build_cost_ic = 1.5
 		}
-		xp_cost = 1
+		xp_cost = 0
 		multiply_stats = {
 			defense = 0.2
 			breakthrough = 0.1
@@ -124,7 +124,7 @@ equipment_modules = {
 			build_cost_ic = 1
 		}
 		dismantle_cost_ic = 1
-		xp_cost = 10
+		xp_cost = 0
 		multiply_stats = {
 			
 		}
@@ -136,10 +136,10 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			entrenchment = 1
-			build_cost_ic = 1
+			entrenchment = 0.2
+			build_cost_ic = 3
 		}
-		xp_cost = 1
+		xp_cost = 0
 		multiply_stats = {
 			
 		}
@@ -155,7 +155,7 @@ equipment_modules = {
 			defense = 2
 			breakthrough = 1
 		}
-		xp_cost = 1
+		xp_cost = 0
 		multiply_stats = {
 
 		}
@@ -172,7 +172,7 @@ equipment_modules = {
 			hard_attack = 2
 			reliability = -0.1
 		}
-		xp_cost = 1
+		xp_cost = 0
 	}
 
 	map_special_module = {
@@ -199,7 +199,7 @@ equipment_modules = {
 			recon = 0.1
 			build_cost_ic = 1
 		}
-		xp_cost = 1
+		xp_cost = 0
 		multiply_stats = {
 			
 		}
@@ -213,7 +213,7 @@ equipment_modules = {
 		add_stats = {
 			build_cost_ic = 1
 		}
-		xp_cost = 1
+		xp_cost = 0
 		multiply_stats = {
 			fuel_consumption = -0.05
 		}
@@ -229,7 +229,7 @@ equipment_modules = {
 			build_cost_ic = 1
 			max_strength = 0.25
 		}
-		xp_cost = 1
+		xp_cost = 0
 	}
 
 	cav_weedpipe = {
@@ -241,7 +241,7 @@ equipment_modules = {
 			build_cost_ic = 1
 			max_strength = 2
 		}
-		xp_cost = 1
+		xp_cost = 0
 	}
 
 	integrated_reconnaissance = {
@@ -253,7 +253,7 @@ equipment_modules = {
 			recon = 0.1
 			build_cost_ic = 1
 		}
-		xp_cost = 1
+		xp_cost = 0
 		multiply_stats = {
 			
 		}
@@ -267,7 +267,7 @@ equipment_modules = {
 		add_stats = {
 			build_cost_ic = 1
 		}
-		xp_cost = 1
+		xp_cost = 0
 		multiply_stats = {
 			armor_value = 0.1
 			hardness = 0.1
@@ -283,7 +283,7 @@ equipment_modules = {
 		add_stats = {
 			build_cost_ic = 1
 		}
-		xp_cost = 1
+		xp_cost = 0
 		multiply_stats = {
 			armor_value = 0.15
 			hardness = 0.15

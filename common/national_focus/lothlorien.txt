@@ -59,7 +59,7 @@ focus_tree = {
 		x =0
 		y =1
 
-		cost = 15
+		cost = 7
 		ai_will_do = {
 			factor = 15
 			modifier = {
@@ -636,6 +636,12 @@ focus_tree = {
 		x =0
 		y =2
 
+		available = {
+		ROH = {
+				exists = yes
+				has_war_with = ISE
+		}
+		}
 		cost = 5
 		ai_will_do = {
 			factor = 15
@@ -6755,12 +6761,10 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 100
-				has_completed_focus = lth_investinnanduhirion
-				has_completed_focus = lth_investintaurhith
 				has_completed_focus = lth_investinparthcelebrant
 			}
 		}
-		prerequisite = { focus = lth_investinnanduhirion focus = lth_investintaurhith focus = lth_investinparthcelebrant }
+		prerequisite = { focus = lth_investinparthcelebrant }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		available = {
 			OR = {
@@ -6772,32 +6776,13 @@ focus_tree = {
 		completion_reward = {
 			# Disable resistance in these states
 			# add compliance
-			custom_effect_tooltip = lth_localautonomy_tt
-			hidden_effect = {
-				if = {
-					limit = {
-						has_completed_focus = lth_investinnanduhirion
-						controls_state = 160
-					}
 					160 = {
 						force_disable_resistance = LTH
 						add_compliance = 25
 					}
-				}
-				if = {
-					limit = {
-						has_completed_focus = lth_investintaurhith
-						controls_state = 76
-					}
 					76 = {
 						force_disable_resistance = LTH
 						add_compliance = 25
-					}
-				}
-				if = {
-					limit = {
-						has_completed_focus = lth_investinparthcelebrant
-						controls_state = 74
 					}
 					74 = {
 						force_disable_resistance = LTH
@@ -6805,8 +6790,7 @@ focus_tree = {
 					}
 				}
 			}
-		}
-	}
+	
 
 	focus = {
 		id = lth_territorialintegration
@@ -6821,8 +6805,6 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 100
-				has_completed_focus = lth_investinnanduhirion
-				has_completed_focus = lth_investintaurhith
 				has_completed_focus = lth_investinparthcelebrant
 			}
 		}
@@ -6839,70 +6821,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			# Get *only* the OG lothlorien states as cores
-			custom_effect_tooltip = lth_territorialintegration_tt
-			hidden_effect = {
-				if = {
-					limit = {
-						has_completed_focus = lth_investinnanduhirion
-						controls_state = 160
-					}
-					160 = {
-						add_core_of = LTH
-					}
-				}
-				if = {
-					limit = {
-						has_completed_focus = lth_investintaurhith
-						controls_state = 76
-					}
-					76 = {
-						add_core_of = LTH
-					}
-				}
-				if = {
-					limit = {
-						has_completed_focus = lth_investinparthcelebrant
-						controls_state = 74
-					}
-					74 = {
-						add_core_of = LTH
-					}
-				}
-			}
+			74 = {add_core_of = LTH}
+			76 = {add_core_of = LTH }
+			160 = { add_core_of = LTH}
+			
+	
+			
 		}
 	}
 
-	focus = {
-		id = lth_investintaurhith
-		icon = GFX_goal_lth_investment
-		
-		relative_position_id = lth_provincialcouncils
-		x =-2
-		y =2
-
-		cost = 5
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				factor = 10
-				74 = { has_dynamic_modifier = { modifier = provincial_council_modifier } }
-				160 = { has_dynamic_modifier = { modifier = provincial_council_modifier } }
-				76 = { has_dynamic_modifier = { modifier = provincial_council_modifier } }
-			}
-		}
-		available = {
-			controls_state = 76
-			76 = { has_dynamic_modifier = { modifier = provincial_council_modifier } }
-		}
-		prerequisite = { focus = lth_provincialcouncils }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			# building slots
-			76 = {
-				add_extra_state_shared_building_slots = 2
-			}
-		}
-	}
 
 	focus = {
 		id = lth_investinparthcelebrant
@@ -6924,7 +6851,14 @@ focus_tree = {
 		}
 		available = {
 			controls_state = 74
+			controls_state = 76
+			controls_state = 160
 			74 = { has_dynamic_modifier = { modifier = provincial_council_modifier } }
+			
+			76 = { has_dynamic_modifier = { modifier = provincial_council_modifier } }
+			
+			160 = { has_dynamic_modifier = { modifier = provincial_council_modifier } }
+		
 		}
 		prerequisite = { focus = lth_provincialcouncils }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -6933,40 +6867,16 @@ focus_tree = {
 			74 = {
 				add_extra_state_shared_building_slots = 2
 			}
-		}
-	}
-
-	focus = {
-		id = lth_investinnanduhirion
-		icon = GFX_goal_lth_investment
-		
-		relative_position_id = lth_provincialcouncils
-		x =2
-		y =2
-
-		cost = 5
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				factor = 10
-				74 = { has_dynamic_modifier = { modifier = provincial_council_modifier } }
-				160 = { has_dynamic_modifier = { modifier = provincial_council_modifier } }
-				76 = { has_dynamic_modifier = { modifier = provincial_council_modifier } }
+			76 = {
+				add_extra_state_shared_building_slots = 2
 			}
-		}
-		available = {
-			controls_state = 160
-			160 = { has_dynamic_modifier = { modifier = provincial_council_modifier } }
-		}
-		prerequisite = { focus = lth_provincialcouncils }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			# building slots
 			160 = {
 				add_extra_state_shared_building_slots = 2
 			}
 		}
 	}
+
+	
 
 	focus = {
 		id = lth_reformtaxcollection
@@ -6981,8 +6891,6 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 100
-				has_completed_focus = lth_investinnanduhirion
-				has_completed_focus = lth_investintaurhith
 				has_completed_focus = lth_investinparthcelebrant
 			}
 		}
@@ -6997,33 +6905,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			# Gain civs in every invested state
-			custom_effect_tooltip = lth_reformtaxcollection_tt
-			hidden_effect = {
-				if = {
-					limit = {
-						has_completed_focus = lth_investinnanduhirion
-						controls_state = 160
-					}
 					160 = { add_building_slot_and_civ_x4 = yes }
-				}
-				if = {
-					limit = {
-						has_completed_focus = lth_investintaurhith
-						controls_state = 76
-					}
 					76 = { add_building_slot_and_civ_x4 = yes }
-				}
-				if = {
-					limit = {
-						has_completed_focus = lth_investinparthcelebrant
-						controls_state = 74
-					}
 					74 = { add_building_slot_and_civ_x4 = yes }
 				}
 			}
-		}
-	}
-
+			
+			
 	focus = {
 		id = lth_minglewiththemortals
 		icon = GFX_goal_lth_friendly_skeleton

@@ -1,7 +1,4 @@
-equipment_modules = {
-	limit = {
-		has_dlc = "No Step Back" 
-	}
+equipment_modules = { limit = { has_dlc = "No Step Back" }
 
 	two_horse_chariot = {
 		abbreviation = "cha"
@@ -27,7 +24,7 @@ equipment_modules = {
 			
 		}
 		multiply_stats = {
-			defense = 0.5
+			defense = 0.4
 			breakthrough = 1.0
 			fuel_consumption = 1
 			build_cost_ic = 0.5

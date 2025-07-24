@@ -993,9 +993,9 @@ lth_on_yearly = {
 		limit = {
 			has_completed_focus = lth_endurethedarkness
 			has_dynamic_modifier = { modifier = lth_immortal_endurance_modifier }
-			check_variable = { lth_immortal_endurance_bonus < 0.4 } # cap
+			check_variable = { lth_immortal_endurance_bonus < 0.5 } # cap
 		}
-		add_to_variable = { lth_immortal_endurance_bonus = 0.04 }
+		add_to_variable = { lth_immortal_endurance_bonus = 0.05 }
 	}
 	else_if = {
 		limit = {

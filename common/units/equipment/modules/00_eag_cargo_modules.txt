@@ -13,7 +13,7 @@ equipment_modules = {
 		add_stats = {
 			weight = 2
 		}
-		xp_cost = 2
+		xp_cost = 0
 		multiply_stats = {
 			air_ground_attack = 0.1
 			air_bombing = 0.1
@@ -34,7 +34,7 @@ equipment_modules = {
 		multiply_stats = {
 			build_cost_ic = 0.08
 		}
-		xp_cost = 2
+		xp_cost = 0
 		multiply_stats = {
 			air_ground_attack = 0.15
 			air_bombing = 0.15
@@ -55,7 +55,7 @@ equipment_modules = {
 		multiply_stats = {
 			build_cost_ic = 0.12
 		}
-		xp_cost = 2
+		xp_cost = 0
 		multiply_stats = {
 			air_ground_attack = 0.18
 			air_bombing = 0.18
@@ -76,7 +76,7 @@ equipment_modules = {
 		multiply_stats = {
 			build_cost_ic = 0.24
 		}
-		xp_cost = 2
+		xp_cost = 0
 		multiply_stats = {
 			air_ground_attack = 0.22
 			air_bombing = 0.22

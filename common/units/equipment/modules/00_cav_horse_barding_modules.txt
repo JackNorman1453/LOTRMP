@@ -94,7 +94,7 @@ equipment_modules = {
 		category = cavalry_horse_armor_light
 		sfx = sfx_ui_sd_module_turret
 
-		xp_cost = 16
+		xp_cost = 0
 
 		add_stats = {
 			defense = 8
@@ -183,7 +183,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		gfx = mithril_barding_module
 
-		xp_cost = 16
+		xp_cost = 0
 
 		add_stats = {
 			defense = 8

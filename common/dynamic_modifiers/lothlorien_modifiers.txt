@@ -43,8 +43,8 @@ lth_consecrated_land = {
 	local_building_slots_factor = 0.35
 	local_factories = 0.1
 	state_resources_factor = 0.1
-	state_production_speed_industrial_complex_factor = 0.08
-	state_production_speed_arms_factory_factor = 0.08
+	state_production_speed_industrial_complex_factor = 0.15
+	state_production_speed_arms_factory_factor = 0.15
 }
 
 lth_twilight_garden = {

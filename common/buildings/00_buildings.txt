@@ -63,7 +63,7 @@ buildings = {
 		infrastructure_construction_effect = yes
 		level_cap = {
 			shares_slots = yes
-			state_max = 20
+			state_max = 99
 		}
 	}
 
@@ -77,7 +77,7 @@ buildings = {
 		infrastructure_construction_effect = yes
 		level_cap = {
 			shares_slots = yes
-			state_max = 20
+			state_max = 99
 		}
 	}
 
@@ -421,7 +421,7 @@ buildings = {
 
 	library = {
 		#show_on_map = 1
-		base_cost = 115000
+		base_cost = 40000
 		icon_frame = 20
 		disabled_in_dmz = no
 		damage_factor = 0.25

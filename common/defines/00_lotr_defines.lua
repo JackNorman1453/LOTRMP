@@ -168,6 +168,20 @@ NDefines.NCountry.EQUIPMENT_UPGRADE_CHUNK_MAX_SIZE = 1000			-- Maximum chunk siz
 NDefines.NCountry.REINFORCEMENT_EQUIPMENT_DELIVERY_SPEED = 0.8 
 NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 45.0
 NDefines.NCountry.REINFORCEMENT_MANPOWER_CHUNK = 0.125
+NDefines.NSupply.NODE_FLOW_BONUS_PER_RAIL_LEVEL = 0.00
+NDefines.NSupply.NODE_INITIAL_SUPPLY_FLOW = 3.2   --vanilla 2.8
+NDefines.NSupply.NODE_STARTING_PENALTY_PER_PROVINCE = 0.40   --vanilla 0.5
+NDefines.NSupply.NODE_ADDED_PENALTY_PER_PROVINCE = 0.55 --vanilla 0.7
+NDefines.NSupply.INFRA_TO_SUPPLY = 0.75							-- each level of infra gives this many supply
+NDefines.NSupply.VP_TO_SUPPLY_BASE = 1.0							-- Bonus to supply from a VP, no matter the level
+NDefines.NSupply.VP_TO_SUPPLY_BONUS_CONVERSION = 0.05			-- Bonus to supply local supplies from Victory Points, multiplied by this aspect and rounded to closest integer
+NDefines.NSupply.SUPPLY_FROM_DAMAGED_INFRA = 0.6         --0.15 vanilla      -- damaged infrastructure counts as this in supply calcs
+NDefines.NSupply.SUPPLY_BASE_MULT = 0.2				
+NDefines.NSupply.SUPPLY_PATH_MAX_DISTANCE = 25
+
+NDefines.NSupply.RAILWAY_CONVERSION_COOLDOWN = 3 -- railways will be put on cooldown when they are captured by enemy and will not be usable during the cooldown
+NDefines.NSupply.RAILWAY_CONVERSION_COOLDOWN_CORE = 1	
+
 
 --Division design xp cost is now 0
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0 -- 0xp, was 25
