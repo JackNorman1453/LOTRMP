@@ -1,0 +1,6536 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_POLITICAL_CHARACTER}
+### search_filters = {FOCUS_FILTER_MILITARY_CHARACTER}
+
+focus_tree = {
+	id = dorwinion_focus_tree
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = DOR
+		} 
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 200 y = 3500 }
+
+	initial_show_position = {
+		x = 25
+		y = 0
+	}
+
+####################
+	focus = {
+		id = DOR_steady_as_it_goes
+		icon = GFX_focus_rom_royal_dictatorship
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = DOR_a_change_in_course
+				}
+			}
+		}
+
+		x = -21
+		y = 0
+		cost = 10
+		available = {
+		}
+		mutually_exclusive = {
+			focus = DOR_a_change_in_course
+		}
+		completion_reward = {
+			add_timed_idea = {
+    			idea = DOR_steady_as_it_goes
+    			days = 365
+				}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DOR_continue_domrichs_reforms
+		icon = GFX_goal_generic_improve_the_administration
+		x = 0
+		y = 1
+		relative_position_id = DOR_steady_as_it_goes
+		cost = 5
+		prerequisite = {
+			focus = DOR_steady_as_it_goes
+		}
+		available = {
+		}
+		completion_reward = {
+			add_popularity = {
+    			ideology = cooperative
+    			popularity = 0.05
+			}
+			add_popularity = {
+    			ideology = unaligned
+    			popularity = 0.025
+			}
+		}
+	}
+	focus = {
+		id = DOR_draft_a_new_constitution
+		icon = GFX_goal_generic_treaty
+		x = 0
+		y = 1
+		relative_position_id = DOR_continue_domrichs_reforms
+		cost = 10
+		prerequisite = {
+			focus = DOR_continue_domrichs_reforms
+		}
+		available = {
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = no_centralization
+				}
+				add_ideas = weak_centralization
+			}
+			else_if = {
+				limit = {
+					has_idea = weak_centralization
+				}
+				add_ideas = moderate_centralization
+			}
+			else_if = {
+				limit = {
+					has_idea = moderate_centralization
+				}
+				add_ideas = strong_centralization
+			}
+			else_if = {
+				limit = {
+					has_idea = very_strong_centralization
+				}
+				add_political_power = 120
+			}
+			else_if = {
+				limit = {
+					has_idea = wartime_centralization
+				}
+				add_political_power = 120
+			}
+			else_if = {
+				limit = {
+					has_idea = absolute_centralization
+				}
+				add_political_power = 120
+			}
+			else_if = {
+				limit = {
+					has_idea = communal_decentralization
+				}
+				add_political_power = 120
+			}
+		}
+	}
+	focus = {
+		id = DOR_tax_reform
+		icon = GFX_goal_lth_collect_taxes
+		x = -3
+		y = 1
+		relative_position_id = DOR_draft_a_new_constitution
+		cost = 5
+		prerequisite = {
+			focus = DOR_draft_a_new_constitution
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = {
+				DOR_tax_reform
+			}
+		}
+	}
+	focus = {
+		id = DOR_political_restructuring
+		icon = GFX_goal_lth_select_advisors
+		x = 0
+		y = 1
+		relative_position_id = DOR_draft_a_new_constitution
+		cost = 5
+		prerequisite = {
+			focus = DOR_draft_a_new_constitution
+		}
+		available = {
+		}
+		completion_reward = {	
+				add_ideas = DOR_political_restructuring
+		}
+	}
+	focus = {
+		id = DOR_the_right_to_vote
+		icon = GFX_goal_lth_emissaries_guild
+		x = 1
+		y = 2
+		relative_position_id = DOR_political_restructuring
+		cost = 5
+		prerequisite = {
+			focus = DOR_begin_the_separation_of_powers
+			focus = DOR_guarantee_a_position_of_power
+		}
+		available = {
+		}
+		completion_reward = {
+			add_popularity = {
+    			ideology = cooperative
+    			popularity = 0.05
+			}
+			if = {
+				limit = {
+					has_idea = DOR_political_restructuring_cooperative
+				}
+				swap_ideas = {
+					remove_idea = DOR_political_restructuring_cooperative
+					add_idea = DOR_political_restructuring_cooperative_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = DOR_political_restructuring_unaligned
+				}
+				swap_ideas = {
+					remove_idea = DOR_political_restructuring_unaligned
+					add_idea = DOR_political_restructuring_unaligned_2
+				}
+			}
+			else = {
+				add_ideas = DOR_political_restructuring
+			}
+		}
+	}
+	focus = {
+		id = DOR_begin_the_separation_of_powers
+		icon = GFX_goal_support_cooperative
+		x = 1
+		y = 1
+		relative_position_id = DOR_tax_reform
+		cost = 5
+		prerequisite = {
+			focus = DOR_tax_reform
+		}
+		prerequisite = {
+			focus = DOR_political_restructuring
+		}
+		mutually_exclusive = {
+			focus = DOR_guarantee_a_position_of_power
+		}
+		available = {
+		}
+		completion_reward = {
+
+				swap_ideas = {
+					remove_idea = DOR_political_restructuring
+					add_idea = DOR_political_restructuring_cooperative
+				}
+		}
+	}
+	focus = {
+		id = DOR_prevent_exploitation
+		icon = GFX_goal_goal_generic_political_pressure
+		x = -1
+		y = 2
+		relative_position_id = DOR_tax_reform
+		cost = 10
+		prerequisite = {
+			focus = DOR_tax_reform
+		}
+		prerequisite = {
+			focus = DOR_begin_the_separation_of_powers
+		}
+		available = {
+		}
+		completion_reward = {
+			add_stability = 0.1
+			swap_ideas = {
+				remove_idea = DOR_tax_reform
+				add_idea = DOR_tax_reform_2
+			}
+		}
+	}
+	focus = {
+		id = DOR_dissolve_the_nobility
+		icon = GFX_goal_goal_demand_sudetenland
+		x = 0
+		y = 1
+		relative_position_id = DOR_begin_the_separation_of_powers
+		cost = 5
+		prerequisite = {
+			focus = DOR_begin_the_separation_of_powers
+		}
+		available = {
+			NOT = {
+				has_completed_focus = DOR_placate_the_nobility
+			}
+		}
+		completion_reward = {
+			add_stability = -0.075
+			add_timed_idea = {
+				idea = DOR_dissolve_the_nobility
+				days = 70
+			}
+		}
+	}
+	focus = {
+		id = DOR_dissolve_the_monarchy
+		icon = GFX_goal_generic_crown_smashed
+		x = -1
+		y = 1
+		relative_position_id = DOR_dissolve_the_nobility
+		cost = 5
+		prerequisite = {
+			focus = DOR_dissolve_the_nobility
+		}
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+			
+		}
+		completion_reward = {
+			retire_character = DOR_domrich
+
+			add_stability = -0.1
+		}
+	}
+	focus = {
+		id = DOR_hold_a_referendum
+		icon = GFX_goal_lth_election_ballot
+		x = 1
+		y = 2
+		relative_position_id = DOR_begin_the_separation_of_powers
+		cost = 10
+		prerequisite = {
+			focus = DOR_begin_the_separation_of_powers
+		}
+		prerequisite = {
+			focus = DOR_the_right_to_vote
+		}
+		mutually_exclusive = {
+			focus = DOR_establish_an_oligarchy
+		}
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+			cooperative > 0.40
+		}
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+	focus = {
+		id = DOR_establish_a_republic
+		icon = GFX_goal_support_cooperative
+		x = -1
+		y = 1
+		relative_position_id = DOR_dissolve_the_monarchy
+		cost = 5
+		prerequisite = {
+			focus = DOR_dissolve_the_monarchy
+		}
+		prerequisite = {
+			focus = DOR_hold_a_referendum
+		}
+		mutually_exclusive = {
+			focus = DOR_establish_a_constitutional_monarchy
+		}
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+			cooperative > 0.5
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = cooperative
+			}
+			add_popularity = {
+    			ideology = cooperative
+    			popularity = 0.25
+			}
+		}
+	}
+	focus = {
+		id = DOR_establish_a_constitutional_monarchy
+		icon = GFX_goal_generic_royal_handshake_deal
+		x = 1
+		y = 1
+		relative_position_id = DOR_hold_a_referendum
+		cost = 5
+		prerequisite = {
+			focus = DOR_hold_a_referendum
+		}
+		mutually_exclusive = {
+			focus = DOR_establish_a_republic
+		}
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+			NOT = {
+				has_completed_focus = DOR_dissolve_the_monarchy
+			}
+			cooperative > 0.35
+			unaligned > 0.15
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = cooperative
+			}
+			add_popularity = {
+    			ideology = cooperative
+    			popularity = 0.15
+			}
+			add_popularity = {
+    			ideology = unaligned
+    			popularity = 0.10
+			}
+			set_cosmetic_tag = DOR_constitution
+		}
+	}
+	focus = {
+		id = DOR_permit_regional_elections
+		icon = GFX_goal_lth_election_ballot
+		x = 0
+		y = 3
+		relative_position_id = DOR_dissolve_the_nobility
+		cost = 10
+		prerequisite = {
+			focus = DOR_establish_a_republic
+			focus = DOR_establish_a_constitutional_monarchy
+		}
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = DOR_ratify_the_principles_of_democracy
+		icon = GFX_goal_generic_torchbearer
+		x = 0
+		y = 1
+		relative_position_id = DOR_permit_regional_elections
+		cost = 10
+		prerequisite = {
+			focus = DOR_permit_regional_elections
+		}
+		available = {
+		}
+		completion_reward = {
+			add_popularity = {
+    			ideology = cooperative
+    			popularity = 0.10
+			}
+		}
+	}
+		focus = {
+		id = DOR_guide_the_people_forward
+		icon = GFX_goal_generic_peasantry_welfare
+		x = 0
+		y = 1
+		relative_position_id = DOR_ratify_the_principles_of_democracy
+		cost = 10
+		prerequisite = {
+			focus = DOR_ratify_the_principles_of_democracy
+		}
+		available = {
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = DOR_peoples_tutelage
+				days = 728
+			}
+			if = {
+				limit = {
+					has_completed_focus = DOR_establish_a_republic
+				}
+				
+				country_event = dorwinion.7
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = DOR_establish_a_constitutional_monarchy
+				}
+				add_political_power = 50
+			}
+		}
+	}
+	focus = {
+		id = DOR_assess_our_future
+		icon = GFX_goal_goal_molotov_ribbentrop_pact
+		x = 2
+		y = 0
+		relative_position_id = DOR_guide_the_people_forward
+		cost = 10
+		prerequisite = {
+			focus = DOR_ratify_the_principles_of_democracy
+			focus = DOR_the_puppet_king
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = {
+				DOR_assess_our_future
+			}
+		}
+	}
+	focus = {
+		id = DOR_look_to_gondor
+		icon = GFX_goal_gondor
+		x = -3
+		y = 1
+		relative_position_id = DOR_assess_our_future
+		cost = 5
+		prerequisite = {
+			focus = DOR_assess_our_future
+		}
+		available = {
+		}
+		mutually_exclusive = {
+			focus = DOR_rekindle_dwarven_relations
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_opinion_modifier = {
+    			target = GON
+    			modifier = large_increase
+			}
+		}
+	}
+	focus = {
+		id = DOR_cooperation_with_gondor
+		icon = GFX_goal_generic_gondor_research
+		x = 0
+		y = 1
+		relative_position_id = DOR_look_to_gondor
+		cost = 10
+		prerequisite = {
+			focus = DOR_look_to_gondor
+		}
+		available = {
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+    			target = GON
+    			modifier = small_increase
+			}
+			GON = {
+				country_event = {
+					id = gondor.8
+				}
+			} 
+		}
+	}
+	focus = {
+		id = DOR_join_gondor
+		icon = GFX_goal_gon_ithilien_soldier_of_gondor_shield
+		x = 0
+		y = 1
+		relative_position_id = DOR_cooperation_with_gondor
+		cost = 10
+		prerequisite = {
+			focus = DOR_cooperation_with_gondor
+		}
+		available = {
+			NOT = {
+				has_war_with = GON 
+			}
+			NOT = {
+				is_puppet = yes
+			}
+			NOT = {
+				has_war = yes
+			}
+			NOT = {
+				is_in_faction = yes
+			}
+		}
+		completion_reward = {
+			GON = {
+				country_event = {
+					id = gondor.7
+				}
+			} 
+		}
+	}
+	focus = {
+		id = DOR_rekindle_dwarven_relations
+		icon = GFX_goal_mor_erebor_flag
+		x = 3
+		y = 1
+		relative_position_id = DOR_assess_our_future
+		cost = 5
+		prerequisite = {
+			focus = DOR_assess_our_future
+		}
+		available = {
+		}
+		mutually_exclusive = {
+			focus = DOR_look_to_gondor
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_opinion_modifier = {
+    			target = ERE
+    			modifier = large_increase
+			}
+		}
+	}
+	focus = {
+		id = DOR_import_dwarven_steel
+		icon = GFX_goal_goal_generic_trade
+		x = -1
+		y = 1
+		relative_position_id = DOR_rekindle_dwarven_relations
+		cost = 5
+		prerequisite = {
+			focus = DOR_rekindle_dwarven_relations
+		}
+		available = {
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+    			target = ERE
+    			modifier = small_increase
+			}
+			add_resource = {
+    		type = steel
+    		amount = 10
+    		state = 137
+			}
+		}
+	}
+	focus = {
+		id = DOR_payment_for_the_spears
+		icon = GFX_goal_generic_spear_and_sabre
+		x = 1
+		y = 1
+		relative_position_id = DOR_rekindle_dwarven_relations
+		cost = 5
+		prerequisite = {
+			focus = DOR_rekindle_dwarven_relations
+		}
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+    			target = ERE
+    			modifier = small_increase
+			}
+			add_timed_idea = {
+				idea = DOR_payment_for_the_spears
+				days = 35
+			}
+			add_equipment_to_stockpile = {
+   				type = infantry_equipment
+    			amount = 2500
+    			producer = ERE
+			}
+		}
+	}
+	focus = {
+		id = DOR_join_erebor
+		icon = GFX_goal_dwarves_soldiers_army
+		x = 0
+		y = 2
+		relative_position_id = DOR_rekindle_dwarven_relations
+		cost = 10
+		prerequisite = {
+			focus = DOR_import_dwarven_steel
+		}
+		prerequisite = {
+			focus = DOR_payment_for_the_spears
+		}
+		available = {
+			NOT = {
+				has_war_with = ERE
+			}
+			NOT = {
+				is_puppet = yes
+			}
+			NOT = {
+				has_war = yes
+			}
+			NOT = {
+				is_in_faction = yes
+			}
+		}
+		completion_reward = {
+			ERE = {
+				country_event = {
+					id = erebor.6
+				}
+			} 
+		}
+	}
+
+
+	focus = {
+		id = DOR_placate_the_nobility
+		icon = GFX_goal_goal_generic_forceful_treaty
+		x = 3e
+		y = 1
+		relative_position_id = DOR_draft_a_new_constitution
+		cost = 5
+		prerequisite = {
+			focus = DOR_draft_a_new_constitution
+		}
+		available = {
+			NOT = {
+				has_completed_focus = DOR_dissolve_the_nobility
+			}
+		}
+		completion_reward = {
+			add_ideas = DOR_placated_nobility
+		}
+	}
+	
+	focus = {
+		id = DOR_guarantee_a_position_of_power
+		icon = GFX_goal_goal_generic_dangerous_deal
+		x = -1
+		y = 1
+		relative_position_id = DOR_placate_the_nobility
+		cost = 5
+		prerequisite = {
+			focus = DOR_placate_the_nobility
+		}
+		prerequisite = {
+			focus = DOR_political_restructuring
+		}
+		mutually_exclusive = {
+			focus = DOR_begin_the_separation_of_powers
+		}
+		available = {
+		}
+		completion_reward = {
+				swap_ideas = {
+					remove_idea = DOR_political_restructuring
+					add_idea = DOR_political_restructuring_unaligned
+				}
+		}
+	}
+	focus = {
+		id = DOR_grant_bailouts
+		icon = GFX_goal_generic_gold_money
+		x = 1
+		y = 2
+		relative_position_id = DOR_placate_the_nobility
+		cost = 10
+		prerequisite = {
+			focus = DOR_placate_the_nobility
+		}
+		prerequisite = {
+			focus = DOR_guarantee_a_position_of_power
+		}
+		available = {
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = DOR_placated_nobility
+				add_idea = DOR_placated_nobility_2
+			}
+		}
+	}
+	focus = {
+		id = DOR_establish_an_oligarchy
+		icon = GFX_goal_generic_voting_ballot_locked
+		x = 1
+		y = 2
+		relative_position_id = DOR_guarantee_a_position_of_power
+		cost = 10
+		prerequisite = {
+			focus = DOR_guarantee_a_position_of_power
+		}
+		prerequisite = {
+			focus = DOR_the_right_to_vote
+		}
+		mutually_exclusive = {
+			focus = DOR_hold_a_referendum
+		}
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+			unaligned > 0.60
+		}
+		completion_reward = {
+			add_popularity = {
+    			ideology = unaligned
+    			popularity = 0.25
+			}
+			add_political_power = 75
+		}
+	}
+	focus = {
+		id = DOR_amp_up_cheap_production
+		icon = GFX_goal_generic_anvil
+		x = -1
+		y = 1
+		relative_position_id = DOR_establish_an_oligarchy
+		cost = 10
+		prerequisite = {
+			focus = DOR_establish_an_oligarchy
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOR_cheap_production
+		}
+	}
+	focus = {
+		id = DOR_exploit_political_loopholes
+		icon = GFX_goal_skull_treaty
+		x = 1
+		y = 1
+		relative_position_id = DOR_establish_an_oligarchy
+		cost = 5
+		prerequisite = {
+			focus = DOR_establish_an_oligarchy
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOR_corruption
+		}
+	}
+	focus = {
+		id = DOR_exploit_the_state
+		icon = GFX_goal_generic_annex_country_2
+		x = 0
+		y = 2
+		relative_position_id = DOR_establish_an_oligarchy
+		cost = 10
+		prerequisite = {
+			focus = DOR_amp_up_cheap_production
+		}
+		prerequisite = {
+			focus = DOR_exploit_political_loopholes
+		}
+		available = {
+			has_completed_focus = DOR_tax_reform
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = DOR_tax_reform
+				add_idea = DOR_tax_reform_3
+			}
+		}
+	}
+	focus = {
+		id = DOR_the_puppet_king
+		icon = GFX_goal_generic_submission_puppet
+		x = 0
+		y = 1
+		relative_position_id = DOR_exploit_the_state
+		cost = 10
+		prerequisite = {
+			focus = DOR_exploit_the_state
+		}
+		available = {
+			has_country_leader = {
+							character = DOR_domrich
+							ruling_only = yes
+						}
+		}
+		completion_reward = {
+			add_trait = {
+    			character = DOR_domrich
+    			ideology = vigilant
+     			trait = DOR_the_puppet_king
+			}
+		}
+	}
+
+	focus = {
+		id = DOR_a_deal_with_rhun
+		icon = GFX_goal_rhu_nazghul_ringwraith_khamul
+		x = 26
+		y = 0
+		cost = 5
+
+		offset = {
+			x = -32
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = DOR_steady_as_it_goes
+			}
+		}
+		prerequisite = {
+		}
+		available = {
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+    			target = RHU
+    			modifier = large_increase
+				}
+		}
+	}
+	focus = {
+		id = DOR_dorwinion_stands_firm
+		icon = GFX_goal_goal_generic_defence
+		x = -2
+		y = 1
+		relative_position_id = DOR_a_deal_with_rhun
+		cost = 10
+		prerequisite = {
+			focus = DOR_a_deal_with_rhun
+		}
+		mutually_exclusive = {
+			focus = DOR_trade_for_protection
+		}
+		available = {
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			add_timed_idea = {
+				idea = DOR_people_of_dorwinion
+				days = 70
+			}
+		}
+	}
+	focus = {
+		id = DOR_trade_for_protection
+		icon = GFX_goal_generic_concessions
+		x = 2
+		y = 1
+		relative_position_id = DOR_a_deal_with_rhun
+		cost = 10
+		prerequisite = {
+			focus = DOR_a_deal_with_rhun
+		}
+		mutually_exclusive = {
+			focus = DOR_dorwinion_stands_firm
+		}
+		available = {
+			NOT = {
+				has_war_with = RHU
+			}
+		}
+		completion_reward = {
+			RHU = {
+				country_event = dorwinion.8
+			}
+		}
+	}
+
+focus = {
+		id = DOR_prepare_against_the_threat
+		icon = GFX_goal_generic_skull_death_nor_dishonor
+		x = 0
+		y = 2
+		relative_position_id = DOR_a_deal_with_rhun
+		cost = 5
+		prerequisite = {
+            focus = DOR_trade_for_protection
+            focus = DOR_dorwinion_stands_firm
+        }
+		available = {
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+    			target = RHU
+    			modifier = large_decrease
+				}
+			add_opinion_modifier = {
+    			target = DRH
+    			modifier = large_increase
+				}
+			add_opinion_modifier = {
+    			target = MOR
+    			modifier = small_decrease
+				}
+			add_opinion_modifier = {
+    			target = GON
+    			modifier = small_increase
+				}
+		}
+	}
+	focus = {
+		id = DOR_rally_the_people_of_dorwinion
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		x = -4
+		y = 1
+		relative_position_id = DOR_prepare_against_the_threat
+		cost = 10
+		prerequisite = {
+			focus = DOR_prepare_against_the_threat
+		}
+		available = {
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = DOR_people_of_dorwinion
+				days = 365
+			}
+		}
+	}
+	focus = {
+		id = DOR_fund_the_blacksmiths
+		icon = GFX_goal_generic_anvil
+		x = -3
+		y = 1
+		relative_position_id = DOR_rally_the_people_of_dorwinion
+		cost = 10
+		prerequisite = {
+			focus = DOR_rally_the_people_of_dorwinion
+		}
+		available = {
+		}
+		mutually_exclusive = {
+			focus = DOR_construction_efforts
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+    				type = arms_factory
+    				level = 3
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_construction_efforts
+		icon = GFX_goal_generic_windmill
+		x = -1
+		y = 1
+		relative_position_id = DOR_rally_the_people_of_dorwinion
+		cost = 10
+		prerequisite = {
+			focus = DOR_rally_the_people_of_dorwinion
+		}
+		mutually_exclusive = {
+			focus = DOR_fund_the_blacksmiths
+		}
+		available = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+    				type = industrial_complex
+    				level = 2
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_all_hands_at_work
+		icon = GFX_goal_goal_generic_national_unity
+		x = 1
+		y = 2
+		relative_position_id = DOR_fund_the_blacksmiths
+		cost = 10
+		prerequisite = {
+			focus = DOR_fund_the_blacksmiths
+			focus = DOR_construction_efforts
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOR_all_hands_at_work
+		}
+	}
+	focus = {
+		id = DOR_call_for_mercenaries
+		icon = GFX_goal_goal_generic_military_deal
+		x = 0
+		y = 2
+		relative_position_id = DOR_rally_the_people_of_dorwinion
+		cost = 10
+		prerequisite = {
+			focus = DOR_rally_the_people_of_dorwinion
+		}
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = dor_mercenaries_tooltip
+			hidden_effect = {
+				division_template = {
+    name = "Easterling Mercenaries"
+	is_locked = yes
+    division_cap = 3 
+    regiments = {
+        easterling_infantry_expanded = { x = 0 y = 0 }
+        easterling_infantry_expanded = { x = 0 y = 1 }
+        easterling_infantry_expanded = { x = 1 y = 0 }
+        easterling_infantry_expanded = { x = 1 y = 1 }
+        easterling_infantry_expanded = { x = 2 y = 0 }
+        easterling_infantry_expanded = { x = 2 y = 1 }
+        easterling_infantry_expanded = { x = 3 y = 0 }
+        easterling_infantry_expanded = { x = 3 y = 1 }
+    } }
+	capital_scope = {
+				create_unit = {
+    				division = "name = \"Easterling Mercenaries\" division_template = \"Easterling Mercenaries\" start_experience_factor = 0.3"
+   					 owner = DOR
+					 count = 3
+				}
+			}
+			}
+			add_timed_idea = {
+	idea = RHUN_merc_wages
+	days = 90 } 
+		}
+		
+	}
+	focus = {
+		id = DOR_draft_fit_for_service_men
+		icon = GFX_focus_generic_military_mission
+		x = 1
+		y = 1
+		relative_position_id = DOR_rally_the_people_of_dorwinion
+		cost = 10
+		prerequisite = {
+			focus = DOR_rally_the_people_of_dorwinion
+		}
+		mutually_exclusive = {
+			focus = DOR_anyone_that_can_fight
+		}
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = dor_draft_tooltip
+
+			hidden_effect = {
+				division_template = {
+    name = "Vanguard Unit"
+	priority = 1
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+    }
+	support = {
+		artillery = { x = 0 y = 0 }
+	} }
+	capital_scope = {
+				create_unit = {
+    				division = "name = \"Vanguard Unit\" division_template = \"Vanguard Unit\" start_experience_factor = 1"
+   					 owner = DOR
+					 count = 2
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_anyone_that_can_fight
+		icon = GFX_goal_generic_workers_and_farmers_rise_peasantry
+		x = 3
+		y = 1
+		relative_position_id = DOR_rally_the_people_of_dorwinion
+		cost = 10
+		prerequisite = {
+			focus = DOR_rally_the_people_of_dorwinion
+		}
+		mutually_exclusive = {
+			focus = DOR_draft_fit_for_service_men
+		}
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = dor_anyone_tooltip
+			hidden_effect = {
+				division_template = {
+    name = "Peasant Militia"
+	priority = 0
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+    } }
+	capital_scope = {
+				create_unit = {
+    				division = "name = \"Peasant Militia\" division_template = \"Peasant Militia\" start_experience_factor = 0.3"
+   					 owner = DOR
+					 count = 6
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_honor_and_duty
+		icon = GFX_goal_lth_weapon_sword_forging
+		x = 1
+		y = 2
+		relative_position_id = DOR_draft_fit_for_service_men
+		cost = 10
+		prerequisite = {
+			focus = DOR_draft_fit_for_service_men
+			focus = DOR_anyone_that_can_fight
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOR_honor_and_duty
+		}
+	}
+	focus = {
+		id = DOR_no_cost_too_great
+		icon = GFX_goal_mor_meat_back_skulls_knife
+		x = 0
+		y = 2
+		relative_position_id = DOR_call_for_mercenaries
+		cost = 10
+		prerequisite = {
+			focus = DOR_all_hands_at_work
+		}
+		prerequisite = {
+			focus = DOR_call_for_mercenaries
+		}
+		prerequisite = {
+			focus = DOR_honor_and_duty
+		}
+		available = {
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = no_mercenaries
+				}
+				add_ideas = elite_mercenaries
+			}
+			else_if = {
+				limit = {
+					has_idea = elite_mercenaries
+				}
+				add_ideas = limited_mercenaries
+			}
+			else_if = {
+				limit = {
+					has_idea = limited_mercenaries
+				}
+				add_ideas = extensive_mercenaries
+			}
+			else_if = {
+				limit = {
+					has_idea = slave_soldiers
+				}
+				add_political_power = 120
+			}
+		}
+	}
+	focus = {
+		id = DOR_raise_the_defenses
+		icon = GFX_goal_goal_generic_defence
+		x = 4
+		y = 1
+		relative_position_id = DOR_prepare_against_the_threat
+		cost = 10
+		prerequisite = {
+			focus = DOR_prepare_against_the_threat
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOR_raise_the_defenses
+		}
+	}
+	focus = {
+		id = DOR_the_southern_plan
+		icon = GFX_goal_mor_wargoal_rhun
+		x = -2
+		y = 1
+		relative_position_id = DOR_raise_the_defenses
+		cost = 5
+		prerequisite = {
+			focus = DOR_raise_the_defenses
+		}
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = DOR_reinforce_the_border_towns
+		icon = GFX_goal_generic_fortify_city
+		x = -1
+		y = 1
+		relative_position_id = DOR_the_southern_plan
+		cost = 10
+		prerequisite = {
+			focus = DOR_the_southern_plan
+		}
+		available = {
+		}
+		bypass = {
+			NOT = {
+				DOR = {
+					owns_state = 208
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = dor_border_town_tooltip
+			hidden_effect = {
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 2175
+					}
+				}
+				208 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 2
+    			instant_build = yes
+    			province = 2175
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 2961
+					}
+				}
+				208 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 2961
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 6522
+					}
+				}
+				208 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 6522
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 1873
+					}
+				}
+				208 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 2
+    			instant_build = yes
+    			province = 1873
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 4354
+					}
+				}
+				208 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 4354
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 3082
+					}
+				}
+				208 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 3082
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 2285
+					}
+				}
+				208 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 2285
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 6547
+					}
+				}
+				208 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 6547
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 4830
+					}
+				}
+				208 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 4830
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 47
+					}
+				}
+				208 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 47
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 6507
+					}
+				}
+				208 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 6507
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 4017
+					}
+				}
+				208 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 4017
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 3762
+					}
+				}
+				208 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 3762
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 1224
+					}
+				}
+				208 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 1224
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 4865
+					}
+				}
+				208 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 4865
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_uldonavan_line
+		icon = GFX_goal_lth_fortifications_castle
+		x = 0
+		y = 1
+		relative_position_id = DOR_reinforce_the_border_towns
+		cost = 10
+		prerequisite = {
+			focus = DOR_reinforce_the_border_towns
+		}
+		available = {
+		}
+		bypass = {
+			NOT = {
+				DOR = {
+					owns_state = 137
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = dor_uldonavan_line_tooltip
+			hidden_effect = {
+
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 4522
+					}
+				}
+				137 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 2
+    			instant_build = yes
+    			province = 4522
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 6418
+					}
+				}
+				137 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 2
+    			instant_build = yes
+    			province = 6418
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 3553
+					}
+				}
+				137 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 2
+    			instant_build = yes
+    			province = 3553
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 973
+					}
+				}
+				137 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 2
+    			instant_build = yes
+    			province = 973
+						}
+					}
+				}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 1042
+					}
+				}
+				137 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 2
+    			instant_build = yes
+    			province = 1042
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_supplies_in_the_desert
+		icon = GFX_goal_generic_rural_trade_farming
+		x = 1
+		y = 1
+		relative_position_id = DOR_the_southern_plan
+		cost = 5
+		prerequisite = {
+			focus = DOR_the_southern_plan
+		}
+		available = {
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 73
+					}
+				}
+				103 = {
+					add_building_construction = {
+    			type = supply_node
+    			level = 1
+    			instant_build = yes
+    			province = 73
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_desert_warfare
+		icon = GFX_goal_generic_camel_corps
+		x = 0
+		y = 1
+		relative_position_id = DOR_supplies_in_the_desert
+		cost = 10
+		prerequisite = {
+			focus = DOR_supplies_in_the_desert
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOR_desert_specialists
+		}
+	}
+	focus = {
+		id = DOR_the_northern_plan
+		icon = GFX_goal_mor_wargoal_rhun
+		x = 2
+		y = 1
+		relative_position_id = DOR_raise_the_defenses
+		cost = 5
+		prerequisite = {
+			focus = DOR_raise_the_defenses
+		}
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+focus = {
+		id = DOR_the_northern_line
+		icon = GFX_goal_generic_fortify_city
+		x = -1
+		y = 1
+		relative_position_id = DOR_the_northern_plan
+		cost = 10
+		prerequisite = {
+			focus = DOR_the_northern_plan
+		}
+		available = {
+		}
+		bypass = {
+			NOT = {
+				DOR = {
+					owns_state = 137
+					owns_state = 103
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = dor_the_northern_tooltip
+			hidden_effect = {
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 3810
+					}
+				}
+				137 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 2
+    			instant_build = yes
+    			province = 3810
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 2978
+					}
+				}
+				137 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 2978
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 771
+					}
+				}
+				103 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 771
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 6199
+					}
+				}
+				103 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 6199
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 2061
+					}
+				}
+				103 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 2061
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 6149
+					}
+				}
+				103 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 6149
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 1651
+					}
+				}
+				103 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 1651
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 1325
+					}
+				}
+				103 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 1325
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_fortress_of_szrel_kain
+		icon = GFX_goal_lth_fortifications_castle
+		x = 0
+		y = 1
+		relative_position_id = DOR_the_northern_line
+		cost = 10
+		prerequisite = {
+			focus = DOR_the_northern_line
+		}
+		available = {
+		}
+		bypass = {
+			NOT = {
+				DOR = {
+					owns_state = 137
+				}
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 3810
+					}
+				}
+				137 = {
+					add_building_construction = {
+    			type = castle
+    			level = 1
+    			instant_build = yes
+    			province = 3810
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_secure_the_coast
+		icon = GFX_goal_generic_coastal_fort
+		x = 1
+		y = 1
+		relative_position_id = DOR_the_northern_plan
+		cost = 5
+		prerequisite = {
+			focus = DOR_the_northern_plan
+		}
+		available = {
+		}
+		bypass = {
+			NOT = {
+				DOR = {
+					owns_state = 137
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = dor_secure_coast_tooltip
+			hidden_effect = {
+				if = {
+				limit = {
+					DOR = {
+						controls_province = 2270
+					}
+				}
+				137 = {
+					add_building_construction = {
+    			type = coastal_bunker
+    			level = 2
+    			instant_build = yes
+    			province = 2270
+					}
+				}
+			}
+				if = {
+				limit = {
+					DOR = {
+						controls_province = 6193
+					}
+				}
+				137 = {
+					add_building_construction = {
+    			type = coastal_bunker
+    			level = 1
+    			instant_build = yes
+    			province = 6193
+					}
+				}
+			}
+				if = {
+				limit = {
+					DOR = {
+						controls_province = 537
+					}
+				}
+				137 = {
+					add_building_construction = {
+    			type = coastal_bunker
+    			level = 2
+    			instant_build = yes
+    			province = 537
+					}
+				}
+			}
+				if = {
+				limit = {
+					DOR = {
+						controls_province = 4610
+					}
+				}
+				137 = {
+					add_building_construction = {
+    			type = coastal_bunker
+    			level = 1
+    			instant_build = yes
+    			province = 4610
+					}
+				}
+			}
+				if = {
+				limit = {
+					DOR = {
+						controls_province = 4522
+					}
+				}
+				137 = {
+					add_building_construction = {
+    			type = coastal_bunker
+    			level = 1
+    			instant_build = yes
+    			province = 4522
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_makeshift_longships
+		icon = GFX_goal_generic_viking_logship
+		x = 0
+		y = 1
+		relative_position_id = DOR_secure_the_coast
+		cost = 10
+		prerequisite = {
+			focus = DOR_secure_the_coast
+		}
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = dor_makeshift_tooltip
+			set_country_flag = DOR_ship_refit
+			add_equipment_to_stockpile = {
+    			type = convoy
+    			amount = 25
+    			producer = DOR
+			}
+		}
+	}
+	focus = {
+		id = DOR_no_blood_too_precious
+		icon = GFX_goal_generic_strike_at_democracy1
+		x = 0
+		y = 4
+		relative_position_id = DOR_raise_the_defenses
+		cost = 10
+		prerequisite = {
+			focus = DOR_uldonavan_line
+			focus = DOR_desert_warfare
+		}
+		prerequisite = {
+			focus = DOR_fortress_of_szrel_kain
+			focus = DOR_makeshift_longships
+		}
+		available = {
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = no_standing_army
+				}
+				add_ideas = priviledged_service
+			}
+			if = {
+				limit = {
+					has_idea = priviledged_service
+				}
+				add_ideas = volunteer_service
+			}
+			else_if = {
+				limit = {
+					has_idea = volunteer_service
+				}
+				add_ideas = limited_levy
+			}
+			else_if = {
+				limit = {
+					has_idea = limited_levy
+				}
+				add_ideas = peasant_levy
+			}
+			else_if = {
+				limit = {
+					has_idea = mass_levy
+				}
+				add_political_power = 120
+			}
+			else_if = {
+				limit = {
+					has_idea = horde
+				}
+				add_political_power = 120
+			}
+		}
+	}
+	focus = {
+		id = DOR_ensure_sovereignty
+		icon = GFX_goal_lth_extend_citizenship
+		x = 0
+		y = 6
+		relative_position_id = DOR_prepare_against_the_threat
+		cost = 10
+		prerequisite = {
+			focus = DOR_no_cost_too_great
+			focus = DOR_no_blood_too_precious
+		}
+		available = {
+			OR = {
+				has_defensive_war_with = RHU
+				has_defensive_war_with = MOR
+			}
+			OR = {
+				RHU = {
+					casualties_inflicted_by = {
+    					opponent = DOR
+    					thousands > 20
+					}
+				}
+				MOR = {
+					casualties_inflicted_by = {
+    					opponent = DOR
+    					thousands > 40
+					}
+				}
+			}
+		}
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+			if = {
+				limit = {
+					has_defensive_war_with = RHU
+				}
+				RHU = {
+				country_event = dorwinion.6
+				}
+			}
+			if = {
+				limit = {
+					has_defensive_war_with = MOR
+				}
+				MOR = {
+				country_event = dorwinion.6
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DOR_ensure_sovereignty_2
+		icon = GFX_goal_mor_tower_of_barad_dur
+		x = 0
+		y = 1
+		relative_position_id = DOR_ensure_sovereignty
+		cost = 10
+		prerequisite = {
+			focus = DOR_ensure_sovereignty
+		}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+					has_completed_focus = DOR_ensure_sovereignty
+			}
+		}
+		available = {
+			OR = {
+				has_defensive_war_with = RHU
+				has_defensive_war_with = MOR
+			}
+			OR = {
+				RHU = {
+					casualties_inflicted_by = {
+    					opponent = DOR
+    					thousands > 26
+					}
+				}
+				MOR = {
+					casualties_inflicted_by = {
+    					opponent = DOR
+    					thousands > 50
+					}
+				}
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_defensive_war_with = RHU
+				}
+				RHU = {
+				country_event = dorwinion.6
+				}
+			}
+			if = {
+				limit = {
+					has_defensive_war_with = MOR
+				}
+				MOR = {
+				country_event = dorwinion.6
+				}
+			}
+		}
+	}
+
+
+
+############################
+
+	focus = {
+		id = DOR_a_change_in_course
+		icon = GFX_focus_generic_strike_at_democracy2
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = DOR_steady_as_it_goes
+				}
+			}
+		}
+
+		x = 0
+		y = 0
+		cost = 10
+		available = {
+		}
+		mutually_exclusive = {
+			focus = DOR_steady_as_it_goes
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = DOR_a_change_in_course
+				days = 365
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
+		allow_branch = {
+			NOT = {
+				has_completed_focus = DOR_steady_as_it_goes
+			}
+		}
+	}
+	focus = {
+		id = DOR_align_with_the_dark_lord
+		icon = GFX_goal_mordor_deal
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = DOR_ashes_of_the_past
+				}
+				NOT = {
+					has_completed_focus = DOR_steady_as_it_goes
+				}
+			}
+		}
+
+		x = -8
+		y = 1
+		relative_position_id = DOR_a_change_in_course
+		cost = 10
+		prerequisite = {
+			focus = DOR_a_change_in_course
+		}
+		mutually_exclusive = {
+			focus = DOR_ashes_of_the_past
+		}
+		available = {
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = DOR_a_change_in_course_4
+				add_idea = DOR_a_change_in_course_5
+			}
+			modify_timed_idea = {
+    			idea = DOR_a_change_in_course_5
+   				days = 70
+			}
+		}
+	}
+	focus = {
+		id = DOR_the_lone_wolf
+		icon = GFX_focus_LIT_organize_the_iron_wolf
+		x = -5
+		y = 1
+		relative_position_id = DOR_align_with_the_dark_lord
+		cost = 10
+		prerequisite = {
+			focus = DOR_align_with_the_dark_lord
+		}
+		available = {
+		}
+		mutually_exclusive = {
+			focus = DOR_gain_the_support_of_mordor
+			focus = DOR_gain_the_support_of_rhun
+		}
+		completion_reward = {
+			add_popularity = {
+    			ideology = belligerent
+    			popularity = 0.10
+			}
+		}
+	}
+	focus = {
+		id = DOR_spread_dissent
+		icon = GFX_goal_goal_generic_dangerous_deal
+		x = 0
+		y = 1
+		relative_position_id = DOR_the_lone_wolf
+		cost = 10
+		prerequisite = {
+			focus = DOR_the_lone_wolf
+		}
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = DOR_spread_dissent_tooltip
+			add_popularity = {
+    			ideology = belligerent
+    			popularity = 0.05
+			}
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = DOR_arm_the_grumbled_peasantry
+		icon = GFX_goal_gon_pitchfork_and_torch_revolt
+		x = 0
+		y = 2
+		relative_position_id = DOR_spread_dissent
+		cost = 10
+		prerequisite = {
+			focus = DOR_spread_dissent
+		}
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = DOR_arm_the_grumbled_peasantry_tooltip
+			add_popularity = {
+    			ideology = belligerent
+    			popularity = 0.05
+			}
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = DOR_gain_the_support_of_rhun
+		icon = GFX_goal_mor_wargoal_rhun
+		x = 0
+		y = 1
+		relative_position_id = DOR_align_with_the_dark_lord
+		cost = 10
+		prerequisite = {
+			focus = DOR_align_with_the_dark_lord
+		}
+		available = {
+		}
+		mutually_exclusive = {
+			focus = DOR_gain_the_support_of_mordor
+			focus = DOR_the_lone_wolf
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+    			target = RHU
+    			modifier = large_increase
+				}
+			add_popularity = {
+    			ideology = belligerent
+    			popularity = 0.10
+			}
+		}
+	}
+	focus = {
+		id = DOR_nurukhizdin_for_assistance
+		icon = GFX_focus_generic_annex_country
+		x = 0
+		y = 1
+		relative_position_id = DOR_gain_the_support_of_rhun
+		cost = 5
+		prerequisite = {
+			focus = DOR_gain_the_support_of_rhun
+		}
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = DOR_nurukhizdin_for_assistance_tooltip
+			add_popularity = {
+    			ideology = belligerent
+    			popularity = 0.05
+			}
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = DOR_smuggle_easterling_fighters
+		icon = GFX_goal_rhu_rhun_civil_war
+		x = -1
+		y = 1
+		relative_position_id = DOR_nurukhizdin_for_assistance
+		cost = 5
+		prerequisite = {
+			focus = DOR_nurukhizdin_for_assistance
+		}
+		available = {
+
+			NOT = {
+				has_completed_focus = DOR_horror_and_fear
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = DOR_smuggle_easterling_fighters_tooltip
+			add_popularity = {
+    			ideology = belligerent
+    			popularity = 0.05
+			}
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = DOR_smuggle_equipment
+		icon = GFX_goal_lth_elven_sword_and_bow
+		x = 1
+		y = 1
+		relative_position_id = DOR_nurukhizdin_for_assistance
+		cost = 5
+		prerequisite = {
+			focus = DOR_nurukhizdin_for_assistance
+		}
+		available = {
+			NOT = {
+				has_completed_focus = DOR_horror_and_fear
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = DOR_smuggle_equipment_tooltip
+			add_popularity = {
+    			ideology = belligerent
+    			popularity = 0.05
+			}
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = DOR_easterling_pressure
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 2
+		relative_position_id = DOR_nurukhizdin_for_assistance
+		cost = 5
+		prerequisite = {
+			focus = DOR_smuggle_easterling_fighters
+			focus = DOR_smuggle_equipment
+		}
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = DOR_easterling_pressure_tooltip
+			add_popularity = {
+    			ideology = belligerent
+    			popularity = 0.05
+			}
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = DOR_gain_the_support_of_mordor
+		icon = GFX_goal_rhu_wargoal_mordor
+		x = 5
+		y = 1
+		relative_position_id = DOR_align_with_the_dark_lord
+		cost = 10
+		prerequisite = {
+			focus = DOR_align_with_the_dark_lord
+		}
+		available = {
+		}
+		mutually_exclusive = {
+			focus = DOR_gain_the_support_of_rhun
+			focus = DOR_the_lone_wolf
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+    			target = MOR
+    			modifier = large_increase
+				}
+			add_popularity = {
+    			ideology = belligerent
+    			popularity = 0.10
+			}
+		}
+	}
+	focus = {
+		id = DOR_submission_for_assistance
+		icon = GFX_goal_lth_elf_kneeling_to_orc
+		x = 0
+		y = 1
+		relative_position_id = DOR_gain_the_support_of_mordor
+		cost = 5
+		prerequisite = {
+			focus = DOR_gain_the_support_of_mordor
+		}
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = DOR_submission_for_assistance_tooltip
+			add_popularity = {
+    			ideology = belligerent
+    			popularity = 0.05
+			}
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = DOR_smuggle_orcs_underground
+		icon = GFX_goal_lth_uruk_hai_orc
+		x = -1
+		y = 1
+		relative_position_id = DOR_submission_for_assistance
+		cost = 5
+		prerequisite = {
+			focus = DOR_submission_for_assistance
+		}
+		available = {
+			NOT = {
+				has_completed_focus = DOR_horror_and_fear
+			}
+
+		}
+		completion_reward = {
+			custom_effect_tooltip = DOR_smuggle_orcs_underground_tooltip
+			add_popularity = {
+    			ideology = belligerent
+    			popularity = 0.05
+			}
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = DOR_orc_generals
+		icon = GFX_goal_mor_azog_orc_revolt
+		x = 1
+		y = 1
+		relative_position_id = DOR_submission_for_assistance
+		cost = 5
+		prerequisite = {
+			focus = DOR_submission_for_assistance
+		}
+		available = {
+			NOT = {
+				has_completed_focus = DOR_horror_and_fear
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = DOR_orc_generals_tooltip
+			add_popularity = {
+    			ideology = belligerent
+    			popularity = 0.05
+			}
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = DOR_praise_sauron
+		icon = GFX_goal_unleash_sauron
+		x = 0
+		y = 2
+		relative_position_id = DOR_submission_for_assistance
+		cost = 5
+		prerequisite = {
+			focus = DOR_smuggle_orcs_underground
+			focus = DOR_orc_generals
+		}
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = DOR_praise_sauron_tooltip
+			add_popularity = {
+    			ideology = belligerent
+    			popularity = 0.05
+			}
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = DOR_infiltrate_the_dorwinion_army
+		icon = GFX_focus_generic_infiltration
+		x = -3
+		y = 2
+		relative_position_id = DOR_align_with_the_dark_lord
+		cost = 10
+		prerequisite = {
+			focus = DOR_align_with_the_dark_lord
+		}
+		available = {
+			NOT = {
+				has_completed_focus = DOR_horror_and_fear
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = DOR_infiltrate_the_dorwinion_army_tooltip
+			add_popularity = {
+    			ideology = belligerent
+    			popularity = 0.05
+			}
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = DOR_plant_the_seeds_of_distrust
+		icon = GFX_goal_mor_meat_back_skulls_knife
+		x = 0
+		y = 1
+		relative_position_id = DOR_infiltrate_the_dorwinion_army
+		cost = 5
+		prerequisite = {
+			focus = DOR_infiltrate_the_dorwinion_army
+		}
+		available = {
+			NOT = {
+				has_completed_focus = DOR_horror_and_fear
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = DOR_spread_dissent_tooltip
+			add_popularity = {
+    			ideology = belligerent
+    			popularity = 0.05
+			}
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = DOR_raid_the_armory
+		icon = GFX_goal_lth_weapon_sword_forging
+		x = 0
+		y = 1
+		relative_position_id = DOR_plant_the_seeds_of_distrust
+		cost = 5
+		prerequisite = {
+			focus = DOR_plant_the_seeds_of_distrust
+		}
+		available = {
+			NOT = {
+				has_completed_focus = DOR_horror_and_fear
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = DOR_raid_the_armory_tooltip
+			add_popularity = {
+    			ideology = belligerent
+    			popularity = 0.05
+			}
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = DOR_horror_and_fear
+		icon = GFX_goal_sauron_eye
+		x = 0
+		y = 5
+		relative_position_id = DOR_align_with_the_dark_lord
+		cost = 5
+		prerequisite = {
+			focus = DOR_arm_the_grumbled_peasantry
+			focus = DOR_easterling_pressure
+			focus = DOR_praise_sauron
+		}
+		available = {
+		}
+		completion_reward = {
+			add_popularity = {
+    			ideology = belligerent
+    			popularity = 0.10
+			}
+			hidden_effect = {
+				division_template = {
+    name = "Dorwinion Fighters"
+	priority = 0
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+    }
+	support = {
+		artillery = { x = 0 y = 0 }
+	} }
+				capital_scope = {
+				create_unit = {
+    				division = "name = \"Dorwinion Fighters\" division_template = \"Dorwinion Fighters\" start_experience_factor = 0.2"
+   					 owner = DOR
+					 count = 12
+						}
+					}
+			}
+				start_civil_war = {
+    				ruling_party = belligerent
+                    ideology = unaligned
+    				size = 0.5
+    				capital = 137
+    				states = {
+        				137 103
+    				}
+    				keep_political_party_members = yes
+				}
+				if = {
+					limit = {
+						has_completed_focus = DOR_spread_dissent
+					}
+					add_manpower = 2500
+				}
+				if = {
+					limit = {
+						has_completed_focus = DOR_arm_the_grumbled_peasantry
+					}
+				division_template = {
+    name = "Peasant Army"
+	priority = 0
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+    } }
+	capital_scope = {
+				create_unit = {
+    				division = "name = \"Peasant Army\" division_template = \"Peasant Army\" start_experience_factor = 0.3"
+   					 owner = DOR
+					 count = 4
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = DOR_smuggle_equipment
+					}
+					add_equipment_to_stockpile = {
+   						type = infantry_equipment
+    					amount = 2500
+    					producer = RHU
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = DOR_smuggle_easterling_fighters
+					}
+					division_template = {
+    name = "Easterling Fighters"
+	is_locked = yes
+    division_cap = 1 
+    regiments = {
+        easterling_infantry_expanded = { x = 0 y = 0 }
+        easterling_infantry_expanded = { x = 0 y = 1 }
+        easterling_infantry_expanded = { x = 1 y = 0 }
+        easterling_infantry_expanded = { x = 1 y = 1 }
+        easterling_infantry_expanded = { x = 2 y = 0 }
+        easterling_infantry_expanded = { x = 2 y = 1 }
+        easterling_infantry_expanded = { x = 3 y = 0 }
+        easterling_infantry_expanded = { x = 3 y = 1 }
+    } }
+	capital_scope = {
+				create_unit = {
+    				division = "name = \"Easterling Fighter\" division_template = \"Easterling Fighters\" start_experience_factor = 0.3"
+   					 owner = DOR
+					 count = 1
+				}
+			}
+				}
+				if = {
+					limit = {
+						has_completed_focus = DOR_smuggle_orcs_underground
+					}
+					division_template = {
+    name = "Mordorian Orcs"
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+        infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+    } }
+	capital_scope = {
+				create_unit = {
+    				division = "name = \"Mordorian Orcs\" division_template = \"Mordorian Orcs\" start_experience_factor = 0.3"
+   					 owner = DOR
+					 count = 3
+				}
+			}
+				}
+				if = {
+					limit = {
+						has_completed_focus = DOR_orc_generals
+					}
+					add_field_marshal_role = {
+  character = DOR_skibi
+  skill = 3
+  attack_skill = 3
+  defense_skill = 1
+  planning_skill = 4
+  logistics_skill = 3
+}
+					add_corps_commander_role = {
+    Character = DOR_dito
+    skill = 2
+    attack_skill = 3
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 2
+}
+					add_corps_commander_role = {
+    Character = DOR_ilet
+    skill = 2
+    attack_skill = 1
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 1
+}
+				}
+				if = {
+					limit = {
+						has_completed_focus = DOR_infiltrate_the_dorwinion_army
+					}
+					division_template = {
+    name = "Elite Vanguard Unit"
+	priority = 2
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+    }
+	support = {
+		artillery = { x = 0 y = 0 }
+	} }
+	capital_scope = {
+				create_unit = {
+    				division = "name = \"Elite Vanguard Unit\" division_template = \"Elite Vanguard Unit\" start_experience_factor = 1"
+   					 owner = DOR
+					 count = 2
+					}
+				}
+				}
+				if = {
+					limit = {
+						has_completed_focus = DOR_raid_the_armory
+					}
+					add_equipment_to_stockpile = {
+   						type = infantry_equipment
+    					amount = 2500
+    					producer = DOR
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = DOR_plant_the_seeds_of_distrust
+					}
+					add_manpower = 2500
+				}
+				if = {
+					limit = {
+						has_completed_focus = DOR_easterling_pressure
+					}
+					add_timed_idea = {
+						idea = DOR_easterling_pressure
+						days = 140
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = DOR_praise_sauron
+					}
+					add_timed_idea = {
+						idea = DOR_praise_sauron
+						days = 140
+					}
+				}
+		}
+	}
+	focus = {
+		id = DOR_honor_morgoth
+		icon = GFX_goal_mor_servant_of_melkor_morgoth
+		x = 0
+		y = 1
+		relative_position_id = DOR_horror_and_fear
+		cost = 10
+		prerequisite = {
+			focus = DOR_horror_and_fear
+		}
+		available = {
+			NOT = {
+				has_civil_war = yes
+			}
+		}
+		completion_reward = {
+			add_ideas = MOR_servant_morgoth
+		}
+	}
+	focus = {
+		id = DOR_secrets_of_the_orcs
+		icon = GFX_goal_lth_orc_warrior
+		x = 2
+		y = 1
+		relative_position_id = DOR_horror_and_fear
+		cost = 10
+		prerequisite = {
+			focus = DOR_horror_and_fear
+		}
+		prerequisite = {
+			focus = DOR_praise_sauron
+		}
+		available = {
+			NOT = {
+				has_civil_war = yes
+			}
+		}
+		completion_reward = {
+			add_popularity = {
+    			ideology = belligerent
+    			popularity = 0.15
+			}
+			add_stability = -0.05
+			lotr_switch_to_orcs = yes
+		}
+	}
+	focus = {
+		id = DOR_an_orcish_dominion
+		icon = GFX_goal_mor_azog_orc_revolt
+		x = 3
+		y = 2
+		relative_position_id = DOR_honor_morgoth
+		cost = 10
+		prerequisite = {
+			focus = DOR_secrets_of_the_orcs
+		}
+		prerequisite = {
+			focus = DOR_honor_morgoth
+		}
+		available = {
+		}
+		completion_reward = {
+			promote_character = {
+    			character = DOR_agrol
+    			ideology = domineering
+			}
+			add_field_marshal_role={
+			character = DOR_agrol
+			traits = { }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+		}
+		}
+	}
+	focus = {
+		id = DOR_align_with_the_new_world_order
+		icon = GFX_goal_lth_sauron_unleashed_with_ring
+		x = -2
+		y = 1
+		relative_position_id = DOR_horror_and_fear
+		cost = 10
+		prerequisite = {
+			focus = DOR_horror_and_fear
+		}
+		prerequisite = {
+			focus = DOR_arm_the_grumbled_peasantry
+			focus = DOR_easterling_pressure
+		}
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+			NOT = {
+				has_civil_war = yes
+			}
+		}
+		completion_reward = {
+			add_popularity = {
+    			ideology = belligerent
+    			popularity = 0.15
+			}
+			add_stability = -0.05
+			MOR = {
+			country_event = {
+				id = mordor.52
+			}
+		}
+		}
+	}
+	focus = {
+		id = DOR_faithful_servant
+		icon = GFX_goal_generic_soldier_rearmament
+		x = -3
+		y = 2
+		relative_position_id = DOR_honor_morgoth
+		cost = 10
+		prerequisite = {
+			focus = DOR_align_with_the_new_world_order
+		}
+		prerequisite = {
+			focus = DOR_honor_morgoth
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOR_faithful_servant
+		}
+	}
+	focus = {
+		id = DOR_alcohol_experiments
+		icon = GFX_goal_generic_alcohol_bottles
+		x = 0
+		y = 1
+		relative_position_id = DOR_honor_morgoth
+		cost = 5
+		prerequisite = {
+			focus = DOR_honor_morgoth
+		}
+		available = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+    				type = synthetic_refinery
+    				level = 1
+    				instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+    				type = synthetic_refinery
+    				level = 1
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_liquid_courage
+		icon = GFX_focus_prc_infiltration
+		x = 0
+		y = 1
+		relative_position_id = DOR_alcohol_experiments
+		cost = 10
+		prerequisite = {
+			focus = DOR_alcohol_experiments
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOR_liquid_courage
+		}
+	}
+	focus = {
+		id = DOR_ashes_of_the_past
+		icon = GFX_goal_gon_gondor_needs_no_king_crown_broken
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = DOR_align_with_the_dark_lord
+				}
+				NOT = {
+					has_completed_focus = DOR_steady_as_it_goes
+				}
+			}
+		}
+
+		x = 8
+		y = 1
+		relative_position_id = DOR_a_change_in_course
+		cost = 10
+		prerequisite = {
+			focus = DOR_a_change_in_course
+		}
+		mutually_exclusive = {
+			focus = DOR_align_with_the_dark_lord
+		}
+		available = {
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = DOR_a_change_in_course_2
+				add_idea = DOR_a_change_in_course_4
+			}
+			modify_timed_idea = {
+    			idea = DOR_a_change_in_course_4
+   				days = 70
+			}
+		}
+	}
+	focus = {
+		id = DOR_denounce_denethor
+		icon = GFX_goal_mor_wargoal_gondor
+		x = -2
+		y = 1
+		relative_position_id = DOR_ashes_of_the_past
+		cost = 10
+		prerequisite = {
+			focus = DOR_ashes_of_the_past
+		}
+		mutually_exclusive = {
+			focus = DOR_maintain_the_status_quo
+		}
+		available = {
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					GON = {
+						has_country_leader = {
+							character = GON_denethor
+							ruling_only = yes
+						}
+					}
+				}
+				add_opinion_modifier = {
+    			target = GON
+    			modifier = medium_decrease
+				}
+			}
+			else = {
+				add_political_power = 50
+			}
+		}
+	}
+	focus = {
+		id = DOR_honor_isildurs_heritage
+		icon = GFX_goal_arnor
+		x = -2
+		y =1
+		relative_position_id = DOR_denounce_denethor
+		cost = 5
+		prerequisite = {
+			focus = DOR_denounce_denethor
+		}
+		prerequisite = {
+		}
+		available = {
+		}
+		completion_reward = {
+			add_popularity = {
+    			ideology = cooperative
+    			popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = DOR_send_an_ambassador_to_rohan
+		icon = GFX_goal_ROH_befriend_dorwinion_rohan
+		x = -2
+		y = 1
+		relative_position_id = DOR_honor_isildurs_heritage
+		cost = 5
+		prerequisite = {
+		}
+		prerequisite = {
+			focus = DOR_honor_isildurs_heritage
+		}
+		mutually_exclusive = {
+		}
+		available = {
+			ROH = {
+				OR = {
+					has_completed_focus = ROH_purge_the_rot
+					has_completed_focus = ROH_let_gandalf_in
+				}
+			}
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+    			target = ROH
+    			modifier = large_increase
+			}
+		}
+	}
+	focus = {
+		id = DOR_mutual_defense_agreement
+		icon = GFX_goal_goal_generic_defence
+		x = -1
+		y = 1
+		relative_position_id = DOR_send_an_ambassador_to_rohan
+		cost = 5
+		prerequisite = {
+			focus = DOR_send_an_ambassador_to_rohan
+		}
+		available = {
+		}
+		completion_reward = {
+			add_popularity = {
+    			ideology = cooperative
+    			popularity = 0.05
+			}
+			add_stability = 0.05
+			diplomatic_relation = {
+    			country = ROH
+    			relation = guarantee
+    			active = yes
+			}
+			ROH = {
+				diplomatic_relation = {
+    			country = ROOT
+    			relation = guarantee
+    			active = yes
+			}
+			}
+		}
+	}
+	focus = {
+		id = DOR_mutual_trade_agreement
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 1
+		y = 1
+		relative_position_id = DOR_send_an_ambassador_to_rohan
+		cost = 5
+		prerequisite = {
+			focus = DOR_send_an_ambassador_to_rohan
+		}
+		available = {
+		}
+		completion_reward = {
+			add_popularity = {
+    			ideology = cooperative
+    			popularity = 0.05
+			}
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				give_market_access = ROH
+					ROH = {
+					give_market_access = ROOT
+				}
+			}
+			add_resource = {
+    		type = chromium
+    		amount = 20
+    		state = 137
+			}
+			ROH = {
+			add_resource = {
+    		type = oil
+    		amount = 20
+    		state = 183
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_formalize_the_alliance
+		icon = GFX_goal_generic_alliance
+		x = 0
+		y = 2
+		relative_position_id = DOR_send_an_ambassador_to_rohan
+		cost = 5
+		prerequisite = {
+			focus = DOR_mutual_defense_agreement
+		}
+		prerequisite = {
+			focus = DOR_mutual_trade_agreement
+		}
+		available = {
+			NOT = {
+				ROH = {
+					is_in_faction = yes
+				}
+			}
+			NOT = {
+				is_puppet = yes
+			}
+			ROH = {
+				has_completed_focus = ROH_alliance_building
+			}
+		}
+		completion_reward = {
+			add_popularity = {
+    			ideology = cooperative
+    			popularity = 0.1
+			}
+			create_faction = SZRELEDORASAXIS
+			ROH = {
+				country_event = generic.5
+			}
+		}
+	}
+	focus = {
+		id = DOR_preempt_the_strategic_threat
+		icon = GFX_goal_orthanc_destroyed
+		x = 0
+		y = 1
+		relative_position_id = DOR_formalize_the_alliance
+		cost = 10
+		will_lead_to_war_with = ISE
+		prerequisite = {
+			focus = DOR_formalize_the_alliance
+		}
+		bypass = {
+			NOT = {
+				country_exists = ISE
+			}
+		}
+		available = {
+			DOR = {
+			OR = {
+				any_allied_country = {
+					is_neighbor_of = ISE
+				}
+				is_neighbor_of = ISE
+			}
+			}
+		}
+		completion_reward = {
+			create_wargoal = {
+    		type = topple_government
+   			 target = ISE
+			}
+		}
+	}
+	focus = {
+		id = DOR_maintain_the_status_quo
+		icon = GFX_goal_gondor
+		x = 2
+		y = 1
+		relative_position_id = DOR_ashes_of_the_past
+		cost = 10
+		prerequisite = {
+			focus = DOR_ashes_of_the_past
+		}
+		mutually_exclusive = {
+			focus = DOR_denounce_denethor
+		}
+		available = {
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					GON = {
+						has_country_leader = {
+							character = GON_denethor
+							ruling_only = yes
+						}
+					}
+				}
+				add_opinion_modifier = {
+    			target = GON
+    			modifier = large_increase
+				}
+			}
+			else = {
+				add_political_power = 50
+			}
+		}
+	}
+	focus = {
+		id = DOR_align_with_denethor
+		icon = GFX_goal_gondor_denethor
+		x = 2
+		y =1
+		relative_position_id = DOR_maintain_the_status_quo
+		cost = 5
+		prerequisite = {
+			focus = DOR_maintain_the_status_quo
+		}
+		prerequisite = {
+		}
+		available = {
+		}
+		completion_reward = {
+			add_popularity = {
+    			ideology = unaligned
+    			popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = DOR_revive_the_eastern_outpost_concept
+		icon = GFX_goal_gon_isildur_crown_with_map
+		x = 0
+		y = 2
+		relative_position_id = DOR_ashes_of_the_past
+		cost = 5
+		will_lead_to_war_with = DAG
+		prerequisite = {
+			focus = DOR_denounce_denethor
+			focus = DOR_maintain_the_status_quo
+		}
+		bypass = {
+			is_puppet = yes
+		}
+		prerequisite = {
+		}
+		available = {
+		}
+		completion_reward = {
+				every_state = {
+					limit = {
+						is_core_of = DAG
+					}
+					add_claim_by = DOR
+				}
+				create_wargoal = {
+    		type = annex_everything
+   			 target = DAG
+			}
+		}
+	}
+	focus = {
+		id = DOR_propose_unification_to_rhovanion
+		icon = GFX_goal_ROH_loth_ise_alliance_unity
+		x = 0
+		y = 1
+		relative_position_id = DOR_revive_the_eastern_outpost_concept
+		cost = 10
+		prerequisite = {
+			focus = DOR_revive_the_eastern_outpost_concept
+		}
+		available = {
+			RHO = {
+				exists = yes
+			}
+			RHO = {
+				OR = {
+					is_puppet = no
+					is_puppet_of = DOR
+				}
+			}
+			RHO = {
+				OR = {
+					is_in_faction = no
+					is_in_faction_with = DOR
+				}
+			}
+			is_puppet = no
+		}
+		completion_reward = {
+			RHO = {
+				country_event = dorwinion.12
+			}
+		}
+	}
+	focus = {
+		id = DOR_invite_isildur_loyalists
+		icon = GFX_goal_gondor
+		x = 0
+		y = 2
+		relative_position_id = DOR_denounce_denethor
+		cost = 5
+		prerequisite = {
+			focus =  DOR_honor_isildurs_heritage
+		}
+		prerequisite = {
+			focus = DOR_revive_the_eastern_outpost_concept
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOR_isildur_loyalists
+		}
+	}
+	focus = {
+		id = DOR_increase_joint_collaboration
+		icon = GFX_goal_union_of_working_orc_class
+		x = 0
+		y = 2
+		relative_position_id = DOR_maintain_the_status_quo
+		cost = 5
+		prerequisite = {
+			focus = DOR_revive_the_eastern_outpost_concept
+		}
+		prerequisite = {
+			focus = DOR_align_with_denethor
+		}
+		available = {
+		}
+		completion_reward = {
+			add_to_tech_sharing_group = gondor_research
+		}
+	}
+	focus = {
+		id = DOR_empower_the_exiles
+		icon = GFX_goal_ROH_call_a_landsmeet_assembly_gathering
+		x = -1
+		y = 1
+		relative_position_id = DOR_invite_isildur_loyalists
+		cost = 5
+		prerequisite = {
+			focus = DOR_invite_isildur_loyalists
+		}
+		available = {
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = DOR_isildur_loyalists
+				add_idea = DOR_isildur_loyalists_2
+			}
+		}
+	}
+	focus = {
+		id = DOR_our_purpose
+		icon = GFX_goal_ROH_liberate_the_people_commoners_peasants
+		x = 1
+		y = 1
+		relative_position_id = DOR_increase_joint_collaboration
+		cost = 5
+		prerequisite = {
+			focus = DOR_increase_joint_collaboration
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOR_volunteer_fighters
+		}
+	}
+	
+	focus = {
+		id = DOR_gondorian_expertise
+		icon = GFX_goal_gon_ithilien_soldier_of_gondor_shield
+		x = 0
+		y = 2
+		relative_position_id = DOR_revive_the_eastern_outpost_concept
+		cost = 10
+		prerequisite = {
+			focus = DOR_invite_isildur_loyalists
+			focus = DOR_increase_joint_collaboration
+		}
+		available = {
+		}
+		completion_reward = {
+			army_experience = 25
+			add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = cat_grand_battle_plan
+			category = cat_superior_firepower
+			}
+			
+		}
+	}
+	focus = {
+		id = DOR_weather_the_storm
+		icon = GFX_goal_ELU_army_restoration_act_soldiers_dwarf
+		x = 0
+		y = 2
+		relative_position_id = DOR_increase_joint_collaboration
+		cost = 5
+		prerequisite = {
+			focus = DOR_our_purpose
+		}
+		prerequisite = {
+			focus = DOR_gondorian_expertise
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOR_weather_the_storm
+		}
+	}
+	focus = {
+		id = DOR_prepare_a_place_for_him
+		icon = GFX_goal_lth_hegemony_crown
+		x = 0
+		y = 2
+		relative_position_id = DOR_invite_isildur_loyalists
+		cost = 5
+		prerequisite = {
+			focus = DOR_empower_the_exiles
+		}
+		prerequisite = {
+			focus = DOR_gondorian_expertise
+		}
+		available = {
+			cooperative > 0.5
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = DOR_isildur_loyalists_2
+				add_idea = DOR_isildur_loyalists_3
+			}
+			set_cosmetic_tag = DOR_constitution
+			set_country_leader_name = {
+				ideology = cooperative
+				name = DOR_domrich_steward
+			}
+			set_politics = {
+				ruling_party = cooperative
+			}
+			add_popularity = {
+    			ideology = cooperative
+    			popularity = 0.15
+			}
+		}
+	}
+	focus = {
+		id = DOR_invite_aragorn_to_szrel_kain
+		icon = GFX_goal_ELU_invite_durinvii_to_the_throne_treaty
+		x = 0
+		y = 4
+		relative_position_id = DOR_honor_isildurs_heritage
+		cost = 10
+		prerequisite = {
+			focus = DOR_formalize_the_alliance
+		}
+		prerequisite = {
+			focus = DOR_prepare_a_place_for_him
+		}
+		available = {
+		}
+		completion_reward = {
+			random_list = {
+				65 = {
+					SHI = {
+						if = {
+							limit = {
+								FS_aragorn = { ring_is_fs_member = yes }
+							}
+
+							add_to_array = { global.fs_eventlog_prefix_targets = 0 }
+							add_to_array = { global.fs_eventlog_suffix_targets = 0 }
+							add_to_array = { global.fs_eventlog = token:fs_event_aragorn_leaves_for_gondor }
+							ring_trim_eventlog = yes
+
+							FS_aragorn = { ring_remove_member_from_fellowship = yes }
+						}
+					}
+					set_global_flag = aragorn_persuaded
+					custom_effect_tooltip = GON_aragorn_leaves_the_fellowship
+				}
+				35 = {
+					add_political_power = -100
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_coronate_aragorn
+		icon = GFX_goal_gondor_king_aragorn
+		x = 0
+		y = 1
+		relative_position_id = DOR_invite_aragorn_to_szrel_kain
+		cost = 5
+		prerequisite = {
+			focus = DOR_invite_aragorn_to_szrel_kain
+		}
+		bypass = {
+			GON = {
+				has_completed_focus = GON_invite_aragorn_to_minas_tirith 
+			}
+		}
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+			
+		custom_trigger_tooltip = {
+			tooltip = ring_aragorn_is_alive_tt
+			NOT = { ring_aragorn_is_dead = yes }
+		}
+		custom_trigger_tooltip = {
+			tooltip = ring_aragorn_not_in_fellowship_tt
+			NOT = { ring_aragorn_in_fellowship = yes }
+		}
+		}
+		completion_reward = {
+			add_popularity = {
+    			ideology = cooperative
+    			popularity = 0.15
+			}
+
+			promote_character = {
+    			character = DOR_aragorn_ii
+    			ideology = protective
+			}
+			add_field_marshal_role = {
+  				character = DOR_aragorn_ii
+  				traits={ brilliant_strategist }
+            	skill = 8
+				attack_skill = 6
+				defense_skill = 6
+				planning_skill = 7
+				logistics_skill = 7
+			}
+		}
+	}
+	focus = {
+		id = DOR_reunite_with_aragorn
+		icon = GFX_goal_generic_royal_handshake_deal
+		x = 1
+		y = 1
+		relative_position_id = DOR_coronate_aragorn
+		cost = 10
+		prerequisite = {
+			focus = DOR_coronate_aragorn
+		}
+		mutually_exclusive = {
+			focus = DOR_reinstate_the_heir_of_isildur
+		}
+		bypass = {
+			OR = {
+				GON = {
+				exists = no
+				}
+				GON = {
+				has_completed_focus = GON_delegitimize_aragorns_claim
+				}
+			}
+		}
+		available = {
+			GON = {
+			has_completed_focus = GON_crown_aragorn_king
+			NOT = { 
+				has_war_with = DOR
+			}
+			NOT = { 
+				has_completed_focus = DOR_standing_alone
+			}
+		}
+		is_puppet = no
+		}
+		completion_reward = {
+			GON = {
+				country_event = dorwinion.11
+			}
+			if = {
+				limit = {
+					ROH = {
+						is_in_faction_with = DOR
+					}
+				}
+				GON = {
+					faction_leader = {
+						add_to_faction = ROH
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_reinstate_the_heir_of_isildur
+		icon = GFX_goal_mor_wargoal_gondor
+		x = -1
+		y = 1
+		relative_position_id = DOR_coronate_aragorn
+		cost = 10
+		will_lead_to_war_with = GON
+		prerequisite = {
+			focus = DOR_coronate_aragorn
+		}
+		bypass = {
+			NOT = {
+				country_exists = GON
+			}
+		}
+		available = {
+			has_country_leader = {
+						character = DOR_aragorn_ii
+						ruling_only = yes
+					}
+			is_puppet = no
+			NOT = {
+				is_in_faction_with = GON
+			}
+			GON = {
+				OR = {
+					has_country_leader = {
+						character = GON_denethor
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = GON_ivriniel
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = GON_gothmog
+						ruling_only = yes
+					}
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = DOR_reunite_with_aragorn
+		}
+		completion_reward = {
+			create_wargoal = {
+    			type = puppet_wargoal_focus
+   			 	target = GON
+			}
+		}
+	}
+	focus = {
+		id = DOR_clear_the_southern_marshes
+		icon = GFX_goal_generic_position_armies
+		x = 0
+		y = 1
+		relative_position_id = DOR_gondorian_expertise
+		cost = 10
+		prerequisite = {
+			focus = DOR_gondorian_expertise
+			focus = DOR_our_purpose
+		}
+		available = {
+		}
+		completion_reward = {
+			if = {
+				every_state = {
+				limit = {
+					is_core_of = DAG
+					is_controlled_by = ROOT
+				}
+				
+				add_compliance = 50
+			}
+			}
+			if = {
+				limit = {
+					DOR = {
+						owns_state = 100
+					}
+				}
+				100 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+    			type = infrastructure
+    			level = 1
+    			instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						owns_state = 205
+					}
+				}
+				205 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+    			type = infrastructure
+    			level = 1
+    			instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						owns_state = 206
+					}
+				}
+				206 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+    			type = infrastructure
+    			level = 1
+    			instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						owns_state = 203
+					}
+				}
+				203 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+    			type = infrastructure
+    			level = 1
+    			instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						owns_state = 204
+					}
+				}
+				204 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+    			type = infrastructure
+    			level = 1
+    			instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_the_southern_supplies
+		icon = GFX_goal_lth_food_resource_storage
+		x = 0
+		y = 1
+		relative_position_id = DOR_clear_the_southern_marshes
+		cost = 5
+		prerequisite = {
+			focus = DOR_clear_the_southern_marshes
+		}
+		available = {
+		}
+		bypass = {
+			DOR = {
+				NOT = {
+					owns_state = 100
+				}
+				NOT = {
+					owns_state = 205
+				}
+				
+			}
+		}
+		completion_reward = {
+			build_railway = {
+    level = 1
+    build_only_on_allied = yes
+    controller_priority = {
+        base = 1
+        modifier = {
+            tag = DOR
+            add = 2
+        }
+    }
+    fallback = yes
+    path = { 4865 2395 2856 2009 2499 1097 2371 6491 1470 }
+    start_province = 4865
+    target_province = 1470
+}
+	100 = {
+		add_building_construction = {
+    type = supply_node
+    level = 1
+    instant_build = yes
+    province = 2009
+	}
+}
+	205 = {
+		add_building_construction = {
+    type = supply_node
+    level = 1
+    instant_build = yes
+    province = 1470
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_secure_the_black_gate
+		icon = GFX_goal_mor_mordor_landscape
+		x = -1
+		y = 1
+		relative_position_id = DOR_the_southern_supplies
+		cost = 10
+		prerequisite = {
+			focus = DOR_the_southern_supplies
+		}
+		bypass = {
+			owns_state = 204
+		}
+		available = {
+			owns_state = 203
+			MOR = {
+				owns_state = 204
+			}
+		}
+		completion_reward = {
+			start_border_war = {
+    change_state_after_war = no
+    attacker = {
+        state = 203
+        num_provinces = 6
+    }	
+    defender = {
+        state = 204
+        num_provinces = 4
+    }
+}
+		}
+	}
+	focus = {
+		id = DOR_war_with_mordor
+		icon = GFX_goal_rhu_wargoal_mordor
+		x = 0
+		y = 1
+		relative_position_id = DOR_secure_the_black_gate
+		cost = 10
+		will_lead_to_war_with = MOR
+		prerequisite = {
+		}
+		prerequisite = {
+			focus = DOR_secure_the_black_gate
+		}
+		bypass = {
+			NOT = {
+				country_exists = MOR
+			}
+		}
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+			NOT = {
+				is_in_faction_with = MOR
+			}
+		}
+		completion_reward = {
+			create_wargoal = {
+    		type = topple_government
+   			 target = MOR
+			}
+		}
+	}
+		focus = {
+		id = DOR_desert_specialists
+		icon = GFX_focus_generic_camel_corps
+		x = 1
+		y = 1
+		relative_position_id = DOR_the_southern_supplies
+		cost = 10
+		prerequisite = {
+			focus = DOR_the_southern_supplies
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOR_desert_specialists
+		}
+	}
+	focus = {
+		id = DOR_war_with_rhun
+		icon = GFX_goal_mor_wargoal_rhun
+		x = 0
+		y = 1
+		relative_position_id = DOR_desert_specialists
+		cost = 10
+		will_lead_to_war_with = RHU
+		prerequisite = {
+			focus = DOR_desert_specialists
+		}
+		mutually_exclusive = {
+		}
+		bypass = {
+			NOT = {
+				country_exists = RHU
+			}
+		}
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+			NOT = {
+				is_in_faction_with = RHU
+			}
+		}
+		completion_reward = {
+			create_wargoal = {
+    			type = take_state_focus
+   			 	target = RHU
+				generator = {
+					104 124 131
+				}
+			}
+		}
+	}
+		focus = {
+		id = DOR_expand_the_domain
+		icon = GFX_goal_goal_generic_more_territorial_claims
+		x = 2
+		y = 1
+		relative_position_id = DOR_align_with_denethor
+		cost = 10
+		prerequisite = {
+		}
+		prerequisite = {
+			focus = DOR_honor_isildurs_heritage
+		}
+		mutually_exclusive = {
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOR_expand_the_domain
+		}
+	}
+	focus = {
+		id = DOR_collaborate_with_rhovanion
+		icon = GFX_goal_lth_defense_deal
+		x = -1
+		y = 1
+		relative_position_id = DOR_expand_the_domain
+		cost = 10
+		prerequisite = {
+			focus = DOR_expand_the_domain
+		}
+		prerequisite = {
+			focus = DOR_increase_joint_collaboration
+		}
+		available = {
+		}
+		mutually_exclusive = {
+			focus = DOR_cull_the_weak
+		}
+		completion_reward = {
+			
+			RHO = {
+				add_to_tech_sharing_group = gondor_research
+			}
+
+			diplomatic_relation = {
+    			country = RHO
+    			relation = guarantee
+    			active = yes
+			}
+			RHO = {
+				diplomatic_relation = {
+    			country = ROOT
+    			relation = guarantee
+    			active = yes
+			}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+    				type = industrial_complex
+    				level = 1
+    				instant_build = yes
+				}
+			}
+			RHO = {
+				random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+    				type = industrial_complex
+    				level = 1
+    				instant_build = yes
+				}
+			}
+			}
+		}
+	}
+	focus = {
+		id = DOR_assist_rhovanion
+		icon = GFX_goal_generic_deal_reach_out_to_military
+		x = -1
+		y = 1
+		relative_position_id = DOR_collaborate_with_rhovanion
+		cost = 15
+		prerequisite = {
+			focus = DOR_cull_the_weak
+		}
+		available = {
+		}
+		completion_reward = {
+			RHO = {
+				remove_ideas = {
+					RHO_kingdoms_remnant
+				}
+			}
+			add_political_power = 100
+			add_opinion_modifier = {
+    			target = RHO
+    			modifier = large_increase
+			}
+			RHO = {
+				add_opinion_modifier = {
+    			target = DOR
+    			modifier = large_increase
+			}
+			}
+
+		}
+	}
+	focus = {
+		id = DOR_cull_the_weak
+		icon = GFX_goal_ROH_heavy_cavalry_horse_armor
+		x = 1
+		y = 1
+		relative_position_id = DOR_expand_the_domain
+		cost = 10
+		will_lead_to_war_with = RHO
+		prerequisite = {
+			focus = DOR_expand_the_domain
+		}
+		bypass = {
+			NOT = {
+				country_exists = RHO
+			}
+		}
+		available = {
+			is_puppet = no
+			NOT = {
+				is_in_faction_with = RHO
+			}
+		}
+		mutually_exclusive = {
+			focus = DOR_collaborate_with_rhovanion
+		}
+		completion_reward = {
+			create_wargoal = {
+    			type = annex_everything
+   			 	target = RHO
+			}
+		}
+	}
+	focus = {
+		id = DOR_integrate_rhovanion
+		icon = GFX_goal_ROH_integrate_the_settlements
+		x = 1
+		y = 1
+		relative_position_id = DOR_cull_the_weak
+		cost = 10
+		prerequisite = {
+			focus = DOR_cull_the_weak
+		}
+		available = {
+			controls_state = 97
+		}
+		completion_reward = {
+			97 = {
+					add_core_of = DOR
+				}
+		}
+	}
+	focus = {
+		id = DOR_the_eastern_flank
+		icon = GFX_goal_lth_defense_guardians
+		x = 0
+		y = 2
+		relative_position_id = DOR_expand_the_domain
+		cost = 5
+		prerequisite = {
+			focus = DOR_collaborate_with_rhovanion
+			focus = DOR_cull_the_weak
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOR_rhun_doctrine_defensive
+		}
+	}
+	focus = {
+		id = DOR_prepare_a_future
+		icon = GFX_goal_generic_population_growth
+		x = 0
+		y = 1
+		relative_position_id = DOR_assist_rhovanion
+		cost = 10
+		prerequisite = {
+			focus = DOR_weather_the_storm
+		}
+		prerequisite = {
+			focus = DOR_the_eastern_flank
+		}
+		available = {
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_ideas = DOR_traditional_order
+			
+		}
+	}
+	focus = {
+		id = DOR_dor_rhunen
+		icon = GFX_goal_gon_isildur_crown_with_map
+		x = 0
+		y = 5
+		relative_position_id = DOR_gondorian_expertise
+		cost = 10
+		prerequisite = {
+			focus = DOR_war_with_mordor
+			focus = DOR_war_with_rhun
+		}
+		prerequisite = {
+		}
+		available = {
+		}
+		completion_reward = {
+			set_cosmetic_tag = DOR_province
+			add_political_power = 120
+			add_ideas = DOR_dor_rhunen
+		}
+	}
+	
+
+######################################
+
+
+
+###########
+
+	focus = {
+		id = DOR_prepare_for_war
+		icon = GFX_goal_ROH_wartime_economy_blacksmith_forging
+		x = 0
+		y = 1
+		relative_position_id = DOR_liquid_courage
+		cost = 10
+		will_lead_to_war_with = DAG
+		prerequisite = {
+			focus = DOR_faithful_servant
+			focus = DOR_an_orcish_dominion
+		}
+		available = {
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = DOR_war_preparations
+				days = 182
+			}
+
+			
+		}
+	}
+
+
+
+
+
+
+	focus = {
+		id = DOR_the_path_forward
+		icon = GFX_focus_generic_total_war
+		x = -2
+		y = 1
+		relative_position_id = DOR_prepare_for_war
+		cost = 5
+		prerequisite = {
+			focus = DOR_prepare_for_war
+		}
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = DOR_the_unholy_alliance
+		icon = GFX_goal_mordor_deal
+		x = 1
+		y = 1
+		relative_position_id = DOR_the_path_forward
+		cost = 10
+		mutually_exclusive = {
+			focus = DOR_standing_alone
+		}
+		available = {
+			MOR = {
+			has_government = belligerent 
+			is_faction_leader = yes 
+			}
+			has_government = belligerent
+			NOT = {
+				has_war_with = MOR
+			}
+			NOT = {
+				is_puppet = yes
+			}
+			NOT = {
+				has_war = yes
+			}
+			NOT = {
+				is_in_faction = yes
+			}
+		}
+		prerequisite = {
+			focus = DOR_the_path_forward
+		}
+		bypass = {
+			DOR = {
+				is_in_faction_with = MOR
+			}
+		}
+		completion_reward = {
+			MOR = {
+			country_event = {
+				id = mordor.52
+			}
+		}
+		}
+	}
+	focus = {
+		id = DOR_invite_rhun
+		icon = GFX_goal_lth_election_ballot
+		x = 1
+		y = 1
+		relative_position_id = DOR_the_unholy_alliance
+		cost = 5
+		prerequisite = {
+			focus = DOR_the_unholy_alliance
+		}
+		mutually_exclusive = {
+			focus = DOR_bring_order_to_rhun
+		}
+		available = {
+			NOT = {
+				RHU = {
+					is_in_faction = yes
+				}
+			}
+		}
+		completion_reward = {
+			RHU = {
+				country_event = generic.5
+			}
+		}
+	}
+		focus = {
+		id = DOR_the_great_leap
+		icon = GFX_goal_goal_generic_territory_or_war
+		x =0
+		y = 2
+		relative_position_id = DOR_the_path_forward
+		cost = 5
+		prerequisite = {
+			focus = DOR_the_unholy_alliance
+			focus = DOR_standing_alone
+		}
+		available = {
+		}
+		completion_reward = {
+			every_state = {
+					limit = {
+						is_core_of = DAG
+					}
+					add_claim_by = DOR
+				}
+				create_wargoal = {
+    		type = annex_everything
+   			 target = DAG
+			}
+		}
+	}
+	focus = {
+		id = DOR_towards_north
+		icon = GFX_goal_mor_wargoal_erebor
+		x = -1
+		y = 1
+		relative_position_id = DOR_the_great_leap
+		cost = 5
+		mutually_exclusive = {
+			focus = DOR_towards_south
+		}
+		prerequisite = {
+		}
+		prerequisite = {
+			focus = DOR_the_great_leap
+		}
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.1
+			127 = {
+				add_claim_by = DOR
+			}
+			207 = {
+				add_claim_by = DOR
+			}
+			209 = {
+				add_claim_by = DOR
+			}
+		}
+	}
+	focus = {
+		id = DOR_towards_south
+		icon = GFX_goal_mor_wargoal_rohan
+		x = 5
+		y = 1
+		relative_position_id = DOR_the_great_leap
+		cost = 5
+		mutually_exclusive = {
+			focus = DOR_towards_north
+		}
+		prerequisite = {
+			focus = DOR_the_great_leap
+		}
+		available = {
+			NOT = {
+				has_completed_focus = DOR_honor_isildurs_heritage
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = DOR_crush_rhovanion
+		icon = GFX_goal_ROH_heavy_cavalry_horse_armor
+		x = 2
+		y = 2
+		relative_position_id = DOR_the_great_leap
+		cost = 10
+		will_lead_to_war_with = RHO
+		prerequisite = {
+			focus = DOR_towards_north
+			focus = DOR_towards_south
+		}
+		available = {
+			is_puppet = no
+			NOT = {
+				is_in_faction_with = RHO
+			}
+			RHO = {
+				exists = yes
+			}
+		}
+		mutually_exclusive = {
+		}
+		completion_reward = {
+			create_wargoal = {
+    			type = annex_everything
+   			 	target = RHO
+			}
+		}
+	}
+		focus = {
+		id = DOR_send_an_ambassador_to_grima
+		icon = GFX_goal_ROH_the_new_regime_grima_wormtongue_king
+		x = -1
+		y = 1
+		relative_position_id = DOR_towards_south
+		cost = 5
+		mutually_exclusive = {
+			focus = DOR_claim_eastern_rohan
+		}
+		prerequisite = {
+		}
+		prerequisite = {
+			focus = DOR_towards_south
+		}
+		available = {
+			ROH = {
+				OR = {
+					has_completed_focus = ROH_wormtongue_cabinet
+					has_completed_focus = ROH_deny_gandalf_entrance
+				}
+			}
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+    			target = ROH
+    			modifier = large_increase
+			}
+		}
+	}
+	focus = {
+		id = DOR_trade_with_rohan_2
+		icon = GFX_goal_generic_positive_trade_relations
+		x = -1
+		y = 1
+		relative_position_id = DOR_send_an_ambassador_to_grima
+		cost = 5
+		prerequisite = {
+			focus = DOR_send_an_ambassador_to_grima
+		}
+		available = {
+		}
+		completion_reward = {
+			add_popularity = {
+    			ideology = cooperative
+    			popularity = 0.05
+			}
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				give_market_access = ROH
+					ROH = {
+					give_market_access = ROOT
+				}
+			}
+			add_resource = {
+    		type = chromium
+    		amount = 20
+    		state = 137
+			}
+			ROH = {
+			add_resource = {
+    		type = oil
+    		amount = 20
+    		state = 183
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_send_aid_to_rohan
+		icon = GFX_goal_ROH_wold_build_supplyline
+		x = 0
+		y = 1
+		relative_position_id = DOR_trade_with_rohan_2
+		cost = 5
+		mutually_exclusive = {
+		}
+		prerequisite = {
+		}
+		prerequisite = {
+			focus = DOR_trade_with_rohan_2
+		}
+		available = {
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+    			target = ROH
+    			modifier = large_increase
+			}
+			add_equipment_to_stockpile = {
+   				type = infantry_equipment
+    			amount = -2500
+    			producer = DOR
+			}
+			ROH = {
+				add_equipment_to_stockpile = {
+   				type = infantry_equipment
+    			amount = 2500
+    			producer = DOR
+			}
+			}
+		}
+	}
+	focus = {
+		id = DOR_claim_eastern_rohan
+		icon = GFX_goal_roh_edoras
+		x = 1
+		y = 1
+		relative_position_id = DOR_towards_south
+		cost = 5
+		mutually_exclusive = {
+			focus = DOR_send_an_ambassador_to_grima
+		}
+		prerequisite = {
+			focus = DOR_towards_south
+		}
+		available = {
+			NOT = {
+				has_completed_focus = DOR_honor_isildurs_heritage
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = DOR_towards_south_tooltip
+			hidden_effect = {
+			27 = {
+				add_claim_by = DOR
+			}
+			30 = {
+				add_claim_by = DOR
+			}
+			177 = {
+				add_claim_by = DOR
+			}
+			178 = {
+				add_claim_by = DOR
+			}
+			179 = {
+				add_claim_by = DOR
+			}
+			180 = {
+				add_claim_by = DOR
+			}
+			181 = {
+				add_claim_by = DOR
+			}
+			182 = {
+				add_claim_by = DOR
+			}
+			}
+
+		}
+	}
+		focus = {
+		id = DOR_clear_the_marshes
+		icon = GFX_goal_generic_position_armies
+		x = 0
+		y = 2
+		relative_position_id = DOR_towards_south
+		cost = 10
+		prerequisite = {
+			focus = DOR_send_an_ambassador_to_grima
+			focus = DOR_claim_eastern_rohan
+		}
+		available = {
+		}
+		completion_reward = {
+			if = {
+				every_state = {
+				limit = {
+					is_core_of = DAG
+					is_controlled_by = ROOT
+				}
+				
+				add_compliance = 50
+			}
+			}
+			if = {
+				limit = {
+					DOR = {
+						owns_state = 100
+					}
+				}
+				100 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+    			type = infrastructure
+    			level = 1
+    			instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						owns_state = 205
+					}
+				}
+				205 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+    			type = infrastructure
+    			level = 1
+    			instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						owns_state = 206
+					}
+				}
+				206 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+    			type = infrastructure
+    			level = 1
+    			instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						owns_state = 203
+					}
+				}
+				203 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+    			type = infrastructure
+    			level = 1
+    			instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						owns_state = 204
+					}
+				}
+				204 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+    			type = infrastructure
+    			level = 1
+    			instant_build = yes
+					}
+				}
+			}
+		}
+	}
+		focus = {
+		id = DOR_pave_new_routes
+		icon = GFX_goal_generic_infrastructure_investment
+		x = 0
+		y = 1
+		relative_position_id = DOR_towards_north
+		cost = 10
+		prerequisite = {
+			focus = DOR_towards_north
+		}
+		available = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+			}
+		}
+	}
+		focus = {
+		id = DOR_the_northern_bulwark
+		icon = GFX_goal_goal_generic_defence
+		x = -2
+		y = 1
+		relative_position_id = DOR_pave_new_routes
+		cost = 10
+		prerequisite = {
+			focus = DOR_pave_new_routes
+		}
+		bypass = {
+		}
+		available = {
+		}
+		completion_reward = {
+				custom_effect_tooltip = dor_the_northern_tooltip
+				hidden_effect = {
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 3810
+					}
+				}
+				137 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 3810
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 2978
+					}
+				}
+				137 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 2978
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 771
+					}
+				}
+				103 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 771
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 6199
+					}
+				}
+				103 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 6199
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 2061
+					}
+				}
+				103 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 2061
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 6149
+					}
+				}
+				103 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 6149
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 1651
+					}
+				}
+				103 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 1651
+					}
+				}
+			}
+			if = {
+				limit = {
+					DOR = {
+						controls_province = 1325
+					}
+				}
+				103 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 1
+    			instant_build = yes
+    			province = 1325
+						}
+					}
+				}
+			}
+		}
+	}
+		focus = {
+		id = DOR_hand_weapons_to_the_peasants
+		icon = GFX_goal_lth_weapon_sword_forging
+		x = 0
+		y = 1
+		relative_position_id = DOR_pave_new_routes
+		cost = 10
+		prerequisite = {
+			focus = DOR_pave_new_routes
+		}
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = dor_anyone_tooltip
+			hidden_effect = {
+				division_template = {
+    name = "Peasant Militia"
+	priority = 0
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+    } }
+	capital_scope = {
+				create_unit = {
+    				division = "name = \"Peasant Militia\" division_template = \"Peasant Militia\" start_experience_factor = 0.3"
+   					 owner = DOR
+					 count = 6
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_hunker_down_in_szrel_kain
+		icon = GFX_goal_lth_fortifications_castle
+		x = 0
+		y = 1
+		relative_position_id = DOR_hand_weapons_to_the_peasants
+		cost = 10
+		prerequisite = {
+			focus = DOR_hand_weapons_to_the_peasants
+		}
+		prerequisite = {
+			focus = DOR_the_northern_bulwark
+			focus = DOR_strategic_supply_hubs
+		}
+		available = {
+		}
+		completion_reward = {
+			137 = {
+		add_building_construction = {
+    		type = castle
+    		level = 1
+    		instant_build = yes
+   		 province = 3810
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_march_north
+		icon = GFX_goal_lth_peasantry
+		x = 0
+		y = 1
+		relative_position_id = DOR_hunker_down_in_szrel_kain
+		cost = 10
+		will_lead_to_war_with = LGT
+		prerequisite = {
+			focus = DOR_hunker_down_in_szrel_kain
+		}
+		bypass = {
+			OR = {
+			LGT = {
+				exists = no
+			}
+			LGT = {
+				is_in_faction_with = DOR
+			}
+			LGT = {
+				is_puppet_of = DOR
+			}
+			}
+		}
+		mutually_exclusive = {
+		}
+		completion_reward = {
+			create_wargoal = {
+    			type = annex_everything
+   			 	target = LGT
+			}
+		}
+	}
+	focus = {
+		id = DOR_demand_dale
+		icon = GFX_goal_mor_wargoal_dale
+		x = -1
+		y = 1
+		relative_position_id = DOR_march_north
+		cost = 10
+		will_lead_to_war_with = DAL
+		prerequisite = {
+			focus = DOR_march_north
+		}
+		available = {
+			DAL = {
+				exists = yes
+			}
+			NOT = {
+				DAL = {
+				is_in_faction_with = DOR
+			}
+			}
+			NOT = {
+				DAL = {
+				is_in_faction_with = DOR
+			}		
+			}
+			NOT = {
+				is_puppet = yes
+			}
+		}
+#		mutually_exclusive = {
+#			focus = DOR_invite_dale
+#		}
+		completion_reward = {
+			DAL = {
+			country_event = {
+				id = generic.20
+			}
+		}
+		}
+	}
+	focus = {
+		id = DOR_subjugate_erebor
+		icon = GFX_goal_mor_wargoal_erebor
+		x = 1
+		y = 1
+		relative_position_id = DOR_march_north
+		cost = 10
+		will_lead_to_war_with = ERE
+		prerequisite = {
+			focus = DOR_march_north
+		}
+		available = {
+			ERE = {
+				exists = yes
+			}
+			NOT = {
+				ERE = {
+				is_in_faction_with = DOR
+			}
+			}
+			NOT = {
+				ERE = {
+				is_in_faction_with = DOR
+			}		
+			}
+			NOT = {
+				is_puppet = yes
+			}
+		}
+		mutually_exclusive = {
+		}
+		completion_reward = {
+			create_wargoal = {
+    			type = annex_everything
+   			 	target = ERE
+			}
+		}
+	}
+	focus = {
+		id = DOR_strategic_supply_hubs
+		icon = GFX_goal_lth_food_resource_storage
+		x = 2
+		y = 1
+		relative_position_id = DOR_pave_new_routes
+		cost = 10
+		prerequisite = {
+			focus = DOR_pave_new_routes
+		}
+		available = {
+			OR = {
+				owns_state = 103
+				owns_state = 96
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					controls_province = 5253
+				}
+				96 = {
+					add_building_construction = {
+    					type = supply_node
+    					level = 1
+    					instant_build = yes
+    					province = 5253
+						}
+					}
+			}
+			if = {
+				limit = {
+					controls_province = 1325
+				}
+				103 = {
+					add_building_construction = {
+    					type = supply_node
+    					level = 1
+    					instant_build = yes
+    					province = 1325
+						}
+					}
+			}
+		}
+	}
+	focus = {
+		id = DOR_the_supplies_down_south
+		icon = GFX_goal_lth_food_resource_storage
+		x = 0
+		y = 1
+		relative_position_id = DOR_clear_the_marshes
+		cost = 5
+		prerequisite = {
+			focus = DOR_clear_the_marshes
+		}
+		available = {
+		}
+		bypass = {
+			DOR = {
+				NOT = {
+					owns_state = 100
+				}
+				NOT = {
+					owns_state = 205
+				}
+				
+			}
+		}
+		completion_reward = {
+			build_railway = {
+    level = 1
+    build_only_on_allied = yes
+    controller_priority = {
+        base = 1
+        modifier = {
+            tag = DOR
+            add = 2
+        }
+    }
+    fallback = yes
+    path = { 4865 2395 2856 2009 2499 1097 2371 6491 1470 }
+    start_province = 4865
+    target_province = 1470
+}
+	100 = {
+		add_building_construction = {
+    type = supply_node
+    level = 1
+    instant_build = yes
+    province = 2009
+	}
+}
+	205 = {
+		add_building_construction = {
+    type = supply_node
+    level = 1
+    instant_build = yes
+    province = 1470
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_invite_rohan
+		icon = GFX_goal_ROH_call_the_banners
+		x = 0
+		y = 3
+		relative_position_id = DOR_send_an_ambassador_to_grima
+		cost = 10
+		prerequisite = {
+			focus = DOR_send_aid_to_rohan
+		}
+		prerequisite = {
+			focus = DOR_the_supplies_down_south
+		}
+		mutually_exclusive = {
+		}
+		available = {
+			NOT = {
+				has_completed_focus = DOR_standing_alone
+			}
+			ROH = {
+				NOT = {
+					has_completed_focus = ROH_pledge_to_saruman
+				}
+			}
+			NOT = {
+				ROH = {
+					is_in_faction = yes
+				}
+			}
+		}
+		completion_reward = {
+			ROH = {
+				country_event = generic.5
+			}
+		}
+	}
+	focus = {
+		id = DOR_siege_rohan
+		icon = GFX_goal_mor_wargoal_rohan
+		x = 1
+		y = 1
+		relative_position_id = DOR_the_supplies_down_south
+		cost = 10
+		will_lead_to_war_with = ROH
+		prerequisite = {
+			focus = DOR_the_supplies_down_south
+		}
+		prerequisite = {
+			focus = DOR_claim_eastern_rohan
+		}
+		available = {
+			is_puppet = no
+			NOT = {
+				is_in_faction_with = ROH
+			}
+			ROH = {
+				exists = yes
+			}
+		}
+		mutually_exclusive = {
+		}
+		completion_reward = {
+			create_wargoal = {
+    			type = annex_everything
+   			 	target = ROH
+			}
+		}
+	}
+	focus = {
+		id = DOR_topple_the_white_wizard
+		icon = GFX_goal_lth_white_council_saruman
+		x = 0
+		y = 2
+		relative_position_id = DOR_the_supplies_down_south
+		cost = 10
+		will_lead_to_war_with = ISE
+		prerequisite = {
+			focus = DOR_invite_rohan
+			focus = DOR_siege_rohan
+		}
+		bypass = {
+			NOT = {
+				country_exists = ISE
+			}
+		}
+		available = {
+			OR = {
+				any_allied_country = {
+					is_neighbor_of = ISE
+				}
+				is_neighbor_of = ISE
+			}
+		}
+		completion_reward = {
+			create_wargoal = {
+    		type = topple_government
+   			 target = ISE
+			}
+		}
+	}
+	focus = {
+		id = DOR_standing_alone
+		icon = GFX_goal_generic_wolf_pack
+		x = -1
+		y = 1
+		relative_position_id = DOR_the_path_forward
+		cost = 10
+		mutually_exclusive = {
+			focus = DOR_the_unholy_alliance
+		}
+		prerequisite = {
+			focus = DOR_the_path_forward
+		}
+		available = {
+			NOT = {
+				has_completed_focus = DOR_honor_morgoth
+			}
+			NOT = {
+				is_puppet = yes
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					is_in_faction = yes
+				}
+				leave_faction = yes
+			}
+			set_rule = {
+    			can_join_factions = no
+			}
+			add_ideas = DOR_standing_alone
+		}
+	}
+
+	focus = {
+		id = DOR_send_spies_to_rhun
+		icon = GFX_goal_generic_spy_agency_eye
+		x = 2
+		y = 1
+		relative_position_id = DOR_prepare_for_war
+		cost = 5
+		prerequisite = {
+			focus = DOR_prepare_for_war
+		}
+		available = {
+			has_intelligence_agency = yes
+			NOT = {
+				is_in_faction_with = RHU
+			}
+		}
+		completion_reward = {
+			add_ideas = DOR_intelligence_efforts
+		}
+	}
+	focus = {
+		id = DOR_exploit_their_defenses
+		icon = GFX_focus_generic_mining_industry
+		x = -1
+		y = 1
+		relative_position_id = DOR_send_spies_to_rhun
+		cost = 5
+		prerequisite = {
+			focus = DOR_send_spies_to_rhun
+		}
+		mutually_exclusive = {
+			focus = DOR_correct_the_survival_bias
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOR_rhun_doctrine_offensive
+		}
+	}
+	focus = {
+		id = DOR_correct_the_survival_bias
+		icon = GFX_goal_goal_generic_air_doctrine
+		x = 1
+		y = 1
+		relative_position_id = DOR_send_spies_to_rhun
+		cost = 5
+		prerequisite = {
+			focus = DOR_send_spies_to_rhun
+		}
+		mutually_exclusive = {
+			focus = DOR_exploit_their_defenses
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOR_rhun_doctrine_defensive
+		}
+	}
+
+	focus = {
+		id = DOR_bring_order_to_rhun
+		icon = GFX_goal_rhu_rhun_civil_war
+		x = 0
+		y = 2
+		relative_position_id = DOR_send_spies_to_rhun
+		cost = 10
+		will_lead_to_war_with = RHU
+		prerequisite = {
+			focus = DOR_exploit_their_defenses
+			focus = DOR_correct_the_survival_bias
+		}
+		available = {
+			is_puppet = no
+			NOT = {
+				is_in_faction_with = RHU
+			}
+			RHU = {
+				exists =  yes
+			}
+		}
+		mutually_exclusive = {
+			focus = DOR_invite_rhun
+		}
+		completion_reward = {
+			create_wargoal = {
+    			type = puppet_wargoal_focus
+   			 	target = RHU
+			}
+		}
+	}
+
+	focus = {
+		id = DOR_greater_dorwinion
+		icon = GFX_goal_rhu_dorwinion_flag
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = DOR_standing_alone
+		prerequisite = {
+			focus = DOR_standing_alone
+		}
+
+		available = {
+		}
+		completion_reward = {
+			set_cosmetic_tag = DOR_greater
+			add_political_power = 120
+			add_ideas = DOR_new_dorwinion_model
+		}
+	}
+	#####################################
+
+		focus = {
+		id = DOR_army_of_dorwinion
+		icon = GFX_goal_rhu_dorwinion_flag
+		relative_position_id = DOR_a_deal_with_rhun
+		x = 14
+		y = 0
+		cost = 10
+
+		available = {
+		}
+		completion_reward = {
+			army_experience = 25
+			air_experience = 25
+			add_ideas = DOR_battle_plan_wine
+		}
+	}
+	focus = {
+		id = DOR_clear_space_for_eagles
+		icon = GFX_goal_goal_generic_territory_or_war
+		x = -4
+		y = 1
+		relative_position_id = DOR_army_of_dorwinion
+		cost = 5
+		prerequisite = {
+			focus = DOR_army_of_dorwinion
+		}
+		available = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+    				type = air_base
+    				level = 2
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_tame_the_wild_beasts
+		icon = GFX_goal_generic_air_eagles
+		x = -1
+		y = 2
+		cost = 5
+		relative_position_id = DOR_clear_space_for_eagles
+		prerequisite = {
+			focus = DOR_clear_space_for_eagles
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 2
+				category = lotr_eagles
+				category = lotr_fellbeasts
+			}
+		}
+	}
+	focus = {
+		id = DOR_maneuver_exercises
+		icon = GFX_goal_goal_generic_air_doctrine
+		x = 1
+		y = 2
+		cost = 5
+		relative_position_id = DOR_clear_space_for_eagles
+		prerequisite = {
+			focus = DOR_clear_space_for_eagles
+		}
+		available = {
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = DOR_being_one_with_the_beast
+		icon = GFX_goal_lth_white_council_eagles
+		x = 0
+		y = 4
+		cost = 10
+		relative_position_id = DOR_clear_space_for_eagles
+		prerequisite = {
+			focus = DOR_tame_the_wild_beasts
+		}
+		prerequisite = {
+			focus = DOR_maneuver_exercises
+		}
+		
+		available = {
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = air_doctrine
+			}
+			increase_eagles_cap_15 = yes
+		}
+	}
+	focus = {
+		id = DOR_the_common_soldier
+		icon = GFX_goal_generic_soldier_rearmament
+		x = 0
+		y = 1
+		relative_position_id = DOR_army_of_dorwinion
+		cost = 10
+		prerequisite = {
+			focus = DOR_army_of_dorwinion
+		}
+		mutually_exclusive = {
+			focus = DOR_invest_in_cavalry
+		}
+		available = {
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = cat_grand_battle_plan
+			}
+		}
+	}
+	focus = {
+		id = DOR_develop_spears
+		icon = GFX_goal_generic_spear_and_sabre
+		x = 0
+		y = 1
+		relative_position_id = DOR_the_common_soldier
+		cost = 10
+		prerequisite = {
+			focus = DOR_the_common_soldier
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				category = lotr_infantry_weapons_spear
+				uses = 2
+				bonus = 0.5
+			}
+		}
+	}
+	focus = {
+		id = DOR_padded_armor
+		icon = GFX_goal_goal_generic_position_armies
+		x = -1
+		y = 1
+		relative_position_id = DOR_develop_spears
+		cost = 5
+		prerequisite = {
+			focus = DOR_develop_spears
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				category = lotr_infantry_supportweapons
+				uses = 2
+				bonus = 0.25
+			}
+		}
+	}
+	focus = {
+		id = DOR_teach_crossbows
+		icon = GFX_goal_goal_generic_position_armies
+		x = 1
+		y = 1
+		relative_position_id = DOR_develop_spears
+		cost = 5
+		prerequisite = {
+			focus = DOR_develop_spears
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				category = lotr_infantry_archery_crossbow
+				uses = 2
+				bonus = 0.25
+			}
+		}
+	}
+	focus = {
+		id = DOR_engineer_company
+		icon = GFX_goal_lth_treaty_executive_power
+		x = 0
+		y = 3
+		relative_position_id = DOR_develop_spears
+		cost = 10
+		prerequisite = {
+			focus = DOR_padded_armor
+		}
+		prerequisite = {
+			focus = DOR_teach_crossbows
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				category = engineers_tech
+				uses = 1
+				bonus = 1
+			}
+			add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = DOR_invest_in_cavalry
+		icon = GFX_goal_goal_generic_cavalry
+		x = 4
+		y = 1
+		relative_position_id = DOR_army_of_dorwinion
+		cost = 10
+		prerequisite = {
+			focus = DOR_army_of_dorwinion
+		}
+		mutually_exclusive = {
+			focus = DOR_the_common_soldier
+		}
+		available = {
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = cat_mobile_warfare
+			}
+		}
+	}
+	focus = {
+		id = DOR_build_chariots
+		icon = GFX_goal_generic_horse_drawn_equipment
+		x = -1
+		y = 1
+		relative_position_id = DOR_invest_in_cavalry
+		cost = 10
+		prerequisite = {
+			focus = DOR_invest_in_cavalry
+		}
+		mutually_exclusive = {
+			focus = DOR_nimble_horses
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				category = lotr_cavalry_carriages
+				uses = 2
+				bonus = 0.5
+			}
+		}
+	}
+	focus = {
+		id = DOR_nimble_horses
+		icon = GFX_goal_generic_horse_studs
+		x = 1
+		y = 1
+		relative_position_id = DOR_invest_in_cavalry
+		cost = 10
+		prerequisite = {
+			focus = DOR_invest_in_cavalry
+		}
+		mutually_exclusive = {
+			focus = DOR_build_chariots
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				category = lotr_cavalry
+				uses = 2
+				bonus = 0.5
+			}
+		}
+	}
+	focus = {
+		id = DOR_longbow_training
+		icon = GFX_goal_lth_elven_sword_and_bow
+		x = 0
+		y = 2
+		relative_position_id = DOR_invest_in_cavalry
+		cost = 5
+		prerequisite = {
+			focus = DOR_build_chariots
+			focus = DOR_nimble_horses
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				category = lotr_infantry_archery_bow
+				uses = 2
+				bonus = 0.25
+			}
+		}
+	}
+	focus = {
+		id = DOR_chariot_archers
+		icon = GFX_goal_lth_generic_archers
+		x = 0
+		y = 2
+		relative_position_id = DOR_build_chariots
+		cost = 10
+		prerequisite = {
+			focus = DOR_build_chariots
+		}
+		prerequisite = {
+			focus = DOR_longbow_training
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				category = lotr_cavalry_carriages
+				uses = 1
+				bonus = 1
+			}
+		}
+	}
+	focus = {
+		id = DOR_cavalry_archers
+		icon = GFX_goal_lth_generic_archers
+		x = 0
+		y = 2
+		relative_position_id = DOR_nimble_horses
+		cost = 10
+		prerequisite = {
+			focus = DOR_nimble_horses
+		}
+		prerequisite = {
+			focus = DOR_longbow_training
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				category = lotr_cavalry_archers
+				uses = 1
+				bonus = 1
+			}
+		}
+	}
+	focus = {
+		id = DOR_logistics_company
+		icon = GFX_goal_lth_treaty_executive_power
+		x = 0
+		y = 2
+		relative_position_id = DOR_longbow_training
+		cost = 10
+		prerequisite = {
+			focus = DOR_chariot_archers
+			focus = DOR_cavalry_archers
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				category = logistics_tech
+				uses = 1
+				bonus = 1
+			}
+			add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = DOR_a_well_funded_army
+		icon = GFX_goal_lth_elven_army_dark
+		x = 0
+		y = 1
+		relative_position_id = DOR_engineer_company
+		cost = 10
+		prerequisite = {
+			focus = DOR_being_one_with_the_beast
+		}
+		prerequisite = {
+			focus = DOR_engineer_company
+			focus = DOR_logistics_company
+		}
+		available = {
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = DOR_battle_plan_wine
+				add_idea = DOR_battle_plan_wine_2
+			}
+		}
+	}
+	focus = {
+		id = DOR_special_forces_department
+		icon = GFX_goal_goal_generic_army_doctrines
+		x = 0
+		y = 1
+		relative_position_id = DOR_a_well_funded_army
+		cost = 10
+		prerequisite = {
+			focus = DOR_a_well_funded_army
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				category = lotr_infantry_specialforces
+				uses = 1
+				bonus = 0.5
+			}
+		}
+	}
+
+	##############################################################
+
+	focus = {
+		id = DOR_economy_of_dorwinion
+		icon = GFX_goal_rhu_dorwinion_flag
+		x = 14
+		y = 0
+		relative_position_id = DOR_army_of_dorwinion
+		cost = 10
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				bonus = 1
+				uses = 2
+				category = lotr_labour_construction_industry
+			}
+		}
+	}
+	focus = {
+		id = DOR_agricultural_subsidies
+		icon = GFX_goal_generic_farming_wheat_grain_agriculture
+		x = -6
+		y = 1
+		relative_position_id = DOR_economy_of_dorwinion
+		cost = 10
+		prerequisite = {
+			focus = DOR_economy_of_dorwinion
+		}
+		available = {
+		}
+		completion_reward = {
+			add_stability = 0.05
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+    				type = synthetic_refinery
+    				level = 1
+    				instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+    				type = synthetic_refinery
+    				level = 1
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_industrial_investments
+		icon = GFX_goal_lth_investment
+		x = -4
+		y = 1
+		relative_position_id = DOR_economy_of_dorwinion
+		cost = 10
+		prerequisite = {
+			focus = DOR_economy_of_dorwinion
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOR_industrial_investments
+		}
+	}
+	focus = {
+		id = DOR_public_works
+		icon = GFX_focus_generic_public_works
+		x = -1
+		y = 1
+		relative_position_id = DOR_industrial_investments
+		cost = 5
+		prerequisite = {
+			focus = DOR_agricultural_subsidies
+			focus = DOR_industrial_investments
+		}
+		available = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_the_wine_trade
+		icon = GFX_goal_mor_grapes
+		x = 0
+		y = 1
+		relative_position_id = DOR_economy_of_dorwinion
+		cost = 10
+		prerequisite = {
+			focus = DOR_economy_of_dorwinion
+		}
+		available = {
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_idea = DOR_wine_trade
+					}
+					NOT = {
+						has_idea = DOR_wine_trade_2
+					}
+					NOT = {
+						has_idea = DOR_wine_trade_3
+					}
+					NOT = {
+						has_idea = DOR_wine_trade_4
+					}
+					NOT = {
+						has_idea = DOR_wine_trade_5
+					}
+					NOT = {
+						has_idea = DOR_wine_trade_6
+					}
+					NOT = {
+						has_idea = DOR_wine_trade_7
+					}
+					NOT = {
+						has_idea = DOR_wine_trade_8
+					}
+					NOT = {
+						has_idea = DOR_wine_trade_9
+					}
+					NOT = {
+						has_idea = DOR_wine_trade_10
+					}
+					NOT = {
+						has_idea = DOR_wine_trade_11
+					}
+					NOT = {
+						has_idea = DOR_wine_trade_12
+					}
+				}
+				add_ideas = DOR_wine_trade
+			}
+
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+    				type = synthetic_refinery
+    				level = 1
+    				instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+    				type = synthetic_refinery
+    				level = 1
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_approach_the_dwarves
+		icon = GFX_goal_lth_elven_dwarf_relations
+		x = -1
+		y = 1
+		relative_position_id = DOR_the_wine_trade
+		cost = 5
+		prerequisite = {
+			focus = DOR_the_wine_trade
+		}
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = DOR_approach_dwarves_tooltip
+			add_political_power = 50
+			
+		}
+	}
+	focus = {
+		id = DOR_approach_the_men
+		icon = GFX_goal_lth_elves_men_handshake
+		x = 1
+		y = 1
+		relative_position_id = DOR_the_wine_trade
+		cost = 5
+		prerequisite = {
+			focus = DOR_the_wine_trade
+		}
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = DOR_approach_men_tooltip
+			add_political_power = 50
+			
+		}
+	}
+	focus = {
+		id = DOR_approach_the_elves
+		icon = GFX_goal_lth_elves_shaking_hands
+		x = 0
+		y = 1
+		relative_position_id = DOR_approach_the_dwarves
+		cost = 5
+		prerequisite = {
+			focus = DOR_approach_the_dwarves
+		}
+		mutually_exclusive = {
+			focus = DOR_approach_the_orcs
+		}
+		available = {
+			NOT = {
+				has_government = belligerent
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = DOR_approach_elves_tooltip
+			add_political_power = 50
+			
+		}
+	}
+	focus = {
+		id = DOR_approach_the_orcs
+		icon = GFX_goal_lth_elf_shaking_hands_with_orc
+		x = 0
+		y = 1
+		relative_position_id = DOR_approach_the_men
+		cost = 5
+		prerequisite = {
+			focus = DOR_approach_the_men
+		}
+		mutually_exclusive = {
+			focus = DOR_approach_the_elves
+		}
+		available = {
+			has_government = belligerent
+		}
+		completion_reward = {
+			custom_effect_tooltip = DOR_approach_orcs_tooltip
+			add_political_power = 50
+			
+		}
+	}
+	focus = {
+		id = DOR_fund_the_carpenters
+		icon = GFX_goal_generic_wood_cutting
+		x = -1
+		y = 1
+		relative_position_id = DOR_public_works
+		cost = 5
+		prerequisite = {
+			focus = DOR_public_works
+		}
+		available = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+    				type = industrial_complex
+    				level = 1
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_masons_of_nurukhizdin
+		icon = GFX_goal_generic_mining_industry
+		x = 0
+		y = 1
+		relative_position_id = DOR_fund_the_carpenters
+		cost = 5
+		prerequisite = {
+			focus = DOR_fund_the_carpenters
+		}
+		available = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+    				type = industrial_complex
+    				level = 1
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_construction_projects
+		icon = GFX_goal_generic_windmill
+		x = 1
+		y = 1
+		relative_position_id = DOR_masons_of_nurukhizdin
+		cost = 10
+		prerequisite = {
+			focus = DOR_masons_of_nurukhizdin
+		}
+		available = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+    				type = industrial_complex
+    				level = 2
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_hire_dwarven_smiths
+		icon = GFX_goal_lth_labour_blacksmith
+		x = 2
+		y = 1
+		relative_position_id = DOR_public_works
+		cost = 10
+		prerequisite = {
+			focus = DOR_public_works
+		}
+		prerequisite = {
+			focus = DOR_approach_the_dwarves
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOR_dwarven_smiths
+		}
+	}
+	focus = {
+		id = DOR_learn_from_the_dwarves
+		icon = GFX_goal_lth_dwarf_elf_handshake
+		x = -1
+		y = 1
+		relative_position_id = DOR_hire_dwarven_smiths
+		cost = 5
+		prerequisite = {
+			focus = DOR_hire_dwarven_smiths
+		}
+		available = {
+		}
+		completion_reward = { 
+		add_tech_bonus = {
+			name = special_bonus
+			bonus = 0.5
+			uses = 2
+			category = lotr_labour_metalworking
+		}
+		add_tech_bonus = {
+			name = special_bonus
+			bonus = 1
+			uses = 1
+			category = lotr_labour_construction_industry
+		}
+	}
+	}
+	focus = {
+		id = DOR_fund_the_dwarves
+		icon = GFX_goal_generic_coins_money
+		x = 1
+		y = 1
+		relative_position_id = DOR_hire_dwarven_smiths
+		cost = 5
+		prerequisite = {
+			focus = DOR_hire_dwarven_smiths
+		}
+		available = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+    				type = arms_factory
+    				level = 1
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_open_more_forges
+		icon = GFX_goal_generic_anvil
+		x = 0
+		y = 2
+		relative_position_id = DOR_hire_dwarven_smiths
+		cost = 10
+		prerequisite = {
+			focus = DOR_learn_from_the_dwarves
+			focus = DOR_fund_the_dwarves
+		}
+		available = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+    				type = arms_factory
+    				level = 3
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DOR_university_of_dorwinion
+		icon = GFX_goal_focus_research
+		x = 1
+		y = 1
+		relative_position_id = DOR_construction_projects
+		cost = 10
+		prerequisite = {
+			focus = DOR_construction_projects
+		}
+		prerequisite = {
+			focus = DOR_open_more_forges
+		}
+		available = {
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = DOR_philosophers_of_a_new_tomorrow
+		icon = GFX_goal_focus_research2
+		x = 0
+		y = 1
+		relative_position_id = DOR_university_of_dorwinion
+		cost = 10
+		prerequisite = {
+			focus = DOR_university_of_dorwinion
+		}
+		available = {
+			num_of_civilian_factories > 25
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = DOR_the_sea_of_rhun
+		icon = GFX_goal_lth_river_ships_navigation
+		x = 6
+		y = 1
+		relative_position_id = DOR_economy_of_dorwinion
+		cost = 10
+		prerequisite = {
+			focus = DOR_economy_of_dorwinion
+		}
+		available = {
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = naval_doctrine
+			}
+		}
+	}
+	focus = {
+		id = DOR_longships
+		icon = GFX_goal_generic_viking_logship
+		x = -1
+		y = 1
+		relative_position_id = DOR_the_sea_of_rhun
+		cost = 5
+		prerequisite = {
+			focus = DOR_the_sea_of_rhun
+		}
+		mutually_exclusive = {
+			focus = DOR_the_grand_armada
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				bonus = 0.5
+				uses = 2
+				category = lotr_sailing_longship
+			}
+		}
+	}
+	focus = {
+		id = DOR_the_grand_armada
+		icon = GFX_goal_gon_the_peoples_fleet_ship
+		x = 1
+		y = 1
+		relative_position_id = DOR_the_sea_of_rhun
+		cost = 5
+		prerequisite = {
+			focus = DOR_the_sea_of_rhun
+		}
+		mutually_exclusive = {
+			focus = DOR_longships
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				bonus = 0.5
+				uses = 2
+				category = lotr_sailing_galley
+			}
+		}
+	}
+	focus = {
+		id = DOR_hire_shipbuilders
+		icon = GFX_goal_generic_deal_reach_out_to_military
+		x = -2
+		y = 2
+		relative_position_id = DOR_the_sea_of_rhun
+		cost = 10
+		prerequisite = {
+			focus = DOR_approach_the_men
+		}
+		prerequisite = {
+			focus = DOR_longships
+			focus = DOR_the_grand_armada
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DOR_foreign_shipbuilders
+		}
+	}
+	focus = {
+		id = DOR_sailing_methods
+		icon = GFX_goal_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 2
+		relative_position_id = DOR_the_sea_of_rhun
+		cost = 10
+		prerequisite = {
+			focus = DOR_longships
+			focus = DOR_the_grand_armada
+		}
+		available = {
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = naval_doctrine
+			}
+		}
+	}
+	focus = {
+		id = DOR_invasion_force
+		icon = GFX_goal_generic_naval_emblem
+		x = 0
+		y = 2
+		relative_position_id = DOR_the_grand_armada
+		cost = 10
+		prerequisite = {
+			focus = DOR_sailing_methods
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				category = lotr_infantry_specialforces
+				uses = 1
+				bonus = 0.5
+			}
+		}
+	}
+	focus = {
+		id = DOR_expand_the_fishing_industry
+		icon = GFX_goal_generic_fishermen
+		x = 0
+		y = 2
+		relative_position_id = DOR_longships
+		cost = 10
+		prerequisite = {
+			focus = DOR_hire_shipbuilders
+		}
+		prerequisite = {
+			focus = DOR_sailing_methods
+		}
+		available = {
+		}
+		completion_reward = {
+			add_resource = {
+    		type = oil
+    		amount = 24
+    		state = 137
+			}
+		}
+	}
+}

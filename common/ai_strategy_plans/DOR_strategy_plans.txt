@@ -1,0 +1,183 @@
+DOR_cooperative_historical_plan = {
+    name = "Dorwinion's Historical Plan"
+    desc = "Historical behavior for Dorwinion"
+    
+    allowed = {
+        original_tag = DOR
+    }
+
+    enable = {
+            is_historical_focus_on = yes
+        }
+
+    abort = {
+        always = no
+    }
+	
+	ai_national_focuses = {
+		DOR_steady_as_it_goes
+		DOR_a_deal_with_rhun
+		DOR_dorwinion_stands_firm
+		DOR_prepare_against_the_threat
+		DOR_raise_the_defenses
+		DOR_the_southern_plan
+		DOR_rally_the_people_of_dorwinion
+		DOR_reinforce_the_border_towns
+		DOR_call_for_mercenaries
+		DOR_anyone_that_can_fight
+		DOR_honor_and_duty
+		DOR_supplies_in_the_desert
+		DOR_desert_warfare
+		DOR_fund_the_blacksmiths
+		DOR_all_hands_at_work
+		DOR_no_cost_too_great
+		DOR_no_blood_too_precious
+		DOR_ensure_sovereignty
+		DOR_ensure_sovereignty_2
+		DOR_continue_domrichs_reforms
+		DOR_draft_a_new_constitution
+		DOR_political_restructuring
+		DOR_tax_reform
+		DOR_begin_the_separation_of_powers
+		DOR_prevent_exploitation
+		DOR_dissolve_the_nobility
+		DOR_dissolve_the_monarchy
+		DOR_the_right_to_vote
+		DOR_hold_a_referendum
+		DOR_establish_a_republic
+		DOR_permit_regional_elections
+		DOR_ratify_the_principles_of_democracy
+		DOR_guide_the_people_forward
+		DOR_assess_our_future
+		DOR_look_to_gondor
+		DOR_cooperation_with_gondor
+		DOR_join_gondor
+	}
+}
+
+DOR_unaligned_unhistorical_plan = {
+    name = "Dorwinion's Unaligned Plan"
+    desc = "Unhistorical Unaligned Behavior for Dorwinion"
+    
+    allowed = {
+        original_tag = DOR
+    }
+
+    enable = {
+		is_historical_focus_on = no
+			has_country_flag = gameplan_going_unaligned_unhistorical
+        }
+    abort = {
+        always = no
+    }
+	
+	ai_national_focuses = {
+		DOR_steady_as_it_goes
+		DOR_a_deal_with_rhun
+		DOR_trade_for_protection
+		DOR_prepare_against_the_threat
+		DOR_raise_the_defenses
+		DOR_the_southern_plan
+		DOR_rally_the_people_of_dorwinion
+		DOR_reinforce_the_border_towns
+		DOR_call_for_mercenaries
+		DOR_anyone_that_can_fight
+		DOR_honor_and_duty
+		DOR_supplies_in_the_desert
+		DOR_desert_warfare
+		DOR_fund_the_blacksmiths
+		DOR_all_hands_at_work
+		DOR_no_cost_too_great
+		DOR_no_blood_too_precious
+		DOR_ensure_sovereignty
+		DOR_ensure_sovereignty_2
+		DOR_continue_domrichs_reforms
+		DOR_draft_a_new_constitution
+		DOR_political_restructuring
+		DOR_placate_the_nobility
+		DOR_guarantee_a_position_of_power
+		DOR_grant_bailouts
+		DOR_the_right_to_vote
+		DOR_hold_a_referendum
+		DOR_establish_an_oligarchy
+		DOR_amp_up_cheap_production
+		DOR_exploit_political_loopholes
+		DOR_exploit_the_state
+		DOR_the_puppet_king
+		DOR_assess_our_future
+		DOR_look_to_gondor
+		DOR_cooperation_with_gondor
+		DOR_join_gondor
+	}
+}
+
+DOR_belligerent_unhistorical_plan = {
+    name = "Dorwinion's Belligerent Plan"
+    desc = "Unhistorical Belligerent Behavior for Dorwinion"
+    
+    allowed = {
+        original_tag = DOR
+    }
+
+    enable = {
+		is_historical_focus_on = no
+        has_country_flag = gameplan_going_belligerent_unhistorical
+        }
+    abort = {
+        always = no
+    }
+	
+	ai_national_focuses = {
+		DOR_a_change_in_course
+		DOR_a_deal_with_rhun
+		DOR_trade_for_protection
+		DOR_align_with_the_dark_lord
+		DOR_gain_the_support_of_rhun
+		DOR_nurukhizdin_for_assistance
+		DOR_infiltrate_the_dorwinion_army
+		DOR_smuggle_easterling_fighters
+		DOR_smuggle_equipment
+		DOR_plant_the_seeds_of_distrust
+		DOR_raid_the_armory
+		DOR_easterling_pressure
+		DOR_horror_and_fear
+		DOR_align_with_the_new_world_order
+		DOR_honor_morgoth
+		DOR_faithful_servant
+		DOR_prepare_for_war
+		DOR_rally_the_people_of_dorwinion
+		DOR_draft_fit_for_service_men
+		DOR_the_path_forward
+		DOR_send_spies_to_rhun
+		DOR_the_unholy_alliance
+		DOR_all_hands_at_work
+		DOR_honor_and_duty
+		DOR_call_for_mercenaries
+		DOR_no_cost_too_great
+		DOR_the_great_leap
+		DOR_towards_north
+		DOR_the_northern_plan
+		DOR_the_northern_line
+		DOR_fortress_of_szrel_kain
+		DOR_no_blood_too_precious
+		DOR_pave_new_routes
+		DOR_the_northern_bulwark
+		DOR_hand_weapons_to_the_peasants
+		DOR_strategic_supply_hubs
+		DOR_hunker_down_in_szrel_kain
+		DOR_crush_rhovanion
+		DOR_march_north
+		DOR_demand_dale
+		DOR_subjugate_erebor
+		DOR_secure_the_coast
+		DOR_makeshift_longships
+		DOR_the_southern_plan
+		DOR_reinforce_the_border_towns
+		DOR_supplies_in_the_desert
+		DOR_uldonavan_line
+		DOR_desert_warfare
+		DOR_ensure_sovereignty
+		DOR_ensure_sovereignty_2
+		DOR_invite_rhun
+	}
+}

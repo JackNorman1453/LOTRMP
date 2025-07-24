@@ -1,0 +1,25 @@
+characters = {
+	EGN_glirion = {
+		name = "Glirion"
+		portraits = {
+			army = {
+				large = "GFX_portrait_elves_generic_77"
+				small = "GFX_idea_portrait_elves_generic_77"
+			}
+		}
+		country_leader={
+			ideology=isolationist
+			expire="1980.1.1.1"
+			traits = { }
+			id=-1
+		}
+		field_marshal={
+			traits={ defensive_doctrine }
+			skill=5
+			attack_skill=4
+			defense_skill=4
+			planning_skill=5
+			logistics_skill=3
+		}
+	}
+ }

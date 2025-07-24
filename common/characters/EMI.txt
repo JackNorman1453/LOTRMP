@@ -1,0 +1,43 @@
+characters = {
+	EMI_Gror = {
+		name = "Grór II"
+		portraits = {
+			army = {
+				large = "GFX_emi_gror"
+				small = "GFX_idea_emi_gror"
+			}
+		}
+		country_leader = {
+			ideology = defensive
+			desc = ""
+			expire = "1980.1.1.1"
+			traits = {
+					legitimate_heir
+			}
+		}
+		country_leader = {
+			ideology = protective
+			desc = ""
+			expire = "1980.1.1.1"
+			traits = {
+					legitimate_heir
+			}
+		}
+		country_leader = {
+			ideology = collectivist
+			desc = ""
+			expire = "1980.1.1.1"
+			traits = {
+					legitimate_heir
+			}
+		}
+		field_marshal={
+			traits = { brilliant_strategist }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 1
+		}
+	}
+ }

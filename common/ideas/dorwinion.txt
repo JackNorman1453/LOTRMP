@@ -1,0 +1,1577 @@
+ideas = {
+	country = {
+#### WINE MECHANIC
+        DOR_wine_trade = {
+			name = DOR_wine_trade
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = DOR_wine_trade
+
+			modifier = {
+                faction_trade_opinion_factor = 0.1
+
+				stability_factor = 0.02 # BY 0.2 EVERY LEVEL
+                base_fuel_gain_factor = 0.01 # BY 0.1 EVERY LEVEL
+				supply_factor = 0.02 # BY 0.2 EVERY LEVEL
+				supply_combat_penalties_on_core_factor = -0.02 # BY 0.2 EVERY LEVEL
+				out_of_supply_factor = -0.02 # BY 0.2 EVERY LEVEL
+			}
+		}
+		DOR_wine_trade_2 = {
+			name = DOR_wine_trade
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = DOR_wine_trade
+
+			modifier = {
+                faction_trade_opinion_factor = 0.1
+
+				stability_factor = 0.04 # BY 0.2 EVERY LEVEL
+                base_fuel_gain_factor = 0.02 # BY 0.1 EVERY LEVEL
+				supply_factor = 0.04 # BY 0.2 EVERY LEVEL
+				supply_combat_penalties_on_core_factor = -0.04 # BY 0.2 EVERY LEVEL
+				out_of_supply_factor = -0.04 # BY 0.2 EVERY LEVEL
+			}
+		}
+		DOR_wine_trade_3 = {
+			name = DOR_wine_trade
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = DOR_wine_trade
+
+			modifier = {
+                faction_trade_opinion_factor = 0.1
+
+				stability_factor = 0.06 # BY 0.2 EVERY LEVEL
+                base_fuel_gain_factor = 0.03 # BY 0.1 EVERY LEVEL
+				supply_factor = 0.06 # BY 0.2 EVERY LEVEL
+				supply_combat_penalties_on_core_factor = -0.06 # BY 0.2 EVERY LEVEL
+				out_of_supply_factor = -0.06 # BY 0.2 EVERY LEVEL
+			}
+		}
+		DOR_wine_trade_4 = {
+			name = DOR_wine_trade
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = DOR_wine_trade
+
+			modifier = {
+                faction_trade_opinion_factor = 0.1
+
+				stability_factor = 0.08 # BY 0.2 EVERY LEVEL
+                base_fuel_gain_factor = 0.04 # BY 0.1 EVERY LEVEL
+				supply_factor = 0.08 # BY 0.2 EVERY LEVEL
+				supply_combat_penalties_on_core_factor = -0.08 # BY 0.2 EVERY LEVEL
+				out_of_supply_factor = -0.08 # BY 0.2 EVERY LEVEL
+			}
+		}
+		DOR_wine_trade_5 = {
+			name = DOR_wine_trade
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = DOR_wine_trade
+
+			modifier = {
+                faction_trade_opinion_factor = 0.1
+
+				stability_factor = 0.10 # BY 0.2 EVERY LEVEL
+                base_fuel_gain_factor = 0.05 # BY 0.1 EVERY LEVEL
+				supply_factor = 0.10 # BY 0.2 EVERY LEVEL
+				supply_combat_penalties_on_core_factor = -0.10 # BY 0.2 EVERY LEVEL
+				out_of_supply_factor = -0.10 # BY 0.2 EVERY LEVEL
+			}
+		}
+		DOR_wine_trade_6 = {
+			name = DOR_wine_trade
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = DOR_wine_trade
+
+			modifier = {
+                faction_trade_opinion_factor = 0.1
+
+				stability_factor = 0.12 # BY 0.2 EVERY LEVEL
+                base_fuel_gain_factor = 0.06 # BY 0.1 EVERY LEVEL
+				supply_factor = 0.12 # BY 0.2 EVERY LEVEL
+				supply_combat_penalties_on_core_factor = -0.12 # BY 0.2 EVERY LEVEL
+				out_of_supply_factor = -0.12 # BY 0.2 EVERY LEVEL
+
+				attrition = -0.02 # BY 0.1 EVERY LEVEL
+				naval_attrition = -0.02 # BY 0.1 EVERY LEVEL
+				supply_consumption_factor = -0.04 # BY 0.2 EVERY LEVEL
+			}
+		}
+		DOR_wine_trade_7 = {
+			name = DOR_wine_trade
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = DOR_wine_trade
+
+			modifier = {
+                faction_trade_opinion_factor = 0.1
+
+				stability_factor = 0.14 # BY 0.2 EVERY LEVEL
+                base_fuel_gain_factor = 0.07 # BY 0.1 EVERY LEVEL
+				supply_factor = 0.14 # BY 0.2 EVERY LEVEL
+				supply_combat_penalties_on_core_factor = -0.14 # BY 0.2 EVERY LEVEL
+				out_of_supply_factor = -0.14 # BY 0.2 EVERY LEVEL
+
+				attrition = -0.03 # BY 0.1 EVERY LEVEL
+				naval_attrition = -0.03 # BY 0.1 EVERY LEVEL
+				supply_consumption_factor = -0.06 # BY 0.2 EVERY LEVEL
+			}
+		}
+		DOR_wine_trade_8 = {
+			name = DOR_wine_trade
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = DOR_wine_trade
+
+			modifier = {
+                faction_trade_opinion_factor = 0.1
+
+				stability_factor = 0.16 # BY 0.2 EVERY LEVEL
+                base_fuel_gain_factor = 0.08 # BY 0.1 EVERY LEVEL
+				supply_factor = 0.16 # BY 0.2 EVERY LEVEL
+				supply_combat_penalties_on_core_factor = -0.16 # BY 0.2 EVERY LEVEL
+				out_of_supply_factor = -0.16 # BY 0.2 EVERY LEVEL
+
+				attrition = -0.04 # BY 0.1 EVERY LEVEL
+				naval_attrition = -0.04 # BY 0.1 EVERY LEVEL
+				supply_consumption_factor = -0.08 # BY 0.2 EVERY LEVEL
+			}
+		}
+		DOR_wine_trade_9 = {
+			name = DOR_wine_trade
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = DOR_wine_trade
+
+			modifier = {
+                faction_trade_opinion_factor = 0.1
+
+				stability_factor = 0.18 # BY 0.2 EVERY LEVEL
+                base_fuel_gain_factor = 0.09 # BY 0.1 EVERY LEVEL
+				supply_factor = 0.18 # BY 0.2 EVERY LEVEL
+				supply_combat_penalties_on_core_factor = -0.18 # BY 0.2 EVERY LEVEL
+				out_of_supply_factor = -0.18 # BY 0.2 EVERY LEVEL
+
+				attrition = -0.05 # BY 0.1 EVERY LEVEL
+				naval_attrition = -0.05 # BY 0.1 EVERY LEVEL
+				supply_consumption_factor = -0.10 # BY 0.2 EVERY LEVEL
+			}
+		}
+		DOR_wine_trade_10 = {
+			name = DOR_wine_trade
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = DOR_wine_trade
+
+			modifier = {
+                faction_trade_opinion_factor = 0.1
+
+				stability_factor = 0.20 # BY 0.2 EVERY LEVEL
+                base_fuel_gain_factor = 0.10 # BY 0.1 EVERY LEVEL
+				supply_factor = 0.20 # BY 0.2 EVERY LEVEL
+				supply_combat_penalties_on_core_factor = -0.20 # BY 0.2 EVERY LEVEL
+				out_of_supply_factor = -0.20 # BY 0.2 EVERY LEVEL
+
+				attrition = -0.06 # BY 0.1 EVERY LEVEL
+				naval_attrition = -0.06 # BY 0.1 EVERY LEVEL
+				supply_consumption_factor = -0.12 # BY 0.2 EVERY LEVEL
+			}
+		}
+		DOR_wine_trade_11 = {
+			name = DOR_wine_trade
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = DOR_wine_trade
+
+			modifier = {
+                faction_trade_opinion_factor = 0.1
+
+				stability_factor = 0.22 # BY 0.2 EVERY LEVEL
+                base_fuel_gain_factor = 0.11 # BY 0.1 EVERY LEVEL
+				supply_factor = 0.22 # BY 0.2 EVERY LEVEL
+				supply_combat_penalties_on_core_factor = -0.22 # BY 0.2 EVERY LEVEL
+				out_of_supply_factor = -0.22 # BY 0.2 EVERY LEVEL
+
+				attrition = -0.07 # BY 0.1 EVERY LEVEL
+				naval_attrition = -0.07 # BY 0.1 EVERY LEVEL
+				supply_consumption_factor = -0.14 # BY 0.2 EVERY LEVEL
+			}
+		}
+		DOR_wine_trade_12 = {
+			name = DOR_wine_trade
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = DOR_wine_trade
+
+			modifier = {
+                faction_trade_opinion_factor = 0.1
+
+				stability_factor = 0.25 # BY 0.2 EVERY LEVEL
+                base_fuel_gain_factor = 0.12 # BY 0.1 EVERY LEVEL
+				supply_factor = 0.25 # BY 0.2 EVERY LEVEL
+				supply_combat_penalties_on_core_factor = -0.25 # BY 0.2 EVERY LEVEL
+				out_of_supply_factor = -0.25 # BY 0.2 EVERY LEVEL
+
+				attrition = -0.08 # BY 0.1 EVERY LEVEL
+				naval_attrition = -0.08 # BY 0.1 EVERY LEVEL
+				supply_consumption_factor = -0.16 # BY 0.2 EVERY LEVEL
+			}
+		}
+
+		DOR_wine_trade_receiver = {
+			name = DOR_wine_trade
+			removal_cost = -1
+			picture = DOR_wine_trade
+
+			allowed = {
+ 				always = no
+ 			}
+
+ 			available = {
+				NOT = {
+					has_war_with = DOR
+					DOR = {
+						is_subject = yes
+					}
+				}
+			}
+
+			on_remove = {
+			}
+
+ 			modifier = {
+				attrition = -0.025
+				supply_factor = 0.1
+				supply_combat_penalties_on_core_factor = -0.1
+				out_of_supply_factor = -0.1
+				supply_node_range = 0.1
+				consumer_goods_factor = 0.15
+			}
+		}
+
+
+
+
+
+####
+
+		DOR_steady_as_it_goes = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				belligerent_drift = -0.05
+				revolutionary_drift = -0.05
+				
+			}
+		}
+
+		DOR_a_change_in_course = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_unaligned_drift_bonus
+
+			modifier = {
+				unaligned_drift = -0.10
+				
+			}
+		}
+		DOR_a_change_in_course_2 = {
+			name = DOR_a_change_in_course
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_unaligned_drift_bonus
+
+			modifier = {
+				revolutionary_drift = -0.05
+				unaligned_drift -0.05
+				
+			}
+		}
+		DOR_a_change_in_course_3 = {
+			name = DOR_a_change_in_course
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_revolutionary_drift_bonus
+
+			modifier = {
+				revolutionary_drift = 0.10
+				
+			}
+		}
+		DOR_a_change_in_course_4 = {
+			name = DOR_a_change_in_course
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_unaligned_drift_bonus
+
+			modifier = {
+				belligerent_drift = 0.05
+				cooperative_drift = 0.05
+			}
+		}
+		DOR_a_change_in_course_5 = {
+			name = DOR_a_change_in_course
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_belligerent_drift_bonus
+
+			modifier = {
+				belligerent_drift = 0.10
+			}
+		}
+		DOR_a_change_in_course_6 = {
+			name = DOR_a_change_in_course
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_cooperative_drift_bonus
+
+			modifier = {
+				cooperative_drift = 0.10
+			}
+		}
+
+		DOR_industrial_investments = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_improved_industries
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_synthetic_refinery_factor = 0.1
+			}
+		}
+
+		DOR_dwarven_smiths = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = ea_resolution_icon_industry
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+
+		DOR_foreign_shipbuilders = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_naval_manufacturer_1
+
+			modifier = {
+				industrial_capacity_dockyard = 0.25
+			}
+		}
+
+		DOR_desert_specialists = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_nomads
+
+			modifier = {
+				acclimatization_hot_climate_gain_factor = 0.25
+			}
+		}
+
+
+		DOR_battle_plan_wine = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = DOR_dorwinion_army
+
+			modifier = {
+				army_defence_factor = 0.1
+				army_speed_factor = 0.05
+			}
+		}
+		DOR_battle_plan_wine_2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = DOR_dorwinion_army
+
+			modifier = {
+				army_defence_factor = 0.15
+				army_speed_factor = 0.05
+				attrition = -0.08
+			}
+		}
+		DOR_tax_reform = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_gold_money
+
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+		DOR_tax_reform_2 = {
+			name = DOR_tax_reform
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_gold_money
+
+			modifier = {
+				cooperative_drift = 0.10
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = -0.025
+			}
+		}
+		DOR_tax_reform_3 = {
+			name = DOR_exploit_the_state
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_gold_money
+
+			modifier = {
+				unaligned_drift = 0.05
+				consumer_goods_factor = -0.25
+				stability_weekly_factor = -0.5
+			}
+		}
+		DOR_dissolve_the_nobility = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_resistance_locked
+
+			modifier = {
+				unaligned_drift = 0.05
+				industrial_capacity_factory = -0.2
+				stability_weekly = 0.015
+			}
+		}
+		DOR_assess_our_future = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_cooperative_drift_bonus
+
+			modifier = {
+				opinion_gain_monthly_factor = 0.25
+				faction_trade_opinion_factor = 0.25
+				join_faction_tension = -0.5
+			}
+		}
+		DOR_payment_for_the_spears = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_gold_money
+
+			modifier = {
+				consumer_goods_factor = 0.15
+			}
+		}
+		DOR_peoples_tutelage = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = generic_bloody_treaty
+
+			modifier = {
+				stability_weekly = 0.001
+				war_support_weekly = 0.001
+			}
+		}
+		DOR_people_of_dorwinion = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_resistance3
+
+			modifier = {
+				weekly_manpower = 50
+			}
+		}
+		DOR_raise_the_defenses = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = lth_unflinching_defender
+
+			modifier = {
+				production_speed_bunker_factor = 0.10
+				production_speed_coastal_bunker_factor = 0.10
+			}
+		}
+		DOR_all_hands_at_work = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_industry_bonus
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1 
+				production_lack_of_resource_penalty_factor = -0.10 
+			}
+		}
+		DOR_honor_and_duty = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = lth_blades_of_the_eldar
+
+			modifier = {
+				army_org_factor = 0.10
+			}
+		}
+		DOR_political_restructuring = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_constitutional_guarantee
+
+			modifier = {
+				political_power_gain = 0.1
+			}
+		}
+		DOR_political_restructuring_cooperative = {
+			name = DOR_political_restructuring
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_constitutional_guarantee
+
+			modifier = {
+				political_power_gain = 0.2
+				cooperative_drift = 0.05
+			}
+		}
+		DOR_political_restructuring_unaligned = {
+			name = DOR_political_restructuring
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_constitutional_guarantee
+
+			modifier = {
+				political_power_gain = 0.2
+				unaligned_drift = 0.05
+			}
+		}
+		DOR_political_restructuring_cooperative_2 = {
+			name = DOR_political_restructuring
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_constitutional_guarantee
+
+			modifier = {
+				political_power_gain = 0.3
+				cooperative_drift = 0.10
+			}
+		}
+		DOR_political_restructuring_unaligned_2 = {
+			name = DOR_political_restructuring
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_constitutional_guarantee
+
+			modifier = {
+				political_power_gain = 0.3
+				unaligned_drift = 0.10
+			}
+		}
+		DOR_political_restructuring_revolutionary = {
+			name = DOR_peoples_law
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_constitutional_guarantee
+
+			modifier = {
+				political_power_gain = 0.3
+				revolutionary_drift = 0.10
+			}
+		}
+		DOR_liberte = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_torchbearers
+
+			modifier = {
+				defensive_war_stability_factor = 0.125
+			}
+		}
+		DOR_egalite = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_torchbearers
+
+			modifier = {
+				drift_defence_factor = 0.25
+			}
+		}
+		DOR_liberte_egalite = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_torchbearers
+
+			modifier = {
+				defensive_war_stability_factor = 0.125
+				drift_defence_factor = 0.25
+			}
+		}
+		DOR_liberte_egalite_solidarite = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_torchbearers
+
+			modifier = {
+				defensive_war_stability_factor = 0.125
+				drift_defence_factor = 0.25
+				army_core_attack_factor = 0.1
+				revolutionary_drift = 0.05
+			}
+		}
+		DOR_liberte_egalite_fraternite = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_torchbearers
+
+			modifier = {
+				defensive_war_stability_factor = 0.125
+				drift_defence_factor = 0.25
+				army_core_defence_factor = 0.1
+				revolutionary_drift = 0.05
+			}
+		}
+		DOR_volunteer_fighters = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_torchbearers
+
+			modifier = {
+				send_volunteer_divisions_required = -0.5
+				send_volunteer_factor = 0.5
+			}
+		}
+		DOR_corruption = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_oppression
+
+			modifier = {
+				min_export = -0.25
+				civilian_intel_to_others = 25
+				army_intel_to_others = 25
+				navy_intel_to_others = 25
+				airforce_intel_to_others = 25
+			}
+		}
+		DOR_cheap_production = {
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			picture = generic_central_management
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.25
+					reliability = -0.25
+					instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.25
+					reliability = -0.25
+					instant = yes
+				}
+			}
+		}
+		DOR_placated_nobility = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_nomad_warrior
+
+			modifier = {
+				stability_factor = 0.05
+				unaligned_drift = 0.05
+			}
+		}
+		DOR_placated_nobility_2 = {
+			name = DOR_placated_nobility
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_nomad_warrior
+
+			modifier = {
+				stability_factor = 0.10
+				unaligned_drift = 0.1
+				industrial_capacity_factory = 0.05
+			}
+		}
+		DOR_revolutionary_drift = {
+			name = DOR_international_revolution
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_revolutionary_drift_bonus
+
+			modifier = {
+				revolutionary_drift = 0.1
+			}
+		}
+		DOR_regulate_foreign_trade = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = ea_resolution_icon_trade_grey
+			modifier = {
+				min_export = -0.33
+			}
+		}
+		DOR_womens_suffrage = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_neutrality_idea
+			modifier = {
+				female_random_operative_chance = 0.5
+				industrial_capacity_factory = 0.1
+			}
+		}
+		DOR_traditional_order = {
+			name = DOR_traditional_order
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_shield_against_communism
+			modifier = {
+				monthly_population = 0.25
+				weekly_manpower = 125
+				industrial_capacity_factory = -0.025
+			}
+		}
+		DOR_peoples_enemy = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_peasant_strikes2
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		DOR_praise_sauron = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = sauron_eye
+			modifier = {
+				army_breakthrough_against_minor_factor = 0.15
+			}
+		}
+		DOR_easterling_pressure = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_purge
+			modifier = {
+				army_breakthrough_against_minor_factor = 0.15
+			}
+		}
+		DOR_liquid_courage = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = lth_last_stand
+			modifier = {
+				army_speed_factor = 0.15
+				army_org_factor = -0.1
+				army_morale_factor = -0.05
+			}
+		}
+		DOR_faithful_servant = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = sauron_eye
+			modifier = {
+				army_attack_against_major_factor = 0.10
+				army_breakthrough_against_major_factor = 0.10
+				army_strength_factor = 0.1
+				max_planning_factor = -0.15
+			}
+		}
+		DOR_new_dorwinion_model = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_central_management
+			modifier = {
+				consumer_goods_factor = -0.25
+				local_factories = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1			
+				production_factory_efficiency_gain_factor = -0.15
+			}
+		}
+		DOR_isildur_loyalists = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = gon_white_tree
+			modifier = {
+				political_power_gain = 0.1
+				cooperative_drift = 0.05
+			}
+		}
+		DOR_isildur_loyalists_2 = {
+			name = DOR_isildur_loyalists
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = gon_white_tree
+			modifier = {
+				political_power_gain = 0.15
+				cooperative_drift = 0.10
+				conscription_factor = 0.1
+			}
+		}
+		DOR_isildur_loyalists_3 = {
+			name = DOR_isildur_loyalists
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = gon_white_tree
+			modifier = {
+				political_power_gain = 0.2
+				cooperative_drift = 0.15
+				conscription_factor = 0.15
+				stability_factor = 0.1
+			}
+		}
+
+		DOR_war_preparations = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_lone_wold
+			modifier = {
+				weekly_manpower = 100
+				war_support_weekly = 0.004
+				max_command_power_mult = 0.25
+				training_time_factor = -0.25
+			}
+		}
+		DOR_concessions_good = {
+			name = DOR_concessions
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_trade_devalued
+			modifier = {
+				industrial_capacity_factory = 0.2
+				weekly_manpower = 150
+				consumer_goods_factor = -0.30
+				production_speed_buildings_factor = 0.2
+			}
+		}
+		DOR_concessions_bad = {
+			name = DOR_concessions
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_risk_of_famine
+			modifier = {
+				industrial_capacity_factory = -0.2
+				weekly_manpower = -250
+				consumer_goods_factor = 0.30
+				production_speed_buildings_factor = -0.2
+			}
+		}
+		DOR_concessions_bad_2 = {
+			name = DOR_concessions
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_risk_of_famine
+			modifier = {
+				industrial_capacity_factory = -0.4
+				weekly_manpower = -500
+				consumer_goods_factor = 0.60
+				production_speed_buildings_factor = -0.4
+			}
+		}
+		DOR_intelligence_efforts = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_spy_intel
+			modifier = {
+				operative_slot = 1
+				agency_upgrade_time = -0.2
+			}
+		}
+		DOR_rhun_doctrine_offensive = {
+			name = RHUN_Rhun_Doctrine
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_chess_wargames
+			targeted_modifier = {
+    			tag = RHU
+    			attack_bonus_against = 0.1
+			}
+		}
+		DOR_rhun_doctrine_defensive = {
+			name = RHUN_Rhun_Doctrine
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_chess_wargames
+			targeted_modifier = {
+    			tag = RHU
+    			defense_bonus_against = 0.1
+			}
+		}
+		DOR_standing_alone = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_wolf_aggression_bite
+
+			modifier = {
+				recruitable_population_factor = 0.1
+				improve_relations_maintain_cost_factor = -0.5
+				defensive_war_stability_factor = 0.35
+				cooperative_acceptance = 50
+				army_defence_against_major_factor = 0.1
+			}
+		}
+		DOR_expand_the_domain = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_oppression
+
+			modifier = {
+				generate_wargoal_tension = -0.50
+				justify_war_goal_time = -0.15
+			}
+		}
+
+		DOR_weather_the_storm = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = lth_unflinching_defender
+
+			modifier = {
+				surrender_limit = 0.25
+				defensive_war_stability_factor = 0.5
+			}
+		}
+		DOR_dor_rhunen = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = elu_age_of_conquest
+
+			modifier = {
+				drift_defence_factor = 0.25
+				army_core_defence_factor = 0.1
+				land_bunker_effectiveness_factor = 0.15
+				coastal_bunker_effectiveness_factor = 0.15
+				compliance_gain = 0.05
+				required_garrison_factor = -0.25
+			}
+		}
+    }
+}

@@ -1,0 +1,15 @@
+
+ai_historical_focus_list_MIR = {
+	ai_national_focuses = {
+		thefateofmirkwood
+		selfcenteredrule
+		perceptionmanagement
+		reconcileerebor
+		MIR_take_gollum_into_custody
+		MIR_escape_of_gollum
+		MIR_extract_information
+		MIR_send_legolas
+		MIR_request_the_aid_of_lothlorien
+		
+	}
+}

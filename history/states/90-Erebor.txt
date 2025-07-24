@@ -1,0 +1,42 @@
+
+state={
+	id=90
+	name="STATE_90"
+	resources={
+		steel=43.000
+		aluminium=3.000
+		tungsten=11.000
+	}
+
+	history={
+		owner = ERE
+		buildings = {
+			infrastructure = 4
+			air_base = 1
+			arms_factory = 5
+			industrial_complex = 4
+			anti_air_building = 1
+			2768 = {
+				bunker = 5
+
+			}
+
+		}
+		add_core_of = ERE
+		victory_points = {
+			2768 80 
+		}
+		victory_points = {
+			5772 1 
+		}
+
+	}
+
+	provinces={
+		2768 3182 4383 4528 5069 5091 5778 
+	}
+	manpower=200000
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+	local_supplies=0.000
+}

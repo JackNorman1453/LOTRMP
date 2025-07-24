@@ -1,0 +1,1898 @@
+################
+##### MON ######
+################
+MOR_influence_revolutionarye = {
+	MOR_legitimize_new_ruler = {
+        icon = GFX_decision_generic_civil_support
+		cost = 150
+
+		visible = {
+			has_idea = MOR_false_king
+		}
+
+        available = {
+			has_idea = MOR_false_king
+        }
+
+		fire_only_once = yes
+        fixed_random_seed = no
+		days_remove = 356
+		remove_effect = {
+            swap_ideas = {
+				remove_idea = MOR_false_king
+				add_idea = MOR_false_king_2
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
+
+MOR_send_union_invites = {
+	Send_union_invite_to_Eastlands = {
+        icon = GFX_decision_generic_army
+		cost = 150
+
+        available = {
+            RHU = {
+                revolutionary > 0.25
+            }
+        }
+
+		visible = {
+			has_completed_focus = send_request_for_joining_union
+		}
+
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+            RHU = {
+				country_event = mordor.44
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	Send_union_invite_to_Harad = {
+        icon = GFX_decision_generic_army_1
+		cost = 150
+
+        available = {
+            HAR = {
+                revolutionary > 0.25
+            }
+        }
+
+		visible = {
+			has_completed_focus = send_request_for_joining_union
+		}
+
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			HAR = {
+				country_event = mordor.44
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	Send_union_invite_to_Erebor = {
+        icon = GFX_decision_generic_army_2
+		cost = 150
+
+        available = {
+            ERE = {
+                revolutionary > 0.25
+            }
+        }
+
+		visible = {
+			has_completed_focus = send_request_for_joining_union_to_north
+		}
+
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+            ERE = {
+				country_event = mordor.44
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	Send_union_invite_to_Dale ={
+        icon = GFX_decision_generic_army_3
+		cost = 150
+
+        available = {
+            DAL = {
+                revolutionary > 0.25
+            }
+        }
+		
+		visible = {
+			has_completed_focus = send_request_for_joining_union_to_north
+		}
+
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			DAL = {
+				country_event = mordor.44
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+}
+
+### Building railroads in the swamp
+MOR_build_railwork = {
+	# south
+	Build_railroad_1 = {
+        icon = GFX_decision_generic_infra
+		cost = 150
+
+        available = {
+            controls_state = 204
+            controls_state = 203
+            controls_state = 100
+            controls_state = 206
+        }
+		days_remove = 50
+		fire_only_once = yes
+        fixed_random_seed = no
+		remove_effect  = {
+			build_railway = {
+				level = 2
+				path = { 1365 2331 3721 6681 2911 2832 6613 6583 928 6556 2584 }
+			}
+			203 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					instant_build = yes
+					province = 2911
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	# south
+	Build_supply_hub_1 = {
+        icon = GFX_decision_generic_construction
+		cost = 200
+
+        available = {
+            controls_state = 206
+			has_railway_connection = {
+				start_province = 2911
+				target_province = 2584
+			}
+        }
+		days_remove = 50
+		fire_only_once = yes
+        fixed_random_seed = no
+		remove_effect  = {
+			206 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					instant_build = yes
+					province = 2584
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	# north
+	Build_railroad_2 = {
+        icon = GFX_decision_generic_infra
+		cost = 150
+
+        available = {
+            controls_state = 204
+			controls_state = 203
+			controls_state = 100
+			controls_state = 97
+			controls_state = 96
+        }
+		days_remove = 25
+		fire_only_once = yes
+        fixed_random_seed = no
+		remove_effect  = {
+			build_railway = {
+				level = 2
+				path = { 1365 2331 3721 6681 2911 }
+			}
+			build_railway = {
+				level = 1
+				start_province = 2911
+				target_province = 3875
+				build_only_on_allied = yes
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	# north
+	Build_supply_hub_2 = {
+        icon = GFX_decision_generic_army_2
+		cost = 200
+
+        available = {
+            controls_state = 96
+			has_railway_connection = {
+				start_province = 2911
+				target_province = 3875
+			}
+        }
+		days_remove = 50
+		fire_only_once = yes
+        fixed_random_seed = no
+		remove_effect  = {
+			96 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					instant_build = yes
+					province = 3875
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	Build_infrastructure = {
+		icon = GFX_decision_generic_army_3
+		cost = 125
+
+        available = {
+			any_owned_state = { is_core_of = DAG }
+        }
+		days_remove = 35
+		fire_only_once = yes
+        fixed_random_seed = no
+		remove_effect  = {
+			every_owned_state = {
+				limit = { is_core_of = DAG }
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+}
+
+## Dol Guldur
+##wiped
+
+MOR_bordor_skirmishes_gondor = {
+	MOR_skirmish_minas_morgul = {
+		icon = GFX_decision_generic_army_2
+		cost = 15
+
+		visible = {
+			
+		}
+
+        available = {
+			
+        }
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect  = {
+			start_border_war = { 
+				change_state_after_war = no #overrides the transfer of state at the end of war 
+				combat_width = 80 #combat width for border war 
+				minimum_duration_in_days = 14 #minimum duration for combat 
+				attacker = { 
+					state = 5 # state to start border war 
+					num_provinces = 1 #number of provinces we want border war to be 
+					#on_win = japan_border_conflict.2 #effect to call if wins 
+					#on_lose = japan_border_conflict.3 #effect to call if loses 
+					#on_cancel = japan_border_conflict.4 #effect to call if cancels 
+					leader_score = { 
+						#score for selecting a leader 
+						base = 1 
+						modifier = { check_variable = { likes_border_wars = 1 } add = 2 } } 
+						modifier = 0.5 #combat modifier 
+						dig_in_factor = 0.5 #dig in modifier factor 
+						terrain_factor = 0.5 #terrain modifier factor 
+					}
+				defender = {
+					state = 173 # state to start border war
+					num_provinces = 1 #number of provinces we want border war to be
+					#on_win = japan_border_conflict.2 #effect to call if wins
+					#on_lose = japan_border_conflict.3 #effect to call if loses
+					#on_cancel = japan_border_conflict.4 #effect to call if cancels
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+}
+
+
+propaganda_efforts = {
+	MOR_release_the_prisoners = {
+        icon = GFX_decision_orc_release
+		cost = 50
+
+		allowed = {
+			original_tag = MOR
+		}
+
+		visible = {
+			GON = { controls_province = 6980 }
+			has_war_with = GON
+		}
+
+        available = {
+			GON = {
+				casualties_inflicted_by = {
+    				opponent = MOR
+    				thousands > 2.5
+				}
+			}
+			OR = {
+				divisions_in_state = {
+					unit = catapult
+					size > 0
+					state = 163
+				}
+				divisions_in_state = {
+					unit = catapult
+					size > 0
+					state = 21
+				}
+			}
+        }
+		
+		fire_only_once = yes
+
+		complete_effect = {
+			GON = { add_war_support = -0.05 }
+			MOR = { add_war_support = 0.05 }
+		}
+	}
+}
+
+MOR_spread_the_revolution_category_men = {
+
+############################################# GONDOR
+
+    DOR_create_unrest_gondor = {
+        icon = GFX_decision_revolt
+		cost = 150
+
+        available = {
+			NOT = {
+				GON = {
+					has_country_flag = banned_revolutionary_flag
+				}
+			}
+        }
+        visible = {
+            NOT = {
+                GON = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+            GON = {
+				add_timed_idea = { idea = MOR_communist_unrest days = 365 }
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+    DOR_spread_support_for_gondor = {
+		icon = GFX_decision_gondor
+		cost = 100
+
+        available = {
+			NOT = {
+				GON = {
+					has_country_flag = banned_revolutionary_flag
+				}
+			}
+        }
+        visible = {
+            NOT = {
+                GON = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		days_remove = 35
+		fire_only_once = no
+        fixed_random_seed = no
+		remove_effect = {
+			GON = {
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.025
+				}
+				add_opinion_modifier = { target = MOR modifier = small_increase }
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	DOR_make_contact_with_rebels_gondor = {
+		icon = GFX_decision_gondor
+		cost = 150
+
+        available = {
+			NOT = {
+				GON = {
+					has_country_flag = banned_revolutionary_flag
+				}
+			}
+			GON = {
+				revolutionary > 0.10
+			}
+        }
+        visible = {
+            NOT = {
+                GON = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			set_global_flag = DOR_contact_with_rebels_gondor
+            GON = {
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.05
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	DOR_send_supplies_to_rebels_gondor = {
+		icon = GFX_decision_gondor
+		cost = 125
+
+        available = {
+			has_global_flag = DOR_contact_with_rebels_gondor
+        }
+        visible = {
+            NOT = {
+                GON = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0   
+				amount = -1000  
+			}
+            GON = {
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.075
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	DOR_support_the_rebels_in_spreading_gondor = {
+		icon = GFX_decision_gondor
+		cost = 125
+
+        available = {
+			has_global_flag = DOR_contact_with_rebels_gondor
+        }
+
+        visible = {
+            NOT = {
+                GON = {
+                    has_government = revolutionary
+                }
+            }
+        }      
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			add_manpower = -1000
+            GON = {
+				add_stability = -0.05
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.05
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+#    DOR_set_afire_gondor = {
+#		icon = GFX_decision_gondor
+#		cost = 200
+#
+#       available = {
+#			has_global_flag = DOR_contact_with_rebels_gondor
+#            GON = {
+#                revolutionary > 0.50
+#            }
+#        }
+#        visible = {
+#            NOT = {
+#                GON = {
+#                    has_government = revolutionary
+#                }
+#            }
+#        }
+#
+#		fire_only_once = yes
+#        fixed_random_seed = no
+#		complete_effect = {
+#			GON = {
+#				start_civil_war = {
+#					ruling_party = revolutionary
+#                   ideology = unaligned
+#					size = 0.5
+#					capital = 13
+#					states = {
+#						13 19 170 15 19 164 21 163 172 176 167 169
+#					}
+#					keep_political_party_members = yes
+#				}
+#				#Communisme will start civil war in Gonder. Will join your faction if exists or maybe become your puppet?
+#			}
+#			every_country = {
+#				limit = {
+#					has_government = revolutionary
+#					has_civil_war = yes
+#					original_tag = GON
+#				}
+#				MOR = {
+#					add_to_faction = PREV
+#				}
+#			}
+#		}
+#		ai_will_do = {
+#			factor = 3
+#		}
+#	}
+
+############################################# GONDOR
+
+############################################# DALE
+
+    DOR_create_unrest_dale = {
+        icon = GFX_decision_revolt
+		cost = 75
+
+        available = {
+			NOT = {
+				DAL = {
+					has_country_flag = banned_revolutionary_flag
+				}
+			}
+        }
+        visible = {
+            NOT = {
+                DAL = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+            DAL = {
+				add_timed_idea = { idea = MOR_communist_unrest days = 365 }
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+    DOR_spread_support_for_dale = {
+		icon = GFX_decision_gondor
+		cost = 50
+
+        available = {
+			NOT = {
+				DAL = {
+					has_country_flag = banned_revolutionary_flag
+				}
+			}
+        }
+        visible = {
+            NOT = {
+                DAL = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		days_remove = 35
+		fire_only_once = no
+        fixed_random_seed = no
+		remove_effect = {
+			DAL = {
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.025
+				}
+				add_opinion_modifier = { target = MOR modifier = small_increase }
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	DOR_make_contact_with_rebels_dale = {
+		icon = GFX_decision_gondor
+		cost = 75
+
+        available = {
+			NOT = {
+				DAL = {
+					has_country_flag = banned_revolutionary_flag
+				}
+			}
+			DAL = {
+				revolutionary > 0.10
+			}
+        }
+        visible = {
+            NOT = {
+                DAL = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			set_global_flag = DOR_contact_with_rebels_dale
+            DAL = {
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.05
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	DOR_send_supplies_to_rebels_dale = {
+		icon = GFX_decision_gondor
+		cost = 75
+
+        available = {
+			has_global_flag = DOR_contact_with_rebels_dale
+        }
+        visible = {
+            NOT = {
+                DAL = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0   
+				amount = -1000  
+			}
+            DAL = {
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.075
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	DOR_support_the_rebels_in_spreading_dale = {
+		icon = GFX_decision_gondor
+		cost = 75
+
+        available = {
+			has_global_flag = DOR_contact_with_rebels_dale
+        }
+
+        visible = {
+            NOT = {
+                DAL = {
+                    has_government = revolutionary
+                }
+            }
+        }        
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			add_manpower = -1000
+            DAL = {
+				add_stability = -0.05
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.05
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+    DOR_set_afire_dale = {
+		icon = GFX_decision_gondor
+		cost = 100
+
+        available = {
+			has_global_flag = DOR_contact_with_rebels_dale
+            DAL = {
+                revolutionary > 0.50
+            }
+        }
+        visible = {
+            NOT = {
+                DAL = {
+                    has_government = revolutionary
+                }
+            }
+        }
+
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			DAL = {
+				start_civil_war = {
+					ruling_party = revolutionary
+                    ideology = cooperative
+					size = 0.5
+					capital = 94
+					states = {
+						94 212
+					}
+					keep_political_party_members = yes
+				}
+				#Communisme will start civil war in Gonder. Will join your faction if exists or maybe become your puppet?
+			}
+			every_country = {
+				limit = {
+					has_government = revolutionary
+					has_civil_war = yes
+					original_tag = DAL
+				}
+				MOR = {
+					add_to_faction = PREV
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+############################################# DALE
+
+############################################# ROHAN
+
+    DOR_create_unrest_rohan = {
+        icon = GFX_decision_revolt
+		cost = 75
+
+        available = {
+			NOT = {
+				ROH = {
+					has_country_flag = banned_revolutionary_flag
+				}
+			}
+        }
+        visible = {
+            NOT = {
+                ROH = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+            ROH = {
+				add_timed_idea = { idea = MOR_communist_unrest days = 365 }
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+    DOR_spread_support_for_rohan = {
+		icon = GFX_decision_gondor
+		cost = 50
+
+        available = {
+			NOT = {
+				ROH = {
+					has_country_flag = banned_revolutionary_flag
+				}
+			}
+        }
+        visible = {
+            NOT = {
+                ROH = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		days_remove = 35
+		fire_only_once = no
+        fixed_random_seed = no
+		remove_effect = {
+			ROH = {
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.025
+				}
+				add_opinion_modifier = { target = MOR modifier = small_increase }
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	DOR_make_contact_with_rebels_rohan = {
+		icon = GFX_decision_gondor
+		cost = 75
+
+        available = {
+			NOT = {
+				ROH = {
+					has_country_flag = banned_revolutionary_flag
+				}
+			}
+			ROH = {
+				revolutionary > 0.10
+			}
+        }
+        visible = {
+            NOT = {
+                ROH = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			set_global_flag = DOR_contact_with_rebels_rohan
+            ROH = {
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.05
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	DOR_send_supplies_to_rebels_rohan = {
+		icon = GFX_decision_gondor
+		cost = 75
+
+        available = {
+			has_global_flag = DOR_contact_with_rebels_logath
+        }
+        visible = {
+            NOT = {
+                ROH = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0   
+				amount = -1000  
+			}
+            ROH = {
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.075
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	DOR_support_the_rebels_in_spreading_rohan = {
+		icon = GFX_decision_gondor
+		cost = 75
+
+        available = {
+			has_global_flag = DOR_contact_with_rebels_rohan
+        }
+
+        visible = {
+            NOT = {
+                ROH = {
+                    has_government = revolutionary
+                }
+            }
+        }        
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			add_manpower = -1000
+            ROH = {
+				add_stability = -0.05
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.05
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+#    DOR_set_afire_rohan = {
+#		icon = GFX_decision_gondor
+#		cost = 100
+#
+#        available = {
+#			has_global_flag = DOR_contact_with_rebels_rohan
+#			ROH = {
+#               revolutionary > 0.50
+#            }
+#        }
+#        visible = {
+#            NOT = {
+#                ROH = {
+#                    has_government = revolutionary
+#                }
+#            }
+#        }
+#
+#		fire_only_once = yes
+#        fixed_random_seed = no
+#		complete_effect = {
+#			ROH = {
+#				start_civil_war = {
+#					ruling_party = revolutionary
+#                    ideology = unaligned
+#					size = 0.5
+#					capital = 127
+#					states = {
+#						127
+#					}
+#					keep_political_party_members = yes
+#				}
+#				#Communisme will start civil war in Gonder. Will join your faction if exists or maybe become your puppet?
+#			}
+#			every_country = {
+#				limit = {
+#					has_government = revolutionary
+#					has_civil_war = yes
+#					original_tag = ROH
+#				}
+#				MOR = {
+#					add_to_faction = PREV
+#				}
+#			}
+#		}
+#		ai_will_do = {
+#			factor = 3
+#		}
+#	}
+
+############################################# ROHAN
+
+############################################# LOGATH (EXPANDED)
+
+    DOR_create_unrest_logath = {
+        icon = GFX_decision_revolt
+		cost = 75
+
+        available = {
+			NOT = {
+				LGT = {
+					has_country_flag = banned_revolutionary_flag
+				}
+			}
+        }
+        visible = {
+            NOT = {
+                LGT = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+            LGT = {
+				add_timed_idea = { idea = MOR_communist_unrest days = 365 }
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+    DOR_spread_support_for_logath = {
+		icon = GFX_decision_gondor
+		cost = 50
+
+        available = {
+			NOT = {
+				LGT = {
+					has_country_flag = banned_revolutionary_flag
+				}
+			}
+        }
+        visible = {
+            NOT = {
+                LGT = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		days_remove = 35
+		fire_only_once = no
+        fixed_random_seed = no
+		remove_effect = {
+			LGT = {
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.025
+				}
+				add_opinion_modifier = { target = MOR modifier = small_increase }
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	DOR_make_contact_with_rebels_logath = {
+		icon = GFX_decision_gondor
+		cost = 75
+
+        available = {
+			NOT = {
+				LGT = {
+					has_country_flag = banned_revolutionary_flag
+				}
+			}
+			LGT = {
+				revolutionary > 0.10
+			}
+        }
+        visible = {
+            NOT = {
+                LGT = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			set_global_flag = DOR_contact_with_rebels_logath
+            LGT = {
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.05
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	DOR_send_supplies_to_rebels_logath = {
+		icon = GFX_decision_gondor
+		cost = 75
+
+        available = {
+			has_global_flag = DOR_contact_with_rebels_logath
+        }
+        visible = {
+            NOT = {
+                LGT = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0   
+				amount = -1000  
+			}
+            LGT = {
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.075
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	DOR_support_the_rebels_in_spreading_logath = {
+		icon = GFX_decision_gondor
+		cost = 75
+
+        available = {
+			has_global_flag = DOR_contact_with_rebels_logath
+        }
+
+        visible = {
+            NOT = {
+                LGT = {
+                    has_government = revolutionary
+                }
+            }
+        }        
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			add_manpower = -1000
+            LGT = {
+				add_stability = -0.05
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.05
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+    DOR_set_afire_logath = {
+		icon = GFX_decision_gondor
+		cost = 100
+
+        available = {
+			has_global_flag = DOR_contact_with_rebels_logath
+            LGT = {
+                revolutionary > 0.50
+            }
+        }
+        visible = {
+            NOT = {
+                LGT = {
+                    has_government = revolutionary
+                }
+            }
+        }
+
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			LGT = {
+				start_civil_war = {
+					ruling_party = revolutionary
+                    ideology = unaligned
+					size = 0.5
+					capital = 127
+					states = {
+						127
+					}
+					keep_political_party_members = yes
+				}
+				#Communisme will start civil war in Gonder. Will join your faction if exists or maybe become your puppet?
+			}
+			every_country = {
+				limit = {
+					has_government = revolutionary
+					has_civil_war = yes
+					original_tag = LGT
+				}
+				MOR = {
+					add_to_faction = PREV
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+############################################# LOGATH (EXPANDED)
+
+}
+
+
+MOR_spread_the_revolution_category_dwarves = {
+
+############################################# EREBOR
+
+    DOR_create_unrest_erebor = {
+        icon = GFX_decision_revolt
+		cost = 150
+
+        available = {
+			NOT = {
+				ERE = {
+					has_country_flag = banned_revolutionary_flag
+				}
+			}
+        }
+        visible = {
+            NOT = {
+                ERE = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+            ERE = {
+				add_timed_idea = { idea = MOR_communist_unrest days = 365 }
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+    DOR_spread_support_for_erebor = {
+		icon = GFX_decision_generic_treasure
+		cost = 100
+
+        available = {
+			NOT = {
+				ERE = {
+					has_country_flag = banned_revolutionary_flag
+				}
+			}
+        }
+        visible = {
+            NOT = {
+                ERE = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		days_remove = 35
+		fire_only_once = no
+        fixed_random_seed = no
+		remove_effect = {
+			ERE = {
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.025
+				}
+				add_opinion_modifier = { target = MOR modifier = small_increase }
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	DOR_make_contact_with_rebels_erebor = {
+		icon = GFX_decision_generic_treasure
+		cost = 150
+
+        available = {
+			NOT = {
+				ERE = {
+					has_country_flag = banned_revolutionary_flag
+				}
+			}
+			ERE = {
+				revolutionary > 0.10
+			}
+        }
+        visible = {
+            NOT = {
+                ERE = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			set_global_flag = DOR_contact_with_rebels_erebor
+            ERE = {
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.05
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	DOR_send_supplies_to_rebels_erebor = {
+		icon = GFX_decision_generic_treasure
+		cost = 125
+
+        available = {
+			has_global_flag = DOR_contact_with_rebels_erebor
+        }
+        visible = {
+            NOT = {
+                ERE = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0   
+				amount = -1000  
+			}
+            ERE = {
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.075
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	DOR_support_the_rebels_in_spreading_erebor = {
+		icon = GFX_decision_generic_treasure
+		cost = 125
+
+        available = {
+			has_global_flag = DOR_contact_with_rebels_erebor
+        }
+
+        visible = {
+            NOT = {
+                ERE = {
+                    has_government = revolutionary
+                }
+            }
+        }      
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			add_manpower = -1000
+            ERE = {
+				add_stability = -0.05
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.05
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+    DOR_set_afire_erebor = {
+		icon = GFX_decision_generic_treasure
+		cost = 200
+
+        available = {
+			has_global_flag = DOR_contact_with_rebels_erebor
+            ERE = {
+                revolutionary > 0.50
+            }
+        }
+        visible = {
+            NOT = {
+                ERE = {
+                    has_government = revolutionary
+                }
+            }
+        }
+
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			ERE = {
+				start_civil_war = {
+					ruling_party = revolutionary
+                    ideology = cooperative
+					size = 0.5
+					capital = 258
+					states = {
+						258 259
+					}
+					keep_political_party_members = yes
+				}
+				#Communisme will start civil war in Gonder. Will join your faction if exists or maybe become your puppet?
+			}
+			every_country = {
+				limit = {
+					has_government = revolutionary
+					has_civil_war = yes
+					original_tag = ERE
+				}
+				MOR = {
+					add_to_faction = PREV
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+############################################# EREBOR
+
+############################################# ERED MITHRIN (EXPANDED)
+
+    DOR_create_unrest_ered = {
+        icon = GFX_decision_revolt
+		cost = 75
+
+        available = {
+			NOT = {
+				EMI = {
+					has_country_flag = banned_revolutionary_flag
+				}
+			}
+        }
+        visible = {
+            NOT = {
+                EMI = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+            EMI = {
+				add_timed_idea = { idea = MOR_communist_unrest days = 365 }
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+    DOR_spread_support_for_ered = {
+		icon = GFX_decision_generic_treasure
+		cost = 50
+
+        available = {
+			NOT = {
+				EMI = {
+					has_country_flag = banned_revolutionary_flag
+				}
+			}
+        }
+        visible = {
+            NOT = {
+                EMI = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		days_remove = 35
+		fire_only_once = no
+        fixed_random_seed = no
+		remove_effect = {
+			EMI = {
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.025
+				}
+				add_opinion_modifier = { target = MOR modifier = small_increase }
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	DOR_make_contact_with_rebels_ered = {
+		icon = GFX_decision_generic_treasure
+		cost = 75
+
+        available = {
+			NOT = {
+				EMI = {
+					has_country_flag = banned_revolutionary_flag
+				}
+			}
+			EMI = {
+				revolutionary > 0.10
+			}
+        }
+        visible = {
+            NOT = {
+                EMI = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			set_global_flag = DOR_contact_with_rebels_ered
+            EMI = {
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.05
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	DOR_send_supplies_to_rebels_ered = {
+		icon = GFX_decision_generic_treasure
+		cost = 75
+
+        available = {
+			has_global_flag = DOR_contact_with_rebels_ered
+        }
+        visible = {
+            NOT = {
+                EMI = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0   
+				amount = -1000  
+			}
+            EMI = {
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.075
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	DOR_support_the_rebels_in_spreading_ered = {
+		icon = GFX_decision_generic_treasure
+		cost = 75
+
+        available = {
+			has_global_flag = DOR_contact_with_rebels_ered
+        }
+
+        visible = {
+            NOT = {
+                EMI = {
+                    has_government = revolutionary
+                }
+            }
+        }        
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			add_manpower = -1000
+            EMI = {
+				add_stability = -0.05
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.05
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+    DOR_set_afire_ered = {
+		icon = GFX_decision_generic_treasure
+		cost = 100
+
+        available = {
+			has_global_flag = DOR_contact_with_rebels_ered
+            EMI = {
+                revolutionary > 0.50
+            }
+        }
+        visible = {
+            NOT = {
+                EMI = {
+                    has_government = revolutionary
+                }
+            }
+        }
+
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			EMI = {
+				start_civil_war = {
+					ruling_party = revolutionary
+                    ideology = cooperative
+					size = 0.5
+					capital = 68
+					states = {
+						68 193 220
+					}
+					keep_political_party_members = yes
+				}
+				#Communisme will start civil war in Gonder. Will join your faction if exists or maybe become your puppet?
+			}
+			every_country = {
+				limit = {
+					has_government = revolutionary
+					has_civil_war = yes
+					original_tag = EMI
+				}
+				MOR = {
+					add_to_faction = PREV
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+############################################# ERED MITHRIN (EXPANDED)
+
+############################################# EMYN ENGRIN (EXPANDED)
+
+    DOR_create_unrest_emyn = {
+        icon = GFX_decision_revolt
+		cost = 75
+
+        available = {
+			NOT = {
+				EGR = {
+					has_country_flag = banned_revolutionary_flag
+				}
+			}
+        }
+        visible = {
+            NOT = {
+                EGR = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+            EGR = {
+				add_timed_idea = { idea = MOR_communist_unrest days = 365 }
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+    DOR_spread_support_for_emyn = {
+		icon = GFX_decision_generic_treasure
+		cost = 50
+
+        available = {
+			NOT = {
+				EGR = {
+					has_country_flag = banned_revolutionary_flag
+				}
+			}
+        }
+        visible = {
+            NOT = {
+                EGR = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		days_remove = 35
+		fire_only_once = no
+        fixed_random_seed = no
+		remove_effect = {
+			EGR = {
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.025
+				}
+				add_opinion_modifier = { target = MOR modifier = small_increase }
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	DOR_make_contact_with_rebels_emyn = {
+		icon = GFX_decision_generic_treasure
+		cost = 75
+
+        available = {
+			NOT = {
+				EGR = {
+					has_country_flag = banned_revolutionary_flag
+				}
+			}
+			EGR = {
+				revolutionary > 0.10
+			}
+        }
+        visible = {
+            NOT = {
+                EGR = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			set_global_flag = DOR_contact_with_rebels_emyn
+            EGR = {
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.05
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	DOR_send_supplies_to_rebels_emyn = {
+		icon = GFX_decision_generic_treasure
+		cost = 75
+
+        available = {
+			has_global_flag = DOR_contact_with_rebels_emyn
+        }
+        visible = {
+            NOT = {
+                EGR = {
+                    has_government = revolutionary
+                }
+            }
+        }
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0   
+				amount = -1000  
+			}
+            EGR = {
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.075
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	DOR_support_the_rebels_in_spreading_emyn = {
+		icon = GFX_decision_generic_treasure
+		cost = 75
+
+        available = {
+			has_global_flag = DOR_contact_with_rebels_emyn
+        }
+
+        visible = {
+            NOT = {
+                EGR = {
+                    has_government = revolutionary
+                }
+            }
+        }        
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			add_manpower = -1000
+            EGR = {
+				add_stability = -0.05
+				add_popularity = {
+					ideology = revolutionary
+					popularity = 0.05
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+    DOR_set_afire_emyn = {
+		icon = GFX_decision_generic_treasure
+		cost = 100
+
+        available = {
+			has_global_flag = DOR_contact_with_rebels_emyn
+            EGR = {
+                revolutionary > 0.50
+            }
+        }
+        visible = {
+            NOT = {
+                EGR = {
+                    has_government = revolutionary
+                }
+            }
+        }
+
+		fire_only_once = yes
+        fixed_random_seed = no
+		complete_effect = {
+			EGR = {
+				start_civil_war = {
+					ruling_party = revolutionary
+                    ideology = unaligned
+					size = 0.5
+					capital = 192
+					states = {
+						192 89 241 92
+					}
+					keep_political_party_members = yes
+				}
+				#Communisme will start civil war in Gonder. Will join your faction if exists or maybe become your puppet?
+			}
+			every_country = {
+				limit = {
+					has_government = revolutionary
+					has_civil_war = yes
+					original_tag = EGR
+				}
+				MOR = {
+					add_to_faction = PREV
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+############################################# EMYN ENGRIN (EXPANDED)
+
+}

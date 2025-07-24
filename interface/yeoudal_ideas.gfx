@@ -1,0 +1,14 @@
+spriteTypes = {
+	SpriteType = {
+        name = "GFX_idea_DOR_wine_trade"
+        texturefile = "gfx/interface/ideas/idea_dor_wine_trade.dds"
+    }
+    SpriteType = {
+        name = "GFX_idea_DOR_dorwinion_army"
+        texturefile = "gfx/interface/ideas/idea_dor_dorwinion_army.dds"
+    }
+    spriteType = {
+		name = "GFX_decision_category_DOR_wine_trade"
+		texturefile = "gfx/interface/decisions/decision_category_DOR_wine_trade.dds"
+	}
+}

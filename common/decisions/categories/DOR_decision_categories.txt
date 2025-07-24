@@ -1,0 +1,31 @@
+###################
+#### DORWINION ####
+###################
+
+DOR_wine_trade_category = {
+    priority = 50
+	icon = DOR_wine_trade
+
+    visible_when_empty = no	
+    visible = {
+        has_completed_focus = DOR_the_wine_trade
+    }
+	allowed = {
+		original_tag = DOR
+	}
+}
+
+DOR_makeshift_longships_category = {
+    priority = 30
+	icon = DOR_wine_trade
+
+    visible_when_empty = no	
+    visible = {
+        has_country_flag = DOR_ship_refit
+    }
+	allowed = {
+		original_tag = DOR
+	}
+}
+
+

@@ -1,0 +1,2771 @@
+focus_tree = {
+id = mirkwood_wip
+country = {
+	factor=0
+	modifier = {
+		add = 0
+		tag = MIR
+	}
+}
+
+
+default = no
+
+continuous_focus_position = { x = 50 y = 2000 }
+
+shared_focus = ea_theelvenalliance
+
+
+#Custom focuses start here
+
+	focus = {
+		id = MIR_rule_of_thranduil
+		icon = GFX_goal_mir_thranduil
+
+		x = -15
+		y = 0
+		mutually_exclusive = {
+
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = MIR_uphold_the_status_quo
+		icon = GFX_goal_lth_target_mirkwood_thranduil
+		x = -27
+		y = 1
+		relative_position_id = MIR_rule_of_thranduil
+		mutually_exclusive = {
+			focus = MIR_meeting_with_legolas
+		}
+		prerequisite = {
+			focus = MIR_rule_of_thranduil
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = MIR_self_centered_rule
+		icon = GFX_focus_generic_self_management
+		x = 0
+		y = 1
+		relative_position_id = MIR_uphold_the_status_quo
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_uphold_the_status_quo
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = MIR_meeting_with_legolas
+		icon = GFX_goal_lth_target_mirkwood_thranduil
+		x = 27
+		y = 1
+		relative_position_id = MIR_rule_of_thranduil
+		mutually_exclusive = {
+			focus = MIR_uphold_the_status_quo
+		}
+		prerequisite = {
+			focus = MIR_rule_of_thranduil
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = MIR_break_the_silence
+		icon = GFX_goal_goal_generic_major_alliance
+		x = 0
+		y = 1
+		relative_position_id = MIR_meeting_with_legolas
+		available = {
+			NOT = {
+				has_completed_focus = MIR_and_the_abyss_stares_back
+			}
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_meeting_with_legolas
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = MIR_visit_celeborn
+		icon = GFX_goal_lth_celeborn_reforms
+		x = -7
+		y = 1
+		relative_position_id = MIR_break_the_silence
+		available = {
+			NOT = {
+				has_completed_focus = MIR_and_the_abyss_stares_back
+			}
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_break_the_silence
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+    			ideology = revolutionary
+    			popularity = 0.05
+			}
+			MIR = { add_opinion_modifier = { target = LTH modifier = medium_increase } }
+		}
+	}
+		focus = {
+		id = MIR_study_his_plans
+		icon = GFX_goal_lth_celeborn_edicts
+		x = -1
+		y = 1
+		relative_position_id = MIR_visit_celeborn
+		available = {
+			NOT = {
+				has_completed_focus = MIR_and_the_abyss_stares_back
+			}
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_visit_celeborn
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_to_be_the_leader_of_the_folk
+		icon = GFX_goal_lth_celeborn_supreme_leader
+		x = 1
+		y = 1
+		relative_position_id = MIR_visit_celeborn
+		available = {
+			NOT = {
+				has_completed_focus = MIR_and_the_abyss_stares_back
+			}
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_visit_celeborn
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_an_admirable_cause
+		icon = GFX_goal_lth_shared_cause_hands
+		x = 0
+		y = 2
+		relative_position_id = MIR_visit_celeborn
+		available = {
+			NOT = {
+				has_completed_focus = MIR_and_the_abyss_stares_back
+			}
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_study_his_plans
+		}
+		prerequisite = {
+			focus = MIR_to_be_the_leader_of_the_folk
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_the_status_of_erebor
+		icon = GFX_goal_mor_erebor_flag
+		x = 0
+		y = 1
+		relative_position_id = MIR_break_the_silence
+		available = {
+			NOT = {
+				has_completed_focus = MIR_and_the_abyss_stares_back
+			}
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_break_the_silence
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = MIR_our_traditional_enemy
+		icon = GFX_goal_mor_wargoal_erebor
+		x = -1
+		y = 1
+		relative_position_id = MIR_the_status_of_erebor
+		available = {
+			NOT = {
+				has_completed_focus = MIR_and_the_abyss_stares_back
+			}
+		}
+		mutually_exclusive = {
+			focus = MIR_mend_the_ties
+		}
+		prerequisite = {
+			focus = MIR_the_status_of_erebor
+		}
+		cost = 2
+	 	available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 1
+			ERE = { add_opinion_modifier = { target = MIR modifier = large_decrease } }
+			MIR = { add_opinion_modifier = { target = ERE modifier = large_decrease } }
+		}
+	}
+	focus = {
+		id = MIR_embargo_erebor
+		icon = GFX_goal_goal_generic_positive_trade_relations
+		x = -1
+		y = 1
+		relative_position_id = MIR_our_traditional_enemy
+		available = {
+			NOT = {
+				has_completed_focus = MIR_and_the_abyss_stares_back
+			}
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_our_traditional_enemy
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 120
+			add_opinion_modifier = { target = ERE modifier = embargo }
+		}
+	}
+	focus = {
+		id = MIR_mend_the_ties
+		icon = GFX_goal_lth_elven_dwarf_relations
+		x = 1
+		y = 1
+		relative_position_id = MIR_the_status_of_erebor
+		available = {
+			NOT = {
+				has_completed_focus = MIR_and_the_abyss_stares_back
+			}
+		}
+		mutually_exclusive = {
+			focus = MIR_our_traditional_enemy
+		}
+		prerequisite = {
+			focus = MIR_the_status_of_erebor
+		}
+		cost = 2
+	 	available_if_capitulated = yes
+		completion_reward = {
+			remove_opinion_modifier = { target = ERE modifier = past_quarrels }
+			ERE = { remove_opinion_modifier = { target = MIR modifier = past_quarrels } }
+		}
+	}
+	focus = {
+		id = MIR_import_erebor_steel
+		icon = GFX_focus_generic_mining_industry
+		x = 1
+		y = 1
+		relative_position_id = MIR_mend_the_ties
+		available = {
+			NOT = {
+				has_completed_focus = MIR_and_the_abyss_stares_back
+			}
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_mend_the_ties
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			add_resource = { type = chromium amount = 12 state = 90 }
+			add_resource = { type = steel amount = 18 state = 83 }
+		}
+	}
+	focus = {
+		id = MIR_a_treaty_of_convenience
+		icon = GFX_goal_goal_generic_military_deal
+		x = 0
+		y = 2
+		relative_position_id = MIR_the_status_of_erebor
+		available = {
+			NOT = {
+				has_completed_focus = MIR_and_the_abyss_stares_back
+			}
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_our_traditional_enemy
+			focus = MIR_mend_the_ties
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			diplomatic_relation = {
+    			country = ERE
+    			relation = non_aggression_pact
+    			active = yes
+			}
+		}
+	}
+	focus = {
+		id = MIR_open_up_talks_with_men
+		icon = GFX_goal_lth_elves_men_handshake
+		x = 7
+		y = 1
+		relative_position_id = MIR_break_the_silence
+		available = {
+			NOT = {
+				has_completed_focus = MIR_and_the_abyss_stares_back
+			}
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_break_the_silence
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			add_popularity = {
+    			ideology = cooperative
+    			popularity = 0.05
+			}
+			every_country = {
+				limit = {
+					is_men = yes
+					NOT = { has_war_with = MIR }
+				}
+				add_opinion_modifier = {
+					target = MIR
+					modifier = medium_increase
+				}
+			}
+		}
+	}
+	focus = {
+		id = MIR_much_needed_leather
+		icon = GFX_goal_roh_rohan_flag
+		x = -1
+		y = 1
+		relative_position_id = MIR_open_up_talks_with_men
+		available = {
+			NOT = {
+				has_completed_focus = MIR_and_the_abyss_stares_back
+			}
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_open_up_talks_with_men
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			add_resource = { type = chromium amount = 12 state = 183 }
+			add_resource = { type = rubber amount = 18 state = 83 }
+			ROH = { add_opinion_modifier = { target = MIR modifier = large_increase } }
+		}
+	}
+	focus = {
+		id = MIR_support_dale
+		icon = GFX_goal_rhu_dale_flag
+		x = 1
+		y = 1
+		relative_position_id = MIR_open_up_talks_with_men
+		available = {
+			NOT = {
+				has_completed_focus = MIR_and_the_abyss_stares_back
+			}
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_open_up_talks_with_men
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			add_resource = { type = chromium amount = 12 state = 211 }
+			add_resource = { type = oil amount = 6 state = 83 }
+			DAL = { add_opinion_modifier = { target = MIR modifier = large_increase } }
+		}
+	}
+	focus = {
+		id = MIR_acknowledge_the_threat_to_the_east
+		icon = GFX_goal_rhu_nazghul_ringwraith_khamul
+		x = 0
+		y = 2
+		relative_position_id = MIR_open_up_talks_with_men
+		available = {
+			NOT = {
+				has_completed_focus = MIR_and_the_abyss_stares_back
+			}
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_much_needed_leather
+		}
+		prerequisite = {
+			focus = MIR_support_dale
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+			add_threat = 2
+			RHU = { add_opinion_modifier = { target = MIR modifier = large_decrease } }
+			MIR = { add_opinion_modifier = { target = RHU modifier = large_decrease } }
+		}
+	}
+	focus = {
+		id = MIR_tread_a_new_path
+		icon = GFX_goal_generic_torchbearer
+		x = 0
+		y = 1
+		relative_position_id = MIR_an_admirable_cause
+		mutually_exclusive = {
+			focus = MIR_and_the_abyss_stares_back
+			focus = MIR_proactive_defence
+		}
+		available = {
+			revolutionary > 0.35
+		}
+		prerequisite = {
+			focus = MIR_an_admirable_cause
+		}
+		prerequisite = {
+			focus = MIR_a_treaty_of_convenience
+		}
+		prerequisite = {
+			focus = MIR_embargo_erebor
+			focus = MIR_import_erebor_steel
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+    			ruling_party = revolutionary
+    			elections_allowed = no
+			}
+			add_popularity = {
+    			ideology = revolutionary
+    			popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = MIR_peoples_king
+		icon = GFX_goal_lth_thranduil_diplomatic_pressure
+		x = -3
+		y = 1
+		relative_position_id = MIR_tread_a_new_path
+		available = {
+		}
+		mutually_exclusive = {
+			focus = MIR_council_of_the_wisest
+		}
+		prerequisite = {
+			focus = MIR_tread_a_new_path
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_council_of_the_wisest
+		icon = GFX_goal_mir_radagast_the_brown
+		x = 3
+		y = 1
+		relative_position_id = MIR_tread_a_new_path
+		available = {
+		}
+		mutually_exclusive = {
+			focus = MIR_peoples_king
+		}
+		prerequisite = {
+			focus = MIR_tread_a_new_path
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_red_in_heart_and_mind
+		icon = GFX_goal_gon_pitchfork_and_torch_revolt
+		x = 0
+		y = 2
+		relative_position_id = MIR_tread_a_new_path
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_peoples_king
+			focus = MIR_council_of_the_wisest
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_proactive_defence
+		icon = GFX_goal_lth_cooperation_and_stability
+		x = 0
+		y = 1
+		relative_position_id = MIR_acknowledge_the_threat_to_the_east
+		mutually_exclusive = {
+			focus = MIR_and_the_abyss_stares_back
+			focus = MIR_tread_a_new_path
+		}
+		available = {
+			cooperative > 0.35
+		}
+		prerequisite = {
+			focus = MIR_acknowledge_the_threat_to_the_east
+		}
+		prerequisite = {
+			focus = MIR_a_treaty_of_convenience
+		}
+		prerequisite = {
+			focus = MIR_embargo_erebor
+			focus = MIR_import_erebor_steel
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+    			ruling_party = cooperative
+    			elections_allowed = no
+			}
+			add_popularity = {
+    			ideology = cooperative
+    			popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = MIR_align_with_the_dwarves
+		icon = GFX_goal_dwarves_soldiers_army
+		x = -3
+		y = 1
+		relative_position_id = MIR_proactive_defence
+		available = {
+			NOT = {
+				has_completed_focus = MIR_our_traditional_enemy
+			}
+			NOT = {
+				has_war_with = ERE
+			}
+			NOT = {
+				is_puppet = yes
+			}
+			NOT = {
+				has_war = yes
+			}
+			NOT = {
+				is_in_faction = yes
+			}
+		}
+		mutually_exclusive = {
+			focus = MIR_protect_the_men
+		}
+		prerequisite = {
+			focus = MIR_proactive_defence
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+			ERE = {
+				country_event = {
+					id = erebor.6
+				}
+			} 
+		}
+	}
+	focus = {
+		id = MIR_protect_the_men
+		icon = GFX_goal_generic_soldier_rearmament
+		x = 3
+		y = 1
+		relative_position_id = MIR_proactive_defence
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+			NOT = {
+				has_war = yes
+			}
+			NOT = {
+				is_in_faction = yes
+			}
+		}
+		mutually_exclusive = {
+			focus = MIR_align_with_the_dwarves
+		}
+		prerequisite = {
+			focus = MIR_proactive_defence
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = MIR_invite_dale
+		icon = GFX_goal_rhu_dale_flag
+		x = 0
+		y = 2
+		relative_position_id = MIR_proactive_defence
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_align_with_the_dwarves
+			focus = MIR_protect_the_men
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_invite_rhovanion
+		icon = GFX_goal_ROH_horselord_supremacy
+		x = 0
+		y = 1
+		relative_position_id = MIR_protect_the_men
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_protect_the_men
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_invite_logath
+		icon = GFX_goal_saruman_enedwaith_tribes
+		x = 3
+		y = 1
+		relative_position_id = MIR_protect_the_men
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_protect_the_men
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_train_the_men
+		icon = GFX_goal_lth_elven_army_training
+		x = 0
+		y = 1
+		relative_position_id = MIR_invite_rhovanion
+		available = {
+			has_completed_focus = MIR_protect_the_men
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_invite_dale
+			focus = MIR_invite_rhovanion
+			focus = MIR_invite_logath
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_joint_development_initiative
+		icon =GFX_goal_lth_shared_research_knowledge
+		x = -2
+		y = 1
+		relative_position_id = MIR_train_the_men
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_train_the_men
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_help_out_rhovanion
+		icon = GFX_goal_generic_deal_reach_out_to_military
+		x = 0
+		y = 1
+		relative_position_id = MIR_train_the_men
+		available = {
+			RHO = {
+				is_in_faction_with = MIR
+			}
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_train_the_men
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_economic_assistance
+		icon = GFX_goal_ELU_aid_supply_crate_equipment
+		x = 2
+		y = 1
+		relative_position_id = MIR_train_the_men
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_train_the_men
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_rhun_situation
+		icon = GFX_goal_mor_wargoal_rhun
+		x = 0
+		y = 2
+		relative_position_id = MIR_train_the_men
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_joint_development_initiative
+			focus = MIR_economic_assistance
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_contact_the_blue_wizards
+		icon = GFX_goal_rhu_the_blue_wizards
+		x = -1
+		y = 1
+		relative_position_id = MIR_rhun_situation
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_rhun_situation
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_support_the_rebels
+		icon = GFX_goal_gon_pitchfork_and_torch_revolt
+		x = 1
+		y = 1
+		relative_position_id = MIR_rhun_situation
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_rhun_situation
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_defend_dorwinion
+		icon = GFX_goal_rhu_dorwinion_flag
+		x = 0
+		y = 2
+		relative_position_id = MIR_rhun_situation
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_contact_the_blue_wizards
+
+		}
+		prerequisite = {
+			focus = MIR_support_the_rebels
+
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_recognize_free_rhun
+		icon = GFX_goal_lth_elves_men_handshake
+		x = 0
+		y = 1
+		relative_position_id = MIR_defend_dorwinion
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_defend_dorwinion
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_economy_of_the_greenwood
+		icon = GFX_goal_lth_nature_forest_between
+		x = -12
+		y = 2
+		relative_position_id = MIR_rule_of_thranduil
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_uphold_the_status_quo
+			focus = MIR_meeting_with_legolas
+		}
+		available = {
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = MIR_take_gollum_into_custody_bweh
+		icon = GFX_goal_mor_golum
+		x = 0
+		y = 2
+		relative_position_id = MIR_rule_of_thranduil
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_uphold_the_status_quo
+			focus = MIR_meeting_with_legolas
+		}
+		available = {
+			has_country_flag = MIR_aragorn_delivered_gollum
+		}
+		cost = 0
+	 	available_if_capitulated = yes
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = MIR_escape_of_gollum_bweh
+		icon = GFX_focus_prc_infiltration
+		x = -1
+		y = 1
+		relative_position_id = MIR_take_gollum_into_custody_bweh
+		available = {
+			has_country_flag = MIR_gollum_escaped
+		}
+		mutually_exclusive = {
+			focus = MIR_extract_information_bweh
+		}
+		prerequisite = {
+			focus = MIR_take_gollum_into_custody_bweh
+		}
+		cost = 0
+	 	available_if_capitulated = yes
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = MIR_extract_information_bweh
+		icon = GFX_focus_CZE_german_puppet
+		x = 1
+		y = 1
+		relative_position_id = MIR_take_gollum_into_custody_bweh
+		available = {
+			has_country_flag = MIR_gollum_in_custody
+		}
+		mutually_exclusive = {
+			focus = MIR_escape_of_gollum_bweh
+		}
+		prerequisite = {
+			focus = MIR_take_gollum_into_custody_bweh
+		}
+		cost = 0
+	 	available_if_capitulated = yes
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = MIR_send_a_messenger_to_rivendell_bweh
+		icon = GFX_goal_riv_council_of_elrond
+		x = -1
+		y = 1
+		relative_position_id = MIR_escape_of_gollum_bweh
+		mutually_exclusive = {
+			focus = MIR_a_great_disturbance
+		}
+		prerequisite = {
+			focus = MIR_escape_of_gollum_bweh
+			focus = MIR_extract_information_bweh
+		}
+		cost = 3
+	 	available_if_capitulated = yes
+		completion_reward = {
+			army_experience = 15
+		}
+	}
+	focus = {
+		id = MIR_send_legolas_bweh
+		icon = GFX_goal_lth_generic_archers
+		x = -1
+		y = 1
+		relative_position_id = MIR_send_a_messenger_to_rivendell_bweh
+		mutually_exclusive = {
+			focus = MIR_send_tauriel_bweh
+		}
+		prerequisite = {
+			focus = MIR_send_a_messenger_to_rivendell_bweh
+		}
+		cost = 2
+	 	available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = MIR_send_legolas_bweh_tt
+			hidden_effect = {
+				MIR_legolas = { retire = yes }
+			}
+		}
+	}
+	focus = {
+		id = MIR_send_tauriel_bweh
+		icon = GFX_goal_lth_glowing_elven_sword_blade
+		x = 1
+		y = 1
+		relative_position_id = MIR_send_a_messenger_to_rivendell_bweh
+		mutually_exclusive = {
+			focus = MIR_send_legolas_bweh
+		}
+		prerequisite = {
+			focus = MIR_send_a_messenger_to_rivendell_bweh
+		}
+		cost = 2
+	 	available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = MIR_send_tauriel_bweh_tt
+			hidden_effect = {
+				MIR_tauriel = { retire = yes }
+			}
+		}
+	}
+	focus = {
+		id = MIR_the_threat_of_dol_guldur_bweh
+		icon = GFX_goal_mor_dark_dol_guldur_fortress
+		x = -2
+		y = 2
+		relative_position_id = MIR_send_a_messenger_to_rivendell_bweh
+		mutually_exclusive = { 
+		focus = MIR_and_the_abyss_stares_back }
+		prerequisite = {
+			focus = MIR_send_legolas_bweh
+			focus = MIR_send_tauriel_bweh
+			focus = MIR_stare_into_the_abyss
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = MIR_request_the_aid_of_lothlorien_bweh
+		icon = GFX_goal_lth_lothlorien_flag
+		x = -1
+		y = 1
+		relative_position_id = MIR_the_threat_of_dol_guldur_bweh
+		mutually_exclusive = {
+			focus = MIR_a_personal_matter_bweh
+		}
+		prerequisite = {
+			focus = MIR_the_threat_of_dol_guldur_bweh
+		}
+		cost = 2
+	 	available_if_capitulated = yes
+		completion_reward = {
+			LTH = {
+				country_event = mirkwood.17
+			}
+		}
+	}
+	focus = {
+		id = MIR_a_personal_matter_bweh
+		icon = GFX_goal_mor_dol_guldur_flag
+		x = 1
+		y = 1
+		relative_position_id = MIR_the_threat_of_dol_guldur_bweh
+		mutually_exclusive = {
+			focus = MIR_request_the_aid_of_lothlorien_bweh
+		}
+		prerequisite = {
+			focus = MIR_the_threat_of_dol_guldur_bweh
+		}
+		cost = 2
+	 	available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = MIR_prepare_the_supply_lines_bweh
+		icon = GFX_goal_lth_food_resource_storage
+		x = 0
+		y = 1
+		relative_position_id = MIR_request_the_aid_of_lothlorien_bweh
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_request_the_aid_of_lothlorien_bweh
+			focus = MIR_a_personal_matter_bweh
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				controller_priority = {
+					base = 1
+					modifier = {
+						tag = MIR
+						add = 2
+					}
+				}
+				fallback = yes
+				path = { 3446 3171 1432 5766 5296 }
+				start_province = 3446
+				target_province = 5296
+			}
+			if = {
+				limit = {
+					MIR = {
+						controls_province = 5296
+					}
+				}
+				103 = {
+					add_building_construction = {
+    			type = supply_node
+    			level = 1
+    			instant_build = yes
+    			province = 5296
+					}
+				}
+			}
+			if = {
+				limit = {
+					MIR = {
+						controls_province = 4584
+					}
+				}
+				103 = {
+					add_building_construction = {
+    			type = supply_node
+    			level = 1
+    			instant_build = yes
+    			province = 4584
+					}
+				}
+			}
+			if = {
+				limit = {
+					MIR = {
+						controls_province = 5952
+					}
+				}
+				103 = {
+					add_building_construction = {
+    			type = supply_node
+    			level = 1
+    			instant_build = yes
+    			province = 5952
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = MIR_fortify_the_front_bweh
+		icon = GFX_goal_lth_fortifications_castle
+		x = 0
+		y = 1
+		relative_position_id = MIR_a_personal_matter_bweh
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_request_the_aid_of_lothlorien_bweh
+			focus = MIR_a_personal_matter_bweh
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border_country = SPI
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = MIR_preemptive_strike_bweh
+		icon = GFX_goal_lth_attack_dol_guldur
+		x = 0
+		y = 3
+		will_lead_to_war_with = DGU
+		relative_position_id = MIR_the_threat_of_dol_guldur_bweh
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_prepare_the_supply_lines_bweh
+			focus = MIR_fortify_the_front_bweh
+		}
+		prerequisite = {
+			
+		}
+		cost = 10
+		completion_reward = {
+			declare_war_on = {
+				target = DGU
+				type = annex_everything
+			}
+			if = {
+				limit = {
+					LTH = {
+						has_country_flag = LTH_accepted_joint_invasion
+					}
+				}
+				LTH = {
+					declare_war_on = {
+						target = DGU
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = MIR_grant_the_woods_to_men_bweh
+		icon = GFX_goal_ROH_rural_development_construction
+		x = -1
+		y = 1
+		relative_position_id = MIR_preemptive_strike_bweh
+		available = {
+			SPI = {
+				exists = no
+			}
+			VAL = {
+				exists = yes
+			}
+			NOT = {
+				is_puppet = yes
+			}
+			NOT = {
+				has_war_with = VAL
+			}
+		}
+		mutually_exclusive = {
+			focus = MIR_woodland_reunited_bweh
+		}
+		prerequisite = {
+			focus = MIR_forge_east_lorien_bweh
+			focus = MIR_reclaim_amon_lanc_bweh
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+			set_cosmetic_tag = MIR_cleansed
+			VAL = { add_opinion_modifier = { target = MIR modifier = large_increase } }
+			MIR = { add_opinion_modifier = { target = VAL modifier = large_increase } }
+				if = {
+					limit = {
+						is_in_faction = yes
+					}
+					faction_leader = { add_to_faction = VAL }
+				}
+			86 = {
+				if = {
+					limit = {
+					is_owned_by = MIR
+				}
+					transfer_state_to = VAL
+				}
+			}
+			190 = {
+				if = {
+					limit = {
+					is_owned_by = MIR
+				}
+					transfer_state_to = VAL
+				}
+			}
+			85 = {
+				if = {
+					limit = {
+					is_owned_by = MIR
+				}
+					transfer_state_to = VAL
+				}
+			}
+			86 = {
+				if = {
+					limit = {
+					is_owned_by = MIR
+				}
+					transfer_state_to = VAL
+				}
+			}
+			82 = {
+				if = {
+					limit = {
+					is_owned_by = MIR
+				}
+					add_core_of = MIR
+				}
+			}
+			86 = {
+				if = {
+					limit = {
+					is_owned_by = MIR
+				}
+					add_core_of = MIR
+				}
+			}
+		}
+	}
+	focus = {
+		id = MIR_woodland_reunited_bweh
+		icon = GFX_goal_lth_nature_forest_between
+		x = 1
+		y = 1
+		relative_position_id = MIR_preemptive_strike_bweh
+		available = {
+			SPI = {
+				exists = no
+			}
+		}
+		mutually_exclusive = {
+			focus = MIR_grant_the_woods_to_men_bweh
+		}
+		prerequisite = {
+			focus = MIR_forge_east_lorien_bweh
+			focus = MIR_reclaim_amon_lanc_bweh
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+			set_cosmetic_tag = MIR_cleansed
+			82 = {
+				add_core_of = MIR
+			}
+			84 = {
+				add_core_of = MIR
+			}
+			85 = {
+				add_core_of = MIR
+			}
+			86 = {
+				add_core_of = MIR
+			}
+			190 = {
+				add_core_of = MIR
+			}
+		}
+	}
+	focus = {
+		id = MIR_forge_east_lorien_bweh
+		icon = GFX_goal_lth_diplomacy_focus
+		x = -2
+		y = 1
+		relative_position_id = MIR_request_the_aid_of_lothlorien_bweh
+		mutually_exclusive = {
+		}
+		available = {
+			DGU = {
+				exists = no
+			}
+		}
+		prerequisite = {
+			focus = MIR_request_the_aid_of_lothlorien_bweh
+		}
+		cost = 10
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = DGU
+					OR = {
+						is_owned_and_controlled_by = MIR
+						is_owned_and_controlled_by = LTH
+					}
+				}
+				set_state_owner_to = ELO
+				add_core_of = ELO
+			}
+			puppet = ELO
+			hidden_effect = {
+				ELO = {
+					load_oob = "ELO_1936"
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						LTH = {
+							NOT = {
+								has_country_flag = LTH_accepted_joint_invasion
+							}
+						}
+					}
+					ELO = {
+						retire_character = ELO_celeborn
+					}
+					ELO = {
+						set_cosmetic_tag = ELO_amon
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = MIR_reclaim_amon_lanc_bweh
+		icon = GFX_goal_generic_annex_country_2
+		x = 2
+		y = 1
+		relative_position_id = MIR_a_personal_matter_bweh
+		mutually_exclusive = {
+		}
+		available = {
+			DGU = {
+				exists = no
+			}
+		}
+		prerequisite = {
+			focus = MIR_a_personal_matter_bweh
+		}
+		cost = 10
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = DGU
+				}
+				add_core_of = MIR
+			}
+		}
+	}
+	focus = {
+		id = MIR_a_great_disturbance
+		icon = GFX_focus_rom_abdicate
+		x = 1
+		y = 1
+		relative_position_id = MIR_extract_information_bweh
+		mutually_exclusive = {
+			focus = MIR_send_a_messenger_to_rivendell_bweh
+		}
+		prerequisite = {
+			focus = MIR_escape_of_gollum_bweh
+		}
+		cost = 3
+	 	available_if_capitulated = yes
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = MIR_stare_into_the_abyss
+		icon = GFX_goal_sauron_eye
+		x = 1
+		y = 1
+		relative_position_id = MIR_a_great_disturbance
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_a_great_disturbance
+		}
+		cost = 2
+	 	available_if_capitulated = yes
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = MIR_and_the_abyss_stares_back
+		icon = GFX_goal_unleash_sauron
+		x = 1
+		y = 1
+		relative_position_id = MIR_stare_into_the_abyss
+		available = {
+			belligerent > 0.15
+		}
+		mutually_exclusive = {
+			focus = MIR_the_threat_of_dol_guldur_bweh
+			focus = MIR_tread_a_new_path
+			focus = MIR_proactive_defence
+		}
+		prerequisite = {
+			focus = MIR_stare_into_the_abyss
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = MIR_and_the_abyss_stares_back_tt
+			set_politics = {
+    			ruling_party = belligerent
+    			elections_allowed = no
+			}
+			add_popularity = {
+    			ideology = belligerent
+    			popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = MIR_exile_legolas
+		icon = GFX_goal_lth_thranduil_diplomatic_pressure
+		x = -3
+		y = 1
+		relative_position_id = MIR_and_the_abyss_stares_back
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_and_the_abyss_stares_back
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_under_the_shadow_of_mordor
+		icon = GFX_goal_ROH_coalition_of_the_shadow_sauron_shadow_mordor
+		x = 0
+		y = 1
+		relative_position_id = MIR_and_the_abyss_stares_back
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_and_the_abyss_stares_back
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_restructure_the_military
+		icon = GFX_goal_lth_elven_army_dark
+		x = 3
+		y = 1
+		relative_position_id = MIR_and_the_abyss_stares_back
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_and_the_abyss_stares_back
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_the_ends_justify_the_means
+		icon = GFX_goal_ROH_propaganda_of_fear_sauron_eye_visions
+		x = 0
+		y = 2
+		relative_position_id = MIR_and_the_abyss_stares_back
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_exile_legolas
+		}
+		prerequisite = {
+			focus = MIR_under_the_shadow_of_mordor
+		}
+		prerequisite = {
+			focus = MIR_restructure_the_military
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_turn_against_the_rest
+		icon = GFX_goal_lth_galadriel_resisting_darkness
+		x = -2
+		y = 1
+		relative_position_id = MIR_the_ends_justify_the_means
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_the_ends_justify_the_means
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_unite_with_dol_guldur
+		icon = GFX_goal_mor_dol_guldur_flag
+		x = 0
+		y = 1
+		relative_position_id = MIR_the_ends_justify_the_means
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_the_ends_justify_the_means
+		}
+		cost = 15
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_target_the_dwarves
+		icon = GFX_goal_ELU_mountain_warfare_dwarf
+		x = 5
+		y = 1
+		relative_position_id = MIR_the_ends_justify_the_means
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_the_ends_justify_the_means
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_spark_the_feud
+		icon = GFX_goal_ELU_unity_through_war_dwarf_warriors
+		x = -2
+		y = 1
+		relative_position_id = MIR_target_the_dwarves
+		available = {
+		}
+		mutually_exclusive = {
+			focus = MIR_diplomatic_maneuvers
+		}
+		prerequisite = {
+			focus = MIR_target_the_dwarves
+		}
+		prerequisite = {
+			focus = MIR_unite_with_dol_guldur
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_quick_as_a_wink
+		icon = GFX_goal_mor_wargoal_erebor
+		x = -1
+		y = 1
+		relative_position_id =MIR_spark_the_feud
+		will_lead_to_war_with = ERE
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+			NOT = {
+				is_in_faction_with = ERE
+			}
+			has_government = belligerent
+		}
+		bypass = {
+			ERE = {
+				exists = no
+			}
+		}
+		mutually_exclusive = {
+			focus = MIR_careful_planning
+		}
+		prerequisite = {
+			focus = MIR_spark_the_feud
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			declare_war_on = {
+    			target = ERE
+    			type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = MIR_careful_planning
+		icon = GFX_goal_ELU_age_of_conquest_dagger_on_map
+		x = 1
+		y = 1
+		relative_position_id =MIR_spark_the_feud
+		available = {
+		}
+		mutually_exclusive = {
+			focus = MIR_quick_as_a_wink
+		}
+		prerequisite = {
+			focus = MIR_spark_the_feud
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_the_northern_supplies
+		icon = GFX_goal_ELU_aid_supply_crate_equipment
+		x = -1
+		y = 1
+		relative_position_id =MIR_careful_planning
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_careful_planning
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_the_fallback_line
+		icon =GFX_goal_ROH_restore_dunharrow_fortress_castle_on_mountain
+		x = 0
+		y = 2
+		relative_position_id =MIR_careful_planning
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_the_northern_supplies
+			focus = MIR_pack_for_the_mountains
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_the_jewels_of_erebor
+		icon = GFX_goal_mor_wargoal_erebor
+		x = 1
+		y = 1
+		relative_position_id = MIR_the_fallback_line
+		will_lead_to_war_with = DAL
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+			NOT = {
+				is_in_faction_with = ERE
+			}
+			has_government = belligerent
+		}
+		bypass = {
+			ERE = {
+				exists = no
+			}
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_the_fallback_line
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_taethor_plan
+		icon = GFX_goal_mor_wargoal_dale
+		x = -1
+		y = 1
+		relative_position_id =MIR_the_fallback_line
+		will_lead_to_war_with = ERE
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+			NOT = {
+				is_in_faction_with = DAL
+			}
+			has_government = belligerent
+		}
+		bypass = {
+			DAL = {
+				exists = no
+			}
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_the_fallback_line
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_pack_for_the_mountains
+		icon = GFX_goal_pass_road_through_mountains
+		x = 1
+		y = 1
+		relative_position_id =MIR_careful_planning
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_careful_planning
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_diplomatic_maneuvers
+		icon = GFX_goal_lth_elven_dwarf_relations
+		x = 2
+		y = 1
+		relative_position_id = MIR_target_the_dwarves
+		available = {
+		}
+		mutually_exclusive = {
+			focus = MIR_spark_the_feud
+		}
+		prerequisite = {
+			focus = MIR_target_the_dwarves
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_corrupt_the_men
+		icon = GFX_goal_ROH_liberate_the_people_commoners_peasants
+		x = -1
+		y = 1
+		relative_position_id =MIR_diplomatic_maneuvers
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_diplomatic_maneuvers
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_support_the_firebeards
+		icon = GFX_goal_support_belligerent
+		x = 1
+		y = 1
+		relative_position_id =MIR_diplomatic_maneuvers
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_diplomatic_maneuvers
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_align_them
+		icon = GFX_goal_ELU_abolish_unions_peasant_suppression
+		x = 0
+		y = 2
+		relative_position_id =MIR_diplomatic_maneuvers
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_corrupt_the_men
+		}
+		prerequisite = {
+			focus = MIR_support_the_firebeards
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_spy_over_lothlorien
+		icon = GFX_goal_lth_galadriel_fair_as_the_sea
+		x = -2
+		y = 1
+		relative_position_id = MIR_turn_against_the_rest
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_turn_against_the_rest
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_construct_outposts
+		icon = GFX_goal_ELU_aid_supply_crate_equipment
+		x = 0
+		y = 1
+		relative_position_id = MIR_turn_against_the_rest
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_turn_against_the_rest
+		}
+		prerequisite = {
+			focus = MIR_unite_with_dol_guldur
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_reinforce_the_outskirts
+		icon = GFX_goal_lth_fortifications_castle
+		x = 0
+		y = 1
+		relative_position_id = MIR_unite_with_dol_guldur
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_unite_with_dol_guldur
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_return_of_legolas
+		icon = GFX_goal_lth_generic_archers
+		x = 0
+		y = 1
+		relative_position_id =MIR_reinforce_the_outskirts
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_reinforce_the_outskirts
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_rally_the_elves
+		icon = GFX_goal_lth_elven_army
+		x = 0
+		y = 1
+		relative_position_id =MIR_return_of_legolas
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_return_of_legolas
+		}
+		prerequisite = {
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_restore_order_to_eryn_galen
+		icon = GFX_goal_lth_nature_forest_between
+		x = 0
+		y = 1
+		relative_position_id =MIR_rally_the_elves
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_rally_the_elves
+		}
+		prerequisite = {
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_final_preparations_for_the_bitter_war
+		icon = GFX_goal_ELU_aid_supply_crate_equipment
+		x = -1
+		y = 1
+		relative_position_id =MIR_construct_outposts
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_spy_over_lothlorien
+		}
+		prerequisite = {
+			focus = MIR_construct_outposts
+			focus = MIR_reinforce_the_outskirts
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_subjugate_the_northmen
+		icon = GFX_goal_lth_anduin_flag
+		x = -1
+		y = 1
+		relative_position_id = MIR_final_preparations_for_the_bitter_war
+		will_lead_to_war_with = VAL
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+			has_government = belligerent
+		}
+		bypass = {
+			is_in_faction_with = VAL
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_final_preparations_for_the_bitter_war
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_survey_the_plains
+		icon = GFX_goal_lth_scribe_knowledge
+		x = 0
+		y = 1
+		relative_position_id = MIR_subjugate_the_northmen
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_subjugate_the_northmen
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+			198 = {
+				add_core_of = LTH
+			}
+			199 = {
+				add_core_of = LTH
+			}
+			71 = {
+				add_core_of = LTH
+			}
+			196 = {
+				add_core_of = LTH
+			}
+		}
+	}
+	focus = {
+		id = MIR_siege_of_caras_galadhon
+		icon = GFX_goal_lth_elven_riders_naith
+		x = 1
+		y = 1
+		relative_position_id = MIR_final_preparations_for_the_bitter_war
+		will_lead_to_war_with = LTH
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+			has_government = belligerent
+			NOT = {
+				is_in_faction_with = LTH
+			}
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_final_preparations_for_the_bitter_war
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_claim_nenya
+		icon = GFX_goal_lth_nenya_enigma
+		x = 0
+		y = 1
+		relative_position_id = MIR_siege_of_caras_galadhon
+		available = {
+			74 = {
+				is_owned_by = MIR
+			}
+			160 = {
+				is_owned_by = MIR
+			}
+			76 = {
+				is_owned_by = MIR
+			}
+			222 = {
+				is_owned_by = MIR
+			}
+			75 = {
+				is_owned_by = MIR
+			}
+			LTH = {
+				exists = no
+			}
+			NOT = {
+				is_puppet = yes
+			}
+			has_government = belligerent
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_siege_of_caras_galadhon
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_subjugate_morian_orcs
+		icon = GFX_goal_lth_cleanse_orcs_from_moria
+		x = -1
+		y = 1
+		relative_position_id = MIR_survey_the_plains
+		will_lead_to_war_with = MOC
+		available = {
+			MOC = {
+				exists = yes
+			}
+			MOA = {
+				exists = no
+			}
+			NOT = {
+				is_puppet = yes
+			}
+			has_government = belligerent
+		}
+		bypass = {
+			OR = {
+				is_in_faction_with = MOC
+				is_in_faction_with = MOA
+			}
+		}
+		mutually_exclusive = {
+			focus = MIR_bust_through_moria
+		}
+		prerequisite = {
+			focus = MIR_survey_the_plains
+			focus = MIR_claim_nenya
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_bust_through_moria
+		icon = GFX_goal_lth_moria_flag
+		x = 1
+		y = 1
+		relative_position_id = MIR_claim_nenya
+		will_lead_to_war_with = MOC
+		will_lead_to_war_with = MOA
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+			has_government = belligerent
+		}
+		bypass = {
+			MOA = {
+				exists = no
+			}
+			MOC = {
+				exists = no
+			}
+		}
+		mutually_exclusive = {
+			focus = MIR_subjugate_morian_orcs
+		}
+		prerequisite = {
+			focus = MIR_survey_the_plains
+			focus = MIR_claim_nenya
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_darkness_over_imladris
+		icon = GFX_goal_generic_elrond_elves_rivendell
+		x = 0
+		y = 4
+		relative_position_id = MIR_final_preparations_for_the_bitter_war
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+			has_government = belligerent
+		}
+		mutually_exclusive = {
+		}
+		bypass = {
+			RIV = {
+				exists = no
+			}
+		}
+		prerequisite = {
+			focus = MIR_subjugate_morian_orcs
+			focus = MIR_bust_through_moria
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_demand_vilya
+		icon = GFX_goal_riv_elrond_ring_vilya
+		x = -1
+		y = 1
+		relative_position_id = MIR_darkness_over_imladris
+		will_lead_to_war_with = RIV
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+			has_government = belligerent
+			RIV = {
+				exists = yes
+			}
+		}
+		mutually_exclusive = {
+			focus = MIR_crush_elrond
+		}
+		prerequisite = {
+			focus = MIR_darkness_over_imladris
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_crush_elrond
+		icon = GFX_goal_lth_target_rivendell_elrond
+		x = 1
+		y = 1
+		relative_position_id = MIR_darkness_over_imladris
+		will_lead_to_war_with = RIV
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+			has_government = belligerent
+		}
+		bypass = {
+			RIV = {
+				exists = no
+			}
+			is_in_faction_with = RIV
+		}
+		mutually_exclusive = {
+			focus = MIR_demand_vilya
+		}
+		prerequisite = {
+			focus = MIR_darkness_over_imladris
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_merge_the_realms
+		icon = GFX_goal_lth_nenya_one_ring_merge
+		x = 0
+		y = 2
+		relative_position_id = MIR_darkness_over_imladris
+		will_lead_to_war_with = RIV
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+			has_government = belligerent
+		}
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_demand_vilya
+			focus = MIR_crush_elrond
+		}
+		cost = 15
+	 	available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_army_of_the_greenwood
+		icon = GFX_goal_lth_nature_forest_between
+		x = 12
+		y = 2
+		relative_position_id = MIR_rule_of_thranduil
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_uphold_the_status_quo
+			focus = MIR_meeting_with_legolas
+		}
+		available = {
+		}
+		cost = 10
+	 	available_if_capitulated = yes
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = MIR_clear_space_for_eagles
+		icon = GFX_goal_goal_generic_territory_or_war
+		x = -4
+		y = 1
+		relative_position_id = MIR_army_of_the_greenwood
+		cost = 5
+		prerequisite = {
+			focus = MIR_army_of_the_greenwood
+		}
+		available = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+    				type = air_base
+    				level = 2
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = MIR_tame_the_wild_beast
+		icon = GFX_goal_generic_air_eagles
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = MIR_clear_space_for_eagles
+		prerequisite = {
+			focus = MIR_clear_space_for_eagles
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 2
+				category = lotr_eagles
+				category = lotr_fellbeasts
+			}
+		}
+	}
+	focus = {
+		id = MIR_maneuver_exercises
+		icon = GFX_goal_goal_generic_air_doctrine
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = MIR_clear_space_for_eagles
+		prerequisite = {
+			focus = MIR_clear_space_for_eagles
+		}
+		available = {
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = MIR_being_one_with_the_beast
+		icon = GFX_goal_lth_white_council_eagles
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = MIR_clear_space_for_eagles
+		prerequisite = {
+			focus = MIR_tame_the_wild_beast
+		}
+		prerequisite = {
+			focus = MIR_maneuver_exercises
+		}
+		
+		available = {
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = air_doctrine
+			}
+			increase_eagles_cap_15 = yes
+		}
+	}
+	focus = {
+		id = MIR_seafaring_rangers
+		icon = GFX_goal_generic_viking_logship
+		x = -2
+		y = 1
+		relative_position_id = MIR_army_of_the_greenwood
+		cost = 10
+		prerequisite = {
+			focus = MIR_army_of_the_greenwood
+		}
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				bonus = 0.5
+				uses = 2
+				category = lotr_sailing_longship
+			}
+			random_owned_controlled_state = {
+				limit = {
+						is_coastal = yes
+					}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+    				type = dockyard
+    				level = 2
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = MIR_learn_sailing_methods
+		icon = GFX_goal_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 2
+		relative_position_id = MIR_seafaring_rangers
+		cost = 10
+		prerequisite = {
+			focus = MIR_seafaring_rangers
+		}
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 2
+			category = naval_doctrine
+			}
+		random_owned_controlled_state = {
+			limit = {
+						is_coastal = yes
+					}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+    				type = dockyard
+    				level = 2
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = MIR_mirkwood_rangers
+		icon = GFX_goal_rangers_of_the_north
+		x = 0
+		y = 1
+		relative_position_id = MIR_army_of_the_greenwood
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_army_of_the_greenwood
+		}
+		available = {
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = special_bonus
+				category = lotr_infantry_archery
+				uses = 2
+				bonus = 0.25
+			}
+		}
+	}
+	focus = {
+		id = MIR_close_quarters
+		icon = GFX_goal_lth_glowing_elven_sword_blade
+		x = -1
+		y = 1
+		relative_position_id = MIR_mirkwood_rangers
+		cost = 10
+		prerequisite = {
+			focus = MIR_mirkwood_rangers
+		}
+		mutually_exclusive = {
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				category = lotr_infantry_weapons_sword
+				category = lotr_support_tech
+				uses = 2
+				bonus = 0.5
+			}
+		}
+	}
+	focus = {
+		id = MIR_improve_the_efficiency
+		icon = GFX_goal_lth_generic_archers
+		x = 1
+		y = 1
+		relative_position_id = MIR_mirkwood_rangers
+		cost = 10
+		prerequisite = {
+			focus = MIR_mirkwood_rangers
+		}
+		mutually_exclusive = {
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				category = lotr_infantry_archery_bow
+				category = lotr_machines_windlance
+				uses = 2
+				bonus = 0.5
+				ahead_reduction = 1
+			}
+		}
+	}
+	focus = {
+		id = MIR_field_medicine
+		icon = GFX_goal_lth_waters_of_healing
+		x = 0
+		y = 2
+		relative_position_id = MIR_mirkwood_rangers
+		cost = 10
+		prerequisite = {
+			focus = MIR_close_quarters
+			focus = MIR_improve_the_efficiency
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				category = hospital_tech
+				uses = 1
+				bonus = 1
+			}
+			add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = MIR_plow_through_the_forest
+		icon = GFX_goal_generic_horse_studs
+		x = 4
+		y = 1
+		relative_position_id = MIR_army_of_the_greenwood
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = MIR_army_of_the_greenwood
+		}
+		available = {
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = special_bonus
+				category = lotr_cavalry
+				uses = 2
+				bonus = 0.25
+			}
+		}
+	}
+	focus = {
+		id = MIR_horseback_archery
+		icon = GFX_goal_lth_elven_cavalry
+		x = -1
+		y = 1
+		relative_position_id = MIR_plow_through_the_forest
+		cost = 10
+		prerequisite = {
+			focus = MIR_plow_through_the_forest
+		}
+		mutually_exclusive = {
+			focus = MIR_rhosgobel_rabbits
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				category = lotr_cavalry_archers
+				category = lotr_infantry_archery_bow
+				uses = 2
+				bonus = 0.5
+				ahead_reduction = 1
+			}
+		}
+	}
+	focus = {
+		id = MIR_rhosgobel_rabbits
+		icon = GFX_goal_mir_radagast_the_brown
+		x = 1
+		y = 1
+		relative_position_id = MIR_plow_through_the_forest
+		cost = 10
+		prerequisite = {
+			focus = MIR_plow_through_the_forest
+		}
+		mutually_exclusive = {
+			focus = MIR_horseback_archery
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				category = lotr_cavalry_light
+				uses = 2
+				bonus = 0.5
+				ahead_reduction = 1
+			}
+		}
+	}
+	focus = {
+		id = MIR_improve_logistics
+		icon = GFX_goal_goal_generic_position_armies
+		x = 0
+		y = 2
+		relative_position_id = MIR_plow_through_the_forest
+		cost = 10
+		prerequisite = {
+			focus = MIR_horseback_archery
+			focus = MIR_rhosgobel_rabbits
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				category = logistics_tech
+				uses = 1
+				bonus = 1
+			}
+			add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = MIR_weaponise_the_forest
+		icon = GFX_goal_lth_nature_great_beasts
+		x = 2
+		y = 1
+		relative_position_id = MIR_army_of_the_greenwood
+		cost = 10
+		prerequisite = {
+			focus = MIR_army_of_the_greenwood
+		}
+		available = {
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MIR_a_trick_up_in_the_sleeve
+		icon = GFX_goal_lth_elven_sword_and_bow
+		x = 0
+		y = 2
+		relative_position_id = MIR_weaponise_the_forest
+		cost = 10
+		prerequisite = {
+			focus = MIR_close_quarters
+			focus = MIR_improve_the_efficiency
+		}
+		prerequisite = {
+			focus = MIR_weaponise_the_forest
+		}
+		prerequisite = {
+			focus = MIR_horseback_archery
+			focus = MIR_rhosgobel_rabbits
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				category = lotr_infantry_specialforces
+				category = lotr_elven_secrets
+				uses = 3
+				bonus = 0.5
+			}
+			add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+			}
+		}
+	}
+}

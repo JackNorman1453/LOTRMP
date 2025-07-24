@@ -1,0 +1,18 @@
+RHU_spread_support = {
+	icon = military_operation
+	visible = {
+		original_tag = RHU
+		}
+	}
+RHU_khandian_skirmishes = {
+	visible = {
+		has_civil_war = no
+		has_completed_focus = RHUN_skirmishes_west
+		NOT = {
+			KND = {
+				controls_state = 115
+				controls_state = 117
+			}
+		}
+	}
+}

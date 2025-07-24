@@ -1,0 +1,69 @@
+
+
+on_actions = {
+	
+	on_capitulation_immediate = {
+        effect = {
+            if = {
+                limit = {
+					ROOT = { tag = DGU }
+					OR = {
+						FROM = { tag = MIR }
+						FROM = { tag = LTH }
+					}
+					OR = {
+						LTH = {
+							controls_state = 87
+						}
+						MIR = {
+							controls_state = 87
+						}
+					}
+					OR = {
+						DGU = {
+							has_war_with = LTH
+							has_war_with = MIR
+						}
+						DGU = {
+							has_war_with = MIR
+						}
+						DGU = {
+							has_war_with = LTH
+						}
+					}
+					OR = {
+						has_global_flag = DGU_dol_guldur_war_flag
+						has_global_flag = MIR_dol_guldur_war_flag
+					}
+				}
+				clr_global_flag = DGU_dol_guldur_war_flag
+				clr_global_flag = MIR_dol_guldur_war_flag
+				DGU = {
+					white_peace = {
+						tag = LTH
+					}
+					white_peace = {
+						tag = MIR
+					}
+				}
+				MIR = {
+					annex_country = {
+						target = DGU
+						transfer_troops = no
+					}
+					annex_country = {
+						target = SPI
+						transfer_troops = no
+					}
+					country_event = {
+						id = mirkwood.18
+						days = 1
+						random_hours = 12
+						random_days = 1
+					}
+				}
+			}
+		}
+	}
+#end
+}

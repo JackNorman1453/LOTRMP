@@ -1,0 +1,147 @@
+RHU_belligerent_historical_plan = {
+    name = "Erebor historical plan Expanded"
+    desc = "Historical behavior for Erebor Expanded"
+    
+    allowed = {
+        original_tag = ERE
+    }
+
+    enable = {
+            is_historical_focus_on = yes
+        }
+
+    abort = {
+        always = no
+    }
+	
+	ai_national_focuses = {
+		ERE_thefateoferebor
+		ERE_dwarvenculture
+		ERE_progressivereforms
+		ERE_tradeempireofthenorth
+		ERE_invitedaletofaction
+		ERE_defensivedoctrine
+		ERE_southernthreat
+		ERE_constructironhillsline
+		ERE_formroyaldefensecouncil
+		ERE_royalinstitutionofinfrastructure
+		ERE_statefundedarmy
+		ERE_firstconscriptionwave
+		ERE_modernizearmy
+		ERE_militarism
+		ERE_royalfoundries
+		ERE_commercialforges
+		ERE_rearmamentinitiative
+		ERE_trainingdrills
+		ERE_traineagles
+		ERE_ereborsteel
+		ERE_digdeeper
+		ERE_plantmoretrees
+		ERE_transportconcerns
+		ERE_defensiveconcerns
+		ERE_roadpaving
+		ERE_investincampsitesarounderebor
+		ERE_raisethegate
+		ERE_antifellbeastinvestment
+		ERE_womeninthearmy
+		ERE_royalsapproach
+		ERE_traditionalwarfare
+		ERE_militaryadvancements
+		
+	}
+}
+
+ERE_belligerent_unhistorical_plan = {
+    name = "Erebor belligerent unhistorical plan Expanded"
+    desc = "Unhistorical belligerent behavior for Erebor Expanded"
+    
+    allowed = {
+        original_tag = ERE
+    }
+
+    enable = {
+		is_historical_focus_on = no
+			has_country_flag = gameplan_going_belligerent_unhistorical
+        }
+    abort = {
+        always = no
+    }
+	
+	ai_national_focuses = {
+		ERE_thefateoferebor
+		ERE_unification
+		ERE_tightengripgreymountains
+		ERE_tightengripironhills
+	}
+}
+
+ERE_unaligned_unhistorical_plan = {
+    name = "Erebor unaligned unhistorical plan Expanded"
+    desc = "Unhistorical unaligned behavior for Erebor Expanded"
+    
+    allowed = {
+        original_tag = ERE
+    }
+
+    enable = {
+		is_historical_focus_on = no
+        has_country_flag = gameplan_going_unaligned_unhistorical
+        }
+    abort = {
+        always = no
+    }
+	
+	ai_national_focuses = {
+		ERE_thefateoferebor
+		ERE_traditionalism
+		ERE_tightencentralization
+		ERE_prewar_austerity
+	}
+}
+
+ERE_revolutionary_unhistorical_plan = {
+    name = "Erebor revolutionary unhistorical plan Expanded"
+    desc = "Unhistorical revolutionary behavior for Erebor Expanded"
+    
+    allowed = {
+        original_tag = ERE
+    }
+
+    enable = {
+		is_historical_focus_on = no
+        has_country_flag = gameplan_going_revolutionary_unhistorical
+        }
+    abort = {
+        always = no
+    }
+	
+	ai_national_focuses = {
+		ERE_thefateoferebor
+		ERE_socialistdream
+		ERE_nationalizeindustry
+		ERE_mandatoryconscription
+	}
+}
+ERE_cooperative_unhistorical_plan = {
+    name = "Erebor cooperative unhistorical plan Expanded"
+    desc = "Unhistorical cooperative behavior for Erebor Expanded"
+    
+    allowed = {
+        original_tag = ERE
+    }
+
+    enable = {
+		is_historical_focus_on = no
+        has_country_flag = gameplan_going_cooperative_unhistorical
+        }
+    abort = {
+        always = no
+    }
+	
+	ai_national_focuses = {
+		ERE_thefateoferebor
+		ERE_progressivereforms
+		ERE_tradeempireofthenorth
+		ERE_invitedaletofaction
+	}
+}

@@ -1,0 +1,522 @@
+
+
+### ENTITIES:
+
+# Generic infantry entity
+entity = {
+	name = "lotr_expanded_generic_infantry_entity"
+	pdxmesh = "generic_soldier_mesh"
+
+	default_state = "idle"
+
+	state = {
+        name = "idle"
+        animation = "idle1"
+        animation_blend_time = 0.6
+		looping = no
+		next_state = "idle"
+		chance = 10
+    }
+	state = {
+        name = "idle"
+        animation = "idle2"
+        animation_blend_time = 0.6
+		looping = no
+		next_state = "idle"
+		chance = 2
+    }
+	state = {
+        name = "idle"
+        animation = "idle3"
+        animation_blend_time = 0.6
+		looping = no
+		next_state = "idle"
+		chance = 2
+    }
+	state = {
+        name = "idle"
+        animation = "idle4"
+        animation_blend_time = 0.6
+		looping = no
+		next_state = "idle"
+		chance = 1
+    }
+
+	state = {
+		name = "move"
+		animation = "move1"
+		animation_blend_time = 0.0
+		animation_speed = 1.0
+		chance = 1
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "infantry_move_animation" }
+		}
+	}
+
+	state = {
+		name = "attack"
+		animation = "attack1"
+		animation_blend_time = 0.15
+		animation_speed = 1.0
+		looping = no
+		next_state = "attack"
+		chance = 1
+	}
+	state = {
+		name = "attack"
+		animation = "attack2"
+		animation_blend_time = 0.15
+		animation_speed = 1.0
+		looping = no
+		next_state = "attack"
+		chance = 1
+	}
+	state = {
+		name = "attack"
+		animation = "attack3"
+		animation_blend_time = 0.15
+		animation_speed = 1.0
+		looping = no
+		next_state = "attack"
+		chance = 1
+	}
+	state = {
+		name = "attack"
+		animation = "attack4"
+		animation_blend_time = 0.15
+		animation_speed = 1.0
+		looping = no
+		next_state = "attack"
+		chance = 1
+	}
+	state = {
+		name = "attack"
+		animation = "attack5"
+		animation_blend_time = 0.15
+		animation_speed = 1.0
+		looping = no
+		next_state = "attack"
+		chance = 1
+	}
+	state = {
+		name = "attack"
+		animation = "attack6"
+		animation_blend_time = 0.15
+		animation_speed = 1.0
+		looping = no
+		next_state = "attack"
+		chance = 1
+	}
+	state = {
+		name = "attack"
+		animation = "attack7"
+		animation_blend_time = 0.15
+		animation_speed = 1.0
+		looping = no
+		next_state = "attack"
+		chance = 5
+	}
+
+	state = {
+		name = "support_attack"
+		animation = "attack3"
+		animation_blend_time = 0.3
+		animation_speed = 1.0
+	}
+
+	state = {
+		name = "defend"
+		animation = "defend1"
+		animation_blend_time = 0.3
+		animation_speed = 1.0
+		chance = 1
+	}
+
+	state = {
+		name = "training"
+		animation = "training1"
+		animation_blend_time = 0.5
+		animation_speed = 1.0
+		chance = 1
+		looping = no
+	}
+
+	state = {
+		name = "retreat"
+		animation = "retreat1"
+		animation_blend_time = 0.3
+		animation_speed = 1.0
+	}
+
+	state = {
+		name = "death"
+		animation = "dying1"
+		animation_blend_time = 0.3
+		animation_speed = 1.0
+	}
+
+	scale = 0.08
+}
+
+# Catapult infantry entity
+entity = {
+	name = "lotr_expanded_catapult_unit_entity"
+	pdxmesh = "catapult_unit_mesh"
+
+	default_state = "idle"
+
+	state = {
+        name = "idle"
+        animation = "idle1"
+        animation_blend_time = 0.6
+		animation_speed = 0.25
+		looping = no
+		next_state = "idle"
+		chance = 10
+    }
+	state = {
+        name = "idle"
+        animation = "idle2"
+        animation_blend_time = 0.6
+		animation_speed = 0.5
+		looping = no
+		next_state = "idle"
+		chance = 2
+    }
+
+	state = {
+		name = "move"
+		animation = "move"
+		animation_blend_time = 0.0
+		animation_speed = 0.8
+		chance = 1
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "motorized_unit_move_animation" }
+		}
+	}
+
+	state = {
+		name = "attack"
+		animation = "attack"
+		animation_blend_time = 0.15
+		animation_speed = 1.0
+		looping = no
+		next_state = "attack"
+		chance = 1
+	}
+
+	state = {
+		name = "support_attack"
+		animation = "attack"
+		animation_blend_time = 0.3
+		animation_speed = 1.0
+	}
+
+	state = {
+		name = "defend"
+		animation = "attack"
+		animation_blend_time = 0.3
+		animation_speed = 1.0
+		chance = 1
+	}
+
+	state = {
+		name = "training"
+		animation = "idle2"
+		animation_blend_time = 0.5
+		animation_speed = 0.85
+		chance = 1
+		looping = no
+	}
+
+	state = {
+		name = "retreat"
+		animation = "move"
+		animation_blend_time = 0.3
+		animation_speed = 1.0
+	}
+
+	state = {
+		name = "death"
+		animation = "idle2"
+		animation_blend_time = 0.3
+		animation_speed = 1.0
+	}
+
+	scale = 0.28
+}
+
+# Cavalry entity (just a horse lol)
+entity = {
+	name = "lotr_expanded_cavalry_unit_entity"
+	pdxmesh = "infantry_cavalry_horse_mesh"
+	
+	default_state = attack
+	state = { name = "idle"						animation = "cavalry_idle" 		animation_blend_time = 0.0 }
+	state = { name = "move"						animation = "cavalry_move" 		animation_blend_time = 0.0 }
+	state = { name = "attack"					animation = "cavalry_attack" 	chance = 4 looping = no next_state = "attack" }
+	state = { name = "attack"					animation = "cavalry_attack_2" 	chance = 1 looping = no next_state = "attack" }
+	state = { name = "defend"					animation = "cavalry_attack" 	chance = 4 looping = no next_state = "defend" }
+	state = { name = "defend"					animation = "cavalry_attack_2" 	chance = 1 looping = no next_state = "defend" }
+	state = { name = "support_attack"					animation = "cavalry_attack" 	chance = 4 looping = no next_state = "support_attack" }
+	state = { name = "support_attack"					animation = "cavalry_attack_2" 	chance = 1 looping = no next_state = "support_attack" }
+	state = { name = "retreat"					animation = "cavalry_move" 		animation_blend_time = 0.0 }
+	state = { name = "training"					animation = "cavalry_idle" 		animation_blend_time = 0.0 }
+	
+	scale = 1.45
+}
+
+# Rhun infantry entity
+entity = {
+	name = "lotr_expanded_rhun_infantry_entity"
+	pdxmesh = "rhun_soldier_mesh"
+
+	clone = "lotr_expanded_generic_infantry_entity"
+
+	scale = 0.08
+}
+
+### COUNTRIES:
+# eregion
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EGN_infantry_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EGN_infantry_2_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EGN_light_cavalry_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EGN_heavy_cavalry_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_catapult_unit_entity"
+    name = "EGN_catapult_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EGN_motorized_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EGN_mechanized_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EGN_anti_tank_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EGN_artillery_entity"
+}
+
+# logath
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "LGT_infantry_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "LGT_infantry_2_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "LGT_light_cavalry_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "LGT_heavy_cavalry_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_catapult_unit_entity"
+    name = "LGT_catapult_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "LGT_motorized_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "LGT_mechanized_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "LGT_anti_tank_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "LGT_artillery_entity"
+}
+
+# ered mithrin (iron hills)
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EMI_infantry_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EMI_infantry_2_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EMI_light_cavalry_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EMI_heavy_cavalry_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_catapult_unit_entity"
+    name = "EMI_catapult_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EMI_motorized_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EMI_mechanized_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EMI_anti_tank_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EMI_artillery_entity"
+}
+
+# emyn engrin (grey mountains)
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EGR_infantry_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EGR_infantry_2_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EGR_light_cavalry_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EGR_heavy_cavalry_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_catapult_unit_entity"
+    name = "EGR_catapult_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EGR_motorized_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EGR_mechanized_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EGR_anti_tank_entity"
+}
+
+entity = {
+    clone = "lotr_expanded_generic_infantry_entity"
+    name = "EGR_artillery_entity"
+}
+
+# FREE RHUN
+
+entity = {
+	clone = "lotr_expanded_rhun_infantry_entity"
+	name = "DRH_infantry_entity"
+}
+
+entity = {
+	clone = "lotr_expanded_rhun_infantry_entity"
+	name = "DRH_infantry_2_entity"
+}
+
+entity = {
+	clone = "lotr_expanded_cavalry_unit_entity"
+	name = "DRH_light_cavalry_entity"
+}
+
+entity = {
+	clone = "lotr_expanded_cavalry_unit_entity"
+	name = "DRH_chariot_entity"
+}
+
+entity = {
+	clone = "lotr_expanded_cavalry_unit_entity"
+	name = "DRH_heavy_cavalry_entity"
+}
+
+entity = {
+	clone = "lotr_expanded_catapult_unit_entity"
+	name = "DRH_catapult_entity"
+}
+
+entity = {
+	clone = "lotr_expanded_rhun_infantry_entity"
+	name = "DRH_motorized_entity"
+}
+
+entity = {
+	clone = "lotr_expanded_rhun_infantry_entity"
+	name = "DRH_mechanized_entity"
+}
+
+entity = {
+	clone = "lotr_expanded_rhun_infantry_entity"
+	name = "DRH_anti_tank_entity"
+}
+
+entity = {
+	clone = "lotr_expanded_rhun_infantry_entity"
+	name = "DRH_artillery_entity"
+}
+
+
+

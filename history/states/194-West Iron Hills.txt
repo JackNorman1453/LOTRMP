@@ -1,0 +1,26 @@
+
+state={
+	id=194
+	name="STATE_194"
+	resources = {
+	steel = 27.000 }
+
+	history={
+		owner = EGR
+		add_core_of = EGR
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+
+	}
+
+	provinces={
+		936 1274 2005 2645 3254 3924 5307 5374 5545 5714 5727 5758 
+	}
+	manpower=30500
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=0.000
+}

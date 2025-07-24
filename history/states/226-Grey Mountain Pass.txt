@@ -1,0 +1,22 @@
+state={
+	id=226
+	name="STATE_226"
+	provinces={
+		768 1475 2293 2589 3457 4346 5674 
+	}
+	
+	history={
+		owner = EGR
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		
+		add_core_of = EGR
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,28 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_NOR_basic_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment/siege_weapons.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOR_improved_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment/siege_weapons2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOR_advanced_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment/siege_weapons3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOR_super_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment/siege_weapons4.dds"
+	}
+	SpriteType = {
+		name = "GFX_NOR_interwar_antiair_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment/ballista_aa.dds"
+	}
+	
+	#helpertoken
+
+}

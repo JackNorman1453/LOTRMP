@@ -1,0 +1,33 @@
+on_actions = {
+    on_capitulation = {
+        effect = {
+            if = {
+				limit = {
+					ROOT = { tag = DAL }
+					FROM = { tag = RHU }
+					ERE = {
+                        is_in_faction_with = DAL
+                        has_war_with = RHU
+                    }
+                    DAL = {
+                        is_in_faction_with = ERE
+                        has_war_with = RHU
+                    }
+				}      
+                country_event = dale.1
+
+                DAL = {
+                    retire_character = DAL_brand
+                    add_war_support = -0.25
+                    promote_character = DAL_bard
+                }
+                ERE = {
+                    retire_character = ERE_dain
+                    add_war_support = -0.25
+                    promote_character = ERE_thorin
+                }
+            }
+        }
+    }
+
+}

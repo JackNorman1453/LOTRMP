@@ -1,0 +1,38 @@
+characters = {
+	MIM_mauhur = {
+		name = "Mauhúr"
+		portraits = {
+			army = {
+				large = "GFX_mauhur"
+				small = "GFX_idea_mauhur"
+			}
+		}
+		country_leader = {
+            ideology = expansionist
+            desc = "placeholder"
+            expire = "1980.1.1.1"
+        }
+		country_leader = {
+			ideology = unchained
+			desc = "placeholder"
+			expire = "1980.1.1.1"
+		}
+		country_leader = {
+			ideology = domineering 
+			desc = "placeholder"
+			expire = "1980.1.1.1"
+		}
+		country_leader = {
+			ideology = defensive 
+			desc = "placeholder"
+			expire = "1980.1.1.1"
+		}
+		field_marshal={
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+ }

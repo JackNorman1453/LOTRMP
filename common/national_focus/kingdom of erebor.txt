@@ -1,0 +1,1381 @@
+focus_tree = {
+id = 'ereborexpanded'
+country = {
+	factor=0
+	modifier = {
+		add = 20
+		tag = ERE
+	}
+}
+
+default = no
+
+continuous_focus_position = { x = 50 y = 2000 }
+############default focus
+shared_focus = army_effort
+shared_focus = aviation_effort
+
+#Custom focuses start here
+##########################################
+####begin of defense and radio focuses####
+##########################################
+	focus = {
+	id = ERE_formroyaldefensecouncil
+	icon = GFX_goal_generic_soldier_rearmament
+	ai_will_do = { }
+	x = 20
+	y = 0
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = yes
+	completion_reward = {
+	add_ideas = ERE_royal_defense_council }
+}
+
+	focus = {
+	id = ERE_privatizedmilitary
+	icon = GFX_goal_generic_deal_reach_out_to_military
+	ai_will_do = { }
+	x = -3
+	y = 1
+	relative_position_id = ERE_formroyaldefensecouncil
+	mutually_exclusive = { focus = ERE_statefundedarmy }
+	prerequisite = { focus = ERE_formroyaldefensecouncil }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_ideas = ERE_privatized_military }
+}
+	#buys guns in exchange for consumer goods
+	focus = {
+	id = ERE_buyswords
+	icon = GFX_goal_lth_investment
+	ai_will_do = { }
+	x = 0
+	y = 1
+	relative_position_id = ERE_privatizedmilitary
+	mutually_exclusive = { }
+	prerequisite = { focus = ERE_privatizedmilitary }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_timed_idea = { 
+	idea = ERE_arms_payments
+	days = 90 }
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 20000
+    producer = ERE } }
+}
+	#buys bows in exchange for consumer goods
+	focus = {
+	id = ERE_buybows
+	icon = GFX_goal_lth_investment
+	ai_will_do = { }
+	x = -2
+	y = 1
+	relative_position_id = ERE_privatizedmilitary
+	mutually_exclusive = { }
+	prerequisite = { focus = ERE_privatizedmilitary }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_timed_idea = { 
+	idea = ERE_arms_payments
+	days = 90 } 
+	add_equipment_to_stockpile = {
+    type = artillery_equipment
+    amount = 5000
+    producer = ERE }}
+}
+	#focus for national spirit that gives weekly manpower and economy debuff for a few months
+	focus = {
+	id = ERE_hiremercenaries
+	icon = GFX_goal_generic_men_at_arms
+	ai_will_do = { }
+	x = -1
+	y = 1
+	relative_position_id = ERE_buyswords
+	mutually_exclusive = { }
+	prerequisite = { focus = ERE_buybows focus = ERE_buyswords }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_timed_idea = { 
+	idea = ERE_recruiting_mercenaries
+	days = 90 } }
+}
+
+	focus = {
+	id = ERE_sellcompanystock
+	icon = GFX_goal_lth_weapon_sword_forging
+	ai_will_do = { }
+	x = 0
+	y = 2
+	relative_position_id = ERE_hiremercenaries
+	mutually_exclusive = { }
+	prerequisite = { focus = ERE_hiremercenaries }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_ideas = ERE_company_bonds }
+}
+
+	focus = {
+	id = ERE_statefundedarmy
+	icon = GFX_goal_lth_collect_taxes
+	ai_will_do = { }
+	x = -1
+	y = 1
+	relative_position_id = ERE_formroyaldefensecouncil
+	mutually_exclusive = { focus = ERE_privatizedmilitary }
+	prerequisite = { focus = ERE_formroyaldefensecouncil }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = { add_ideas = ERE_state_funded_army }
+}
+
+	focus = {
+	id = ERE_militarism
+	icon = GFX_goal_goal_generic_alliance
+	ai_will_do = { }
+	x = 2
+	y = 1
+	relative_position_id = ERE_statefundedarmy
+	mutually_exclusive = { }
+	prerequisite = { focus = ERE_statefundedarmy }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	swap_ideas = { 
+	remove_idea = ERE_state_funded_army 
+	add_idea = ERE_militarism_expanded } }
+}
+
+	focus = {
+	id = ERE_firstconscriptionwave
+	icon = GFX_goal_generic_monarchy_2
+	ai_will_do = { }
+	x = 0
+	y = 1
+	relative_position_id = ERE_statefundedarmy
+	mutually_exclusive = { }
+	prerequisite = { focus = ERE_statefundedarmy }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = { 
+	add_timed_idea = {
+    idea = ERE_conscription_expanded
+    days = 200 } }
+}
+
+	focus = {
+	id = ERE_womeninthearmy
+	icon = GFX_goal_generic_population_growth
+	ai_will_do = { }
+	x = 0
+	y = 2
+	relative_position_id = ERE_militarism
+	mutually_exclusive = { }
+	prerequisite = { focus = ERE_militarism }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_ideas = ERE_women_in_the_army }
+}
+
+	focus = {
+	id = ERE_modernizearmy
+	icon = GFX_goal_support_the_left_right
+	ai_will_do = { }
+	x = 1
+	y = 3
+	relative_position_id = ERE_firstconscriptionwave
+	mutually_exclusive = { }
+	prerequisite = { focus = ERE_firstconscriptionwave focus = ERE_privatizedmilitary }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	swap_ideas = { 
+	remove_idea = ERE_royal_defense_council
+	add_idea = ERE_royal_defense_council_1 } }
+}
+######more output for civs and stuff
+	focus = {
+	id = ERE_royalfoundries
+	icon = GFX_goal_generic_jaeger_emblem
+	ai_will_do = { }
+	x = 1
+	y = 2
+	relative_position_id = ERE_privatizedmilitary
+	mutually_exclusive = { }
+	prerequisite = { focus = ERE_privatizedmilitary focus = ERE_statefundedarmy }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_ideas = ERE_royal_foundries }
+}
+#########some civs
+	focus = {
+	id = ERE_commercialforges
+	icon = GFX_goal_generic_industry_merge
+	ai_will_do = { }
+	x = -1
+	y = 1
+	relative_position_id = ERE_royalfoundries
+	mutually_exclusive = { }
+	prerequisite = { focus = ERE_royalfoundries }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	90 = { add_extra_state_shared_building_slots = 2 }
+	90 = {
+	add_building_construction = {
+    type = industrial_complex
+    level = 2
+    instant_build = yes } } }
+}
+	#gives army xp
+	focus = {
+	id = ERE_trainingdrills
+	icon = GFX_goal_generic_spear_and_sabre
+	ai_will_do = { }
+	x = 1
+	y = 1
+	relative_position_id = ERE_royalfoundries
+	mutually_exclusive = { }
+	prerequisite = { focus = ERE_royalfoundries }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = { army_experience = 25 }
+}
+	#gives some eagles and air xp
+	focus = {
+	id = ERE_traineagles
+	icon = GFX_goal_generic_air_eagles
+	ai_will_do = { }
+	x = 0
+	y = 2
+	relative_position_id = ERE_trainingdrills
+	mutually_exclusive = { }
+	prerequisite = { focus = ERE_trainingdrills }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+			# Unlock eagle research
+			set_technology = {
+				eagle_domestication = 1
+				fighter_eagle = 1
+			}
+			increase_eagles_cap_5 = yes
+			# Get a number of eagles
+			add_equipment_to_stockpile = {
+    			type = fighter_eagle_airframe_0
+    			amount = 5
+    			producer = ERE
+			}
+		}
+}
+	focus = {
+	id = ERE_rearmamentinitiative
+	icon = GFX_goal_generic_sword_arrow_and_shield
+	ai_will_do = { }
+	x = 0
+	y = 2
+	relative_position_id = ERE_royalfoundries
+	mutually_exclusive = { }
+	prerequisite = { focus = ERE_royalfoundries }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	90 = { add_extra_state_shared_building_slots = 2 }
+	90 = {
+	add_building_construction = {
+    type = arms_factory
+    level = 2
+    instant_build = yes } } }
+}
+
+	focus = {
+	id = ERE_nationalizemedia
+	icon = GFX_goal_generic_voting_ballot_locked
+	ai_will_do = { }
+	x = 11
+	y = 0
+	mutually_exclusive = { }
+	prerequisite = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_popularity = {
+    ideology = belligerent
+    popularity = 0.15 }
+	add_timed_idea = {
+    idea = generic_belligerent
+    days = 180 } }
+}
+
+	focus = {
+	id = ERE_propagandacampaign
+	icon = GFX_goal_lth_map_measures
+	ai_will_do = { }
+	x = 0
+	y = 3
+	relative_position_id = ERE_nationalizemedia
+	mutually_exclusive = { }
+	prerequisite = { focus = ERE_nationalizemedia }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_timed_idea = {
+    idea = ERE_propaganda_campaign
+    days = 90 } }
+}
+
+	focus = {
+	id = ERE_buildoutposttower
+	icon = GFX_goal_lth_total_isolation_tower
+	ai_will_do = { }
+	x = 0
+	y = 3
+	relative_position_id = ERE_propagandacampaign
+	mutually_exclusive = { }
+	prerequisite = { focus = ERE_propagandacampaign }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	90 = {
+	add_building_construction = {
+    type = radar_station
+    level = 3
+    instant_build = yes } } }
+}
+
+	focus = {
+	id = ERE_minersapproach
+	icon = GFX_goal_generic_mining_industry
+	ai_will_do = { }
+	x = 2
+	y = 1
+	relative_position_id = ERE_formroyaldefensecouncil
+	mutually_exclusive = { focus = ERE_royalsapproach }
+	prerequisite = { focus = ERE_formroyaldefensecouncil }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = { add_ideas = ERE_miners_approach }
+}
+
+	focus = {
+	id = ERE_drawupnewstrategies
+	icon = GFX_goal_goal_generic_army_doctrines
+	ai_will_do = { }
+	x = 0
+	y = 2
+	relative_position_id = ERE_minersapproach
+	mutually_exclusive = { }
+	prerequisite = { focus = ERE_minersapproach }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_tech_bonus = {
+    bonus = 0.5
+    uses = 1
+    category = cat_superior_firepower
+	category = cat_mobile_warfare } }
+}
+
+	focus = {
+	id = ERE_royalsapproach
+	icon = GFX_goal_goal_tfv_strengthen_commonwealth_ties
+	ai_will_do = { }
+	x = 4
+	y = 1
+	relative_position_id = ERE_formroyaldefensecouncil
+	mutually_exclusive = { focus = ERE_minersapproach }
+	prerequisite = { focus = ERE_formroyaldefensecouncil }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = { add_ideas = ERE_royals_approach }
+}
+
+	focus = {
+	id = ERE_traditionalwarfare
+	icon = GFX_goal_goal_generic_air_doctrine
+	ai_will_do = { }
+	x = 0
+	y = 2
+	relative_position_id = ERE_royalsapproach
+	mutually_exclusive = { }
+	prerequisite = { focus = ERE_royalsapproach }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_tech_bonus = {
+    bonus = 0.5
+    uses = 1
+    category = cat_grand_battle_plan } }
+}
+
+	focus = {
+	id = ERE_militaryadvancements
+	icon = GFX_goal_goal_tripartite_pact
+	ai_will_do = { }
+	x = -1
+	y = 3
+	relative_position_id = ERE_traditionalwarfare
+	mutually_exclusive = { }
+	prerequisite = { focus = ERE_drawupnewstrategies focus = ERE_traditionalwarfare }
+	prerequisite = { focus = ERE_modernizearmy }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	swap_ideas = {
+    remove_idea = ERE_royal_defense_council_1
+    add_idea = ERE_royal_defense_council_2 } }
+}
+#########################################
+####end of defense and radio focuses#####
+#########################################
+
+#########################################
+#####start of infrastructure focuses#####
+#########################################
+
+	focus = {
+	id = ERE_royalinstitutionofinfrastructure
+	icon = GFX_goal_genetic_emblem
+	ai_will_do = { }
+	x = 32
+	y = 0
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_ideas = ERE_royal_institute_of_infrastructure_1 }
+}
+#############supply hub building speed increase
+	focus = {
+	id = ERE_transportconcerns
+	icon = GFX_goal_generic_rural_trade_farming
+	ai_will_do = { }
+	x = -3
+	y = 1
+	relative_position_id = ERE_royalinstitutionofinfrastructure
+	prerequisite = { focus = ERE_royalinstitutionofinfrastructure }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	swap_ideas = {
+    remove_idea = ERE_royal_institute_of_infrastructure_1
+	add_idea = ERE_royal_institute_of_infrastructure_2 } }
+}
+
+	focus = {
+	id = ERE_investincaravans
+	icon = GFX_goal_generic_infrastructure_investment
+	ai_will_do = { }
+	x = -1
+	y = 1
+	relative_position_id = ERE_transportconcerns
+	prerequisite = { focus = ERE_transportconcerns }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_equipment_to_stockpile = {
+    type = train_equipment
+    amount = 5
+    producer = ERE } }
+}
+
+	focus = {
+	id = ERE_investinwagons
+	icon = GFX_goal_generic_horse_drawn_equipment
+	ai_will_do = { }
+	x = 1
+	y = 1
+	relative_position_id = ERE_transportconcerns
+	prerequisite = { focus = ERE_transportconcerns }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_equipment_to_stockpile = {
+    type = motorized_equipment_1
+    amount = 100
+    producer = ERE } }
+}
+####increases division speed
+	focus = {
+	id = ERE_roadpaving
+	icon = GFX_goal_generic_horse_studs
+	ai_will_do = { }
+	x = 0
+	y = 2
+	relative_position_id = ERE_royalinstitutionofinfrastructure
+	prerequisite = { focus = ERE_royalinstitutionofinfrastructure}
+	prerequisite = { focus = ERE_transportconcerns }
+	prerequisite = { focus = ERE_defensiveconcerns }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	swap_ideas = {
+    remove_idea = ERE_royal_institute_of_infrastructure_2
+	add_idea = ERE_royal_institute_of_infrastructure_3 } }
+	
+	
+}
+
+	focus = {
+	id = ERE_infrastructureconcerns
+	icon = GFX_goal_generic_urban_city
+	ai_will_do = { }
+	x = 0
+	y = 2
+	relative_position_id = ERE_roadpaving
+	prerequisite = { focus = ERE_roadpaving }
+	mutually_exclusive = { }
+	cost = 2
+ 	available_if_capitulated = no
+	completion_reward = {
+	swap_ideas = {
+    remove_idea = ERE_royal_institute_of_infrastructure_3
+	add_idea = ERE_royal_institute_of_infrastructure_5 } }
+}
+
+	focus = {
+	id = ERE_investinwesternerebor
+	icon = GFX_goal_lth_tax_collection_reformed
+	ai_will_do = { }
+	x = -3
+	y = 1
+	relative_position_id = ERE_infrastructureconcerns
+	prerequisite = { focus = ERE_infrastructureconcerns }
+	mutually_exclusive = { }
+	cost = 2
+ 	available_if_capitulated = no
+	completion_reward = {
+	259 = {
+	add_building_construction = {
+    type = infrastructure
+    level = 1
+    instant_build = yes } } }
+}
+
+	focus = {
+	id = ERE_investincentralerebor
+	icon = GFX_goal_lth_tax_collection_reformed
+	ai_will_do = { }
+	x = -1
+	y = 1
+	relative_position_id = ERE_infrastructureconcerns
+	prerequisite = { focus = ERE_infrastructureconcerns }
+	mutually_exclusive = { }
+	cost = 2
+ 	available_if_capitulated = no
+	completion_reward = {
+	90 = {
+	add_building_construction = {
+    type = infrastructure
+    level = 1
+    instant_build = yes } } }
+}
+
+	focus = {
+	id = ERE_investinnorthernerebor
+	icon = GFX_goal_lth_tax_collection_reformed
+	ai_will_do = { }
+	x = 1
+	y = 1
+	relative_position_id = ERE_infrastructureconcerns
+	prerequisite = { focus = ERE_infrastructureconcerns }
+	mutually_exclusive = { }
+	cost = 2
+ 	available_if_capitulated = no
+	completion_reward = {
+	258 = {
+	add_building_construction = {
+    type = infrastructure
+    level = 1
+    instant_build = yes } } }
+}
+
+	focus = {
+	id = ERE_investineasternerebor
+	icon = GFX_goal_lth_tax_collection_reformed
+	ai_will_do = { }
+	x = 3
+	y = 1
+	relative_position_id = ERE_infrastructureconcerns
+	prerequisite = { focus = ERE_infrastructureconcerns }
+	mutually_exclusive = { }
+	cost = 2
+ 	available_if_capitulated = no
+	completion_reward = {
+	242 = {
+	add_building_construction = {
+    type = infrastructure
+    level = 1
+    instant_build = yes } } }
+}
+###########build railway
+	focus = {
+	id = ERE_northerngreyroad
+	icon = GFX_goal_lth_treaty_invitation
+	ai_will_do = { }
+	x = -3
+	y = 1
+	relative_position_id = ERE_roadpaving
+	prerequisite = { focus = ERE_roadpaving }
+	prerequisite = { focus = ERE_investinwagons focus = ERE_investincaravans }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	build_railway = {
+    level = 1
+    build_only_on_allied = no
+    controller_priority = {
+        base = 1
+        modifier = {
+            tag = ERE
+            add = 2
+        }
+    }
+    fallback = yes
+    path = { 5069 3182 2255 4858 1003 }
+    start_state = 90
+    target_state = 219 } }
+}
+
+	focus = {
+	id = ERE_defensiveconcerns
+	icon = GFX_goal_lth_celebrate_trumpets_message
+	ai_will_do = { }
+	x = 3
+	y = 1
+	relative_position_id = ERE_royalinstitutionofinfrastructure
+	prerequisite = { focus = ERE_royalinstitutionofinfrastructure }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_ideas = ERE_defensive_concerns }
+	
+}
+
+	focus = {
+	id = ERE_antifellbeastinvestment
+	icon = GFX_goal_generic_arrows
+	ai_will_do = { }
+	x = -1
+	y = 1
+	relative_position_id = ERE_defensiveconcerns
+	prerequisite = { focus = ERE_defensiveconcerns }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	90 = {
+	add_building_construction = {
+    type = anti_air_building
+    level = 3
+    instant_build = yes } } }
+}
+
+	focus = {
+	id = ERE_investincampsitesarounderebor
+	icon = GFX_goal_goal_generic_defence
+	ai_will_do = { }
+	x = 1
+	y = 1
+	relative_position_id = ERE_defensiveconcerns
+	prerequisite = { focus = ERE_defensiveconcerns }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	90 = {
+	add_building_construction = {
+    type = bunker
+    level = 2
+    instant_build = yes
+    province = 5091 }
+	add_building_construction = {
+    type = bunker
+    level = 2
+    instant_build = yes
+    province = 5778 }
+	add_building_construction = {
+    type = bunker
+    level = 2
+    instant_build = yes
+    province = 4383 } } }
+}
+
+	focus = {
+	id = ERE_raisethegate
+	icon = GFX_goal_generic_home_defense
+	ai_will_do = { }
+	x = 1
+	y = 1
+	relative_position_id = ERE_antifellbeastinvestment
+	prerequisite = { focus = ERE_antifellbeastinvestment focus = ERE_investincampsitesarounderebor }
+	prerequisite = { focus = ERE_roadpaving }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	90 = {
+	add_building_construction = {
+    type = castle
+    level = 3
+    instant_build = yes
+    province = 2768 } } }
+}
+########################################
+####end of infrastructure focuses#######
+########################################
+
+########################################
+####start of political focuses##########
+########################################
+
+	focus = {
+	id = ERE_thefateoferebor
+	icon = GFX_goal_a_land_of_mountains
+	ai_will_do = { }
+	x = 17
+	y = 8
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = { add_political_power = 50 }
+}
+#########gives according national spirit
+	focus = {
+	id = ERE_traditionalism
+	icon = GFX_goal_support_unaligned
+	ai_will_do = { }
+	x = -10
+	y = 1
+	relative_position_id = ERE_thefateoferebor
+	prerequisite = { focus = ERE_thefateoferebor }
+	mutually_exclusive = { focus = ERE_progressivereforms focus = ERE_socialistdream focus = ERE_unification }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = { add_ideas = generic_unaligned }
+}
+
+	focus = {
+	id = ERE_tightencentralization
+	icon = GFX_goal_goal_generic_forceful_treaty
+	available = {
+	has_government = unaligned }
+	ai_will_do = { }
+	x = 0
+	y = 1
+	relative_position_id = ERE_traditionalism
+	prerequisite = { focus = ERE_traditionalism }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = { add_ideas = strong_centralization }
+}
+
+	focus = {
+	id = ERE_prewar_austerity
+	icon = GFX_goal_goal_generic_attack_allies
+	available = {
+	has_government = unaligned }
+	ai_will_do = { }
+	x = 0
+	y = 2
+	relative_position_id = ERE_tightencentralization
+	prerequisite = { focus = ERE_tightencentralization }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = { add_ideas = ERE_prewar_austerity }
+}
+########gives according national spirit
+	focus = {
+	id = ERE_progressivereforms
+	icon = GFX_goal_support_cooperative
+	ai_will_do = { }
+	x = -5
+	y = 1
+	relative_position_id = ERE_thefateoferebor
+	prerequisite = { focus = ERE_thefateoferebor }
+	mutually_exclusive = { focus = ERE_traditionalism focus = ERE_socialistdream focus = ERE_unification }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = { add_ideas = generic_cooperative }
+}
+
+	focus = {
+	id = ERE_tradeempireofthenorth
+	icon = GFX_goal_generic_infrastructure_investment
+	available = {
+	has_government = cooperative }
+	ai_will_do = { }
+	x = -1
+	y = 1
+	relative_position_id = ERE_progressivereforms
+	prerequisite = { focus = ERE_progressivereforms }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_ideas = free_trade
+	add_offsite_building = { type = industrial_complex level = 2 } }
+}
+
+	focus = {
+	id = ERE_invitedaletofaction
+	icon = GFX_goal_lth_election_ballot
+	available = {
+	has_government = cooperative }
+	ai_will_do = { }
+	x = 0
+	y = 3
+	relative_position_id = ERE_progressivereforms
+	prerequisite = { focus = ERE_progressivereforms }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	DAL = { invite_to_faction = yes } }
+}
+
+	focus = {
+	id = ERE_defensivedoctrine
+	icon = GFX_goal_goal_generic_improve_relations
+	ai_will_do = { }
+	x = -3
+	y = 2
+	relative_position_id = ERE_progressivereforms
+	prerequisite = { focus = ERE_progressivereforms focus = ERE_traditionalism }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_ideas = ERE_defensive_doctrine
+	EGR = { add_ideas = ERE_defensive_doctrine }
+	EMI = { add_ideas = ERE_defensive_doctrine } }
+}
+
+	focus = {
+	id = ERE_recognizefreerhun
+	icon = GFX_goal_generic_treaty
+	available = {
+	has_government = unaligned
+	has_government = cooperative }
+	ai_will_do = { }
+	x = 0
+	y = 2
+	relative_position_id = ERE_defensivedoctrine
+	prerequisite = { focus = ERE_defensivedoctrine }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	DRH = {
+	add_opinion_modifier = {
+	target = ERE
+	modifier  = medium_increase } } }
+}
+
+###########gives according national spirit 
+	focus = {
+	id = ERE_socialistdream
+	icon = GFX_goal_support_revolutionary
+	ai_will_do = { }
+	x = 5
+	y = 1
+	relative_position_id = ERE_thefateoferebor
+	prerequisite = { focus = ERE_thefateoferebor }
+	mutually_exclusive = { focus = ERE_traditionalism focus = ERE_progressivereforms focus = ERE_unification }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = { add_ideas = generic_revolutionary }
+}
+#######lower amount of factories consumer goods
+	focus = {
+	id = ERE_nationalizeindustry
+	icon = GFX_goal_generic_annex_country
+	available = {
+	has_government = revolutionary }
+	ai_will_do = { }
+	x = 1
+	y = 1
+	relative_position_id = ERE_socialistdream
+	prerequisite = { focus = ERE_socialistdream }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_offsite_building = { type = industrial_complex level = 2 } }
+}
+
+	focus = {
+	id = ERE_mandatoryconscription
+	icon = GFX_goal_lth_gondor_skull
+	available = {
+	has_government = revolutionary }
+	ai_will_do = { }
+	x = 0
+	y = 3
+	relative_position_id = ERE_socialistdream
+	prerequisite = { focus = ERE_socialistdream }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = { add_ideas = extensive_levy }
+}
+################
+	focus = {
+	id = ERE_unification
+	icon = GFX_goal_support_belligerent
+	ai_will_do = { }
+	x = 10
+	y = 1
+	relative_position_id = ERE_thefateoferebor
+	prerequisite = { focus = ERE_thefateoferebor }
+	mutually_exclusive = { focus = ERE_traditionalism focus = ERE_progressivereforms focus = ERE_socialistdream }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = { add_ideas = generic_belligerent }
+}
+
+	focus = {
+	id = ERE_tightengripgreymountains
+	icon = GFX_goal_generic_repeal_legislation
+	ai_will_do = { }
+	available = {
+	strength_ratio = {
+    tag = EMI
+    ratio > 1 } }
+	x = 0
+	y = 1
+	relative_position_id = ERE_unification
+	prerequisite = { focus = ERE_unification }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	ERE = {
+	set_autonomy = {
+    target = EMI
+    autonomous_state = autonomy_puppet
+    end_wars = no
+    end_civil_wars = no } } }
+}
+
+	focus = {
+	id = ERE_tightengripironhills
+	icon = GFX_goal_generic_repeal_legislation
+	ai_will_do = { }
+	available = {
+	strength_ratio = {
+    tag = EMI
+    ratio > 1 } }
+	x = 0
+	y = 2
+	relative_position_id = ERE_tightengripgreymountains
+	prerequisite = { focus = ERE_tightengripgreymountains }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	ERE = {
+	set_autonomy = {
+    target = EGR
+    autonomous_state = autonomy_puppet
+    end_wars = no
+    end_civil_wars = no } } }
+}
+
+	focus = {
+	id = ERE_offensivedoctrine
+	icon = GFX_goal_generic_sabres
+	available = {
+	has_government = belligerent }
+	ai_will_do = { }
+	x = -2
+	y = 2
+	relative_position_id = ERE_unification
+	prerequisite = { focus = ERE_unification focus = ERE_socialistdream }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = { add_ideas = ERE_offensive_doctrine }
+}
+
+	focus = {
+	id = ERE_liberateourneighbours
+	icon = GFX_goal_generic_provoke_border_clashes
+	available = {
+	has_government = belligerent }
+	ai_will_do = { }
+	x = 0
+	y = 2
+	relative_position_id = ERE_offensivedoctrine
+	prerequisite = { focus = ERE_offensivedoctrine }
+	prerequisite = { focus = ERE_tightengripironhills }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	create_wargoal = {
+    type = annex_everything
+    target = EMI }
+	create_wargoal = {
+    type = annex_everything
+    target = EGR } }
+}
+
+	focus = {
+	id = ERE_southernthreat
+	icon = GFX_goal_rhu_rhun_civil_war
+	ai_will_do = { }
+	x = 3
+	y = 2
+	relative_position_id = ERE_thefateoferebor
+	prerequisite = { focus = ERE_thefateoferebor }
+	mutually_exclusive = { }
+	cost = 1
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_opinion_modifier = {
+    target = RHU
+    modifier = medium_decrease } }
+}
+
+	focus = {
+	id = ERE_embargomordor
+	icon = GFX_goal_rhu_wargoal_mordor
+	ai_will_do = { }
+	x = -1
+	y = 1
+	relative_position_id = ERE_southernthreat
+	prerequisite = { focus = ERE_southernthreat }
+	mutually_exclusive = { }
+	cost = 3
+ 	available_if_capitulated = no
+	completion_reward = {
+	send_embargo = MOR }
+}
+
+	focus = {
+	id = ERE_embargorhun
+	icon = GFX_goal_rhu_nazghul_ringwraith_khamul
+	ai_will_do = { }
+	x = 1
+	y = 1
+	relative_position_id = ERE_southernthreat
+	prerequisite = { focus = ERE_southernthreat }
+	mutually_exclusive = { }
+	cost = 3
+ 	available_if_capitulated = no
+	completion_reward = { send_embargo = RHU }
+}
+
+########fort line on iron hill mountains
+	focus = {
+	id = ERE_constructironhillsline
+	icon = GFX_goal_generic_coins_money
+	ai_will_do = { }
+	available = {
+	OR = {
+	controls_state = 194
+	controls_state = 93
+	any_subject_country = {
+	controls_state = 194
+	controls_state = 93 } } }
+	x = 0
+	y = 2
+	relative_position_id = ERE_southernthreat
+	prerequisite = { focus = ERE_southernthreat }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	194 = {
+	add_building_construction = {
+    type = bunker
+    level = 2
+    instant_build = yes
+    province = 5545 }
+	add_building_construction = {
+    type = bunker
+    level = 2
+    instant_build = yes
+    province = 2645 }
+	add_building_construction = {
+    type = bunker
+    level = 2
+    instant_build = yes
+    province = 5374 }
+	add_building_construction = {
+    type = bunker
+    level = 2
+    instant_build = yes
+    province = 936 }
+	add_building_construction = {
+    type = bunker
+    level = 2
+    instant_build = yes
+    province = 5758 } }
+	93 = {
+	add_building_construction = {
+    type = bunker
+    level = 2
+    instant_build = yes
+    province = 123 }
+	add_building_construction = {
+    type = bunker
+    level = 2
+    instant_build = yes
+    province = 3281 }
+	add_building_construction = {
+    type = bunker
+    level = 2
+    instant_build = yes
+    province = 1838 }
+	add_building_construction = {
+    type = bunker
+    level = 2
+    instant_build = yes
+    province = 5729 }
+	add_building_construction = {
+    type = bunker
+    level = 2
+    instant_build = yes
+    province = 3846 } } }
+}
+
+####gundabad campaign start
+	focus = {
+	id = ERE_westernthreat
+	icon = GFX_goal_gundabad_flag
+	ai_will_do = { }
+	x = -3
+	y = 2
+	relative_position_id = ERE_thefateoferebor
+	prerequisite = { focus = ERE_thefateoferebor }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_opinion_modifier = {
+    target = GUN
+    modifier = medium_decrease } }
+}
+
+	focus = {
+	id = ERE_securegundabadborder
+	icon = GFX_goal_lth_fortifications_castle
+	ai_will_do = { }
+	available = {
+	OR = {
+	controls_state = 68
+	any_subject_country = {
+	controls_state = 68 } } }
+	x = 0
+	y = 2
+	relative_position_id = ERE_westernthreat
+	prerequisite = { focus = ERE_westernthreat }
+	prerequisite = { focus = ERE_denouncemistymountainorcs }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	68 = {
+	add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 3785 }
+	add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 5673 }
+	add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 3774 }
+	add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 3408 } } }
+}
+
+	focus = {
+	id = ERE_reclaimdurinsbirthplace
+	icon = GFX_goal_lth_aule_the_blacksmith
+	ai_will_do = { }
+	available = {
+	OR = {
+	controls_state = 68
+	any_subject_country = {
+	controls_state = 68 } } }
+	x = 0
+	y = 1
+	relative_position_id = ERE_securegundabadborder
+	prerequisite = { focus = ERE_securegundabadborder }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	create_wargoal = {
+    type = annex_everything
+    target = GUN } }
+}
+
+	focus = {
+	id = ERE_denouncemistymountainorcs
+	icon = GFX_goal_lth_cleanse_orcs_from_moria
+	ai_will_do = { }
+	available = {
+	OR = {
+	controls_state = 68
+	any_subject_country = {
+	controls_state = 68 } } }
+	x = 1
+	y = 1
+	relative_position_id = ERE_westernthreat
+	prerequisite = { focus = ERE_westernthreat }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	send_embargo = GUN
+	send_embargo = GOT
+	send_embargo = MIM
+	send_embargo = SMM }
+}
+
+	focus = {
+	id = ERE_fortifygreenwoodgates
+	icon = GFX_goal_lth_mallorn_tree_planning
+	ai_will_do = { }
+	available = {
+	OR = {
+	controls_state = 193
+	any_subject_country = {
+	controls_state = 193 } } }
+	x = -1
+	y = 1
+	relative_position_id = ERE_westernthreat
+	prerequisite = { focus = ERE_westernthreat }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	193 = {
+	add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 944 }
+	add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 5112 }
+	add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 3296 } } }
+}
+
+	focus = {
+	id = ERE_dwarvenculture
+	icon = GFX_goal_dwarves_soldiers_army
+	ai_will_do = { }
+	x = 0
+	y = 2
+	relative_position_id = ERE_thefateoferebor
+	prerequisite = { focus = ERE_thefateoferebor }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_stability = 0.1
+	add_war_support = 0.1 }
+}
+
+	focus = {
+	id = ERE_ereborsteel
+	icon = GFX_goal_lth_labour_blacksmith
+	ai_will_do = { }
+	x = 0
+	y = 2
+	relative_position_id = ERE_dwarvenculture
+	prerequisite = { focus = ERE_dwarvenculture }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_resource = {
+    type = steel
+    amount = 10
+    state = 90 } }
+}
+
+	focus = {
+	id = ERE_digdeeper
+	icon = GFX_goal_generic_mining_industry
+	ai_will_do = { }
+	x = -1
+	y = 1
+	relative_position_id = ERE_ereborsteel
+	prerequisite = { focus = ERE_ereborsteel }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_resource = {
+    type = aluminium
+    amount = 3
+    state = 90 } }
+}
+
+	focus = {
+	id = ERE_plantmoretrees
+	icon = GFX_goal_generic_wood_cutting
+	ai_will_do = { }
+	x = 1
+	y = 1
+	relative_position_id = ERE_ereborsteel
+	prerequisite = { focus = ERE_ereborsteel }
+	mutually_exclusive = { }
+	cost = 6
+ 	available_if_capitulated = no
+	completion_reward = {
+	add_resource = {
+    type = chromium
+    amount = 3
+    state = 259 }
+	add_resource = {
+    type = chromium
+    amount = 3
+    state = 258 }
+	add_resource = {
+    type = chromium
+    amount = 3
+    state = 242 } }
+}
+###################################
+####end of political focuses#######
+###################################
+
+####################### end of focus tree
+}

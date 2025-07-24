@@ -1,0 +1,118 @@
+﻿l_english:
+
+### TOOLTIPS
+
+### IDEAS
+
+generic_three_civs:0 "Spoils of the Raid"
+
+### TRAITS
+
+SPI_spider_swarm:0 "Spider Swarm"
+
+### FOCUSES
+
+DGU_fortress_of_the_necromancer:0 "Fortress of the Necromancer"
+DGU_fortress_of_the_necromancer_desc:0 ""
+
+DGU_prepare_to_assault_mirkwood:0 "Prepare to Assault Mirkwood"
+DGU_prepare_to_assault_mirkwood_desc:0 ""
+
+DGU_make_use_of_balcoth:0 "Make use of the Balcoth"
+DGU_make_use_of_the_balcoth_desc:0 ""
+
+DGU_lure_the_spiders:0 "Lure the Spiders"
+DGU_lure_the_spiders_desc:0 ""
+
+DGU_raid_mirkwood:0 "Raid Mirkwood"
+DGU_raid_mirkwood_desc:0 ""
+
+DGU_observe_the_elves:0 "Observe the Elves"
+DGU_observe_the_elves_desc:0 ""
+
+DGU_fortify_the_riverline:0 "Fortify the Riverline"
+DGU_fortify_the_riverline_desc:0 ""
+
+DGU_fortify_dol_guldur:0 "Fortify Dol Guldur"
+DGU_fortify_dol_guldur_desc:0 ""
+
+DGU_cross_into_the_forest:0 "Cross into the Forest"
+DGU_cross_into_the_forest_desc:0 ""
+
+DGU_forge_blades_of_war:0 "Forge Blades of War"
+DGU_forge_blades_of_war_desc:0 ""
+
+DGU_request_forces_from_lord_sauron:0 "Request Forces from Lord Sauron"
+DGU_request_forces_from_lord_sauron_desc:0 ""
+
+DGU_torch_the_forest:0 "Torch the Forest"
+DGU_torch_the_forest_desc:0 ""
+
+DGU_through_the_mountain:0 "Through the Mountain"
+DGU_through_the_mountain_desc:0 ""
+
+DGU_crush_the_elves:0 "Crush the Elves"
+DGU_crush_the_elves_desc:0 ""
+
+### GENERIC FOCUSES
+
+ DGU_army_effort:0 "Army Effort"
+ DGU_army_effort_desc:0 ""
+ DGU_equipment_effort:0 "Equipment Effort"
+ DGU_equipment_effort_desc:0 ""
+ DGU_motorization_effort:0 "Wagon Effort"
+ DGU_motorization_effort_desc:0 ""
+ DGU_doctrine_effort:0 "Doctrine Effort"
+ DGU_doctrine_effort_desc:0 ""
+ DGU_equipment_effort_2:0 "Equipment Effort II"
+ DGU_equipment_effort_2_desc:0 ""
+ DGU_mechanization_effort:0 "Carriage Effort"
+ DGU_mechanization_effort_desc:0 ""
+ DGU_doctrine_effort_2:0 "Doctrine Effort II"
+ DGU_doctrine_effort_2_desc:0 ""
+ DGU_equipment_effort_3:0 "Equipment Effort III"
+ DGU_equipment_effort_3_desc:0 ""
+ DGU_armor_effort:0 "Cavalry Effort"
+ DGU_armor_effort_desc:0 ""
+ DGU_special_forces:0 "Uruk-hai"
+ DGU_special_forces_desc:0 ""
+
+ DGU_industrial_effort:0 "Industrial Effort"
+ DGU_industrial_effort_desc:0 ""
+ DGU_industrial_effort_2:0 "Industrial Effort II"
+ DGU_industrial_effort_2_desc:0 ""
+ DGU_construction_effort:0 "Construction Effort"
+ DGU_construction_effort_desc:0 ""
+ DGU_production_effort:0 "Armament Effort"
+ DGU_production_effort_desc:0 ""
+ DGU_construction_effort_2:0 "Construction Effort II"
+ DGU_construction_effort_2_desc:0 ""
+ DGU_production_effort_2:0 "Armament Effort II"
+ DGU_production_effort_2_desc:0 ""
+ DGU_production_effort_3:0 "Armament Effort III"
+ DGU_production_effort_3_desc:0 ""
+ DGU_infrastructure_effort:0 "Infrastructure Effort"
+ DGU_infrastructure_effort_desc:0 ""
+ DGU_infrastructure_effort_2:0 "Infrastructure Effort II"
+ DGU_infrastructure_effort_2_desc:0 ""
+ DGU_construction_effort_3:0 "Construction Effort III"
+ DGU_construction_effort_3_desc:0 ""
+ DGU_nuclear_effort:0 "Extreme Wizardry"
+ DGU_nuclear_effort_desc:0 ""
+ DGU_extra_tech_slot:0 "Extra Research Slot"
+ DGU_extra_tech_slot_desc:0 ""
+ DGU_extra_tech_slot_2:0 "Extra Research Slot II"
+ DGU_extra_tech_slot_2_desc:0 ""
+ DGU_technology_sharing:0 "Technology Sharing"
+ DGU_technology_sharing_desc:0 ""
+ DGU_secret_weapons:0 "Alchemical Compounds"
+ DGU_secret_weapons_desc:0 ""
+
+ DGU_construction_effort_4:0 "Construction Effort IV"
+ DGU_construction_effort_4_desc:0 ""
+ DGU_production_effort_4:0 "Armament Effort IV"
+ DGU_production_effort_4_desc:0 ""
+ DGU_resource_extraction:0 "Resource Extraction"
+ DGU_resource_extraction_desc:0 "" 
+ DGU_the_earth_has_one_weakness:0 "Deeper Mining"
+ DGU_the_earth_has_one_weakness_desc:0 ""

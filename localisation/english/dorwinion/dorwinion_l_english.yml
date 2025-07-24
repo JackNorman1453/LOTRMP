@@ -1,0 +1,1337 @@
+﻿l_english:
+
+### HISTORICAL
+
+DOR_steady_as_it_goes:0 "Steady as It Goes"
+DOR_steady_as_it_goes_desc:0 ""
+
+DOR_continue_domrichs_reforms:0 "Continue Dómrich's Reforms"
+DOR_continue_domrichs_reforms_desc:0 ""
+
+DOR_draft_a_new_constitution:0 "Draft a New Constitution"
+DOR_draft_a_new_constitution_desc:0 ""
+
+DOR_tax_reform:0 "Tax Reform"
+DOR_tax_reform_desc:0 ""
+
+DOR_political_restructuring:0 "Political Restructuring"
+DOR_political_restructuring_desc:0 ""
+
+DOR_placate_the_nobility:0 "Placate the Nobility"
+DOR_placate_the_nobility_desc:0 ""
+
+DOR_begin_the_separation_of_powers:0 "Begin the Separation of Powers"
+DOR_begin_the_separation_of_powers_desc:0 ""
+
+DOR_guarantee_a_position_of_power:0 "Guarantee a Position of Power"
+DOR_guarantee_a_position_of_power_desc:0 ""
+
+DOR_grant_bailouts:0 "Grant Bailouts"
+DOR_grant_bailouts_desc:0 ""
+
+DOR_the_right_to_vote:0 "The Right to Vote"
+DOR_the_right_to_vote_desc:0 ""
+
+DOR_dissolve_the_nobility:0 "Dissolve the Nobility"
+DOR_dissolve_the_nobility_desc:0 ""
+
+DOR_prevent_exploitation:0 "Prevent Exploitation"
+DOR_prevent_exploitation_desc:0 ""
+
+DOR_dissolve_the_monarchy:0 "Dissolve the Monarchy"
+DOR_dissolve_the_monarchy_desc:0 ""
+
+DOR_hold_a_referendum:0 "Hold a Referandum"
+DOR_hold_a_referendum_desc:0 ""
+
+DOR_establish_an_oligarchy:0 "Establish an Oligarchy"
+DOR_establish_an_oligarchy_desc:0 ""
+
+DOR_establish_a_republic:0 "Establish a Republic"
+DOR_establish_a_republic_desc:0 ""
+
+DOR_establish_a_constitutional_monarchy:0 "Constitutional Monarchy"
+DOR_establish_a_constitutional_monarchy_desc:0 ""
+
+DOR_rule_of_the_few:0 "Rule of the Few"
+DOR_rule_of_the_few_desc:0 ""
+
+DOR_permit_regional_elections:0 "Permit Regional Elections"
+DOR_permit_regional_elections_desc:0 ""
+
+DOR_offer_bribes:0 "Offer Bribes"
+DOR_offer_bribes_desc:0 ""
+
+DOR_exploit_political_loopholes:0 "Exploit Political Loopholes"
+DOR_exploit_political_loopholes_desc:0 ""
+DOR_pressure_domrich:0 "Pressure Dómrich"
+
+DOR_amp_up_cheap_production:0 "Amp up Cheap Production"
+DOR_amp_up_cheap_production_desc:0 ""
+
+DOR_ratify_the_principles_of_democracy:0 "Ratify the Principles of Democracy"
+DOR_ratify_the_principles_of_democracy_desc:0 ""
+
+DOR_assess_our_future:0 "Assess our Future"
+DOR_assess_our_future_desc:0 ""
+
+DOR_guide_the_people_forward:0 "Guide the People Forward"
+DOR_guide_the_people_forward_desc:0 ""
+
+DOR_the_puppet_king:0 "The Puppet King"
+DOR_the_puppet_king_desc:0 ""
+
+DOR_look_to_gondor:0 "Look to Gondor"
+DOR_look_to_gondor_desc:0 ""
+
+DOR_rekindle_dwarven_relations:0 "Rekindle Dwarven Relations"
+DOR_rekindle_dwarven_relations_desc:0 ""
+
+DOR_cooperation_with_gondor:0 "Cooperation with Gondor"
+DOR_cooperation_with_gondor_desc:0 ""
+
+DOR_import_dwarven_steel:0 "Import Dwarven Steel"
+DOR_import_dwarven_steel_desc:0 ""
+
+DOR_payment_for_the_spears:0 "Payment for the Spears"
+DOR_payment_for_the_spears_desc:0 ""
+
+DOR_join_gondor:0 "Join Gondor"
+DOR_join_gondor_desc:0 ""
+
+DOR_join_erebor:0 "Join Erebor"
+DOR_join_erebor_desc:0 ""
+
+DOR_towards_a_new_dorwinion:0 "Towards a New Dorwinion"
+DOR_towards_a_new_dorwinion_desc:0 ""
+
+DOR_exploit_the_state:0 "Exploit the State"
+DOR_exploit_the_state_desc:0 ""
+
+### HISTORICAL DEFENSE
+
+DOR_the_defense_of_the_nation:0 "The Defense of the Nation"
+DOR_the_defense_of_the_nation_desc:0 ""
+
+DOR_prepare_against_the_threat:0 "Prepare Against the Threat"
+DOR_prepare_against_the_threat_desc:0 ""
+
+DOR_rally_the_people_of_dorwinion:0 "Rally the People of Dorwinion"
+DOR_rally_the_people_of_dorwinion_desc:0 ""
+
+DOR_fund_the_blacksmiths:0 "Fund the Blacksmiths"
+DOR_fund_the_blacksmiths_desc:0 ""
+
+DOR_construction_efforts:0 "Construction Efforts"
+DOR_construction_efforts_desc:0 ""
+
+DOR_all_hands_at_work:0 "All Hands at Work"
+DOR_all_hands_at_work_desc:0 ""
+
+DOR_call_for_mercenaries:0 "Call for Mercenaries"
+DOR_call_for_mercenaries_desc:0 ""
+
+DOR_draft_fit_for_service_men:0 "Draft Fit for Service Men"
+DOR_draft_fit_for_service_men_desc:0 ""
+
+DOR_anyone_that_can_fight:0 "Anyone That Can Fight"
+DOR_anyone_that_can_fight_desc:0 ""
+
+DOR_honor_and_duty:0 "Honor and Duty"
+DOR_honor_and_duty_desc:0 ""
+
+DOR_no_cost_too_great:0 "No Cost Too Great"
+DOR_no_cost_too_great_desc:0 ""
+
+DOR_raise_the_defenses:0 "Raise the Defenses"
+DOR_raise_the_defenses_desc:0 ""
+
+DOR_the_southern_plan:0 "The Southern Plan"
+DOR_the_southern_plan_desc:0 ""
+
+DOR_the_northern_plan:0 "The Northern Plan"
+DOR_the_northern_plan_desc:0 ""
+
+DOR_the_northern_line:0 "The Northern Line"
+DOR_the_northern_line_desc:0 ""
+
+DOR_fortress_of_szrel_kain:0 "Fortress of Szrel-Kain"
+DOR_fortress_of_szrel_kain_desc:0 ""
+
+DOR_secure_the_coast:0 "Secure the Coast"
+DOR_secure_the_coast_desc:0 ""
+
+DOR_makeshift_longships:0 "Makeshift Longships"
+DOR_makeshift_longships_desc:0 ""
+
+DOR_no_blood_too_precious:0 "No Blood Too Precious"
+DOR_no_blood_too_precious_desc:0 ""
+
+DOR_ensure_sovereignty:0 "Fait Accompli"
+DOR_ensure_sovereignty_desc:0 ""
+
+DOR_reinforce_the_border_towns:0 "Reinforce the Border Towns"
+DOR_reinforce_the_border_towns_desc:0 ""
+
+DOR_uldonavan_line:0 "Uldonavan Line"
+DOR_uldonavan_line_desc:0 ""
+
+DOR_supplies_in_the_desert:0 "Supplies in the Desert"
+DOR_supplies_in_the_desert_desc:0 ""
+
+DOR_desert_warfare:0 "Desert Warfare"
+DOR_desert_warfare_desc:0 ""
+
+#### NON-HISTORICAL
+
+DOR_a_change_in_course:0 "A Change in Course"
+DOR_a_change_in_course_desc:0 ""
+
+DOR_distance_from_gondor:0 "Distance from Gondor"
+DOR_distance_from_gondor_desc:0 ""
+
+DOR_the_peoples_will:0 "The Peoples' Will"
+DOR_the_peoples_will_desc:0 ""
+
+DOR_set_the_course:0 "Set the Course"
+DOR_set_the_course_desc:0 ""
+
+DOR_abolish_the_monarchy:0 "Abolish the Monarchy"
+DOR_abolish_the_monarchy_desc:0 ""
+### ALIGN WITH THE DARK LORD
+
+DOR_align_with_the_dark_lord:0 "Align with the Dark Lord"
+DOR_align_with_the_dark_lord_desc:0 ""
+
+DOR_the_lone_wolf:0 "The Lone Wolf"
+DOR_the_lone_wolf_desc:0 ""
+
+DOR_spread_dissent:0 "Spread Dissent"
+DOR_spread_dissent_desc:0 ""
+
+DOR_arm_the_grumbled_peasantry:0 "Arm the Grumbled Peasantry"
+DOR_arm_the_grumbled_peasantry_desc:0 "" 
+
+DOR_gain_the_support_of_rhun:0 "Gain the Support of Rhûn"
+DOR_gain_the_support_of_rhun_desc:0 ""
+
+DOR_nurukhizdin_for_assistance:0 "Nurukhizdin for Assistance"
+DOR_nurukhizdin_for_assistance_desc:0 ""
+
+DOR_smuggle_easterling_fighters:0 "Smuggle Easterling Fighters"
+DOR_smuggle_easterling_fighters_desc:0 ""
+
+DOR_smuggle_equipment:0 "Smuggle Equipment"
+DOR_smuggle_equipment_desc:0 ""
+
+DOR_easterling_pressure:0 "Easterling Pressure"
+DOR_easterling_pressure_desc:0 ""
+
+DOR_infiltrate_the_dorwinion_army:0 "Infiltrate the Dorwinion Army"
+DOR_infiltrate_the_dorwinion_army_desc:0 "" 
+
+DOR_plant_the_seeds_of_distrust:0 "Plant the Seeds of Distrust"
+DOR_plant_the_seeds_of_distrust_desc:0 "" 
+
+DOR_raid_the_armory:0 "Raid the Armory"
+DOR_raid_the_armory_desc:0 ""
+
+DOR_burn_the_vineyards:0 "Burn the Vineyards"
+DOR_burn_the_vineyards_desc:0 ""
+
+DOR_gain_the_support_of_mordor:0 "Gain the Support of Mordor"
+DOR_gain_the_support_of_mordor_desc:0 ""
+
+DOR_submission_for_assistance:0 "Submission for Assistance"
+DOR_submission_for_assistance_desc:0 ""
+
+DOR_smuggle_orcs_underground:0 "Smuggle Orcs Underground"
+DOR_smuggle_orcs_underground_desc:0 "" 
+
+DOR_orc_generals:0 "Orc Generals"
+DOR_orc_generals_desc:0 ""
+
+DOR_praise_sauron:0 "Praise Sauron"
+DOR_praise_sauron_desc:0 ""
+
+DOR_horror_and_fear:0 "Horror and Fear"
+DOR_horror_and_fear_desc:0 ""
+
+DOR_align_with_the_new_world_order:0 "Align with the New World Order"
+DOR_align_with_the_new_world_order_desc:0 ""
+
+DOR_honor_morgoth:0 "Honor Morgoth"
+DOR_honor_morgoth_desc:0 ""
+
+DOR_secrets_of_the_orcs:0 "Secrets of the Orcs"
+DOR_secrets_of_the_orcs_desc:0 ""
+
+DOR_alcohol_experiments:0 "Alcohol Experiments"
+DOR_alcohol_experiments_desc:0 "" 
+
+DOR_faithful_servant:0 "Faithful Servant"
+DOR_faithful_servant_desc:0 "" 
+
+DOR_liquid_courage:0 "Liquid Courage"
+DOR_liquid_courage_desc:0 ""
+
+DOR_an_orcish_dominion:0 "An Orcish Dominion"
+DOR_an_orcish_dominion_desc:0 ""
+
+
+### ASHES OF THE PAST
+
+DOR_ashes_of_the_past:0 "Ashes of the Past"
+DOR_ashes_of_the_past_desc:0 ""
+
+DOR_denounce_denethor:0 "Denounce Denethor"
+DOR_denounce_denethor_desc:0 ""
+
+DOR_send_an_ambassador_to_grima:0 "Send an Ambassador to Grima"
+DOR_send_an_ambassador_to_grima_desc:0 ""
+
+DOR_invite_grima_to_dorwinion:0 "Invite Grima to Dorwinion"
+DOR_invite_grima_to_dorwinion_desc:0 ""
+
+DOR_mutual_defense_agreement:0 "Mutual Defense Agreement"
+DOR_mutual_defense_agreement_desc:0 ""
+
+DOR_mutual_trade_agreement:0 "Mutual Trade Agreement"
+DOR_mutual_trade_agreement_desc:0 ""
+
+DOR_formalize_the_alliance:0 "Formalize the Alliance"
+DOR_formalize_the_alliance_desc:0 ""
+
+DOR_the_hunt_for_the_heir_of_isildur:0 "The Hunt for the Heir of Isildur"
+DOR_the_hunt_for_the_heir_of_isildur_desc:0 ""
+
+DOR_disregard_aragorns_claim:0 "Disregard Aragorn's Claim"
+DOR_disregard_aragorns_claim_desc:0 ""
+
+DOR_honor_isildurs_heritage:0 "Honor Isildur's Heritage"
+DOR_honor_isildurs_heritage_desc:0 ""
+
+DOR_kill_grima:0 "Kill Grima"
+DOR_kill_grima_desc:0 ""
+
+DOR_preempt_the_strategic_threat:0 "Pre-empt the Strategic Threat"
+DOR_preempt_the_strategic_threat_desc:0 ""
+
+DOR_kill_aragorn:0 "Kill Aragorn"
+DOR_kill_aragorn_desc:0 ""
+
+DOR_usurp_the_line_of_isildur:0 "Usurp the Line of Isildur"
+DOR_usurp_the_line_of_isildur_desc:0 ""
+
+DOR_stop_pretending:0 "Stop Pretending"
+DOR_stop_pretending_desc:0 ""
+
+DOR_claim_the_name_of_gondor:0 "Claim the Name of Gondor"
+DOR_claim_the_name_of_gondor_desc:0 ""
+
+DOR_an_empire_of_wine:0 "An Empire of Wine"
+DOR_an_empire_of_wine_desc:0 ""
+
+DOR_invite_aragorn_to_dorwinion:0 "Invite Aragorn to Dorwinion"
+DOR_invite_aragorn_to_dorwinion_desc:0 ""
+
+DOR_the_eastern_outpost:0 "The Eastern Outpost"
+DOR_the_eastern_outpost_desc:0 ""
+
+DOR_coronate_aragorn:0 "Coronate Aragorn"
+DOR_coronate_aragorn_desc:0 ""
+
+DOR_invite_isildur_loyalists:0 "Invite Isildur Loyalists"
+DOR_invite_isildur_loyalists_desc:0 ""
+
+
+### A DEAL WITH RHUN
+
+DOR_a_deal_with_rhun:0 "A Deal with Rhun"
+DOR_a_deal_with_rhun_desc:0 ""
+
+DOR_an_unexpected_alliance:0 "An Unexpected Alliance"
+DOR_an_unexpected_alliance_desc:0 ""
+
+DOR_trade_for_protection:0 "Trade for Protection"
+DOR_trade_for_protection_desc:0 ""
+
+DOR_westward_expansion:0 "Westward Expansion"
+DOR_westward_expansion_desc:0 ""
+
+DOR_invite_erebor:0 "Invite Erebor"
+DOR_invite_erebor_desc:0 ""
+
+DOR_subjugate_erebor:0 "Subjugate Erebor"
+DOR_subjugate_erebor_desc:0 ""
+
+DOR_the_northern_bulwark:0 "The Northern Bulwark"
+DOR_the_northern_bulwark_desc:0 ""
+
+DOR_pave_new_routes:0 "Pave New Routes"
+DOR_pave_new_routes_desc:0 ""
+
+DOR_appease_mordor:0 "Appease Mordor"
+DOR_appease_mordor_desc:0 ""
+
+DOR_hand_over_the_ring:0 "Hand Over the Ring"
+DOR_hand_over_the_ring_desc:0 ""
+
+DOR_invite_dale:0 "Invite Dale"
+DOR_invite_dale_desc:0 ""
+
+DOR_demand_dale:0 "Demand Dale"
+DOR_demand_dale_desc:0 ""
+
+DOR_strategic_supply_hubs:0 "Strategic Supply Hubs"
+DOR_strategic_supply_hubs_desc:0 ""
+
+DOR_divide_mirkwood:0 "Divide Mirkwood"
+DOR_divide_mirkwood_desc:0 ""
+
+DOR_greater_dorwinion:0 "Greater Dorwinion"
+DOR_greater_dorwinion_desc:0 ""
+
+
+### POWER TO THE PEOPLE
+
+DOR_power_to_the_people:0 "Power to the People"
+DOR_power_to_the_people_desc:0 ""
+
+DOR_develop_a_revolutionary_idea:0 "A Revolutionary Conception"
+DOR_develop_a_revolutionary_idea_desc:0 ""
+
+DOR_free_peoples_of_the_world:0 "Free Peoples of the World"
+DOR_free_peoples_of_the_world_desc:0 ""
+
+DOR_support_the_free_orcs:0 "Support the Free Orcs"
+DOR_support_the_free_orcs_desc:0 ""
+
+DOR_exclude_the_orcs:0 "Exclude the Orcs"
+DOR_exclude_the_orcs_desc:0 ""
+
+DOR_all_hands_against_the_peoples_enemy:0 "All Hands Against the People's Enemy"
+DOR_all_hands_against_the_peoples_enemy_desc:0 ""
+
+DOR_prepare_to_spread_the_revolution:0 "Prepare to Spread the Revolution"
+DOR_prepare_to_spread_the_revolution_desc:0 ""
+
+DOR_support_mordors_secret_faction:0 "Support Mordor's Secret Faction"
+DOR_support_mordors_secret_faction_desc:0 ""
+
+DOR_northern_directive:0 "Northern Directive"
+DOR_northern_directive_desc:0 ""
+
+DOR_ignite_anti_stewardship_sentiment:0 "Ignite Anti-Stewardship Sentiment"
+DOR_ignite_anti_stewardship_sentiment_desc:0 ""
+
+DOR_volunteer_fighters:0 "Volunteer Fighters"
+DOR_volunteer_fighters_desc:0 ""
+
+DOR_international_revolution:0 "International Revolution"
+DOR_international_revolution_desc:0 ""
+
+DOR_union_of_the_free_people:0 "Union of the Free People"
+DOR_union_of_the_free_people_desc:0 ""
+
+DOR_begin_land_redistribution:0 "Begin Land Redistribution"
+DOR_begin_land_redistribution_desc:0 ""
+
+DOR_interior_reforms:0 "Interior Reforms"
+DOR_interior_reforms_desc:0 ""
+
+DOR_maintain_traditional_order:0 "Maintain Traditional Order"
+DOR_maintain_traditional_order_desc:0 ""
+
+DOR_womens_suffrage:0 "Rights for Women"
+DOR_womens_suffrage_desc:0 ""
+
+DOR_true_equality:0 "True Equality"
+DOR_true_equality_desc:0 ""
+
+DOR_new_dorwinion_model:0 "A New Dorwinion"
+DOR_new_dorwinion_model_desc:0 ""
+
+DOR_introduce_the_grain_tax:0 "Introduce the Grain Tax"
+DOR_introduce_the_grain_tax_desc:0 ""
+
+DOR_regulate_foreign_trade:0 "Regulate Foreign Trade"
+DOR_regulate_foreign_trade_desc:0 ""
+
+DOR_empower_the_guilds:0 "Empower the Guilds"
+DOR_empower_the_guilds_desc:0 ""
+
+DOR_peoples_law:0 "People's Law"
+DOR_peoples_law_desc:0 ""
+
+DOR_close_the_gap:0 "Close the Gap"
+DOR_close_the_gap_desc:0 ""
+
+###
+
+DOR_rights_of_the_common_man:0 "Rights of the Common Man"
+DOR_rights_of_the_common_man_desc:0 ""
+
+DOR_liberty:0 "Liberty"
+DOR_liberty_desc:0 ""
+
+DOR_solidarity:0 "Solidarity"
+DOR_solidarity_desc:0 ""
+
+DOR_equality:0 "Equality"
+DOR_equality_desc:0 ""
+
+DOR_fraternity:0 "Fraternity"
+DOR_fraternity_desc:0 ""
+
+### ELECT A PRESIDENT
+
+DOR_elect_a_president:0 "Elect a President"
+DOR_elect_a_president_desc:0 "Not really, this path was long deprecated lol."
+
+
+
+### PREPARE FOR WAR
+
+DOR_prepare_for_war:0 "Prepare for War"
+DOR_prepare_for_war_desc:0 ""
+
+DOR_the_great_leap:0 "The Great Leap"
+DOR_the_great_leap_desc:0 ""
+
+DOR_send_aid_to_rohan:0 "Send Aid to Rohan"
+DOR_send_aid_to_rohan_desc:0 ""
+
+DOR_claim_eastern_rohan:0 "Claim Eastern Rohan"
+DOR_claim_eastern_rohan_desc:0 ""
+
+DOR_topple_the_white_wizard:0 "Topple the White Wizard"
+DOR_topple_the_white_wizard_desc:0 ""
+
+DOR_pick_a_fight_with_the_elves:0 "Pick a Fight with the Elves"
+DOR_pick_a_fight_with_the_elves_desc:0 ""
+
+DOR_settlements_in_the_woods:0 "Settlements in the Woods"
+DOR_settlements_in_the_woods_desc:0 ""
+
+DOR_core_rohan:0 "Core Rohan"
+DOR_core_rohan_desc:0 ""
+
+DOR_secure_the_seat_of_the_palantir:0 "Secure the Seat of the Palantír"
+DOR_secure_the_seat_of_the_palantir_desc:0 ""
+
+DOR_the_southern_lands:0 "The Southern Lands"
+DOR_the_southern_lands_desc:0 ""
+
+DOR_the_mordor_threat:0 "The Mordor Threat"
+DOR_the_mordor_threat_desc:0 ""
+
+DOR_the_unholy_alliance:0 "Under the Dark Lord"
+DOR_the_unholy_alliance_desc:0 ""
+
+DOR_clear_the_southern_marshes:0 "Clear the Southern Marshes"
+DOR_clear_the_southern_marshes_desc:0 ""
+
+DOR_the_southern_supplies:0 "The Southern Supplies"
+DOR_the_southern_supplies_desc:0 ""
+
+DOR_secure_the_black_gate:0 "Secure the Black Gate"
+DOR_secure_the_black_gate_desc:0 ""
+
+DOR_submission_or_war:0 "Submission or War"
+DOR_submission_or_war_desc:0 ""
+
+DOR_reunite_with_aragorn:0 "Reunite with Aragorn"
+DOR_reunite_with_aragorn_desc:0 ""
+
+DOR_war_with_mordor:0 "War with Mordor"
+DOR_war_with_mordor_desc:0 ""
+
+DOR_proclaim_gondor:0 "Proclaim Gondor"
+DOR_proclaim_gondor_desc:0 ""
+
+DOR_core_the_southlands:0 "Core the Southlands"
+DOR_core_the_southlands_desc:0 ""
+
+DOR_subjugate_the_tribes_of_enedwaith:0 "Subjugate the Tribes of Enedwaith"
+DOR_subjugate_the_tribes_of_enedwaith_desc:0 ""
+
+DOR_civilize_the_tribes:0 "Civilize the Tribes"
+DOR_civilize_the_tribes_desc:0 ""
+
+DOR_seize_harad:0 "Seize Harad"
+DOR_seize_harad_desc:0 ""
+
+DOR_reclaim_harondor:0 "Reclaim Harondor"
+DOR_reclaim_harondor_desc:0 ""
+
+DOR_revive_the_empire_of_gondor:0 "Revive the Empire of Gondor"
+DOR_revive_the_empire_of_gondor_desc:0 ""
+
+DOR_reunite_with_arnor:0 "Reunite with Arnor"
+DOR_reunite_with_arnor_desc:0 ""
+
+DOR_colonize_cardolan:0 "Colonize Cardolan"
+DOR_colonize_cardolan_desc:0 ""
+
+DOR_core_arthedain:0 "Core Arthedain"
+DOR_core_arthedain_desc:0 ""
+
+DOR_resettle_in_rhudaur:0 "Resettle in Rhudaur"
+DOR_resettle_in_rhudaur_desc:0 ""
+
+DOR_bring_order_to_the_hobbits:0 "Bring Order to the Hobbits"
+DOR_bring_order_to_the_hobbits_desc:0 ""
+
+DOR_the_empire_of_man:0 "The Empire of Man"
+DOR_the_empire_of_man_desc:0 ""
+
+DOR_the_eastern_desert:0 "The Eastern Desert"
+DOR_the_eastern_desert_desc:0 ""
+
+DOR_form_an_united_front:0 "Form an United Front"
+DOR_form_an_united_front_desc:0 ""
+
+DOR_standing_alone:0 "Standing Alone"
+DOR_standing_alone_desc:0 ""
+
+DOR_invite_logath:0 "Invite Logath"
+DOR_invite_logath_desc:0 ""
+
+DOR_invite_free_rhun:0 "Invite Free Rhûn"
+DOR_invite_free_rhun_desc:0 ""
+
+DOR_invite_rhun:0 "Invite Rhûn"
+DOR_invite_rhun_desc:0 ""
+
+DOR_war_with_rhun:0 "War with Rhûn"
+DOR_war_with_rhun_desc:0 ""
+
+DOR_mend_the_conflict:0 "Mend the Conflict"
+DOR_mend_the_conflict_desc:0 ""
+
+DOR_prioritize_rhun:0 "Prioritize Rhûn"
+DOR_prioritize_rhun_desc:0 ""
+
+DOR_settle_on_a_compromise:0 "Settle on a Compromise"
+DOR_settle_on_a_compromise_desc:0 ""
+
+DOR_prioritize_free_rhun:0 "Prioritize Free Rhûn"
+DOR_prioritize_free_rhun_desc:0 ""
+
+DOR_desert_specialists:0 "Desert Specialists"
+DOR_desert_specialists_desc:0 ""
+
+DOR_hunker_down_in_szrel_kain:0 "Hunker Down in Szrel-Kain"
+DOR_hunker_down_in_szrel_kain_desc:0 ""
+
+DOR_hand_weapons_to_the_peasants:0 "Conscript the Peasants"
+DOR_hand_weapons_to_the_peasants_desc:0 ""
+
+DOR_send_spies_to_rhun:0 "Send Spies to Rhûn"
+DOR_send_spies_to_rhun_desc:0 ""
+
+DOR_exploit_their_defenses:0 "Exploit their Defenses"
+DOR_exploit_their_defenses_desc:0 ""
+
+DOR_correct_the_survival_bias:0 "Correct the Survival Bias"
+DOR_correct_the_survival_bias_desc:0 ""
+
+DOR_offer_mistrand_to_free_rhun:0 "Offer Mistrand to Free Rhûn"
+DOR_offer_mistrand_to_free_rhun_desc:0 ""
+
+DOR_redraw_the_borders_to_mistrand:0 "Redraw the Borders to Mistrand"
+DOR_redraw_the_borders_to_mistrand_desc:0 ""
+
+#### ARMY
+
+DOR_army_of_dorwinion:0 "Army of Dorwinion"
+DOR_army_of_dorwinion_desc:0 ""
+
+DOR_clear_space_for_eagles:0 "Clear Space for Eagles"
+DOR_clear_space_for_eagles_desc:0 ""
+
+DOR_tame_the_wild_beasts:0 "Tame the Wild Beasts"
+DOR_tame_the_wild_beasts_desc:0 ""
+
+DOR_make_use_of_their_speed:0 "Make Use of their Speed"
+DOR_make_use_of_their_speed_desc:0 ""
+
+DOR_strap_releasable_explosives:0 "Strap Releasable Explosives"
+DOR_strap_releasable_explosives_desc:0 ""
+
+DOR_maneuver_exercises:0 "Maneuver Exercises"
+DOR_maneuver_exercises_desc:0 ""
+
+DOR_being_one_with_the_beast:0 "Being One with the Beast"
+DOR_being_one_with_the_beast_desc:0 ""
+
+DOR_the_common_soldier:0 "The Common Soldier"
+DOR_the_common_soldier_desc:0 ""
+
+DOR_develop_spears:0 "Develop Spears"
+DOR_develop_spears_desc:0 ""
+
+DOR_padded_armor:0 "Padder Armor"
+DOR_padded_armor_desc:0 ""
+
+DOR_teach_crossbows:0 "Teach Crossbows"
+DOR_teach_crossbows_desc:0 ""
+
+DOR_torches:0 "Torches"
+DOR_torches_desc:0 ""
+
+DOR_engineer_company:0 "Engineer Company"
+DOR_engineer_company_desc:0 ""
+
+DOR_invest_in_cavalry:0 "Invest in Cavalry"
+DOR_invest_in_cavalry_desc:0 ""
+
+DOR_build_chariots:0 "Build Chariots"
+DOR_build_chariots_desc:0 ""
+
+DOR_nimble_horses:0 "Nimble Horses"
+DOR_nimble_horses_desc:0 ""
+
+DOR_longbow_training:0 "Longbow Training"
+DOR_longbow_training_desc:0 ""
+
+DOR_chariot_archers:0 "Chariot Archers"
+DOR_chariot_archers_desc:0 ""
+
+DOR_cavalry_archers:0 "Cavalry Archers"
+DOR_cavalry_archers_desc:0 ""
+
+DOR_logistics_company:0 "Logistics Company"
+DOR_logistics_company_desc:0 ""
+
+DOR_a_well_funded_army:0 "A Well Funded Army"
+DOR_a_well_funded_army_desc:0 ""
+
+DOR_special_forces_department:0 "Special Forces Department"
+DOR_special_forces_department_desc:0 ""
+
+DOR_knights_of_szrel_kain:0 "Knights of Szrel-Kain"
+DOR_knights_of_szrel_kain_desc:0 ""
+
+DOR_mountain_experts:0 "Mountain Experts"
+DOR_mountain_experts_desc:0 ""
+
+### ECONOMY
+
+DOR_economy_of_dorwinion:0 "Economy of Dorwinion"
+DOR_economy_of_dorwinion_desc:0 ""
+
+DOR_agricultural_subsidies:0 "Agricultural Subsidies"
+DOR_agricultural_subsidies_desc:0 ""
+
+DOR_industrial_investments:0 "Industrial Investments"
+DOR_industrial_investments_desc:0 ""
+
+DOR_public_works:0 "Public Works"
+DOR_public_works_desc:0 ""
+
+DOR_fund_the_carpenters:0 "Fund the Carpenters"
+DOR_fund_the_carpenters_desc:0 ""
+
+DOR_masons_of_nurukhizdin:0 "Masons of Nurukhizdin"
+DOR_masons_of_nurukhizdin_desc:0 ""
+
+DOR_construction_projects:0 "Construction Projects"
+DOR_construction_projects_desc:0 ""
+
+DOR_hire_dwarven_smiths:0 "Hire Dwarven Smiths"
+DOR_hire_dwarven_smiths_desc:0 ""
+
+DOR_learn_from_the_dwarves:0 "Learn from the Dwarves"
+DOR_learn_from_the_dwarves_desc:0 ""
+
+DOR_fund_the_dwarves:0 "Fund the Dwarves"
+DOR_fund_the_dwarves_desc:0 ""
+
+DOR_open_more_forges:0 "Open More Forges"
+DOR_open_more_forges_desc:0 ""
+
+DOR_university_of_dorwinion:0 "University of Dorwinion"
+DOR_university_of_dorwinion_desc:0 ""
+
+DOR_philosophers_of_a_new_tomorrow:0 "Philosophers of a New Tomorrow"
+DOR_philosophers_of_a_new_tomorrow_desc:0 ""
+
+DOR_the_wine_trade:0 "The Wine Trade"
+DOR_the_wine_trade_desc:0 ""
+
+DOR_approach_the_dwarves:0 "Approach the Dwarves"
+DOR_approach_the_dwarves_desc:0 ""
+
+DOR_approach_the_men:0 "Approach the Men"
+DOR_approach_the_men_desc:0 ""
+
+DOR_approach_the_elves:0 "Approach the Elves"
+DOR_approach_the_elves_desc:0 ""
+
+DOR_approach_the_orcs:0 "Approach the Orcs"
+DOR_approach_the_orcs_desc:0 ""
+
+DOR_the_sea_of_rhun:0 "The Sea of Rhûn"
+DOR_the_sea_of_rhun_desc:0 ""
+
+DOR_longships:0 "Longships"
+DOR_longships_desc:0 ""
+
+DOR_the_grand_armada:0 "The Grand Armada"
+DOR_the_grand_armada_desc:0 ""
+
+DOR_hire_shipbuilders:0 "Hire Shipbuilders"
+DOR_hire_shipbuilders_desc:0 ""
+
+DOR_sailing_methods:0 "Sailing Methods"
+DOR_sailing_methods_desc:0 ""
+
+DOR_expand_the_fishing_industry:0 "Expand the Fishing Industry"
+DOR_expand_the_fishing_industry_desc:0 ""
+
+DOR_invasion_force:0 "Invasion Force"
+DOR_invasion_force_desc:0 ""
+
+
+DOR_ensure_sovereignty_2:0 "Fait Accompli 2: Mordorian Boogaloo"
+DOR_ensure_sovereignty_2_desc:0 ""
+
+
+
+DOR_dorwinion_stands_firm:0 "Dorwinion Stands Firm"
+DOR_dorwinion_stands_firm_desc:0 ""
+
+### FOCUSES / CHRISTMAS
+
+DOR_maintain_the_status_quo:0 "Maintain the Status Quo"
+DOR_maintain_the_status_quo_desc:0 ""
+
+DOR_revive_the_eastern_outpost_concept:0 "Revive the Eastern Outpost Plan"
+DOR_revive_the_eastern_outpost_concept_desc:0 ""
+
+DOR_align_with_denethor:0 "Align with Denethor"
+DOR_align_with_denethor_desc:0 ""
+
+DOR_send_an_ambassador_to_rohan:0 "Send an Ambassador to [ROH.GetNameDEF]"
+DOR_send_an_ambassador_to_rohan_desc:0 ""
+
+DOR_propose_unification_to_rhovanion:0 "Propose Unification to [RHO.GetNameDEF]"
+DOR_propose_unification_to_rhovanion_desc:0 ""
+
+DOR_increase_joint_collaboration:0 "Joint Collaboration"
+DOR_increase_joint_collaboration_desc:0 ""
+
+DOR_expand_the_domain:0 "Expand the Domain"
+DOR_expand_the_domain_desc:0 ""
+
+DOR_empower_the_exiles:0 "Empower the Exiles"
+DOR_empower_the_exiles_desc:0 ""
+
+DOR_gondorian_expertise:0 "Gondorian Expertise"
+DOR_gondorian_expertise_desc:0 ""
+
+DOR_our_purpose:0 "Aid our Allies"
+DOR_our_purpose_desc:0 ""
+
+DOR_collaborate_with_rhovanion:0 "Collaborate with [RHO.GetNameDEF]"
+DOR_collaborate_with_rhovanion_desc:0 ""
+
+DOR_cull_the_weak:0 "Cull the Weak"
+DOR_cull_the_weak_desc:0 ""
+
+DOR_prepare_a_place_for_him:0 "Prepare a Place for Him"
+DOR_prepare_a_place_for_him_desc:0 ""
+
+DOR_weather_the_storm:0 "Weather the Storm"
+DOR_weather_the_storm_desc:0 ""
+
+DOR_assist_rhovanion:0 "Assist [RHO.GetNameDEF]"
+DOR_assist_rhovanion_desc:0 ""
+
+DOR_the_eastern_flank:0 "The Eastern Flank"
+DOR_the_eastern_flank_desc:0 ""
+
+DOR_integrate_rhovanion:0 "Integrate Dor Rhúnen"
+DOR_integrate_rhovanion_desc:0 ""
+
+DOR_prepare_a_future:0 "Prepare a Future"
+DOR_prepare_a_future_desc:0 ""
+
+DOR_invite_aragorn_to_szrel_kain:0 "Invite Aragorn to Szrel-Kain"
+DOR_invite_aragorn_to_szrel_kain_desc:0 ""
+
+DOR_reinstate_the_heir_of_isildur:0 "Reinstate the Heir of Isildur"
+DOR_reinstate_the_heir_of_isildur_desc:0 ""
+
+DOR_dor_rhunen:0 "Dor Rhúnen"
+DOR_dor_rhunen_desc:0 ""
+
+DOR_the_path_forward:0 "The Path Forward"
+DOR_the_path_forward_desc:0 ""
+
+DOR_bring_order_to_rhun:0 "Bring Order to [RHU.GetNameDEF]"
+DOR_bring_order_to_rhun_desc:0 ""
+
+DOR_towards_north:0 "Toward North"
+DOR_towards_north_desc:0 ""
+
+DOR_towards_south:0 "Toward South"
+DOR_towards_south_desc:0 ""
+
+DOR_crush_rhovanion:0 "Crush [RHO.GetNameDEF]"
+DOR_crush_rhovanion_desc:0 ""
+
+DOR_trade_with_rohan_2:0 "Trade with [ROH.GetNameDEF]"
+DOR_trade_wth_rohan_2_desc:0 ""
+
+DOR_clear_the_marshes:0 "Clear the Marshes"
+DOR_clear_the_marshes_desc:0 ""
+
+DOR_the_supplies_down_south:0 "The Supplies Down South"
+DOR_the_supplies_down_south_desc:0 ""
+
+DOR_invite_rohan:0 "Invite [ROH.GetNameDEF]"
+DOR_invite_rohan_desc:0 ""
+
+DOR_siege_rohan:0 "Siege [ROH.GetNameDEF]"
+DOR_siege_rohan_desc:0 ""
+
+DOR_march_north:0 "March North"
+DOR_march_north_desc:0 ""
+
+### TOOLTIPS
+
+DOR_aragorn_killed:0 "Aragorn is killed in a sudden ambush."
+
+DOR_westward_tooltip:0 "Grants §Yclaims§! on §YRhovania§! and §YDagorlad§!. If §YRhûn§! is in faction with §YDorwinion§!, they claim §YSouthern Dagorlad§!."
+DOR_towards_south_tooltip:0 "Grants §Yclaims§! on §YEastern Rohan§! down to the river line."
+DOR_approach_dwarves_tooltip:0 "Unlocks §Ydecisions§! to send trade delegations to the §Ydwarves§!."
+DOR_approach_men_tooltip:0 "Unlocks §Ydecisions§! to send trade delegations to §Ymen§!."
+DOR_approach_orcs_tooltip:0 "Unlocks §Ydecisions§! to send trade delegations to the §Yorcs§!."
+DOR_approach_elves_tooltip:0 "Unlocks §Ydecisions§! to send trade delegations to the §Yelves§!."
+
+DOR_southlands_tooltip:0 "Grants §Yclaims§! on §YGondor§!'s historical territories in §YMordor§!."
+
+dor_colonise_arthedain_tooltip:0 "Grants §Ycores§! on the entirety of §YArthedain§! after gaining complete control over its territories."
+dor_colonise_cardolan_tooltip:0 "Grants §Ycores§! on the entirety of §YCardolan§! after gaining complete control over its territories."
+dor_colonise_rhudaur_tooltip:0 "Grants §Ycores§! on the entirety of §YRhudaur§! after gaining complete control over its territories."
+
+dor_border_town_tooltip:0 "Constructs §Yfortifications§! at the southern border with §YRhûn§!."
+
+dor_the_northern_tooltip:0 "Constructs §Yfortifications§! at the northern border with §YLogathavuld§!."
+
+dor_makeshift_tooltip:0 "Allows the ability to convert §Ymerchant vessels§! into §Ylongships§! with the use of §YPolitical Power§!."
+
+dor_draft_tooltip:0 "Creates §Y2 Elite Vanguard§! units in §Y[ROOT.capital.GetName]§!."
+dor_anyone_tooltip:0 "Creates §Y6 Peasant Militia§! units in §Y[ROOT.capital.GetName]§!."
+dor_mercenaries_tooltip:0 "Creates §Y3 Easterling Mercenary§! units in §Y[ROOT.capital.GetName]§!."
+
+dor_internationale_tooltip:0 "Allows you to start §Yrevolutions§! in certain countries."
+
+dor_secure_coast_tooltip:0 "Constructs §Ycoastal fortifications§! at near §YSzrel-Kain§! and §YUldonavan§!."
+dor_uldonavan_line_tooltip:0 "Constructs §Yfortifications§! at the mountains to the south of §YUldonavan§!."
+
+
+
+
+DOR_infiltrate_the_dorwinion_army_tooltip:0 "When the civil war starts, we will receive §Y2 Elite Vanguard§! units."
+
+DOR_plant_the_seeds_of_distrust_tooltip:0 "When the civil war starts, we will receive §Y25000§! manpower.
+
+DOR_raid_the_armory_tooltip:0 "When the civil war starts, we will receive §Y2500§! infantry equipment."
+
+DOR_nurukhizdin_for_assistance_tooltip:0 "After the civil war ends, we will cede §YNurukhizdin§! to §YRhûn§!"
+
+DOR_smuggle_easterling_fighters_tooltip:0 "When the civil war starts, we will receive §Y1 Easterling Mercenary§! unit."
+
+DOR_smuggle_equipment_tooltip:0 "When the civil war starts, we will receive §Y2500§! infantry equipment."
+
+DOR_easterling_pressure_tooltip:0 "When the civil war starts, we will receive a §Ytemporary boost.§!"
+
+DOR_submission_for_assistance_tooltip:0 "After the civil war ends, we will become a §Ypuppet§! of §YMordor§!."
+
+DOR_smuggle_orcs_underground_tooltip:0 "When the civil war starts, we will receive §Y2 Orc§! units."
+
+DOR_orc_generals_tooltip:0 "When the civil war starts, we will receive §Y3 Orc§! generals."
+
+DOR_praise_sauron_tooltip:0 "When the civil war starts, we will receive a §Ytemporary boost§!."
+
+DOR_spread_dissent_tooltip:0 "When the civil war starts, we will receive §Y25000§! manpower."
+
+DOR_arm_the_grumbled_peasantry_tooltip:0 "When the civil war starts, we will receive §Y4 Peasant Militia§! units."
+
+
+
+
+
+
+
+
+
+
+### IDEAS
+
+DOR_intelligence_efforts:0 "Intelligence Efforts"
+
+DOR_concessions:0 "Concessions"
+
+DOR_traditional_order:0 "Traditional Order"
+
+DOR_peoples_enemy:0 "People's Enemy"
+
+DOR_battle_plan_wine:0 "Dorwinion Army"
+DOR_battle_plan_wine_2:0 "Dorwinion Army"
+DOR_dwarven_smiths:0 "Dwarven Smiths"
+DOR_foreign_shipbuilders:0 "Foreign Shipbuilders"
+DOR_peoples_tutelage:0 "People's Tutelage"
+DOR_people_of_dorwinion:0 "People of Dorwinion"
+
+DOR_liberte:0 "Liberty"
+DOR_egalite:0 "Equality"
+DOR_liberte_egalite:0 "Liberty, Equality"
+DOR_liberte_egalite_solidarite:0 "Liberty, Equality, Solidarity"
+DOR_liberte_egalite_fraternite:0 "Liberty, Equality, Fraternity"
+
+DOR_cheap_production:0 "Cheap Production"
+
+DOR_corruption:0 "Corruption"
+
+DOR_placated_nobility:0 "Placated Nobility"
+
+DOR_isildur_loyalists:0 "Isildur Loyalists"
+
+DOR_war_preparations:0 "War Preparations"
+
+### EVENTS
+
+dorwinion.3.t:0 "Trade Delegation Arrives in [ROOT.capital.GetName]"
+dorwinion.3.d:0 "This morning, a trade delegation from [DOR.GetNameDef] has arrived in our capital city to discuss the possibility of establishing trade. Accepting this offer could prove beneficial for both nations."
+dorwinion.3.a:0 "A mutually beneficial trade."
+dorwinion.3.b:0 "We have no need."
+
+dorwinion.4.t:0 "Trade Delegation Returns with Success!"
+dorwinion.4.d:0 "Our delegation has returned with the seal declaring the approval of establishing trade."
+dorwinion.4.a:0 "Wonderful!"
+
+dorwinion.5.t:0 "Trade Delegation Returns with Failure"
+dorwinion.5.d:0 "Our delegation has returned empty handed from their long journey."
+dorwinion.5.a:0 "Shame."
+
+dorwinion.6.t:0 "[DOR.GetName] Offers to End the Hosilities"
+dorwinion.6.d:0 "A delegation has been sent by [DOR.GetNameDef] to discuss the possibility of ending the conflict between the two nations. Should we accept, we will have to pay the consequences. Should we refuse, thousands will continue to perish."
+dorwinion.6.a:0 "Enough blood has been spilled for the Young-land country."
+dorwinion.6.b:0 "We have set our course. We will not falter."
+
+dorwinion.7.t:0 "Proposal for a New Flag"
+dorwinion.7.d:0 "Following our reforms, there has been many proposals for a new flag for our nation to symbolize a new chapter in our history. The most popular proposal is of four equal bands, each symbolizing a race of the Middle-Earth.\n\nThe purple band symbolizes the Men.\n\nThe yellow band symbolizes the Elves.\n\nThe blue band symbolizes the Dwarves.\n\nThe black band symbolizes the Orcs."
+dorwinion.7.a:0 "An excellent proposal!"
+dorwinion.7.b:0 "Exclude the orcs."
+dorwinion.7.c:0 "Our flag is fine as is."
+
+dorwinion.8.t:0 "An Offer of Concession"
+dorwinion.8.d:0 "This morning, a delegation from [DOR.GetNameDef] has arrived to put forth an agreement. For a year, they offered us a concession that might benefit us greatly; however, the agreement will obligate us not to attack them during this time."
+dorwinion.8.a:0 "It's a good deal."
+dorwinion.8.b:0 "They're afraid!"
+
+dorwinion.9.t:0 "[RHU.GetNameDef] Refused our Concession"
+dorwinion.9.d:0 "Grave news from our delegation; [RHU.GetNameDef]'s leader [RHU.GetLeader] has not only refused our concession but also spoke in a threatening matter before sending off our delegation. It seems like war is inevitable."
+dorwinion.9.a:0 "We best be ready."
+
+dorwinion.10.t:0 "[RHU.GetNameDef] Accepted our Concession"
+dorwinion.10.d:0 "Good news from our delegation; [RHU.GetNameDef]'s leader [RHU.GetLeader] has accepted our concession. However, we must be on our guard as the words of the Easterlings cannot be trusted."
+dorwinion.10.a:0 "We've bought some time."
+
+dorwinion.11.t:0 "[DOR.GetNameDef] Requests to Reunite with Us"
+dorwinion.11.d:0 "A delegation from [DOR.GetNameDef] has arrived in [ROOT.capital.GetName] to discuss the possibility of reuniting with us. Their government was already aligned with us and such, it's a good idea to make it official."
+dorwinion.11.a:0 "We welcome [DOR.GetNameDef] back!"
+dorwinion.11.b:0 "We can't let our guard down."
+
+
+
+
+
+ dorwinion.12.t:0 "[DOR.GetName] proposes unification"
+ dorwinion.12.desc:0 "in a speech in Szrel-Kain, [DOR.GetLeader] has proposed that the two nations must be united in the face of aggression. He has publicly noted that the Rhovanian people should be permitted to make that choice for themselves."
+ dorwinion.12.a:0 "Let the people have their say."
+ dorwinion.12.b:0 "Such things should be left to professionals."
+ dorwinion.12.c:0 "We will ensure the right results."
+ dorwinion.13.t:0 "Referendum approved"
+ dorwinion.13.desc:0 "The results of the Referendum are in, and the preliminary count shows a significant majority for Union with Dorwinion."
+ dorwinion.13.a:0 "The people have spoken."
+ dorwinion.14.t:0 "Referendum fails"
+ dorwinion.14.desc:0 "Despite a well-orchestrated campaign by pro-Dorwinion groups, preliminary results show a small majority for maintaining the status quo."
+ dorwinion.14.a:0 "Wise choice."
+ dorwinion.15.t:0 "Referendum succeeds"
+ dorwinion.15.desc:0 "Shortly after midnight, [RHO.GetLeader] announced that the Rhovanian people had voted for a union with Dorwinion. A courier has arrived with a writ, formally offering [DOR.GetLeader] the crown of Rhovania in a first step to form a double monarchy."
+ dorwinion.15.a:0 "Excellent."
+ dorwinion.16.t:0 "Referendum defeated"
+ dorwinion.16.desc:0 "Despite our best efforts, the people of Rhovania have decided to keep the status quo."
+ dorwinion.16.a:0 "We must liberate the country from its weakness."
+ dorwinion.16.b:0 "We shall respect the result."
+ dorwinion.17.t:0 "Referendum refused"
+ dorwinion.17.desc:0 "Rhovanian leader [RHO.GetLeader] has publicly declared that the entire country is united in their opposition to Dorwinion, and that the very idea of a referendum on Rhovanian independence is utterly absurd. "
+ dorwinion.17.a:0 "We shall see how united they really are."
+ dorwinion.17.b:0 ""Democracy" at work."
+ dorwinion.18.t:0 "Guiding the referendum"
+ dorwinion.18.desc:0 "The Dorwinion offer of a referendum has put us in a tight spot internationally. We can't be seen to deny the people a choice, but we can't trust them to make the right one. Thankfully, there are ways and means to solve the issue. What result do we want from the referendum?"
+ dorwinion.18.a:0 "People refuse"
+ dorwinion.18.b:0 "People agree"
+
+
+
+
+
+
+
+
+
+
+
+### DECISIONS
+
+DOR_wine_trade_category:0 "The Wine Trade"
+
+DOR_trade_with_mordor:0 "Trade with [MOR.GetNameDef] (30 Days)"
+DOR_trade_with_gundabad:0 "Trade with [GUN.GetNameDef] (60 Days)"
+DOR_trade_with_the_free_orcs:0 "Trade with [MOC.GetNameDef] (60 Days)"
+
+DOR_trade_with_mirkwood:0 "Trade with [MIR.GetNameDef] (30 Days)"
+DOR_trade_with_lothlorien:0 "Trade with [LTH.GetNameDef] (45 Days)"
+DOR_trade_with_rivendell:0 "Trade with [RIV.GetNameDef] (60 Days)"
+DOR_trade_with_lindon:0 "Trade with [LIN.GetNameDef] (90 Days)"
+
+DOR_trade_with_dale:0 "Trade with [DAL.GetNameDef] (30 Days)"
+DOR_trade_with_gondor:0 "Trade with [GON.GetNameDef] (30 Days)"
+DOR_trade_with_rohan:0 "Trade with [ROH.GetNameDef] (30 Days)"
+DOR_trade_with_harad:0 "Trade with [HAR.GetNameDef] (45 Days)"
+
+DOR_trade_with_erebor:0 "Trade with [ERE.GetNameDef] (45 Days)"
+DOR_trade_with_moria:0 "Trade with [MOA.GetNameDef] (60 Days)"
+
+DOR_delegation_sent:0 "A delegation has already been sent."
+
+refit_to_longship:0 "Refit ships to Longships"
+DOR_makeshift_longships_category:0 "Makeshift Longships"
+
+banned_revolutionary_flag:0 "Crackdown on revolutionaries has occured."
+DOR_contact_with_rebels_gondor:0 "Revolutionaries have been contacted."
+
+DOR_contact_with_rebels_dale:0 "Revolutionaries have been contacted."
+
+DOR_contact_with_rebels_rohan:0 "Revolutionaries have been contacted."
+
+DOR_contact_with_rebels_logath:0 "Revolutionaries have been contacted."
+
+DOR_contact_with_rebels_mordor:0 "Revolutionaries have been contacted."
+
+DOR_contact_with_rebels_erebor:0 "Revolutionaries have been contacted."
+
+DOR_contact_with_rebels_emyn:0 "Revolutionaries have been contacted."
+
+DOR_contact_with_rebels_ered:0 "Revolutionaries have been contacted."
+
+MOR_spread_the_revolution_category_men:0 "Spread the Revolution: Men"
+
+DOR_create_unrest_gondor:0 "Create unrest in [GON.GetName]"
+
+DOR_spread_support_for_gondor:0 "Spread revolutionary thought in [GON.GetName]"
+
+DOR_make_contact_with_rebels_gondor:0 "Make contact with [GON.GetAdjective] revolutionaries"
+
+DOR_send_supplies_to_rebels_gondor:0 "Send supplies to [GON.GetAdjective] revolutionaries"
+
+DOR_support_the_rebels_in_spreading_gondor:0 "Infiltrate the [GON.GetAdjective] Government"
+
+DOR_create_unrest_rohan:0 "Create unrest in [ROH.GetName]"
+
+DOR_set_afire_gondor:0 "Set [GON.GetName] Afire"
+
+DOR_spread_support_for_rohan:0 "Spread revolutionary thought in [ROH.GetName]"
+
+DOR_make_contact_with_rebels_rohan:0 "Make contact with [ROH.GetAdjective] revolutionaries"
+
+DOR_send_supplies_to_rebels_rohan:0 "Send supplies to [ROH.GetAdjective] revolutionaries"
+
+DOR_support_the_rebels_in_spreading_rohan:0 "Infiltrate the [ROH.GetAdjective] Government"
+
+DOR_set_afire_gondor:0 "Set [GON.GetName] Afire"
+
+DOR_create_unrest_dale:0 "Create unrest in [DAL.GetNameDEF]"
+
+DOR_spread_support_for_dale:0 "Spread revolutionary thought in [DAL.GetName]"
+
+DOR_make_contact_with_rebels_dale:0 "Make contact with [DAL.GetAdjective] revolutionaries"
+
+DOR_send_supplies_to_rebels_dale:0 "Send supplies to [DAL.GetAdjective] revolutionaries"
+
+DOR_support_the_rebels_in_spreading_dale:0 "Infiltrate the [DAL.GetAdjective] Government"
+
+DOR_set_afire_dale:0 "Set [DAL.GetNameDEF] Afire"
+
+DOR_create_unrest_logath:0 "Create unrest in [LGT.GetNameDEF]"
+
+DOR_spread_support_for_logath:0 "Spread revolutionary thought in [LGT.GetName]"
+
+DOR_make_contact_with_rebels_logath:0 "Make contact with [LGT.GetAdjective] revolutionaries"
+
+DOR_send_supplies_to_rebels_logath:0 "Send supplies to [LGT.GetAdjective] revolutionaries"
+
+DOR_support_the_rebels_in_spreading_logath:0 "Infiltrate the [LGT.GetAdjective] Government"
+
+DOR_set_afire_logath:0 "Set [LGT.GetNameDEF] Afire"
+
+MOR_spread_the_revolution_category_orcs:0 "Spread the Revolution: Orcs"
+
+DOR_create_unrest_mordor:0 "Create unrest in [MOR.GetNameDEF]"
+
+DOR_spread_support_for_mordor:0 "Spread revolutionary thought in [MOR.GetName]"
+
+DOR_make_contact_with_rebels_mordor:0 "Make contact with [MOR.GetAdjective] revolutionaries"
+
+DOR_send_supplies_to_rebels_mordor:0 "Send supplies to [MOR.GetAdjective] revolutionaries"
+
+DOR_support_the_rebels_in_spreading_mordor:0 "Infiltrate the [MOR.GetAdjective] Government"
+
+DOR_set_afire_mordor:0 "Set [MOR.GetNameDEF] Afire"
+
+MOR_spread_the_revolution_category_dwarves:0 "Spread the Revolution: Dwarves"
+
+DOR_create_unrest_erebor:0 "Create unrest in [ERE.GetNameDEF]"
+
+DOR_spread_support_for_erebor:0 "Spread revolutionary thought in [ERE.GetName]"
+
+DOR_make_contact_with_rebels_erebor:0 "Make contact with [ERE.GetAdjective] revolutionaries"
+
+DOR_send_supplies_to_rebels_erebor:0 "Send supplies to [ERE.GetAdjective] revolutionaries"
+
+DOR_support_the_rebels_in_spreading_erebor:0 "Infiltrate the [ERE.GetAdjective] Government"
+
+DOR_set_afire_erebor:0 "Set [ERE.GetNameDEF] Afire"
+
+DOR_create_unrest_ered:0 "Create unrest in [EMI.GetNameDEF]"
+
+DOR_spread_support_for_ered:0 "Spread revolutionary thought in [EMI.GetName]"
+
+DOR_make_contact_with_rebels_ered:0 "Make contact with [EMI.GetAdjective] revolutionaries"
+
+DOR_send_supplies_to_rebels_ered:0 "Send supplies to [EMI.GetAdjective] revolutionaries"
+
+DOR_support_the_rebels_in_spreading_ered:0 "Infiltrate the [EMI.GetAdjective] Government"
+
+DOR_set_afire_ered:0 "Set [EMI.GetNameDEF] Afire"
+
+DOR_create_unrest_emyn:0 "Create unrest in [EGR.GetNameDEF]"
+
+DOR_spread_support_for_emyn:0 "Spread revolutionary thought in [EGR.GetName]"
+
+DOR_make_contact_with_rebels_emyn:0 "Make contact with [EGR.GetAdjective] revolutionaries"
+
+DOR_send_supplies_to_rebels_emyn:0 "Send supplies to [EGR.GetAdjective] revolutionaries"
+
+DOR_support_the_rebels_in_spreading_emyn:0 "Infiltrate the [EGR.GetAdjective] Government"
+
+DOR_set_afire_emyn:0 "Set [EGR.GetNameDEF] Afire"
+
+### EXPANDED DECISIONS
+
+DOR_trade_with_iron_hills:0 "Trade with [EGR.GetNameDef] (30 Days)"
+DOR_trade_with_grey_mountains:0 "Trade with [EMI.GetNameDef] (45 Days)"
+
+DOR_trade_with_goblin_town:0 "Trade with [GOT.GetNameDef] (60 Days)"
+
+### FACTION
+
+SZRELEDORASAXIS:0 "Szrel-Edoras Axis"
+EASTERNUNITEDFRONT:0 "Eastern United Front"
+BRITHLENPACT:0 "Brithlen Pact"
+
+### COSMETIC TAGS
+
+DOR_union_revolutionary:0 "Union of the Free People"
+DOR_union_revolutionary_DEF:0 "The Union of the Free People"
+
+DOR_province_cooperative:0 "Dor Rhúnen"
+DOR_province_cooperative_DEF:0 "Dor Rhúnen"
+
+DOR_province_unaligned:0 "Dor Rhúnen"
+DOR_province_unaligned_DEF:0 "Dor Rhúnen"
+
+DOR_war_revolutionary:0 "Dorwinion Commune"
+DOR_war_revolutionary_DEF:0 "Dorwinion Commune"
+
+DOR_empire_belligerent:0 "Empire of Wine"
+DOR_empire_belligerent_DEF:0 "The Empire of Wine"
+
+DOR_empire_cooperative:0 "Empire of Wine"
+DOR_empire_cooperative_DEF:0 "The Empire of Wine"
+
+DOR_empire_cooperative:0 "Empire of Wine"
+DOR_empire_cooperative_DEF:0 "The Empire of Wine"
+
+DOR_empire_revolutionary:0 "Union of Wine"
+DOR_empire_revolutionary_DEF:0 "The Union of Wine"
+
+DOR_gondor_cooperative:0 "Kingdom of Gondor"
+DOR_gondor_cooperative_DEF:0 "The Kingdom of Gondor"
+
+DOR_gondor_belligerent:0 "Kingdom of Gondor"
+DOR_gondor_belligerent_DEF:0 "The Kingdom of Gondor"
+
+DOR_gondor_revolutionary:0 "Red Gondor"
+DOR_gondor_revolutionary_DEF:0 "Red Gondor"
+
+DOR_gondor_unaligned:0 "Kingdom of Gondor"
+DOR_gondor_unaligned_DEF:0 "The Kingdom of Gondor"
+ 
+DOR_gondorempire_unaligned:0 "Empire of Gondor"
+DOR_gondorempire_unaligned_DEF:0 "The Empire of Gondor"
+
+DOR_gondorempire_cooperative:0 "Empire of Gondor"
+DOR_gondorempire_cooperative_DEF:0 "The Empire of Gondor"
+
+DOR_gondorempire_belligerent:0 "Empire of Gondor"
+DOR_gondorempire_belligerent_DEF:0 "The Empire of Gondor"
+
+DOR_gondorempire_revolutionary:0 "Union of the Southlands"
+DOR_gondorempire_revolutionary_DEF:0 "The Union of the Southlands"
+
+
+DOR_greater:0 "Greater Dorwinion"
+DOR_greater_DEF:0 "Greater Dorwinion"
+
+DOR_empireofman:0 "Empire of Man"
+DOR_empireofman_DEF:0 "The Empire of Man"
+
+DOR_empireofman_revolutionary:0 "Union of Man"
+DOR_empireofman_revolutionary_DEF:0 "The Union of Man"
+
+DOR_province_cooperative_ADJ:0 "Dor Rhûnian"
+DOR_province_unaligned_ADJ:0 "Dor Rhûnian"
+
+DOR_greater_cooperative:0 "Dorwinion Federation"
+DOR_greater_cooperative_DEF:0 "The Dorwinion Federation"
+DOR_greater_unaligned:0 "Greater Dorwinion"
+DOR_greater_unaligned_DEF:0 "The Greater Dorwinion"
+DOR_greater_belligerent:0 "Dark Realm of Gwinion"
+DOR_greater_belligerent_DEF:0 "The Dark Realm of Gwinion"
+
+DOR_gondor_belligerent_ADJ:0 "Gondorian"
+DOR_gondor_cooperative_ADJ:0 "Gondorian"
+DOR_gondor_unaligned_ADJ:0 "Gondorian"
+DOR_gondor_revolutionary_ADJ:0 "Gondorian"
+DOR_gondor_ADJ:0 "Gondorian"
+
+DOR_tutelage_cooperative:0 "Republic of Dorwinion"
+DOR_tutelage_cooperative_DEF:0 "The Republic of Dorwinion"
+
+DOR_tutelageorcless_cooperative:0 "Republic of Dorwinion"
+DOR_tutelageorcless_cooperative_DEF:0 "The Republic of Dorwinion"
+
+DOR_constitution_cooperative:0 "Kingdom of Dorwinion"
+DOR_constitution_cooperative_DEF:0 "The Kingdom of Dorwinion"
+
+### NAMES
+
+DOR_domrich_steward:0 "Dómrich the Steward"

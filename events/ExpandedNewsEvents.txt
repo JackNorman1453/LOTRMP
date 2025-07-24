@@ -1,0 +1,36 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = newsexpanded
+
+# Rhun civil war
+news_event = {
+	id = newsexpanded.1
+	title = newsexpanded.1.t
+	desc = newsexpanded.1.d
+	picture = GFX_news_event_rhun_army
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = newsexpanded.1.a
+	}
+}
+
+news_event = {
+	id = newsexpanded.2
+	title = newsexpanded.2.t
+	desc = newsexpanded.2.d
+	picture = GFX_news_event_harad
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = newsexpanded.2.a
+	}
+}

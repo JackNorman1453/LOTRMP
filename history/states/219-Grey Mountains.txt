@@ -1,0 +1,25 @@
+
+state={
+	id=219
+	name="STATE_219"
+	resources = {
+	steel = 18.000 }
+	
+	history={
+		owner = EMI
+		add_core_of = EMI
+		buildings = {
+			infrastructure = 0
+
+		}
+
+	}
+
+	provinces={
+		1003 1398 2412 2668 3801 4761 4836 4858 5314 5640 5655 5667 5675 
+	}
+	manpower=130000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,37 @@
+DOR_RHU_puppet = {
+	color = rgb { 175 105 0 }
+	color_ui = rgb { 255 246 255 }
+}
+RHO_RHU_puppet = {
+	color = rgb { 175 105 0 }
+	color_ui = rgb { 255 246 255 }
+}
+LGT_RHU_puppet = {
+	color = rgb { 175 105 0 }
+	color_ui = rgb { 255 246 255 }
+}
+DOR_union = {
+	color = rgb { 125 13 24 }
+	color_ui = rgb { 163 17 31 }
+}
+
+DOR_empireofman = {
+	color = HSV { 0.1 0.15 0.4 }
+	color_ui = rgb { 138 155 116 }
+}
+
+DOR_province = {
+	color = rgb { 72 73 126 }
+	color_ui = rgb { 94 95 164 }
+}
+
+DOR_gondor = {
+	color = rgb { 72 73 126 }
+	color_ui = rgb { 94 95 164 }
+}
+
+DOR_gondorempire = {
+	color = rgb { 72 73 126 }
+	color_ui = rgb { 94 95 164 }
+}
+

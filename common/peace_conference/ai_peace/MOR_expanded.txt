@@ -1,0 +1,26 @@
+# Scripted AI desire for peace actions.
+# See documentation.info file for more detailed scripting information.
+
+peace_ai_desires = {
+
+	dont_grab_rhovanion = {
+        peace_action_type = take_states
+        enable = {
+			tag = MOR
+            MOR = {
+                is_in_faction_with = RHU
+			}
+			ROOT = {
+				tag = RHU 
+			}
+			FROM = {
+                OR = {
+					original_tag = DOR
+					original_tag = LGT
+				}
+            }
+        }
+        ai_desire = -1000
+    }
+
+}

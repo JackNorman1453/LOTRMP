@@ -1,0 +1,1526 @@
+focus_tree = {
+id = dolguldur
+country = {
+	factor=0
+	modifier = {
+		add = 10
+		tag = DGU
+	}
+}
+
+
+default = no
+
+continuous_focus_position = { x = 712 y = 1400 }
+
+#Custom focuses start here
+
+	focus = {
+		id = DGU_fortress_of_the_necromancer
+		icon = GFX_goal_mor_dark_dol_guldur_fortress
+
+		x = 8
+		y = 0
+		mutually_exclusive = {
+
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = DGU_prepare_to_assault_mirkwood
+		icon = GFX_goal_lth_target_mirkwood_thranduil
+		x = 0
+		y = 1
+		relative_position_id = DGU_fortress_of_the_necromancer
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = DGU_fortress_of_the_necromancer
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+				MIR = {
+					country_event = mirkwood.14
+				}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+    				type = arms_factory
+    				level = 1
+    				instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+    				type = industrial_complex
+    				level = 1
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DGU_make_use_of_balcoth
+		icon = GFX_goal_lth_elf_kneeling_to_orc
+		x = -1
+		y = 1
+		relative_position_id = DGU_prepare_to_assault_mirkwood
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = DGU_prepare_to_assault_mirkwood
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			add_manpower = 15000
+			if = {
+				limit = {
+					has_idea = no_mercenaries
+				}
+				add_ideas = elite_mercenaries
+			}
+			else_if = {
+				limit = {
+					has_idea = elite_mercenaries
+				}
+				add_ideas = limited_mercenaries
+			}
+			else_if = {
+				limit = {
+					has_idea = limited_mercenaries
+				}
+				add_ideas = extensive_mercenaries
+			}
+			else_if = {
+				limit = {
+					has_idea = slave_soldiers
+				}
+				add_political_power = 120
+			}
+		}
+	}
+	focus = {
+		id = DGU_lure_the_spiders
+		icon = GFX_goal_lth_nature_spiders_of_ungoliant
+		x = 1
+		y = 1
+		relative_position_id = DGU_prepare_to_assault_mirkwood
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = DGU_prepare_to_assault_mirkwood
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			SPI = {
+				add_autonomy_score = {
+    				value = -100
+				}
+			}
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = DGU_raid_mirkwood
+		icon =GFX_goal_ELU_deal_with_goblin_raiders_orc
+		x = 0
+		y = 2
+		relative_position_id = DGU_prepare_to_assault_mirkwood
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = DGU_make_use_of_balcoth
+		}
+		prerequisite = {
+			focus = DGU_lure_the_spiders
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			hidden_effect = {
+				if = {
+					limit = {
+						is_historical_focus_on = yes
+					}
+					MIR = {
+						country_event = mirkwood.15
+					}
+				}
+				else = {
+					MIR = {
+						random_list = {
+							10 = {
+								country_event = mirkwood.15
+							}
+							10 = {
+								country_event = mirkwood.16
+							}
+						}
+					}
+				}
+			}
+			MIR = {
+				country_event = lothlorien.22
+			}
+			add_manpower = -2000
+			add_timed_idea = {
+				idea = generic_three_civs
+				days = 180
+			}
+		}
+	}
+	focus = {
+		id = DGU_observe_the_elves
+		icon = GFX_goal_ROH_invite_loth_galadriel
+		x = 0
+		y = 1
+		relative_position_id = DGU_raid_mirkwood
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = DGU_raid_mirkwood
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			LTH = {
+				give_intel_on_country = yes
+			}
+			MIR = {
+				give_intel_on_country = yes
+			}
+		}
+	}
+	focus = {
+		id = DGU_fortify_the_riverline
+		icon = GFX_goal_generic_defensive_fort
+		x = -1
+		y = 1
+		relative_position_id = DGU_observe_the_elves
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = DGU_observe_the_elves
+		}
+		bypass = {
+			NOT = {
+				controls_state = 191
+			}
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			if = {
+				limit = {
+					DGU = {
+						controls_province = 3610
+					}
+				}
+				191 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 2
+    			instant_build = yes
+    			province = 3610
+					}
+				}
+			}
+			if = {
+				limit = {
+					DGU = {
+						controls_province = 1714
+					}
+				}
+				191 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 2
+    			instant_build = yes
+    			province = 1714
+					}
+				}
+			}
+			if = {
+				limit = {
+					DGU = {
+						controls_province = 3828
+					}
+				}
+				191 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 2
+    			instant_build = yes
+    			province = 3828
+					}
+				}
+			}
+			if = {
+				limit = {
+					DGU = {
+						controls_province = 1322
+					}
+				}
+				191 = {
+					add_building_construction = {
+    			type = bunker
+    			level = 2
+    			instant_build = yes
+    			province = 1322
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = DGU_cross_into_the_forest
+		icon = GFX_goal_entwood_forest_nature
+		x = -1
+		y = 1
+		relative_position_id = DGU_fortify_the_riverline
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = DGU_fortify_the_riverline
+			focus = DGU_fortify_dol_guldur
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			add_resource = {
+    		type = chromium
+    		amount = 16
+    		state = 87
+			}
+		}
+	}
+	focus = {
+		id = DGU_fortify_dol_guldur
+		icon = GFX_goal_generic_dark_fortress_dol_guldur
+		x = 1
+		y = 1
+		relative_position_id = DGU_observe_the_elves
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = DGU_observe_the_elves
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			87 = {
+		add_building_construction = {
+    		type = castle
+    		level = 1
+    		instant_build = yes
+   		 	province = 4266
+				}
+			}
+		}
+	}
+	focus = {
+		id = DGU_request_forces_from_lord_sauron
+		icon = GFX_goal_unleash_sauron
+		x = 1
+		y = 1
+		relative_position_id = DGU_fortify_dol_guldur
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = DGU_fortify_the_riverline
+			focus = DGU_fortify_dol_guldur
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+		add_manpower = 25000
+		add_equipment_to_stockpile = { type = infantry_equipment   amount = 2500  }
+		MOR = {
+			add_manpower = -25000
+			add_equipment_to_stockpile = { type = infantry_equipment   amount = -2500  }
+		}
+	}
+	}
+	focus = {
+		id = DGU_forge_blades_of_war
+		icon =GFX_goal_ELU_deal_with_goblin_raiders_orc
+		x = 0
+		y = 2
+		relative_position_id = DGU_observe_the_elves
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = DGU_fortify_the_riverline
+		}
+		prerequisite = {
+			focus = DGU_fortify_dol_guldur
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+    				type = arms_factory
+    				level = 1
+    				instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+    				type = arms_factory
+    				level = 1
+    				instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+    				type = industrial_complex
+    				level = 1
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DGU_torch_the_forest
+		icon =GFX_goal_burn_fangorn_forest
+		x = 0
+		y = 2
+		relative_position_id = DGU_fortify_the_riverline
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = DGU_forge_blades_of_war
+		}
+		prerequisite = {
+			focus = DGU_cross_into_the_forest
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			LTH = {
+				country_event = lothlorien.22
+			}
+			add_timed_idea = {
+				idea = generic_three_civs
+				days = 180
+			}
+			hidden_effect = {
+					set_country_flag = has_raided_lothlorien
+			}
+		}
+	}
+	focus = {
+		id = DGU_through_the_mountain
+		icon =GFX_goal_ELU_mountain_warfare_dwarf
+		x = 0
+		y = 2
+		relative_position_id = DGU_fortify_dol_guldur
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = DGU_forge_blades_of_war
+		}
+		prerequisite = {
+			focus = DGU_request_forces_from_lord_sauron
+		}
+		cost = 5
+	 	available_if_capitulated = yes
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = special_bonus
+				category = lotr_infantry_specialforces
+				uses = 2
+				bonus = 0.5
+			}
+		}
+	}
+	focus = {
+		id = DGU_crush_the_elves
+		icon =GFX_goal_ELU_deal_with_goblin_raiders_orc
+		x = 0
+		y = 2
+		relative_position_id = DGU_forge_blades_of_war
+		mutually_exclusive = {
+		}
+		prerequisite = {
+			focus = DGU_torch_the_forest
+		}
+		prerequisite = {
+			focus = DGU_through_the_mountain
+		}
+		cost = 5
+	 	available_if_capitulated = no
+		will_lead_to_war_with = MIR 
+		will_lead_to_war_with = LTH
+		completion_reward = {
+			set_global_flag = DGU_dol_guldur_war_flag
+			declare_war_on = {
+    			target = LTH
+    			type = annex_everything
+			}
+			declare_war_on = {
+    			target = MIR
+    			type = annex_everything
+			}
+			if = {
+				limit = {
+					NOT = {
+						MIR = {
+							has_completed_focus = MIR_a_personal_matter
+						}
+					}
+				}
+				LTH = {
+					set_country_flag = LTH_accepted_joint_invasion
+				}
+			}
+		}
+		
+	}
+
+
+###########
+
+	focus = {
+		id = DGU_army_effort
+		icon = GFX_goal_lth_orc_warrior
+		x = 7
+		y = 0
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		relative_position_id = DGU_fortress_of_the_necromancer
+		available = {
+			has_completed_focus = DGU_crush_the_elves
+		}
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = DGU_equipment_effort
+		icon = GFX_goal_ELU_dagger_sword_hammer
+		prerequisite = { focus = DGU_army_effort }
+		x = -1
+		y = 1
+		relative_position_id = DGU_army_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = DGU_motorization_effort
+		icon = GFX_goal_generic_horse_drawn_equipment
+		prerequisite = { focus = DGU_army_effort }
+		bypass = { has_tech = horse_drawn_infantry }
+		x = 1
+		y = 1
+		relative_position_id = DGU_army_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = horse_drawn_infantry
+			}
+		}
+	}
+
+	focus = {
+		id = DGU_doctrine_effort
+		icon = GFX_goal_lth_elite_special_forces
+		prerequisite = { focus = DGU_army_effort }
+		x = 0
+		y = 2
+		relative_position_id = DGU_army_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = DGU_equipment_effort_2
+		icon = GFX_goal_ELU_deal_with_goblin_raiders_orc
+		prerequisite = { focus = DGU_equipment_effort }
+		x = 0
+		y = 2
+		relative_position_id = DGU_equipment_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = DGU_mechanization_effort
+		icon = GFX_goal_generic_horse_studs
+		prerequisite = { focus = DGU_motorization_effort }
+		x = 0
+		y = 2
+		relative_position_id = DGU_motorization_effort
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = DGU_doctrine_effort_2
+		icon = GFX_goal_lth_elite_special_forces
+		prerequisite = { focus = DGU_doctrine_effort }
+		x = 0
+		y = 2
+		relative_position_id = DGU_doctrine_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = DGU_equipment_effort_3
+		icon = GFX_goal_ELU_dwarven_supremacy_hand_hammer
+		prerequisite = { focus = DGU_equipment_effort_2 }
+		x = 0
+		y = 2
+		relative_position_id = DGU_equipment_effort_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = DGU_armor_effort
+		icon = GFX_goal_ROH_equine_requisitions_horses
+		prerequisite = { focus = DGU_mechanization_effort }
+		x = 0
+		y = 2
+		relative_position_id = DGU_mechanization_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = lotr_cavalry
+			}
+		}
+	}
+
+	focus = {
+		id = DGU_special_forces
+		icon = GFX_goal_mor_azog_orc_revolt
+		prerequisite = { focus = DGU_equipment_effort_3 }
+		prerequisite = { focus = DGU_doctrine_effort_2 }
+		prerequisite = { focus = DGU_armor_effort }
+		x = 1
+		y = 1
+		relative_position_id = DGU_equipment_effort_3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = special_forces
+			add_tech_bonus = {
+				name = DGU_special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+
+
+
+
+
+### Industry Branch
+
+	focus = {
+		id = DGU_industrial_effort
+		icon = GFX_goal_ROH_barrack_construction
+		relative_position_id = DGU_fortress_of_the_necromancer
+		x = -7
+		y = 0
+		cost = 5
+		available = {
+			has_completed_focus = DGU_crush_the_elves
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = lotr_labour
+			}
+		}
+
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				add = 15
+				date < 3019.1.1
+			}
+		}
+	}
+
+	focus = {
+		id = DGU_construction_effort
+		icon = GFX_goal_generic_windmill
+		prerequisite = { focus = DGU_industrial_effort }
+		relative_position_id = DGU_industrial_effort
+		x = -2
+		y = 1
+		cost = 10
+
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DGU_production_effort
+		icon = GFX_goal_ROH_wartime_economy_blacksmith_forging
+		prerequisite = { focus = DGU_industrial_effort }
+		relative_position_id = DGU_industrial_effort
+		x = 2
+		y = 1
+		cost = 10
+
+
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DGU_construction_effort_2
+		icon = GFX_goal_ROH_construction_projects
+		prerequisite = { focus = DGU_construction_effort }
+		relative_position_id = DGU_construction_effort
+		x = 0
+		y = 1
+		cost = 10
+
+
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DGU_production_effort_2
+		icon = GFX_goal_ROH_restore_dunharrow_forges_anvil_mils_hammer
+		prerequisite = { focus = DGU_production_effort }
+		relative_position_id = DGU_production_effort
+		x = 0
+		y = 1
+		cost = 10
+
+
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DGU_infrastructure_effort
+		icon = GFX_goal_ROH_road_network_expansion
+		prerequisite = { focus = DGU_construction_effort_2 }
+		relative_position_id = DGU_construction_effort_2
+		x = 0
+		y = 1
+		cost = 10
+
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DGU_production_effort_3
+		icon = GFX_goal_ROH_metallurgy_and_stoneworks_crucible_forge
+		prerequisite = { focus = DGU_production_effort_2 }
+		relative_position_id = DGU_production_effort_2
+		x = 0
+		y = 1
+		cost = 10
+
+
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DGU_production_effort_4
+		icon = GFX_goal_ROH_forge_construction
+		prerequisite = { focus = DGU_production_effort_3 }
+		relative_position_id = DGU_production_effort_3		
+		x = 1
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			has_tech = construction2
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DGU_infrastructure_effort_2
+		icon = GFX_goal_pass_road_through_mountains
+		prerequisite = { focus = DGU_infrastructure_effort }
+		relative_position_id = DGU_infrastructure_effort
+		x = 0
+		y = 1
+		cost = 10
+
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DGU_construction_effort_3
+		icon = GFX_goal_generic_windmill
+		prerequisite = { focus = DGU_infrastructure_effort }
+		relative_position_id = DGU_infrastructure_effort
+		x = 3
+		y = 1
+		cost = 10
+
+
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DGU_construction_effort_4
+		icon = GFX_goal_generic_industry_I
+		prerequisite = { focus = DGU_construction_effort_3 }
+		relative_position_id = DGU_construction_effort_3
+		x = 2
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+
+
+		available = {
+			has_tech = construction2
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DGU_the_earth_has_one_weakness
+		icon = GFX_goal_ELU_dig_shovel_steel
+		prerequisite = { focus = DGU_construction_effort_3 }
+		x = 0
+		y = 1
+		relative_position_id = DGU_construction_effort_3	
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		available_if_capitulated = no
+#		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = mobilize_army_construction_tt
+				has_army_manpower = { size > 1000 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = reserve_army_construction_tt
+				has_manpower > 200
+			}
+			has_tech = explosives
+		}
+		select_effect = {
+			add_manpower = -200
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = -100
+				producer = ROOT
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = force_excavation_tt
+			hidden_effect = { add_manpower = -50 }
+			if = {
+				limit = {
+					any_owned_state = {
+						NOT = { has_state_flag = deep_mined }
+					}
+				}
+				random_owned_state = {
+					limit = {
+						NOT = { has_state_flag = deep_mined }
+					}
+					add_resource = {
+					 	type = steel
+						amount = 20
+					}
+					set_state_flag = force_excavated
+				}
+			}
+			else = {
+				random_owned_state = {
+					add_resource = {
+					 	type = steel
+						amount = 10
+					}
+					set_state_flag = force_excavated
+				}
+			}
+			custom_effect_tooltip = stacked_resource_warning_tt
+
+		} # End Rewards Bloc
+	}
+
+	focus = {
+		id = DGU_resource_extraction
+		icon = GFX_goal_ROH_eastemnet_resource_exploitation_steel_production
+		prerequisite = { focus = DGU_the_earth_has_one_weakness }
+		relative_position_id = DGU_the_earth_has_one_weakness
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		available_if_capitulated = no
+#		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = mobilize_army_construction_tt
+				has_army_manpower = { size > 1000 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = reserve_army_construction_tt
+				has_manpower > 200
+			}
+			has_tech = excavation1
+			has_tech = excavation2
+			has_tech = excavation3
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = demobilize_reserve_army_construction_tt
+			hidden_effect = { add_manpower = 200 }
+			if = {
+				limit = {
+					any_owned_state = {
+						NOT = { has_state_flag = force_excavated }
+					}
+				}
+				random_owned_state = {
+					limit = {
+						NOT = { has_state_flag = force_excavated }
+					}
+					add_resource = {
+					 	type = steel
+						amount = 15
+					}
+					add_resource = {
+					 	type = chromium
+						amount = 6
+					}
+					set_state_flag = deep_mined
+				}
+			}
+			else = {
+				random_owned_state = {
+					add_resource = {
+					 	type = steel
+						amount = 12
+					}
+					add_resource = {
+					 	type = chromium
+						amount = 3
+					}
+					set_state_flag = deep_mined
+				}
+			}
+			custom_effect_tooltip = stacked_resource_warning_tt
+
+		} #End Rewards Bloc
+	}
+
+	focus = {
+		id = DGU_secret_weapons
+		icon = GFX_goal_ROH_alchemy_and_wizardry_potions
+		prerequisite = { focus = DGU_infrastructure_effort_2 }
+		relative_position_id = DGU_infrastructure_effort_2
+		x = -1
+		y = 1
+		cost = 10
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 0.5
+				uses = 4
+				category = lotr_knowledge_alchemy
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = DGU_nuclear_effort
+		icon = GFX_goal_burn_fangorn_forest
+		prerequisite = { focus = DGU_secret_weapons }
+		relative_position_id = DGU_secret_weapons
+		x = 0
+		y = 1
+		cost = 10
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 0.5
+				category = lotr_knowledge_magic
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = DGU_extra_tech_slot
+		icon = GFX_goal_lth_library_caras_galadhon
+		prerequisite = { focus = DGU_infrastructure_effort_2 }
+		relative_position_id = DGU_infrastructure_effort_2
+		x = 1
+		y = 1
+		cost = 10
+
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = DGU_extra_tech_slot_2
+		icon = GFX_goal_ROH_construct_knowledge_repositories_library_books
+		prerequisite = { focus = DGU_extra_tech_slot }
+		relative_position_id = DGU_extra_tech_slot
+		available = {
+			num_of_factories > 50
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		x = 0
+		y = 1
+		cost = 10
+
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+}

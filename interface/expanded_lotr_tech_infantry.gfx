@@ -1,0 +1,13 @@
+spriteTypes = {
+	SpriteType = {
+        name = "GFX_NOR_gw_artillery_medium"
+        texturefile = "gfx/interface/technologies/infantry_equipment/art1.dds"
+    }
+	SpriteType = {
+		name = "GFX_NOR_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment/infantry_equipment_0_men.dds"
+	}
+
+	#helpertoken
+
+}

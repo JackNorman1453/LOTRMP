@@ -1,0 +1,22 @@
+state={
+	id=227
+	name="STATE_227"
+	provinces={
+		2179 4711 5312 5723 5772 
+	}
+	
+	history={
+		owner = ERE
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		
+		add_core_of = ERE
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,89 @@
+spriteTypes = {
+
+	###############################################
+	####################RHUN#######################
+	###############################################
+	spriteType = { 
+    name = "GFX_unit_easterling_infantry_expanded_icon_medium"				
+    textureFile = "gfx/interface/counters/divisions_large/unit_easterlings_icon.dds"  ## Thats the paradox shepe, but you can use any path and file naming you want
+    noOfFrames = 2 }
+	
+	spriteType = { 
+    name = "GFX_unit_easterling_infantry_expanded_icon_medium_white" # Do not omit "medium"						
+    textureFile = "gfx/interface/counters/divisions_small/onmap_unit_easterling_icon.dds" 
+    noOfFrames = 2
+   }
+
+   spriteType = {
+    name = "GFX_unit_easterling_infantry_expanded_icon_small"
+    texturefile = "gfx/texticons/unit_easterling_infantry_expanded_icon_small.dds"
+    legacy_lazy_load = no
+    noOfFrames = 2		
+   }
+   ##################################################
+	spriteType = { 
+    name = "GFX_unit_easterling_guard_expanded_icon_medium"				
+    textureFile = "gfx/interface/counters/divisions_large/unit_easterling_guard_icon.dds"  ## Thats the paradox shepe, but you can use any path and file naming you want
+    noOfFrames = 2 }
+	
+	spriteType = { 
+    name = "GFX_unit_easterling_guard_expanded_icon_medium_white" # Do not omit "medium"						
+    textureFile = "gfx/interface/counters/divisions_small/onmap_unit_easterling_guard_icon.dds" 
+    noOfFrames = 2
+   }
+
+   spriteType = {
+    name = "GFX_unit_easterling_guard_expanded_icon_small"
+    texturefile = "gfx/texticons/unit_easterling_guard_expanded_icon_small.dds"
+    legacy_lazy_load = no
+    noOfFrames = 2		
+   }
+   ######################################################
+	spriteType = { 
+    name = "GFX_unit_wainriders_expanded_icon_medium"				
+    textureFile = "gfx/interface/counters/divisions_large/unit_mechanized_icon.dds"  ## Thats the paradox shepe, but you can use any path and file naming you want
+    noOfFrames = 2 }
+	
+	spriteType = { 
+    name = "GFX_unit_wainriders_expanded_icon_medium_white" # Do not omit "medium"						
+    textureFile = "gfx/interface/counters/divisions_small/onmap_unit_mechanized_icon.dds" 
+    noOfFrames = 2
+   }
+
+   spriteType = {
+    name = "GFX_unit_wainriders_expanded_icon_small"
+    texturefile = "gfx/texticons/unit_mechanized_icon_small.dds"
+    legacy_lazy_load = no
+    noOfFrames = 2		
+   }
+   ##########################################################
+   #########################MORDOR###########################
+   ##########################################################
+   spriteType = { 
+    name = "GFX_unit_sauron_expanded_icon_medium"				
+    textureFile = "gfx/interface/counters/divisions_large/unit_heavy_infantry_icon.dds"  ## Thats the paradox shepe, but you can use any path and file naming you want
+    noOfFrames = 2 }
+	
+	spriteType = { 
+    name = "GFX_unit_sauron_expanded_icon_medium_white" # Do not omit "medium"						
+    textureFile = "gfx/interface/counters/divisions_small/onmap_unit_heavy_infantry_icon.dds" 
+    noOfFrames = 2
+   }
+
+   spriteType = {
+    name = "GFX_unit_sauron_expanded_icon_small"
+    texturefile = "gfx/texticons/unit_heavy_infantry_icon_small.dds"
+    legacy_lazy_load = no
+    noOfFrames = 2		
+   }
+
+   #########################################################
+   #################CUSTOM GROUPS EXPANDED##################
+   #########################################################
+
+   spriteType = {
+   name = "GFX_group_easterlings_gr_exp_icon"
+   textureFile = "gfx/interface/counters/divisions_large/unit_easterlings_icon.dds"
+   noOfFrames = 2 }
+   ########################################################
+}

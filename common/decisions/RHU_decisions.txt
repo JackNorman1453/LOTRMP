@@ -1,0 +1,76 @@
+################
+##### RHU ######
+################
+RHU_spread_support = {
+	RHU_impending_civil_war = {
+		icon = GFX_decision_generic_army_1
+		cost = 50
+
+		visible = {
+			has_civil_war = no
+			has_completed_focus = RHUN_break_free_from_mordor
+		}
+
+		days_remove = 180
+		fire_only_once = yes
+        fixed_random_seed = no
+
+		remove_effect = {
+			RHU = { country_event = rhunexpanded.8 }
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+}
+
+RHU_khandian_skirmishes = {
+	RHU_chelkar_skirmish = {
+		icon = GFX_decision_generic_army_1
+		cost = 50
+		
+		available = {
+			KND = {
+				controls_state = 123
+				NOT = {
+					has_border_war_with = HAR
+				}
+			}
+		}
+
+		days_remove = 0
+		fire_only_once = no
+        fixed_random_seed = no
+
+		remove_effect = {
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 123
+					num_provinces = 3
+					on_win = rhunexpanded.21
+					on_lose = rhunexpanded.22
+					on_cancel = rhunexpanded.22
+					modifier = 0.1
+					dig_in_factor = 0
+					terrain_factor = 0
+				}	
+				defender = {
+					state = 115
+					num_provinces = 3
+					on_win = rhunexpanded.24
+					on_lose = rhunexpanded.23
+					on_cancel = rhunexpanded.22
+				}
+			}
+			set_border_war_data = {
+					attacker = 123
+					defender = 115
+					attacker_modifier = 0.5
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+}

@@ -1,0 +1,29 @@
+ideas = {
+	
+	hidden_ideas = {
+	
+		RHUN_operation_grape_AI = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			picture = generic_purge
+			
+			modifier = {
+			attrition = -0.5
+			out_of_supply_factor = -0.5
+			army_speed_factor = 0.3 }
+			
+			targeted_modifier = {
+			tag = DOR
+			attack_bonus_against = 2
+			defense_bonus_against = 1
+			}
+		}

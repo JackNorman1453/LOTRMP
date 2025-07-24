@@ -1,0 +1,6 @@
+LGT = "countries/Logath.txt"
+DRH = "countries/Free Rhûn.txt"
+EGR = "countries/Emyn Engrin.txt"
+EMI = "countries/Ered Mithrin.txt"
+EGN = "countries/Eregion.txt"
+ELO = "countries/East Lorien.txt"

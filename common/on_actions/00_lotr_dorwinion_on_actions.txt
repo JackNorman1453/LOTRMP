@@ -1,0 +1,68 @@
+
+
+on_actions = {
+	
+	on_civil_war_end = {
+        effect = {
+            if = {
+                limit = {
+                    DOR = {
+						has_completed_focus = DOR_horror_and_fear
+                        exists = yes
+                        has_completed_focus = DOR_submission_for_assistance
+                    }
+                }
+                MOR = {
+		set_autonomy = {
+		target = DOR
+		autonomy_state = autonomy_puppet
+				    }  
+			    }
+            }
+        }
+    }
+	on_civil_war_end = {
+        effect = {
+            if = {
+                limit = {
+                    DOR = {
+						has_completed_focus = DOR_horror_and_fear
+                        exists = yes
+						owns_state = 208
+                        has_completed_focus = DOR_nurukhizdin_for_assistance
+                    }
+                }
+                RHU = {
+		set_state_owner = 208
+			    }
+            }
+        }
+    }
+	on_civil_war_end = {
+        effect = {
+            if = {
+                limit = {
+                    DOR = {
+						has_completed_focus = DOR_horror_and_fear
+                        
+                    }
+                }
+				delete_units = {
+    						division_template = "Dorwinion Fighters"
+						}
+						delete_units = {
+    						division_template = "Easterling Fighters"
+						}
+						delete_units = {
+    						division_template = "Mordorian Orcs"
+						}
+						delete_units = {
+    						division_template = "Elite Vanguard Unit"
+						}
+                        delete_units = {
+    						division_template = "Peasant Army"
+						}
+            }
+        }
+    }
+}

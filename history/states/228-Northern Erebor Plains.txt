@@ -1,0 +1,21 @@
+state={
+	id=228
+	name="STATE_228"
+	provinces={
+		945 2255 2722 5118 5688 5726 
+	}
+	history={
+		owner = ERE
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		
+		add_core_of = ERE
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

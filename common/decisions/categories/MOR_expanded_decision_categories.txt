@@ -1,0 +1,17 @@
+MOR_spread_the_revolution_category_men = {
+	icon = military_operation
+	visible = {
+		original_tag = MOR
+		has_government = revolutionary
+		has_completed_focus = spreadtherevolution
+	}
+}
+
+MOR_spread_the_revolution_category_dwarves = {
+	icon = military_operation
+	visible = {
+		original_tag = MOR
+		has_government = revolutionary
+		has_completed_focus = spreadtherevolution
+	}
+}

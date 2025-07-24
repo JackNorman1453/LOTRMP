@@ -1,0 +1,452 @@
+ideas = {
+
+	country = {
+	####################
+	######EREBOR########
+	####################
+		ERE_royal_defense_council = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = lth_unflinching_defender
+
+			modifier = {
+					army_core_defence_factor = 0.1
+					army_strength_factor = 0.05
+					experience_gain_army_unit_factor = 0.05
+			}
+		}
+		
+		ERE_privatized_military = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = lth_silvan_elite_warriors
+
+			modifier = {
+					conscription_factor = -0.05
+					experience_gain_army_factor = 0.15
+					training_time_army_factor = 0.25
+			}
+		}
+		ERE_arms_payments = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_relocate_gold_money
+
+			modifier = {
+					consumer_goods_factor = 0.2
+			}
+		}
+		ERE_recruiting_mercenaries = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_mobilization_trumpet
+
+			modifier = {
+					weekly_manpower = 50
+					consumer_goods_factor = 0.15
+			}
+		}
+		ERE_company_bonds = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_foreign_capital
+
+			modifier = {
+					production_speed_buildings_factor = 0.1
+					consumer_goods_factor = -0.05
+			}
+		}
+		ERE_state_funded_army = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+					industrial_capacity_factory = 0.1
+					consumer_goods_factor = -0.2
+			}
+		}
+		ERE_militarism_expanded = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_resistance2
+
+			modifier = {
+					consumer_goods_factor = -0.3
+					industrial_capacity_factory = 0.1
+					production_speed_arms_factory_factor = 0.15
+			}
+		}
+		ERE_conscription_expanded = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_mobilization_trumpet
+
+			modifier = {
+					weekly_manpower = 25
+			}
+		}
+		ERE_women_in_the_army = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = lth_meritocracy
+
+			modifier = {
+					conscription = 0.02
+			}
+		}
+		ERE_royal_defense_council_1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = lth_unflinching_defender
+
+			modifier = {
+					army_strength_factor = 0.05
+					experience_gain_army_unit_factor = 0.05
+					army_core_defence_factor = 0.2
+			}
+		}
+		ERE_royal_foundries = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_improved_industries
+
+			modifier = {
+					cic_construction_boost = 0.1
+			}
+		}
+		ERE_propaganda_campaign = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_empire
+
+			modifier = {
+					war_support_weekly_factor = 0.2
+					stability_weekly_factor = 0.2
+			}
+		}
+		ERE_miners_approach = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_torchbearers
+
+			modifier = {
+					local_resources_factor = 0.15
+			}
+		}
+		ERE_royals_approach = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_monarchy_crown
+
+			modifier = {
+					subjects_autonomy_gain = -0.1
+			}
+		}
+		ERE_royal_defense_council_2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = lth_unflinching_defender
+
+			modifier = {
+					army_org_factor = 0.05
+					army_morale_factor = 0.1
+					army_strength_factor = 0.1
+					experience_gain_army_unit_factor = 0.05
+					army_core_defence_factor = 0.2
+			}
+		}
+		ERE_royal_institute_of_infrastructure_1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_research_bonus
+
+			modifier = {
+					industry_repair_factor = 0.1
+					cic_construction_boost = 0.05
+			}
+		}
+		ERE_royal_institute_of_infrastructure_2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_research_bonus
+
+			modifier = {
+					industry_repair_factor = 0.1
+					cic_construction_boost = 0.05
+					supply_node_range = 0.2
+			}
+		}
+		ERE_royal_institute_of_infrastructure_3 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_research_bonus
+
+			modifier = {
+					industry_repair_factor = 0.1
+					cic_construction_boost = 0.05
+					supply_node_range = 0.2
+					army_speed_factor = 0.1
+			}
+		}
+		ERE_defensive_concerns = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_research_bonus
+
+			modifier = {
+					acclimatization_cold_climate_gain_factor = 0.1
+					army_defence_factor = 0.1
+					army_strength_factor = 0.05
+			}
+		}
+		ERE_royal_institute_of_infrastructure_5 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_research_bonus
+
+			modifier = {
+					industry_repair_factor = 0.1
+					cic_construction_boost = 0.05
+					supply_node_range = 0.2
+					army_speed_factor = 0.1
+					local_supply_impact_factor = -0.1
+			}
+		}
+		ERE_prewar_austerity = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_local_self_management
+
+			modifier = {
+					consumer_goods_factor = -0.1
+			}
+		}
+		ERE_defensive_doctrine = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = limited_intervention
+
+			modifier = {
+					army_core_defence_factor = 0.05
+			}
+		}
+		ERE_offensive_doctrine = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_viking_axe_weapons
+
+			modifier = {
+					army_attack_factor = 0.05
+			}
+		}
+	
+	}
+}

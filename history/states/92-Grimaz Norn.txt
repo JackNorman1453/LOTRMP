@@ -1,0 +1,32 @@
+
+state={
+	id=92
+	name="STATE_92"
+	resources={
+		chromium=12.000
+		oil=4.000
+		rubber=3.000
+	}
+
+	history={
+		owner = EGR
+		add_core_of = EGR
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			1544 5
+		}
+
+	}
+
+	provinces={
+		819 1544 3843 4210 
+	}
+	manpower=500
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

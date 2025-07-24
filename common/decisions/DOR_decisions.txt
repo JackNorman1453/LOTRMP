@@ -1,0 +1,650 @@
+DOR_wine_trade_category = {
+
+####### HUMAN
+
+
+    DOR_trade_with_dale = {
+        icon = GFX_decision_generic_trade
+        fire_only_once = yes
+        days_remove = 30
+        ai_will_do = {
+			base = 100
+		}
+        cost = 50
+        available = {
+             NOT = {
+                has_country_flag = DOR_delegation_sent
+            }
+            has_completed_focus = DOR_approach_the_men
+            hidden_trigger = {
+                country_exists = DAL
+            }
+            NOT = {
+                has_war_with = DAL
+            }
+        }
+        visible = {
+            has_completed_focus = DOR_approach_the_men
+            NOT = {
+                has_idea = DOR_wine_trade_12
+            }
+            hidden_trigger = {
+                country_exists = DAL
+            }
+        }
+        complete_effect = {
+            set_country_flag = DOR_delegation_sent
+            DAL = {
+                country_event = { id = dorwinion.3 days = 30 }
+            }
+            
+        }
+    }
+    DOR_trade_with_rohan = {
+        icon = GFX_decision_generic_trade
+        fire_only_once = yes
+        days_remove = 30
+        ai_will_do = {
+			base = 100
+		}
+        cost = 50
+        available = {
+             NOT = {
+                has_country_flag = DOR_delegation_sent
+            }
+            has_completed_focus = DOR_approach_the_men
+            hidden_trigger = {
+                country_exists = ROH
+            }
+            NOT = {
+                has_war_with = ROH
+            }
+        }
+        visible = {
+            has_completed_focus = DOR_approach_the_men
+            NOT = {
+                has_idea = DOR_wine_trade_12
+            }
+            hidden_trigger = {
+                country_exists = ROH
+            }
+        }
+        complete_effect = {
+            set_country_flag = DOR_delegation_sent
+            ROH = {
+                country_event = { id = dorwinion.3 days = 30 }
+            }
+            
+        }
+    }
+    DOR_trade_with_gondor = {
+        icon = GFX_decision_generic_trade
+        fire_only_once = yes
+        days_remove = 30
+        ai_will_do = {
+			base = 100
+		}
+        cost = 50
+        available = {
+             NOT = {
+                has_country_flag = DOR_delegation_sent
+            }
+            has_completed_focus = DOR_approach_the_men
+            hidden_trigger = {
+                country_exists = GON
+            }
+            NOT = {
+                has_war_with = GON
+            }
+        }
+        visible = {
+            has_completed_focus = DOR_approach_the_men
+            NOT = {
+                has_idea = DOR_wine_trade_12
+            }
+            hidden_trigger = {
+                country_exists = GON
+            }
+        }
+        complete_effect = {
+            set_country_flag = DOR_delegation_sent
+            GON = {
+                country_event = { id = dorwinion.3 days = 30 }
+            }
+            
+        }
+    }
+    DOR_trade_with_harad = {
+        icon = GFX_decision_generic_trade
+        fire_only_once = yes
+        days_remove = 45
+        ai_will_do = {
+			base = 80
+		}
+        cost = 50
+        available = {
+             NOT = {
+                has_country_flag = DOR_delegation_sent
+            }
+            has_completed_focus = DOR_approach_the_men
+            hidden_trigger = {
+                country_exists = HAR
+            }
+            NOT = {
+                has_war_with = HAR
+            }
+        }
+        visible = {
+            has_completed_focus = DOR_approach_the_men
+            NOT = {
+                has_idea = DOR_wine_trade_12
+            }
+            hidden_trigger = {
+                country_exists = HAR
+            }
+        }
+        complete_effect = {
+            set_country_flag = DOR_delegation_sent
+            HAR = {
+                country_event = { id = dorwinion.3 days = 45 }
+            }
+            
+        }
+    }
+
+####### DWARVES
+
+DOR_trade_with_erebor = {
+        icon = GFX_decision_generic_trade
+        fire_only_once = yes
+        days_remove = 45
+        ai_will_do = {
+			base = 80
+		}
+        cost = 50
+        available = {
+            NOT = {
+                has_country_flag = DOR_delegation_sent
+            }
+            has_completed_focus = DOR_approach_the_dwarves
+            hidden_trigger = {
+                country_exists = ERE
+            }
+            NOT = {
+                has_war_with = ERE
+            }
+        }
+        visible = {
+            has_completed_focus = DOR_approach_the_dwarves
+            NOT = {
+                has_idea = DOR_wine_trade_12
+            }
+            hidden_trigger = {
+                country_exists = ERE
+            }
+        }
+        complete_effect = {
+            set_country_flag = DOR_delegation_sent
+            ERE = {
+                country_event = { id = dorwinion.3 days = 45 }
+            }
+            
+        }
+    }
+
+DOR_trade_with_moria = {
+        icon = GFX_decision_generic_trade
+        fire_only_once = yes
+        days_remove = 60
+        ai_will_do = {
+			base = 60
+		}
+        cost = 50
+        available = {
+             NOT = {
+                has_country_flag = DOR_delegation_sent
+            }
+            has_completed_focus = DOR_approach_the_dwarves
+            hidden_trigger = {
+                country_exists = MOA
+            }
+            NOT = {
+                has_war_with = MOA
+            }
+        }
+        visible = {
+            has_completed_focus = DOR_approach_the_dwarves
+            NOT = {
+                has_idea = DOR_wine_trade_12
+            }
+            hidden_trigger = {
+                country_exists = MOA
+            }
+        }
+        complete_effect = {
+            set_country_flag = DOR_delegation_sent
+            MOA = {
+                country_event = { id = dorwinion.3 days = 60 }
+            }
+            
+        }
+    }
+
+####### EXPANDED DWARVES
+
+DOR_trade_with_iron_hills = {
+        icon = GFX_decision_generic_trade
+        fire_only_once = yes
+        days_remove = 30
+        ai_will_do = {
+			base = 100
+		}
+        cost = 50
+        available = {
+            NOT = {
+                has_country_flag = DOR_delegation_sent
+            }
+            has_completed_focus = DOR_approach_the_dwarves
+            hidden_trigger = {
+                country_exists = EGR
+            }
+            NOT = {
+                has_war_with = EGR
+            }
+        }
+        visible = {
+            has_completed_focus = DOR_approach_the_dwarves
+            NOT = {
+                has_idea = DOR_wine_trade_12
+            }
+             hidden_trigger = {
+                country_exists = EGR
+            }
+        }
+        complete_effect = {
+            set_country_flag = DOR_delegation_sent
+            EGR = {
+                country_event = { id = dorwinion.3 days = 30 }
+            }
+            
+        }
+    }
+
+DOR_trade_with_grey_mountains = {
+        icon = GFX_decision_generic_trade
+        fire_only_once = yes
+        days_remove = 45
+        cost = 50
+        ai_will_do = {
+			base = 80
+		}
+        available = {
+            NOT = {
+                has_country_flag = DOR_delegation_sent
+            }
+            has_completed_focus = DOR_approach_the_dwarves
+            hidden_trigger = {
+                country_exists = EMI
+            }
+            NOT = {
+                has_war_with = EMI
+            }
+        }
+        visible = {
+            has_completed_focus = DOR_approach_the_dwarves
+            NOT = {
+                has_idea = DOR_wine_trade_12
+            }
+            hidden_trigger = {
+                country_exists = EMI
+            }
+        }
+        complete_effect = {
+            set_country_flag = DOR_delegation_sent
+            EMI = {
+                country_event = { id = dorwinion.3 days = 45 }
+            }
+            
+        }
+    }
+
+####### ORCS
+
+DOR_trade_with_mordor = {
+        icon = GFX_decision_generic_trade
+        fire_only_once = yes
+        days_remove = 30
+        ai_will_do = {
+			base = 100
+		}
+        cost = 50
+        available = {
+             NOT = {
+                has_country_flag = DOR_delegation_sent
+            }
+            has_completed_focus = DOR_approach_the_orcs
+            hidden_trigger = {
+                country_exists = DOR
+            }
+            NOT = {
+                has_war_with = DOR
+            }
+        }
+        visible = {
+            has_completed_focus = DOR_approach_the_orcs
+            NOT = {
+                has_idea = DOR_wine_trade_12
+            }
+            hidden_trigger = {
+                country_exists = DOR
+            }
+        }
+        complete_effect = {
+            set_country_flag = DOR_delegation_sent
+            DOR = {
+                country_event = { id = dorwinion.3 days = 30 }
+            }
+            
+        }
+    }
+
+DOR_trade_with_the_free_orcs = {
+        icon = GFX_decision_generic_trade
+        fire_only_once = yes
+        days_remove = 60
+        ai_will_do = {
+			base = 60
+		}
+        cost = 50
+        available = {
+             NOT = {
+                has_country_flag = DOR_delegation_sent
+            }
+            has_completed_focus = DOR_approach_the_orcs
+            hidden_trigger = {
+                country_exists = MOC
+            }
+            NOT = {
+                has_war_with = MOC
+            }
+        }
+        visible = {
+            has_completed_focus = DOR_approach_the_orcs
+            NOT = {
+                has_idea = DOR_wine_trade_12
+            }
+            hidden_trigger = {
+                country_exists = MOC
+            }
+        }
+        complete_effect = {
+            set_country_flag = DOR_delegation_sent
+            MOC = {
+                country_event = { id = dorwinion.3 days = 60 }
+            }
+            
+        }
+    }
+
+DOR_trade_with_gundabad = {
+        icon = GFX_decision_generic_trade
+        fire_only_once = yes
+        days_remove = 60
+        ai_will_do = {
+			base = 60
+		}
+        cost = 50
+        available = {
+             NOT = {
+                has_country_flag = DOR_delegation_sent
+            }
+            has_completed_focus = DOR_approach_the_orcs
+            hidden_trigger = {
+                country_exists = GUN
+            }
+            NOT = {
+                has_war_with = GUN
+            }
+        }
+        visible = {
+            has_completed_focus = DOR_approach_the_orcs
+            NOT = {
+                has_idea = DOR_wine_trade_12
+            }
+            hidden_trigger = {
+                country_exists = GUN
+            }
+        }
+        complete_effect = {
+            set_country_flag = DOR_delegation_sent
+            GUN = {
+                country_event = { id = dorwinion.3 days = 30 }
+            }
+            
+        }
+    }
+
+####### EXPANDED ORCS
+#####removed after GTD#########
+
+####### ELVES
+
+    DOR_trade_with_mirkwood = {
+        icon = GFX_decision_generic_trade
+        fire_only_once = yes
+        days_remove = 30
+        ai_will_do = {
+			base = 100
+		}
+        cost = 50
+        available = {
+             NOT = {
+                has_country_flag = DOR_delegation_sent
+            }
+            has_completed_focus = DOR_approach_the_elves
+            hidden_trigger = {
+                country_exists = MIR
+            }
+            NOT = {
+                has_war_with = MIR
+            }
+        }
+        visible = {
+            has_completed_focus = DOR_approach_the_elves
+            NOT = {
+                has_idea = DOR_wine_trade_12
+            }
+            hidden_trigger = {
+                country_exists = MIR
+            }
+        }
+        complete_effect = {
+            set_country_flag = DOR_delegation_sent
+            MIR = {
+                country_event = { id = dorwinion.3 days = 30 }
+            }
+            
+        }
+    }
+    DOR_trade_with_lothlorien = {
+        icon = GFX_decision_generic_trade
+        fire_only_once = yes
+        days_remove = 45
+        cost = 50
+        ai_will_do = {
+			base = 80
+		}
+        available = {
+             NOT = {
+                has_country_flag = DOR_delegation_sent
+            }
+            has_completed_focus = DOR_approach_the_elves
+            hidden_trigger = {
+                country_exists = LTH
+            }
+            NOT = {
+                has_war_with = LTH
+            }
+        }
+        visible = {
+            has_completed_focus = DOR_approach_the_elves
+            NOT = {
+                has_idea = DOR_wine_trade_12
+            }
+            hidden_trigger = {
+                country_exists = LTH
+            }
+        }
+        complete_effect = {
+            set_country_flag = DOR_delegation_sent
+            LTH = {
+                country_event = { id = dorwinion.3 days = 45 }
+            }
+            
+        }
+    }
+    DOR_trade_with_rivendell = {
+        icon = GFX_decision_generic_trade
+        fire_only_once = yes
+        days_remove = 30
+        ai_will_do = {
+			base = 100
+		}
+        cost = 50
+        available = {
+             NOT = {
+                has_country_flag = DOR_delegation_sent
+            }
+            has_completed_focus = DOR_approach_the_elves
+            hidden_trigger = {
+                country_exists = RIV
+            }
+            NOT = {
+                has_war_with = RIV
+            }
+        }
+        visible = {
+            has_completed_focus = DOR_approach_the_elves
+            NOT = {
+                has_idea = DOR_wine_trade_12
+            }
+            hidden_trigger = {
+                country_exists = RIV
+            }
+        }
+        complete_effect = {
+            set_country_flag = DOR_delegation_sent
+            RIV = {
+                country_event = { id = dorwinion.3 days = 60 }
+            }
+            
+        }
+    }
+    DOR_trade_with_lindon = {
+        icon = GFX_decision_generic_trade
+        fire_only_once = yes
+        days_remove = 90
+        cost = 50
+        ai_will_do = {
+			base = 20
+		}
+        available = {
+             NOT = {
+                has_country_flag = DOR_delegation_sent
+            }
+            has_completed_focus = DOR_approach_the_elves
+            hidden_trigger = {
+                country_exists = LIN
+            }
+            NOT = {
+                has_war_with = LIN
+            }
+        }
+        visible = {
+            has_completed_focus = DOR_approach_the_elves
+            NOT = {
+                has_idea = DOR_wine_trade_12
+            }
+            hidden_trigger = {
+                country_exists = LIN
+            }
+        }
+        complete_effect = {
+            set_country_flag = DOR_delegation_sent
+            LIN = {
+                country_event = { id = dorwinion.3 days = 90 }
+            }
+            
+        }
+    }
+}
+
+DOR_makeshift_longships_category = {
+    refit_to_longship= {
+		cost = 25
+		icon = GFX_decision_generic_merge_plant_ship
+		fire_only_once = no
+		visible = {
+			has_country_flag = DOR_ship_refit
+		}
+		available = {	
+			has_equipment = {
+   				convoy > 24
+	  		}	
+				has_tech = longship_0
+		}
+		days_remove = 60
+
+		complete_effect = {
+			add_equipment_to_stockpile = { 
+				type = convoy_1
+				amount = -25 
+			    }
+		    }
+        remove_effect = {
+            create_equipment_variant = {	
+						name = "Refitted Longship Class" 		
+						type = longship_hull_0
+						name_group = "DEN_DD_HISTORICAL" #Note: Doesn't matter if ROOT is not DEN, the effect will grab the appropriate country-specific name list anyways
+						parent_version = 0
+						modules = {
+							mid_custom_module_slot = boarding_crew_1_module
+			                fixed_materials_module_slot = improved_hull_longship_1_module
+			                fixed_structure_module_slot = empty
+			                fixed_defenses_module_slot = empty
+			                fixed_propulsion_module_slot = mainsail_small_module
+						}
+						obsolete = yes
+					}
+                    create_ship = {
+					type = longship_hull_0
+					equipment_variant = "Refitted Longship Class"
+					creator = ROOT
+					name = "Refitted Longship"
+				    }
+            }  
+		}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
