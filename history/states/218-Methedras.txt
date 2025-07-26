@@ -12,6 +12,8 @@ state={
 		owner = ISE
 		add_core_of = ISE
 		buildings = {
+		arms_factory = 3
+			industrial_complex = 4
 			infrastructure = 0
 		}
 	}

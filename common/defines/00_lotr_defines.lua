@@ -187,7 +187,7 @@ NDefines.NSupply.RAILWAY_CONVERSION_COOLDOWN_CORE = 1
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0 -- 0xp, was 25
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 0 -- 0xp, was 5
 NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 0 -- 0xp, was 10
-NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 8 -- Number of support companies allowed per division
+NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 2 -- Number of support companies allowed per division
 
 NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT = 0 -- 0% consumger goods possible
 NDefines.NMilitary.LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 0.50 -- eagle cap adjustment

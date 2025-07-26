@@ -4,14 +4,16 @@ state={
 	name="STATE_18"
 	resources={
 		steel=40.000
+		rubber = 12.000
+		tungsten = 7.000
 	}
 
 	history={
 		owner = GON
 		buildings = {
-			infrastructure = 2
-			arms_factory = 1
-			industrial_complex = 1
+			infrastructure = 3
+			arms_factory = 3
+			industrial_complex = 3
 
 
 		}

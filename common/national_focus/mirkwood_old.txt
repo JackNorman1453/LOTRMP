@@ -1675,7 +1675,7 @@ focus = {
 			set_state_owner_to = ELO
 			add_core_of = ELO
 		}
-		puppet = ELO
+		LTH = { puppet = ELO}
 		hidden_effect = {
 			ELO = {
 				load_oob = "ELO_1936"

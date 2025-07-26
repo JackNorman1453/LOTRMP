@@ -474,7 +474,7 @@ continuous_focus_position = { x = 50 y = 1700 }
 		}
 		completion_reward = {
 			add_ideas = GON_isildur_legacy
-			add_political_power = 50
+			add_political_power = 100
 		}
 	}
 
@@ -486,7 +486,7 @@ continuous_focus_position = { x = 50 y = 1700 }
 		prerequisite = { focus = GON_honor_isildurs_legacy}
 		x = 0
 		y = 1
-		cost = 7
+		cost = 5
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_COOPERATIVE }
 		bypass = {
 			has_government = cooperative
@@ -549,7 +549,7 @@ continuous_focus_position = { x = 50 y = 1700 }
 		completion_reward = {
 			denethor_gets_less_paranoid = yes
 			add_timed_idea = { idea = GON_idea_restructure_the_army  days = 100 }
-			add_popularity = { ideology = cooperative popularity = 0.025 }
+			add_popularity = { ideology = cooperative popularity = 0.10 }
 		}
 	}
 
@@ -641,7 +641,7 @@ continuous_focus_position = { x = 50 y = 1700 }
 		}
 		completion_reward = {
 			random_list = {
-				65 = {
+				100 = {
 					SHI = {
 						if = {
 							limit = {
@@ -659,9 +659,7 @@ continuous_focus_position = { x = 50 y = 1700 }
 					set_global_flag = aragorn_persuaded
 					custom_effect_tooltip = GON_aragorn_leaves_the_fellowship
 				}
-				35 = {
-					add_political_power = -100
-				}
+			
 			}
 		}
 	}
@@ -1258,57 +1256,13 @@ continuous_focus_position = { x = 50 y = 1700 }
 		}
 	}
 
-	focus = {
-		id = GON_reclaim_orthanc
-		icon = GFX_goal_orthanc_destroyed
-		ai_will_do = {
-			factor = 15
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		relative_position_id = GON_historical_claims
-		prerequisite = { focus = GON_historical_claims }
-		x = 2
-		y = 1
-		cost = 7
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-		available = {
-			ISE = {
-				owns_state = 31
-			}
-			the_other_gondor_does_not_exist = yes
-		}
-		bypass = {
-			has_war_with = ISE
-		}
-		completion_reward = {
-			if = {
-				limit = {
-					ISE = {
-						has_government = belligerent
-					}
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = ISE
-				}
-			}
-			else = {
-				ISE = {
-					country_event = { id = isengard.13 }
-				}
-			}
-		}
-	}
 
 	focus = {
 		id = GON_reintergrate_orthanc
 		icon = GFX_goal_generic_position_armies
 		ai_will_do = { factor = 30 }
-		relative_position_id = GON_reclaim_orthanc
-		prerequisite = { focus = GON_reclaim_orthanc }
+		relative_position_id = GON_historical_claims
+		prerequisite = { focus = GON_historical_claims }
 		x = 0
 		y = 1
 		cost = 7
@@ -2188,8 +2142,8 @@ continuous_focus_position = { x = 50 y = 1700 }
 		}
 		completion_reward = {
 			19 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+				add_extra_state_shared_building_slots = 7
+				add_building_construction = { type = arms_factory level = 5 instant_build = yes }
 			}
 		}
 	}
@@ -2210,8 +2164,8 @@ continuous_focus_position = { x = 50 y = 1700 }
 		}
 		completion_reward = {
 			19 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
 			}
 		}
 	}
@@ -2231,7 +2185,7 @@ continuous_focus_position = { x = 50 y = 1700 }
 		}
 		completion_reward = {
 			16 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
 				add_building_construction = {	type = infrastructure level = 2 instant_build = yes }
 			}
@@ -2254,8 +2208,8 @@ continuous_focus_position = { x = 50 y = 1700 }
 		}
 		completion_reward = {
 			16 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+				add_extra_state_shared_building_slots = 7
+				add_building_construction = { type = arms_factory level = 5 instant_build = yes }
 			}
 		}
 	}
@@ -2276,8 +2230,8 @@ continuous_focus_position = { x = 50 y = 1700 }
 		}
 		completion_reward = {
 			16 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
 			}
 		}
 	}
@@ -2590,22 +2544,6 @@ continuous_focus_position = { x = 50 y = 1700 }
 		}
 	}
 
-	focus = {
-		id = GON_improve_relations_with_rohan
-		icon = GFX_goal_roh_rohan_flag
-		ai_will_do = { factor = 5 }
-		relative_position_id = GON_external_policy_department
-		prerequisite = { focus = GON_external_policy_department }
-		x = -1
-		y = 1
-		cost = 5
-		completion_reward = {
-			add_opinion_modifier = { target = ROH modifier = large_increase }
-			ROH = {
-				add_opinion_modifier = { target = GON modifier = large_increase }
-			}
-		}
-	}
 
 	focus = {
 		id = GON_help_deal_with_isengard
@@ -2619,9 +2557,9 @@ continuous_focus_position = { x = 50 y = 1700 }
 				}
 			}
 		}
-		relative_position_id = GON_improve_relations_with_rohan
-		prerequisite = { focus = GON_improve_relations_with_rohan }
-		x = 0
+		relative_position_id = GON_external_policy_department
+		prerequisite = { focus = GON_external_policy_department }
+		x = -2
 		y = 1
 		cost = 5
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -2630,10 +2568,10 @@ continuous_focus_position = { x = 50 y = 1700 }
 			ISE = { has_completed_focus = quarrelwithrohan }
 		}
 		completion_reward = {
-			add_manpower = -1000
+			add_manpower = -5000
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_0
-				amount = -1000
+				amount = -5000
 			}
 			ROH = {
 				country_event = rohan.8
@@ -2645,29 +2583,11 @@ continuous_focus_position = { x = 50 y = 1700 }
 		id = GON_where_was_gondor
 		icon = GFX_focus_generic_little_entente
 		ai_will_do = { factor = 5 }
-		relative_position_id = GON_help_deal_with_isengard
-		prerequisite = { focus = GON_help_deal_with_isengard }
-		x = 0
-		y = 1
-		cost = 5
-		available = {
-			the_other_gondor_does_not_exist = yes
-		}
-		completion_reward = {
-			set_rule = { can_send_volunteers = yes }
-			add_ideas = GON_volunteers_against_evil
-		}
-	}
-
-	focus = {
-		id = GON_invite_rohan
-		icon = GFX_goal_generic_major_alliance
-		ai_will_do = { factor = 3 }
-		relative_position_id = GON_where_was_gondor
-		prerequisite = { focus = GON_where_was_gondor }
-		x = 0
-		y = 1
-		cost = 5
+		relative_position_id = GON_external_policy_department
+		prerequisite = { focus = GON_external_policy_department }
+		x = -1
+		y = 2
+		cost = 25.8
 		available = {
 			the_other_gondor_does_not_exist = yes
 		}
@@ -2675,8 +2595,9 @@ continuous_focus_position = { x = 50 y = 1700 }
 			ROH = {
 				invite_to_faction = yes
 			}
-		}
+			}
 	}
+
 
 	focus = {
 		id = GON_express_intressed_in_haronder
@@ -2739,9 +2660,12 @@ continuous_focus_position = { x = 50 y = 1700 }
 			the_other_gondor_does_not_exist = yes
 		}
 		completion_reward = {
-			HAR = {
-				country_event = { id = harad.3 }
-			}
+			set_state_owner = 107
+			set_state_owner = 105
+			set_state_owner = 106
+			set_state_controller = 107
+			set_state_controller = 105
+			set_state_controller = 106
 		}
 	}
 
@@ -2753,7 +2677,7 @@ continuous_focus_position = { x = 50 y = 1700 }
 		prerequisite = { focus = GON_demand_harondor }
 		x = 0
 		y = 1
-		cost = 7
+		cost = 5
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		available = {
 			owns_state = 105

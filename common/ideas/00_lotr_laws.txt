@@ -14,7 +14,7 @@ ideas = {
 			cost = 300
 
 			modifier = {
-				consumer_goods_expected_value = 0.6
+				consumer_goods_expected_value = 0.5
 				political_power_gain = 0.25
 			}
 
@@ -83,7 +83,7 @@ ideas = {
 
 			modifier = {
 				consumer_goods_expected_value = 0.25
-				political_power_gain = -0.25
+				political_power_gain = -0.1
 			}
 
 			available = {
@@ -155,7 +155,7 @@ ideas = {
 
 			modifier = {
 				consumer_goods_expected_value = 0.15
-				political_power_gain = -0.35
+				political_power_gain = -0.2
 			}
 
 			allowed_to_remove = {
@@ -296,7 +296,7 @@ ideas = {
 
 			modifier = {
 				min_export = 0.0
-				political_power_gain = -0.35
+			
 			}
 
 			ai_will_do = {
@@ -347,7 +347,6 @@ ideas = {
 
 			modifier = {
 				min_export = 0.25
-				political_power_gain = -0.25
 				civilian_intel_to_others = 10.0
 				navy_intel_to_others = 5
 			}
@@ -394,7 +393,7 @@ ideas = {
 
 			modifier = {
 				min_export = 0.6
-				political_power_gain = -0.15
+		
 				civilian_intel_to_others = 20.0
 				navy_intel_to_others = 10.0
 			}
@@ -553,7 +552,7 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
-			cost = 300
+			cost = 270
 
 			modifier = {
 				conscription = 0.0035
@@ -576,10 +575,10 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
-			cost = 300
+			cost = 270
 
 			modifier = {
-				conscription = 0.007
+				conscription = 0.01
 				political_power_gain = 0.05
 				training_time_factor = -0.15
 			}
@@ -619,10 +618,10 @@ ideas = {
 			}
 
 			removal_cost = -1
-			cost = 300
+			cost = 270
 
 			modifier = {
-				conscription = 0.01
+				conscription = 0.02
 				political_power_gain = 0.0
 			}
 
@@ -683,10 +682,10 @@ ideas = {
 				has_war_support > 0.2
 			}
 			removal_cost = -1
-			cost = 300
+			cost = 270
 
 			modifier = {
-				conscription = 0.02
+				conscription = 0.03
 				political_power_gain = -0.15
 				training_time_factor = 0.1
 			}
@@ -775,7 +774,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			cost = 300
+			cost = 170
 
 			modifier = {
 				conscription = 0.04
@@ -867,7 +866,7 @@ ideas = {
 			cost = 300
 
 			modifier = {
-				conscription = 0.08
+				conscription = 0.10
 				political_power_gain = -0.5
 				industrial_capacity_factory = -0.25
 				industrial_capacity_dockyard = -0.25
@@ -1020,6 +1019,7 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.03
 				conscription = 0.006
+				army_org_factor = 0.05
 			}
 
 			allowed_to_remove = {

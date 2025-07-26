@@ -201,7 +201,7 @@ honor_morgoth_desc:0 "We should not forget who brought us here. Our dark lord ha
 ## Isengard path
 reach_out_to_isengard:0 "Reach out to Isengard"
 reach_out_to_isengard_desc:0 "Let us extend a hand in friendship to Isengard, for they can prove useful and if need be our hand can always be drawn back."
-invite_isengard_to_faction:0 "Invite Isengard"
+invite_isengard_to_faction:0 "Join the War"
 invite_isengard_to_faction_desc:0 "Isengard has been growing into a useful-for now- power. We should ally our self with them."
 suggest_war_with_gondor:0 "Suggest war with Gondor"
 suggest_war_with_gondor_desc:0 "A two-front war will be the end of Gondor. We should reach out to our ally Isengard and ask if they will help us in destroying Gondor."

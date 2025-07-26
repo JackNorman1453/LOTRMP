@@ -3,6 +3,9 @@ state={
 	id=31
 	name="STATE_31"
 	resources={
+		rubber = 11
+		tungsten = 11
+		oil = 20
 		steel=48.000
 	}
 
@@ -11,8 +14,8 @@ state={
 		buildings = {
 			infrastructure = 4
 			air_base = 1
-			arms_factory = 5
-			industrial_complex = 3
+			arms_factory = 3
+			industrial_complex = 6
 			library = 1
 			6610 = {
 				landmark_orthanc = 1

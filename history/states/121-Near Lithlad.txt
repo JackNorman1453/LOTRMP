@@ -5,12 +5,16 @@ state={
 
 	resources = {
 		oil=12.000
+		chromium = 8.000
+		tungsten = 4.000
+		rubber = 7.000
 	}
 
 	history={
 		owner = MOR
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 3
 
 		}
 		add_core_of = MOR

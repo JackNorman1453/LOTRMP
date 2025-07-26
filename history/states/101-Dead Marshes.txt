@@ -6,9 +6,11 @@ state={
 	history={
 		owner = DAG
 		buildings = {
-			infrastructure = 0
+			infrastructure = 2
 		}
 		add_core_of = DAG
+		add_core_of = MOR
+
 
 	}
 
@@ -17,7 +19,6 @@ state={
 	}
 	manpower=12
 	buildings_max_level_factor=1.000
-	state_category=wasteland
-	impassable = yes
-	local_supplies=0.000
+	state_category=town
+	local_supplies=1.000
 }

@@ -4,9 +4,9 @@ state={
 	name="STATE_206"
 
 	history={
-		owner = DAG
+		owner = ROH
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 
 		}
 		victory_points = {

@@ -396,6 +396,8 @@ technologies = {
 	}
 
     men_society3 = {
+	
+		conscription_factor = 0.35
         political_power_gain = 0.15
         lend_lease_tension = -1.0
 

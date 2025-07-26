@@ -646,7 +646,9 @@ focus = {
 	focus = {
 	id = RHUN_teachings_of_morgoth
 	icon = GFX_goal_mor_servant_of_melkor_morgoth
-	ai_will_do = { }
+	ai_will_do = { factor = 1000
+	base = 1000
+	}
 	allow_branch = {
 	NOT = {
 	has_completed_focus = RHUN_break_free_from_mordor } }
@@ -678,7 +680,7 @@ focus = {
 focus = {
 	id = RHUN_one_tribe_supremacy
 	icon = GFX_goal_ELU_suppress_radicalism_boot
-	ai_will_do = { }
+	ai_will_do = { factor = 1000 base =1000}
 	x = 19
 	y = 2
 	mutually_exclusive = { focus = RHUN_mend_the_conflict }
@@ -763,7 +765,7 @@ focus = {
 	id = RHUN_recognize_sauron
 	icon = GFX_goal_mor_tower_of_barad_dur
 	ai_will_do = { 
-	base = 70 }
+	base = 1000 }
 	available = { }
 	x = 15
 	y = 1

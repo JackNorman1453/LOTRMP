@@ -18,6 +18,37 @@ focus_tree = {
 	shared_focus = whc_rekindlewhitecouncil
 
 	shared_focus = ea_theelvenalliance
+	
+	
+	
+	focus = {
+		id = lth_jointhewar
+		icon = GFX_goal_lth_sauron_eye_contained_war
+		
+		
+		#relative_position_id = lth_thefateoflothlorien
+		x = 5
+		y =0
+
+		available = {NOT = { has_completed_focus = lth_totalisoltation }
+		ROH = {
+				exists = yes
+				has_war_with = MOR
+		}
+		}
+		
+
+		cost = 1
+		ai_will_do = { factor = 100 }
+		prerequisite = { }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			 ROH = { ask_to_join_faction = yes } 
+			GON = { ask_to_join_faction = yes }
+
+		}
+	}
+	
 
 	focus = {
 		id = lth_acknowledgethemordorthreat
@@ -5434,67 +5465,20 @@ focus_tree = {
 			}
 		}
 	}
+	
 
 	focus = {
-		id = lth_amostgenerousoffer
-		icon = GFX_goal_lth_vales_of_anduin_offer_chain
+		id = lth_northboundinvasion
+		mutually_exclusive  = {focus =lth_agestureofgoodwill}
+		icon = GFX_goal_lth_invasion_northbound
 		
 		relative_position_id = lth_valesofanduin
 		x =-1
 		y =1
 
 		cost = 5
-		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 0
-				has_government = cooperative
-			}
-			modifier = {
-				factor = 0
-				has_government = unaligned
-			}
-		}
-		prerequisite = { focus = lth_valesofanduin }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		mutually_exclusive = { focus = lth_agestureofgoodwill }
-		available = {
-			lthi_has_100_noldor_influence = yes
-			lthi_has_25p_noldor_influence = yes
-			country_exists = VAL
-			NOT = { has_war_with = VAL }
-			NOT = {
-				VAL = { is_puppet = yes }
-			}
-			controls_state = 76
-			has_civil_war = no
-		}
-		completion_reward = {
-			# Offer anduin puppetry
-			custom_effect_tooltip = lth_amostgenerousoffer_tt
-			event_option_tooltip = lothlorien.28.a
-			hidden_effect = {
-				VAL = { country_event = { id = lothlorien.28 days = 3 } }
-			}
-			add_named_threat = {
-				threat = 2
-				name = "Lothlorien finished the A Most Generous Offer focus"
-			}
-			custom_effect_tooltip = mirror_predictable
-		}
-	}
-
-	focus = {
-		id = lth_northboundinvasion
-		icon = GFX_goal_lth_invasion_northbound
-		
-		relative_position_id = lth_valesofanduin
-		x =-1
-		y =2
-
-		cost = 5
 		ai_will_do = { factor = 10 }
-		prerequisite = { focus = lth_amostgenerousoffer }
+		prerequisite = { focus = lth_valesofanduin }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = {
 			country_exists = VAL
@@ -5510,6 +5494,35 @@ focus_tree = {
 				target = VAL
 				type = puppet_wargoal_focus
 			}
+		}
+	}
+	
+	focus = {
+		id = lth_integratethevale
+		icon = GFX_goal_lth_galadriel_shaking_hands_with_beorn_vale
+		
+		relative_position_id = lth_northboundinvasion
+		x =0
+		y =1
+
+		cost = 5
+		ai_will_do = { factor = 10 }
+		prerequisite = { focus = lth_northboundinvasion }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			country_exists = VAL
+			NOT = { has_war_with = VAL }
+		}
+		completion_reward = {
+		add_state_core = 195
+		add_state_core = 198
+		add_state_core = 197
+		add_state_core = 69
+		add_state_core = 196
+		add_state_core = 199
+		add_state_core = 72
+		add_state_core = 70
+		
 		}
 	}
 
@@ -5531,7 +5544,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = lth_valesofanduin }
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		mutually_exclusive = { focus = lth_amostgenerousoffer }
+		mutually_exclusive = { focus = lth_northboundinvasion }
 		available = {
 			country_exists = VAL
 			lthi_has_100_halfelves_influence = yes
@@ -5751,7 +5764,7 @@ focus_tree = {
 		x =3
 		y =1
 
-		cost = 5
+		cost = 3
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = lth_patrolsandriverwardens }
 		prerequisite = { focus = lth_preemptivemeasures }
@@ -5783,7 +5796,7 @@ focus_tree = {
 		x =0
 		y =1
 
-		cost = 5
+		cost = 3
 		ai_will_do = { factor = 5 }
 		prerequisite = { focus = lth_thefortressofdolguldur }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5827,7 +5840,7 @@ focus_tree = {
 
 		will_lead_to_war_with = DGU
 
-		cost = 5
+		cost = 3
 		ai_will_do = {
 			factor = 8
 			modifier = {

@@ -331,10 +331,10 @@ country_event = {
 
 	option = {
 		name = rohan.8.a
-		add_manpower = 1000
+		add_manpower = 5000
 		add_equipment_to_stockpile = {
 			type = infantry_equipment_0
-			amount = 1000
+			amount = 5000
 		}
 		add_opinion_modifier = { target = GON modifier = medium_increase }
 	}
