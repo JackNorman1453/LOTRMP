@@ -136,6 +136,13 @@ on_actions = {
 									has_global_flag = lth_civil_war
 									has_government = revolutionary
 								}
+								
+								modifier = {
+								factor = 7
+								has_government = belligerent
+								
+								}
+								
 								add_unit_leader_trait = noldor_trait
 							}
 							10 = {

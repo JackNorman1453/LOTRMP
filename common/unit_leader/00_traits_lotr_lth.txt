@@ -129,6 +129,7 @@ leader_traits = {
             factor = 1
         }
     }
+	}
 
     mirrors_chosen = {
         type = land
@@ -179,5 +180,4 @@ leader_traits = {
 			}
 		}
 	}
-
 }

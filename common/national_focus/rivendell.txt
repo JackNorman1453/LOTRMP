@@ -27,7 +27,7 @@ focus_tree = {
 		y =0
 		mutually_exclusive = { }
 		prerequisite = { }
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { add_political_power = 50 }
 	}
@@ -41,7 +41,7 @@ focus_tree = {
 		y =1
 		mutually_exclusive = { focus = selfreliancefocus }
 		prerequisite = { focus = thefateofrivendell}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { 
 			add_ideas = RIV_collaboration_focus 
@@ -58,7 +58,7 @@ focus_tree = {
 		y =2
 		mutually_exclusive = { }
 		prerequisite = { focus = collaborationfocus}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { add_ideas = RIV_trade_reforms }
 	}
@@ -72,7 +72,7 @@ focus_tree = {
 		y =3
 		mutually_exclusive = { }
 		prerequisite = { focus = tradereforms}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { add_ideas = RIV_fight_abroad }
 	}
@@ -86,7 +86,7 @@ focus_tree = {
 		y =1
 		mutually_exclusive = { focus = collaborationfocus }
 		prerequisite = { focus = thefateofrivendell}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { add_ideas = RIV_selfreliance_focus }
 	}
@@ -101,7 +101,7 @@ focus_tree = {
 		y =2
 		mutually_exclusive = { }
 		prerequisite = { focus = selfreliancefocus}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { add_resource = { type = steel amount = 20 state = 65 } }
 	}
@@ -115,7 +115,7 @@ focus_tree = {
 		y =3
 		mutually_exclusive = { }
 		prerequisite = { focus = syr_miningeffort}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { add_ideas = RIV_fight_at_home }
 	}
@@ -129,7 +129,7 @@ focus_tree = {
 		y =1
 		mutually_exclusive = { }
 		prerequisite = { focus = thefateofrivendell}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { air_experience = 25 }
 	}
@@ -143,7 +143,7 @@ focus_tree = {
 		y =2
 		mutually_exclusive = { focus = purchaseforeigndesigns }
 		prerequisite = { focus = ruletheskies}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			add_tech_bonus = {
@@ -165,7 +165,7 @@ focus_tree = {
 		y =3
 		mutually_exclusive = { focus = syr_bombingoperations }
 		prerequisite = { focus = elvenaircrafts}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			add_tech_bonus = {
@@ -188,7 +188,7 @@ focus_tree = {
 		y =3
 		mutually_exclusive = { focus = syr_groundsupport }
 		prerequisite = { focus = elvenaircrafts}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			add_tech_bonus = {
@@ -210,7 +210,7 @@ focus_tree = {
 		y =2
 		mutually_exclusive = { focus = elvenaircrafts }
 		prerequisite = { focus = ruletheskies}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { add_political_power = 100 }
 	}
@@ -238,7 +238,7 @@ focus_tree = {
 		y =4
 		mutually_exclusive = { }
 		prerequisite = { focus = syr_groundsupport focus = syr_bombingoperations focus = organizedlicensing}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			add_doctrine_cost_reduction = {
@@ -258,7 +258,7 @@ focus_tree = {
 		y =5
 		mutually_exclusive = { }
 		prerequisite = { focus = airmaneuvers}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { add_research_slot = 1 }
 	}
@@ -272,7 +272,7 @@ focus_tree = {
 		y =6
 		mutually_exclusive = { }
 		prerequisite = { focus = rivendellfacultyforaeronautics}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			add_tech_bonus = {
@@ -294,7 +294,7 @@ focus_tree = {
 		mutually_exclusive = { }
 		prerequisite = { focus = syr_nuclearresearch}
 		prerequisite = { focus = elvenwarmachine}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			add_tech_bonus = {
@@ -315,7 +315,7 @@ focus_tree = {
 		y =8
 		mutually_exclusive = { }
 		prerequisite = { focus = syr_rocketresearch}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { add_research_slot = 1 }
 	}
@@ -330,7 +330,7 @@ focus_tree = {
 		y =1
 		mutually_exclusive = { focus = industrializeimladris }
 		prerequisite = { focus = thefateofrivendell}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			66 = { add_extra_state_shared_building_slots = 2 }
@@ -350,7 +350,7 @@ focus_tree = {
 		y =2
 		mutually_exclusive = { }
 		prerequisite = { focus = industrializeeregion}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { add_resource = { type = oil amount = 8 state = 66 } add_resource = { type = oil amount = 8 state = 67 } }
 	}
@@ -365,7 +365,7 @@ focus_tree = {
 		y =3
 		mutually_exclusive = { }
 		prerequisite = { focus = exploiteregionoilfields}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			66 = { add_building_construction = { type = air_base level = 2 instant_build = yes } }
@@ -383,7 +383,7 @@ focus_tree = {
 		y =1
 		mutually_exclusive = { focus = industrializeeregion }
 		prerequisite = { focus = thefateofrivendell}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			65 = { add_extra_state_shared_building_slots = 4 }
@@ -401,7 +401,7 @@ focus_tree = {
 		y =2
 		mutually_exclusive = { }
 		prerequisite = { focus = industrializeimladris}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { add_resource = { type = steel amount = 16 state = 65 }  } }
 
@@ -416,7 +416,7 @@ focus_tree = {
 		y =3
 		mutually_exclusive = { }
 		prerequisite = { focus = exploitrivendelloredeposits}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { 65 = { add_building_construction = { type = air_base level = 2 instant_build = yes } } }
 	}
@@ -431,7 +431,7 @@ focus_tree = {
 		y =3
 		mutually_exclusive = { }
 		prerequisite = { focus = exploiteregionoilfields focus = exploitrivendelloredeposits }
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			65 = { add_building_construction = { type = infrastructure level = 3 instant_build = yes } }
@@ -450,7 +450,7 @@ focus_tree = {
 		y =4
 		mutually_exclusive = { focus = militarizeimladris }
 		prerequisite = { focus = roadinitiative }
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			66 = { add_extra_state_shared_building_slots = 1 }
@@ -470,7 +470,7 @@ focus_tree = {
 		y =5
 		mutually_exclusive = { }
 		prerequisite = { focus = militarizeeregion }
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			66 = { add_extra_state_shared_building_slots = 1 }
@@ -490,7 +490,7 @@ focus_tree = {
 		y =4
 		mutually_exclusive = { focus = militarizeeregion }
 		prerequisite = { focus = roadinitiative }
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			65 = { add_extra_state_shared_building_slots = 2 }
@@ -508,7 +508,7 @@ focus_tree = {
 		y =5
 		mutually_exclusive = { }
 		prerequisite = { focus = militarizeimladris }
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			65 = { add_extra_state_shared_building_slots = 1 }
@@ -525,7 +525,7 @@ focus_tree = {
 		y =5
 		mutually_exclusive = {}
 		prerequisite = { focus = roadinitiative }
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { 		
 			add_doctrine_cost_reduction = {
@@ -546,7 +546,7 @@ focus_tree = {
 		y =6
 		mutually_exclusive = {}
 		prerequisite = { focus = improveeregionproductionline focus = improveimladrisproductionline }
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			65 = { add_extra_state_shared_building_slots = 1 }
@@ -618,7 +618,7 @@ focus_tree = {
 		y =3
 		mutually_exclusive = { focus = integrityfocus }
 		prerequisite = { focus = libertyconsensus}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			add_ideas = RIV_stability_focus
@@ -639,7 +639,7 @@ focus_tree = {
 		y =4
 		mutually_exclusive = { focus = landofthepopulace }
 		prerequisite = { focus = assasinateelrond}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { set_politics = { ruling_party = belligerent elections_allowed = no } }
 	}
@@ -655,7 +655,7 @@ focus_tree = {
 		y =3
 		mutually_exclusive = { }
 		prerequisite = { focus = collectivethinking}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			add_threat = 5
@@ -682,7 +682,7 @@ focus_tree = {
 		available = { revolutionary > 0.3 }
 		bypass = { has_government = revolutionary }
 		prerequisite = { focus = assasinateelrond}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { set_politics = { ruling_party = revolutionary elections_allowed = no } }
 	}
@@ -701,7 +701,7 @@ focus_tree = {
 		y =3
 		mutually_exclusive = { focus = stabilityfocus }
 		prerequisite = { focus = libertyconsensus}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { set_politics = { ruling_party = cooperative elections_allowed = no } }
 	}
@@ -717,7 +717,7 @@ focus_tree = {
 		y =5
 		mutually_exclusive = { }
 		prerequisite = { focus = elvenarrogance}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			MOR = { country_event = { id = mordor.52 } }
@@ -765,7 +765,7 @@ focus_tree = {
 		mutually_exclusive = { }
 		prerequisite = { focus = elvenarrogance}
 		prerequisite = { focus =assasinateelrond}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			if = {
@@ -801,7 +801,7 @@ focus_tree = {
 		y =4
 		mutually_exclusive = { }
 		prerequisite = { focus = stabilityfocus}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			add_political_power = 100
@@ -824,7 +824,7 @@ focus_tree = {
 		y =4
 		mutually_exclusive = { }
 		prerequisite = { focus = stabilityfocus  focus = integrityfocus}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { set_global_flag = narsil_reforged }
 	}
@@ -840,7 +840,7 @@ focus_tree = {
 		mutually_exclusive = { }
 		prerequisite = { focus = landofthepopulace}
 		prerequisite = { focus =assasinateelrond}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { add_resource = { type = steel amount = -20 state = 65 } add_resource = { type = steel amount = 25 state = 66 } add_resource = { type = steel amount = 25 state = 67 } }
 	}
@@ -888,7 +888,7 @@ focus_tree = {
 		y =6
 		mutually_exclusive = { }
 		prerequisite = { focus = mordorcooperation}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			ROH = { add_ideas = RIV_sabotage }
@@ -904,7 +904,7 @@ focus_tree = {
 		y =5
 		mutually_exclusive = { }
 		prerequisite = { focus = seekcooperationwithgondor }
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { set_global_flag = arnor_reunification_encouraged custom_effect_tooltip = "WIP" }
 	}
@@ -918,7 +918,7 @@ focus_tree = {
 		y =5
 		mutually_exclusive = { }
 		prerequisite = { focus = improveelvenrelations}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			LTH = { country_event = { days = 1 id = rivendell.5 } }
@@ -936,7 +936,7 @@ focus_tree = {
 		y =5
 		mutually_exclusive = { }
 		prerequisite = { focus = elvendefencealliance}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { LTH = { country_event = { days = 1 id = rivendell.13 } } }
 	}
@@ -950,7 +950,7 @@ focus_tree = {
 		y =5
 		mutually_exclusive = { focus = takehisring}
 		prerequisite = { focus = assasinateelrond}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			add_ideas = RIV_prideful_past
@@ -967,7 +967,7 @@ focus_tree = {
 		y =5
 		mutually_exclusive = { focus = burryhimwithhonor }
 		prerequisite = { focus = assasinateelrond}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			add_country_leader_trait = ringbearer
@@ -985,7 +985,7 @@ focus_tree = {
 		y =6
 		mutually_exclusive = { }
 		prerequisite = { focus = sharethewealthofrivendell}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { add_ideas = RIV_revisionist_regime }
 	}
@@ -1001,7 +1001,7 @@ focus_tree = {
 		y =1
 		mutually_exclusive = { }
 		prerequisite = { focus = eraseelventraditions}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			create_faction = "global_collective"
@@ -1018,7 +1018,7 @@ focus_tree = {
 		y =5
 		mutually_exclusive = { }
 		prerequisite = { focus = buildupdefensiveoutposts}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			65 = { add_building_construction = {	type = anti_air_building level = 5 instant_build = yes	}	}
@@ -1042,7 +1042,7 @@ focus_tree = {
 		y =5
 		mutually_exclusive = { }
 		prerequisite = { focus = exertinfluenceamongstmen}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { ROH = { add_timed_idea = { idea = RIV_rivendell_influence_d days = 356 }	} }
 	}
@@ -1062,7 +1062,7 @@ focus_tree = {
 		y =5
 		mutually_exclusive = { }
 		prerequisite = { focus = exertinfluenceamongstmen}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { GON = { add_timed_idea = { idea = RIV_rivendell_influence_d days = 356 }	} }
 	}
@@ -1077,7 +1077,7 @@ focus_tree = {
 		y =5
 		mutually_exclusive = { }
 		prerequisite = { focus = seekcooperationwithgondor}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { GON = { country_event = { days = 1 id = rivendell.12 } } }
 	}
@@ -1093,7 +1093,7 @@ focus_tree = {
 		y =7
 		mutually_exclusive = { }
 		prerequisite = { focus = sabotagerohan}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			GON = { add_ideas = RIV_sabotage }
@@ -1127,7 +1127,7 @@ focus_tree = {
 		x = 2
 		y = 6
 		prerequisite = { focus = elvenmilitarism}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			add_threat = 3
@@ -1151,7 +1151,7 @@ focus_tree = {
 		y =6
 		mutually_exclusive = { }
 		prerequisite = { focus = invitelothlorien}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { MIR = { country_event = { days = 1 id = rivendell.13 } } }
 	}
@@ -1165,7 +1165,7 @@ focus_tree = {
 		y =6
 		mutually_exclusive = { focus = blamethedwarves}
 		prerequisite = { focus = assasinateelrond}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			add_threat = 2
@@ -1187,7 +1187,7 @@ focus_tree = {
 		y =6
 		mutually_exclusive = { focus = blametherangers}
 		prerequisite = { focus = assasinateelrond}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			add_threat = 2
@@ -1209,7 +1209,7 @@ focus_tree = {
 		y =6
 		mutually_exclusive = { }
 		prerequisite = { focus = askgondorforanalliance}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			add_ideas = RIV_millitary_cooperation
@@ -1236,7 +1236,7 @@ focus_tree = {
 		y =8
 		mutually_exclusive = { focus = assertelvenideals }
 		prerequisite = { focus = sabotagegondor}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { MOR = { puppet = RIV } add_ideas = RIV_might_of_sauron add_threat = 3 }
 	}
@@ -1283,7 +1283,7 @@ focus_tree = {
 		y =8
 		mutually_exclusive = { focus = embracesauronsreign}
 		prerequisite = { focus = licentiousexpansionism}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			add_ideas = RIV_idealist_regime
@@ -1300,7 +1300,7 @@ focus_tree = {
 		y =7
 		mutually_exclusive = { }
 		prerequisite = { focus = invitemirkwood}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = { LIN = { country_event = { days = 1 id = rivendell.13 } } }
 	}
@@ -1316,7 +1316,7 @@ focus_tree = {
 		mutually_exclusive = { }
 		prerequisite = { focus = blametherangers}
 		prerequisite = { focus =licentiousexpansionism}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		will_lead_to_war_with = RHD
 		completion_reward = {	create_wargoal = { type = annex_everything target = RHD } }
@@ -1333,7 +1333,7 @@ focus_tree = {
 		mutually_exclusive = { }
 		prerequisite = { focus = blamethedwarves}
 		prerequisite = { focus =licentiousexpansionism}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		will_lead_to_war_with = MOA
 		completion_reward = {	create_wargoal = { type = annex_everything target = MOA } }
@@ -1348,7 +1348,7 @@ focus_tree = {
 		y =7
 		mutually_exclusive = { }
 		prerequisite = { focus = militarycooperation}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			army_experience = 10
@@ -1386,7 +1386,7 @@ focus_tree = {
 		y =8
 		mutually_exclusive = { }
 		prerequisite = { focus = demandrhudaur  focus = seekthejewelsofmoria}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		will_lead_to_war_with = CAR
 		completion_reward = {	create_wargoal = { type = annex_everything target = CAR } }
@@ -1433,7 +1433,7 @@ focus_tree = {
 		y =9
 		mutually_exclusive = { }
 		prerequisite = { focus = sanctionsauronsallies}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		will_lead_to_war_with = MOR
 		completion_reward = { create_wargoal = { type = annex_everything target = MOR } }
@@ -1455,7 +1455,7 @@ focus_tree = {
 		y =9
 		mutually_exclusive = { }
 		prerequisite = { focus = sanctionsauronsallies}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		will_lead_to_war_with = ANG
 		completion_reward = { create_wargoal = { type = annex_everything target = ANG } }
@@ -1481,7 +1481,7 @@ focus_tree = {
 		y =9
 		mutually_exclusive = { }
 		prerequisite = { focus = sanctionsauronsallies}
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		will_lead_to_war_with = ISE
 		completion_reward = { create_wargoal = { type = annex_everything target = ISE } }

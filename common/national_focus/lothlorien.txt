@@ -1020,7 +1020,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ELVEN_FACTIONS }
 		completion_reward = {
 			# increase noldor influence
-			lthi_increase_influence_noldor_minor = yes
+			lthi_increase_influence_noldor_major = yes
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
 				uses = 2
@@ -1052,41 +1052,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = lth_deepknowledge
-		icon = GFX_goal_lth_noldor_golden_book_open_knowledge
-		
-		relative_position_id = lth_legacyofthenoldor
-		x =-1
-		y =2
-
-		cost = 5
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				factor = 4
-				is_going_belligerent = yes
-			}
-		}
-		prerequisite = { focus = lth_legacyofthenoldor }
-		search_filters = { FOCUS_FILTER_ELVEN_FACTIONS }
-		available = {
-			NOT = { lth_civil_war_sindar = yes }
-
-			lthi_has_100_noldor_influence = yes
-		}
-		completion_reward = {
-			# increase noldor influence
-			lthi_increase_influence_noldor_minor = yes
-			# Add knowldege research bonus
-			add_tech_bonus = {
-				name = special_bonus
-				bonus = 0.3
-				uses = 2
-				category = lotr_knowledge
-			}
-		}
-	}
 
 	focus = {
 		id = lth_theoathoffeanor
@@ -1252,7 +1217,7 @@ focus_tree = {
 				is_going_belligerent = yes
 			}
 		}
-		prerequisite = { focus = lth_deepknowledge }
+		prerequisite = { focus = lth_legacyofthenoldor }
 		search_filters = { FOCUS_FILTER_ELVEN_FACTIONS }
 		available = {
 			lthi_has_200_noldor_influence = yes
@@ -1261,8 +1226,14 @@ focus_tree = {
 		completion_reward = {
 			# increase noldor influence
 			country_event = lothlorien.11
-			lthi_increase_influence_noldor_minor = yes
+			lthi_increase_influence_noldor_major = yes
 			add_political_power = 100
+			add_tech_bonus = {
+				name = special_bonus
+				bonus = 0.3
+				uses = 2
+				category = lotr_knowledge
+			}
 		}
 	}
 
@@ -2228,7 +2199,7 @@ focus_tree = {
 		x =12
 		y =14
 
-		cost = 5
+		cost = 4
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -2447,7 +2418,7 @@ focus_tree = {
 				add_tech_bonus = {
 					name = special_bonus
 					category = lotr_infantry_archery_bow
-					bonus = 0.35
+					bonus = 0.45
 					uses = 1
 				}
 			}
@@ -2604,7 +2575,7 @@ focus_tree = {
 				set_temp_variable = { days_left = days_mission_timeout@great_schism_civil_war }
 				check_variable = {
 					var = days_left
-					val = 160
+					val = 300
 					compare = less_than
 					tooltip = lth_less_than_X_days_until_cw_tt
 				}
@@ -2833,7 +2804,7 @@ focus_tree = {
 				set_temp_variable = { days_left = days_mission_timeout@great_schism_civil_war }
 				check_variable = {
 					var = days_left
-					val = 160
+					val = 300
 					compare = less_than
 					tooltip = lth_less_than_X_days_until_cw_tt
 				}
@@ -4569,7 +4540,7 @@ focus_tree = {
 				set_temp_variable = { days_left = days_mission_timeout@great_schism_civil_war }
 				check_variable = {
 					var = days_left
-					val = 160
+					val = 300
 					compare = less_than
 					tooltip = lth_less_than_X_days_until_cw_tt
 				}
@@ -5481,7 +5452,7 @@ focus_tree = {
 		prerequisite = { focus = lth_valesofanduin }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = {
-			country_exists = VAL
+			
 			VAL = { NOT = { has_country_flag = lth_anduin_accepts_offer } }
 		}
 		completion_reward = {
@@ -5510,7 +5481,6 @@ focus_tree = {
 		prerequisite = { focus = lth_northboundinvasion }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = {
-			country_exists = VAL
 			NOT = { has_war_with = VAL }
 		}
 		completion_reward = {
@@ -5595,7 +5565,7 @@ focus_tree = {
 		x =0
 		y =1
 
-		cost = 5
+		cost = 3
 		ai_will_do = { factor = 10 }
 		prerequisite = { focus = lth_preemptivemeasures }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5641,7 +5611,7 @@ focus_tree = {
 		x =0
 		y =2
 
-		cost = 5
+		cost = 3
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -5657,12 +5627,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = {
 			lthi_has_200_noldor_influence = yes
-			country_exists = MOC
-			NOT = { country_exists = MOA }
-			MOC = { has_country_flag = has_raided_lothlorien }
-			has_army_manpower = {
-    			size > 50000
-			}
+		
 			controls_state = 160
 			has_civil_war = no
 		}

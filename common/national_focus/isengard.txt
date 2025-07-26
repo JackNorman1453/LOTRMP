@@ -825,6 +825,7 @@ focus_tree = {
 		prerequisite = { focus = takeeastdunland}
 		cost = 5
 		completion_reward = {
+		 create_wargoal = { type = annex_everything target = DUN } 
 			custom_effect_tooltip = ISE_tooltip_loading_militia
 			hidden_effect = {
 				ISE = { load_oob = "ISE_Militia" }

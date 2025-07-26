@@ -349,7 +349,7 @@ country_event = {
 	option = {
 		name = moria.6.c
 		ai_chance = {
-			base = 4
+			base = 0
 		}
 
 		add_political_power = -200
@@ -369,7 +369,7 @@ country_event = {
 		}
 		else = {
 			hidden_effect = {
-				MOC_cavetroll = { ring_add_member_to_hunting_party = yes }
+		
 				ring_open_interception_attempt_prompt = yes
 			}
 		}

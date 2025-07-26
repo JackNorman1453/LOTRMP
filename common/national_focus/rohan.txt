@@ -1251,7 +1251,7 @@ focus_tree = {
 		x =-1
 		y =1
 		mutually_exclusive = { }
-		cost = 7
+		cost = 5
 		completion_reward = {
 			# Can't really make a militarisitc tyranny without money, can we? lol
 			# lower taxes, disable increasing taxes for some time
@@ -1343,7 +1343,7 @@ focus_tree = {
 		x =1
 		y =1
 		mutually_exclusive = { }
-		cost = 7
+		cost = 5
 		completion_reward = {
 			custom_effect_tooltip = ROH_curb_foreign_influence_tt
 			# change national spirit
@@ -1567,13 +1567,13 @@ focus_tree = {
 		x =1
 		y =1
 		mutually_exclusive = { }
-		cost = 5
+		cost = 3
 		completion_reward = {
 			# add more castle/fort in Edoras
 			183 = {
 				add_building_construction = {
 					type = castle
-					level = 1
+					level = 3
 					instant_build = yes
 					province = 6760
 				}
@@ -1594,7 +1594,7 @@ focus_tree = {
 		x =1
 		y =2
 		mutually_exclusive = { }
-		cost = 7
+		cost = 4
 		completion_reward = {
 			# add forges and mils in edoras
 			183 = {
@@ -1660,7 +1660,7 @@ focus_tree = {
 		x =0
 		y =3
 		mutually_exclusive = { }
-		cost = 5
+		cost = 3
 		completion_reward = {
 			# build railway from Helmsdeep into westmarch
 			custom_effect_tooltip = ROH_secure_the_westmarch_tt
@@ -1911,7 +1911,7 @@ focus_tree = {
 		x =2
 		y =2
 		mutually_exclusive = { }
-		cost = 7
+		cost = 5.8
 		completion_reward = {
 			# make it more expensive to declare small council members
 			add_ideas = ROH_the_kings_council
@@ -2022,7 +2022,7 @@ focus_tree = {
 		x =-2
 		y =0
 		mutually_exclusive = { focus = ROH_let_gandalf_in focus = ROH_deny_gandalf_entrance focus = ROH_wormtongue_cabinet }
-		cost = 7
+		cost = 5
 		completion_reward = {
 			event_option_tooltip = rohan.86.a
 
@@ -2599,74 +2599,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = ROH_loth_ise_alliance
-		icon = GFX_goal_ROH_loth_ise_alliance_unity
-		relative_position_id = ROH_alliance_building
-		prerequisite = { focus = ROH_alliance_building }
-		bypass = {
-			OR = {
-				is_in_faction_with = ISE
-				is_in_faction_with = LTH
-			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_COOPERATIVE }
-		available = {
-			is_subject = no
-			# only if isengard went good-guy
-			OR = {
-				ise_is_evil = no
-				date < 3022.1.1
-			}
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				OR = {
-					LTH = { has_government = unaligned }
-					LTH = { has_government = cooperative }
-				}
-			}
-			modifier = {
-				factor = 6
-				OR = {
-					ISE = { has_government = unaligned }
-					ISE = { has_government = cooperative }
-				}
-			}
-			modifier = {
-				factor = 0.5
-				ISE = { has_government = belligerent }
-			}
-			modifier = {
-				factor = 4
-				has_war = yes
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					LTH = { we_like_them = yes }
-					ISE = { we_like_them = yes }
-				}
-			}
-			modifier = {
-				factor = 2
-				surrender_progress > 0.5
-			}
-			modifier = {
-				factor = 2
-				surrender_progress > 0.8
-			}
-		}
-		x =-1
-		y =1
-		mutually_exclusive = { focus = ROH_towards_gondor }
-		cost = 7
-		completion_reward = {
-			create_faction = ROH_loth_ise_alliance
-		}
-	}
+	
 
 	focus = {
 		id = ROH_invite_the_ents
@@ -2721,233 +2654,8 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = ROH_invite_loth
-		icon = GFX_goal_ROH_invite_loth_galadriel
-		relative_position_id = ROH_alliance_building
-		prerequisite = { focus = ROH_loth_ise_alliance }
-		available = {
-			is_subject = no
-			LTH = {
-				is_subject = no
-				exists = yes
-				is_in_faction = no
-				NOT = { has_government = belligerent }
-				NOT = { has_war_with = ROOT }
-			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_COOPERATIVE }
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				factor = 2
-				LTH = { has_same_ideology = yes }
-			}
-			modifier = {
-				factor = 2
-				LTH = { we_like_them = yes }
-			}
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		x =-2
-		y =3
-		mutually_exclusive = { }
-		cost = 5
-		completion_reward = {
-			# invite lothlorien
-			LTH = { invite_to_faction = yes }
-		}
-	}
+	
 
-	focus = {
-		id = ROH_improve_loth_alliance
-		icon = GFX_goal_ROH_theoden_galadriel_loth_alliance
-		relative_position_id = ROH_invite_loth
-		prerequisite = { focus = ROH_invite_loth }
-		available = {
-			is_in_faction_with = LTH
-		}
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				factor = 3
-				LTH = { is_ai = no }
-			}
-			modifier = {
-				factor = 3
-				target_air_focus = yes
-			}
-		}
-		x =0
-		y =2
-		mutually_exclusive = { }
-		cost = 7
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_COOPERATIVE }
-		completion_reward = {
-			# something with eagles presumably
-			if = {
-				limit = { has_completed_focus = ROH_technological_coherence }
-				add_tech_bonus = {
-					name = special_bonus
-					category = lotr_eagles
-					uses = 1
-					bonus = 0.5
-				}
-			}
-			else_if = {
-				limit = { has_completed_focus = ROH_technological_edge }
-				add_tech_bonus = {
-					name = special_bonus
-					category = lotr_eagles
-					uses = 1
-					bonus = 0.5
-					ahead_reduction = 1.0
-				}
-			}
-			else = {
-				add_tech_bonus = {
-					name = special_bonus
-					category = lotr_eagles
-					uses = 2
-					bonus = 0.5
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = ROH_invite_ise
-		icon = GFX_goal_ROH_invite_ise_saruman
-		relative_position_id = ROH_alliance_building
-		prerequisite = { focus = ROH_loth_ise_alliance }
-		available = {
-			is_subject = no
-			ISE = {
-				is_subject = no
-				exists = yes
-				is_in_faction = no
-				NOT = { has_government = belligerent }
-				NOT = { has_war_with = ROOT }
-			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_COOPERATIVE }
-		ai_will_do = {
-			factor = 6
-			modifier = {
-				factor = 2
-				ISE = { has_same_ideology = yes }
-			}
-			modifier = {
-				factor = 2
-				ISE = { we_like_them = yes }
-			}
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-		x =0
-		y =3
-		mutually_exclusive = { }
-		cost = 5
-		completion_reward = {
-			# invite isengard
-			ISE = { invite_to_faction = yes }
-		}
-	}
-
-	focus = {
-		id = ROH_improve_ise_alliance
-		icon = GFX_goal_ROH_theoden_saruman_ise_alliance
-		relative_position_id = ROH_invite_ise
-		prerequisite = { focus = ROH_invite_ise }
-		available = {
-			is_in_faction_with = LTH
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_COOPERATIVE }
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				factor = 3
-				ISE = { is_ai = no }
-			}
-		}
-		x =0
-		y =2
-		mutually_exclusive = { }
-		cost = 7
-		completion_reward = {
-			if = {
-				limit = { has_completed_focus = ROH_technological_coherence }
-				add_tech_bonus = {
-					name = special_bonus
-					category = lotr_knowledge_magic
-					uses = 1
-					bonus = 0.5
-				}
-			}
-			else_if = {
-				limit = { has_completed_focus = ROH_technological_edge }
-				add_tech_bonus = {
-					name = special_bonus
-					category = lotr_knowledge_magic
-					uses = 1
-					bonus = 0.5
-					ahead_reduction = 1.0
-				}
-			}
-			else = {
-				add_tech_bonus = {
-					name = special_bonus
-					category = lotr_knowledge_magic
-					uses = 2
-					bonus = 0.5
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = ROH_alliance_of_the_center
-		icon = GFX_goal_ROH_alliance_of_the_center_rohan_isengard_lothlorien
-		relative_position_id = ROH_alliance_building
-		prerequisite = { focus = ROH_invite_ise }
-		prerequisite = { focus = ROH_invite_loth }
-		available = {
-			is_in_faction = yes
-			is_faction_leader = yes
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_COOPERATIVE }
-		ai_will_do = { factor = 10 }
-		x =-1
-		y =4
-		mutually_exclusive = { }
-		cost = 7
-		completion_reward = {
-			# This if is here just so the tooltip makes sense
-			if = {
-				limit = { is_faction_leader = no }
-				effect_tooltip = {
-					ROH = {
-						add_to_tech_sharing_group = calenardhon_research_group
-						army_experience = 100
-					}
-				}
-			}
-			# research group
-			every_country = {
-				limit = {
-					is_in_faction_with = ROH
-					exists = yes
-				}
-				add_to_tech_sharing_group = calenardhon_research_group
-				army_experience = 100
-			}
-		}
-	}
 
 	focus = {
 		id = ROH_execute_grima

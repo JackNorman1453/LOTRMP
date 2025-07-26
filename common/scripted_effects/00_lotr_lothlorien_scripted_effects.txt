@@ -195,35 +195,35 @@ lthi_update_values = {
 		limit = { has_completed_focus = lth_purityandbrilliance }
 
 		if = {
-			limit = { check_variable = { lthi_noldor_influence_fraction > 0.8 } }
+			limit = { check_variable = { lthi_noldor_influence_fraction > 0.7 } }
 			multiply_variable = { lthi_noldor_bonus_attack = 2 }
 			multiply_variable = { lthi_noldor_bonus_breakthrough = 2 }
 			multiply_variable = { lthi_noldor_bonus_factoryoutput = 2 }
 		}
 		else_if = {
-			limit = { check_variable = { lthi_nandor_influence_fraction > 0.8 } }
+			limit = { check_variable = { lthi_nandor_influence_fraction > 0.7 } }
 			multiply_variable = { lthi_nandor_bonus_conscription = 2 }
 			multiply_variable = { lthi_nandor_bonus_speed = 2 }
 			multiply_variable = { lthi_nandor_bonus_organization = 2 }
 		}
 		else_if = {
-			limit = { check_variable = { lthi_sindar_influence_fraction > 0.8 } }
+			limit = { check_variable = { lthi_sindar_influence_fraction > 0.7 } }
 			multiply_variable = { lthi_sindar_bonus_constructionspeed = 2 }
 			multiply_variable = { lthi_sindar_bonus_supply = 2 }
 			multiply_variable = { lthi_sindar_bonus_research = 2 }
 		}
 		else_if = {
-			limit = { check_variable = { lthi_halfelves_influence_fraction > 0.8 } }
+			limit = { check_variable = { lthi_halfelves_influence_fraction > 0.7 } }
 			multiply_variable = { lthi_halfelves_bonus_experiencegain = 2 }
 			multiply_variable = { lthi_halfelves_bonus_stability = 2 }
 			multiply_variable = { lthi_halfelves_bonus_consumergoods = 2 }
 		}
 		else_if = {
-			limit = { check_variable = { lthi_nonelves_influence_fraction > 0.8 } }
+			limit = { check_variable = { lthi_nonelves_influence_fraction > 0.7 } }
 			multiply_variable = { lthi_nonelves_bonus_monthlypop = 2 }
 		}
 		else_if = {
-			limit = { check_variable = { lthi_orcs_influence_fraction > 0.8 } }
+			limit = { check_variable = { lthi_orcs_influence_fraction > 0.7 } }
 			multiply_variable = { lthi_orcs_bonus_strength = 2 }
 		}
 	}

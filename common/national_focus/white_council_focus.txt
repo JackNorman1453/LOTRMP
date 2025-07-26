@@ -47,7 +47,7 @@ shared_focus = {
 	cost = 10
 
 	available = {
-		has_government = cooperative
+		tag = RIV
 		is_white_council_member = no
 	}
 
@@ -67,7 +67,7 @@ shared_focus = {
 				RIV = { country_event = { id = whitecouncil.1 days = 3 random_days = 3 } }
 			}
 			if = {
-				limit = { NOT = { tag = LTH } NOT = { lth_is_evil = yes } NOT = { LTH = { has_war_with = ROOT } } }
+				limit = { NOT = { tag = LTH } NOT = { LTH = { has_war_with = ROOT } } }
 				LTH = { country_event = { id = whitecouncil.1 days = 3 random_days = 3 } }
 			}
 		}
@@ -103,6 +103,7 @@ joint_focus = {
 	}
 
 	available = {
+		
 		tag = ISE
 		ISE = { is_white_council_member = yes }
 	}

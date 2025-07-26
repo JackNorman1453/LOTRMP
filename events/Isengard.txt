@@ -19,11 +19,11 @@ country_event = {
 			base = 30
 			modifier = {
 				add = -25
-				ISE = { has_army_size = { size < 30 } }
+				ISE = { has_army_size = { size < 10 } }
 			}
 			modifier = {
-				add = 30
-				ISE = { has_army_size = { size > 40 } }
+				add = 50
+				ISE = { has_army_size = { size > 11 } }
 			}
 			modifier = {
 				add = 100

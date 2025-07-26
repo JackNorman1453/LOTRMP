@@ -3,16 +3,16 @@ state={
 	id=29
 	name="STATE_29"
 	resources={
-		chromium=90.000
+		chromium= 159.000
 		oil=12.000
 	}
 
 	history={
 		owner = ENT
 		buildings = {
-			infrastructure = 1
-			arms_factory = 1
-			industrial_complex = 2
+			infrastructure = 2
+			arms_factory = 5
+			industrial_complex = 10
 
 		}
 		add_core_of = ENT
@@ -23,6 +23,6 @@ state={
 	}
 	manpower=340000
 	buildings_max_level_factor=1.000
-	state_category=large_town
+	state_category=megalopolis 
 	local_supplies=0.000
 }

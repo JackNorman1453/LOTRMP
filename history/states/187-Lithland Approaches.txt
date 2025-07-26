@@ -5,6 +5,8 @@ state={
 
 	resources={
 		oil=25.000
+		rubber = 20.000
+		tungsten = 20.000
 		chromium=6.000
 	}
 
