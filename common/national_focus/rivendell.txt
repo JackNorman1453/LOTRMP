@@ -350,7 +350,7 @@ focus_tree = {
 		y =2
 		mutually_exclusive = { }
 		prerequisite = { focus = industrializeeregion}
-		cost = 7
+		cost = 4
 		available_if_capitulated = yes
 		completion_reward = { add_resource = { type = oil amount = 8 state = 66 } add_resource = { type = oil amount = 8 state = 67 } }
 	}
@@ -365,7 +365,7 @@ focus_tree = {
 		y =3
 		mutually_exclusive = { }
 		prerequisite = { focus = exploiteregionoilfields}
-		cost = 7
+		cost = 3
 		available_if_capitulated = yes
 		completion_reward = {
 			66 = { add_building_construction = { type = air_base level = 2 instant_build = yes } }
@@ -401,7 +401,7 @@ focus_tree = {
 		y =2
 		mutually_exclusive = { }
 		prerequisite = { focus = industrializeimladris}
-		cost = 7
+		cost = 4
 		available_if_capitulated = yes
 		completion_reward = { add_resource = { type = steel amount = 16 state = 65 }  } }
 
@@ -416,7 +416,7 @@ focus_tree = {
 		y =3
 		mutually_exclusive = { }
 		prerequisite = { focus = exploitrivendelloredeposits}
-		cost = 7
+		cost = 3
 		available_if_capitulated = yes
 		completion_reward = { 65 = { add_building_construction = { type = air_base level = 2 instant_build = yes } } }
 	}
@@ -1417,7 +1417,7 @@ focus_tree = {
 	focus = {
 		id = themordorthreat
 		icon = GFX_goal_rhu_wargoal_mordor
-		available = { OR = { MOR = { has_government = belligerent } MOR = { has_government = revolutionary } } }
+		available = { date >3022.06.01}
 		ai_will_do = {
 			factor = 2
 			modifier = {
@@ -1465,7 +1465,7 @@ focus_tree = {
 	focus = {
 		id = theisengardthreat
 		icon = GFX_goal_generic_major_war
-		available = { OR = { ISE = { has_government = belligerent } ISE = { has_government = revolutionary } } }
+		available = { OR = { ISE = { has_war_with = LTH } date > 3022.06.01 } } 
 		ai_will_do = {
 			factor = 1
 			modifier = {

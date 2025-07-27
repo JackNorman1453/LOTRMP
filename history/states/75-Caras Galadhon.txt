@@ -36,6 +36,6 @@ state={
 	}
 	manpower=750000
 	buildings_max_level_factor=1.000
-	state_category=megalopolis
+	state_category=elven_paradise
 	local_supplies=8.000
 }

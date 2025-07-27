@@ -20,8 +20,8 @@ ideas = {
 			modifier = {
 				monthly_population = -0.9
 				army_org_factor = 0.1
-				research_speed_factor = 0.02
-        production_speed_library_factor = 0.45
+				research_speed_factor = 0.05
+        
 
 				# These are hidden, and based on availabilty of generic portraits (see portraits.txt)
 				female_random_country_leader_chance = -0.6	# base chance 0.5 -> 0.2
