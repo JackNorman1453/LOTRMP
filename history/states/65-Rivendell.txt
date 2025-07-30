@@ -17,7 +17,10 @@ state={
 			anti_air_building = 3
 
 
-			1088 = { bunker = 3 }
+			1088 = { 
+			bunker = 3
+			laboratory = 1
+			}
 		}
 		add_core_of = RIV
 

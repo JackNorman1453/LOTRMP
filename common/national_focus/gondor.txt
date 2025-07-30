@@ -625,7 +625,6 @@ continuous_focus_position = { x = 50 y = 1700 }
 		}
 		relative_position_id = GON_declare_aragorn_the_rightful_heir
 		prerequisite = { focus = GON_declare_aragorn_the_rightful_heir }
-		prerequisite = { focus = GON_send_faramir_with_the_fellowship }
 		x = 2
 		y = 1
 		cost = 7
@@ -1100,7 +1099,7 @@ continuous_focus_position = { x = 50 y = 1700 }
 			factor = 0
 			modifier = {
 				factor = 10
-				date > "3022.1.1"
+				date > "3022.3.1"
 				has_war = no
 			}
 		}
@@ -2594,9 +2593,11 @@ continuous_focus_position = { x = 50 y = 1700 }
 		y = 2
 		cost = 25.8
 		available = {
-		
-			ROH = {has_war = yes} 
-			the_other_gondor_does_not_exist = yes
+			OR = {
+			ROH = {has_war = yes}
+			date > 3022.03.01
+			}
+			
 		}
 		completion_reward = {
 			ROH = {

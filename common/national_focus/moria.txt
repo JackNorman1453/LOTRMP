@@ -31,7 +31,7 @@ focus_tree = {
 		y =0
 		mutually_exclusive = { }
 		prerequisite = { }
-		cost = 12
+		cost = 7
 		completion_reward = { add_political_power = 50 }
 	}
 
@@ -212,7 +212,7 @@ focus_tree = {
 		y =1
 		mutually_exclusive = { }
 		prerequisite = { focus = thefateofmoria}
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = { add_political_power = 100 add_stability = 0.1 }
 	}
@@ -227,7 +227,7 @@ focus_tree = {
 		y =1
 		mutually_exclusive = { }
 		prerequisite = { focus = thefateofmoria}
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = { add_political_power = 100 add_stability = 0.1 }
 	}
@@ -241,7 +241,7 @@ focus_tree = {
 		y =2
 		mutually_exclusive = { }
 		prerequisite = { focus = assumecontrolovermoria  focus = beatbacktheorcinvasion}
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = { remove_ideas = MOA_civil_war }
 	}
@@ -255,7 +255,7 @@ focus_tree = {
 		y =3
 		mutually_exclusive = { }
 		prerequisite = { focus = restorestability}
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = { add_ideas = MOA_mining_effort }
 	}
@@ -269,7 +269,7 @@ focus_tree = {
 		y =3
 		mutually_exclusive = { }
 		prerequisite = { focus = restorestability}
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = { army_experience = 25 }
 	}
@@ -283,7 +283,7 @@ focus_tree = {
 		y =3
 		mutually_exclusive = { }
 		prerequisite = { focus = restorestability}
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = { add_timed_idea = { idea = MOA_rebuilding_effort days = 200 } }
 	}
@@ -302,7 +302,7 @@ focus_tree = {
 		y =4
 		mutually_exclusive = {  focus = huntdownthebalrog }
 		prerequisite = { focus = dealwiththebalrog}
-		cost = 10
+		cost = 7
 		available = { controls_state = 134 }
 		available_if_capitulated = no
 		completion_reward = {
@@ -360,7 +360,7 @@ focus_tree = {
 		y =4
 		mutually_exclusive = { focus = submittothebalrog  }
 		prerequisite = { focus = dealwiththebalrog}
-		cost = 10
+		cost = 7
 		available_if_capitulated = no
 		available = { controls_state = 134 controls_state = 73 }
 		completion_reward = {
@@ -383,7 +383,7 @@ focus_tree = {
 		mutually_exclusive = {  }
 		prerequisite = { focus = restorestability}
 		available = { controls_state = 134 controls_state = 73 }
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			add_political_power = 100
@@ -400,7 +400,7 @@ focus_tree = {
 		y =4
 		mutually_exclusive = { }
 		prerequisite = { focus = rebuildingeffort}
-		cost = 12
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			134 = { add_extra_state_shared_building_slots = 2 add_building_construction = { type = industrial_complex level = 2 instant_build = yes } }
@@ -418,7 +418,7 @@ focus_tree = {
 		y =4
 		mutually_exclusive = { }
 		prerequisite = { focus = miningeffort}
-		cost = 15
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			add_resource = { type = steel amount = 25 state = 134 }
@@ -438,7 +438,7 @@ focus_tree = {
 		y =4
 		mutually_exclusive = { }
 		prerequisite = { focus = miningeffort}
-		cost = 12
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			add_resource = { type = oil amount = 12 state = 134 }
@@ -456,7 +456,7 @@ focus_tree = {
 		y =4
 		mutually_exclusive = { }
 		prerequisite = { focus = armyeffort}
-		cost = 8
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			134 = { add_extra_state_shared_building_slots = 3 add_building_construction = { type = arms_factory level = 3 instant_build = yes } }
@@ -474,7 +474,7 @@ focus_tree = {
 		y =4
 		mutually_exclusive = { }
 		prerequisite = { focus = rebuildingeffort}
-		cost = 15
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			73 = { add_extra_state_shared_building_slots = 4	}
@@ -491,7 +491,7 @@ focus_tree = {
 		y =5
 		mutually_exclusive = { }
 		prerequisite = { focus = hoardtheancienttreasures  focus = setupundergroundoilpumps}
-		cost = 11
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = MOA_miners_bureau
@@ -508,7 +508,7 @@ focus_tree = {
 		y =5
 		mutually_exclusive = { }
 		prerequisite = { focus = optimizedwarvenarchitecture}
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			73 = { add_building_construction = { type = infrastructure level = 2 instant_build = yes } }
@@ -541,7 +541,7 @@ focus_tree = {
 		mutually_exclusive = { }
 		prerequisite = { focus = restoretheupperlayers}
 		prerequisite = { focus =armyeffort}
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			134 = { add_building_construction = {	type = bunker level = 3 instant_build = yes province = 4710 } }
@@ -590,7 +590,7 @@ focus_tree = {
 		mutually_exclusive = { }
 		prerequisite = { focus = ignitetheforges}
 		available = { controls_state = 134 controls_state = 73 }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_tech_bonus = {
 				name = MOA_improve_equipment
@@ -610,7 +610,7 @@ focus_tree = {
 		y =6
 		mutually_exclusive = { }
 		prerequisite = { focus = fortifythemines}
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_tech_bonus = {
 				name = MOA_replicate_machinery
@@ -645,7 +645,7 @@ focus_tree = {
 		y =6
 		mutually_exclusive = { }
 		prerequisite = { focus = improveourequipment}
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			134 = { add_extra_state_shared_building_slots = 2 add_building_construction = { type = arms_factory level = 2 instant_build = yes } }
@@ -663,7 +663,7 @@ focus_tree = {
 		y =6
 		mutually_exclusive = { }
 		prerequisite = { focus = renewthebrokeninfrastructure  focus = resettletheupperlayers}
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			73 = { add_building_construction = { type = infrastructure level = 3 instant_build = yes } }
@@ -681,7 +681,7 @@ focus_tree = {
 		y =6
 		mutually_exclusive = { focus = betterworkingconditionsforminers}
 		prerequisite = { focus = formtheminersbureau}
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			add_resource = { type = steel amount = 15 state = 134 }
@@ -697,7 +697,7 @@ focus_tree = {
 		y =7
 		mutually_exclusive = { }
 		prerequisite = { focus = replicateancientdwarvenmachinery}
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			add_research_slot = 1
@@ -711,9 +711,9 @@ focus_tree = {
 		ai_will_do = { factor = 3 }
 		x =11
 		y =7
-		mutually_exclusive = { focus = hiremoresoldiers }
+	
 		prerequisite = { focus = getbacktowork  focus = betterworkingconditionsforminers}
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = MOA_excess_of_miners
@@ -727,9 +727,9 @@ focus_tree = {
 		ai_will_do = { factor = 4 }
 		x =15
 		y =7
-		mutually_exclusive = { focus = hiremoreminers}
+		
 		prerequisite = { focus = replicateancientdwarvenmachinery  focus = moreefficientproductionlines}
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = MOA_militarization_1
@@ -766,7 +766,7 @@ focus_tree = {
 		y =8
 		mutually_exclusive = { }
 		prerequisite = { focus = hiremoreminers}
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			add_resource = { type = steel amount = 15 state = 134 }
@@ -784,7 +784,7 @@ focus_tree = {
 		y =8
 		mutually_exclusive = { }
 		prerequisite = { focus = hiremoresoldiers}
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = MOA_militarization_2
@@ -800,7 +800,7 @@ focus_tree = {
 		y =8
 		mutually_exclusive = { }
 		prerequisite = { focus = hiremoreminers}
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			add_research_slot = 1
@@ -817,7 +817,7 @@ focus_tree = {
 		y =8
 		mutually_exclusive = { }
 		prerequisite = { focus = setupundergroundfarms}
-		cost = 12
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			add_manpower = 25000
@@ -833,7 +833,7 @@ focus_tree = {
 		y =8
 		mutually_exclusive = { }
 		prerequisite = { focus = hiremoreminers}
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			add_tech_bonus = {
@@ -874,7 +874,7 @@ focus_tree = {
 		y =9
 		mutually_exclusive = { }
 		prerequisite = { focus = departmentofmineralresearch}
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			add_tech_bonus = {
@@ -895,7 +895,7 @@ focus_tree = {
 		y =9
 		mutually_exclusive = { }
 		prerequisite = { focus = resettlethelowerlayers}
-		cost = 10
+		cost = 5
 		completion_reward = { add_ideas = ROH_trade_reforms }
 	}
 
@@ -909,7 +909,7 @@ focus_tree = {
 		y =9
 		mutually_exclusive = { }
 		prerequisite = { focus = openupthelowertunnels}
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			add_resource = { type = aluminium amount = 8 state = 134 }
@@ -931,7 +931,7 @@ focus_tree = {
 		mutually_exclusive = { }
 		prerequisite = { focus = investinweaponsresearch}
 		prerequisite = { focus =excavatemoremithril}
-		cost = 10
+		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
 			set_technology = {

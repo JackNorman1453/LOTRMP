@@ -386,10 +386,10 @@
  sow_of_distrust:0 "Sow Distrust in [FROM.GetName]"
  sow_of_distrust_desc:0 "With some clever political maneuvering we can make other nations dislike [FROM.GetName]."
 
- rare_mineral_researcher_effect_tooltip:0 "Grants §G0.5%§! research speed for each unit of surplus Mithril (£resources_strip|2 ) available. (Capped at §G15%§!)"
+ rare_mineral_researcher_effect_tooltip:0 "Grants §G0.5%§! research speed for each unit of surplus Mithril (£resources_strip|2 ) available. (Capped at §G50%§!)"
  rare_mineral_researcher_modifier:0 "Rare Mineral Researcher Bonus"
 
- valuable_luxury_crafter_effect_tooltip:0 "Grants §Y-0.5%§! consumer goods for each unit of surplus Mithril (£resources_strip|2 ) available. (Capped at §Y-35%§!)"
+ valuable_luxury_crafter_effect_tooltip:0 "Grants §Y-0.5%§! consumer goods for each unit of surplus Mithril (£resources_strip|2 ) available. (Capped at §Y-50%§!)"
  valuable_luxury_crafter_modifier:0 "Valuable Luxury Crafter Bonus"
  valuable_luxury_crafter_start:0 "Valuable Luxury Crafting Beginning"
 

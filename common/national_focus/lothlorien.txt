@@ -31,9 +31,15 @@ focus_tree = {
 		y =0
 
 		available = {NOT = { has_completed_focus = lth_totalisoltation }
-		ROH = {
+		OR = {ROH = {
 				exists = yes
 				has_war_with = MOR
+		}
+		date > 3022.09.01
+		ROH = {
+		surrender_progress > 0.5
+		}
+		
 		}
 		}
 		
@@ -1862,12 +1868,12 @@ focus_tree = {
 
 				if = {
 					limit = { lthi_has_50p_nandor_influence = yes }
-					multiply_variable = { civs_in_caras = 0.8 }
-					multiply_variable = { mils_in_cerin = 0.8 }
-				}
-				else = {
 					multiply_variable = { civs_in_caras = 0.5 }
 					multiply_variable = { mils_in_cerin = 0.5 }
+				}
+				else = {
+					multiply_variable = { civs_in_caras = 0.35 }
+					multiply_variable = { mils_in_cerin = 0.35}
 				}
 
 				75 = {
@@ -6883,9 +6889,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			# Gain civs in every invested state
-					160 = { add_building_slot_and_civ_x4 = yes }
-					76 = { add_building_slot_and_civ_x4 = yes }
-					74 = { add_building_slot_and_civ_x4 = yes }
+					160 = { add_building_slot_and_civ_x3 = yes }
+					76 = { add_building_slot_and_civ_x3 = yes }
+					74 = { add_building_slot_and_civ_x3 = yes }
 				}
 			}
 			

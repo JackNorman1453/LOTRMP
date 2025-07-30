@@ -139,7 +139,7 @@ ideas = {
 			picture = gon_white_tree
 			modifier = {
 				stability_factor = 0.05
-				cooperative_drift = 0.05
+				cooperative_drift = 0.10
 			}
 		}
 		

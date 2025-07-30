@@ -21,6 +21,7 @@ ideas = {
 				monthly_population = -0.9
 				army_org_factor = 0.1
 				research_speed_factor = 0.05
+				production_speed_library_factor = 0.45
         
 
 				# These are hidden, and based on availabilty of generic portraits (see portraits.txt)

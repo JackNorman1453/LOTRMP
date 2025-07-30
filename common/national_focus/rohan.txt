@@ -1216,7 +1216,7 @@ focus_tree = {
 		x =1
 		y =1
 		mutually_exclusive = { }
-		cost = 7
+		cost = 5
 		completion_reward = {			
 			decrease_centralization = yes
 
@@ -1437,7 +1437,7 @@ focus_tree = {
 		x =0
 		y =1
 		mutually_exclusive = { }
-		cost = 5
+		cost = 3
 		completion_reward = {
 			# possibly something with the Isengard point system
 
@@ -1786,7 +1786,7 @@ focus_tree = {
 		x =-1
 		y =1
 		mutually_exclusive = { focus = ROH_evacuate_the_westmarch }
-		cost = 7
+		cost = 3
 		completion_reward = {
 			# build a new castle in westmarch as well as a line of encampments
 			custom_effect_tooltip = ROH_commit_to_defense_tt
@@ -1843,7 +1843,7 @@ focus_tree = {
 		x =1
 		y =1
 		mutually_exclusive = { focus = ROH_commit_to_defense }
-		cost = 5
+		cost = 3
 		completion_reward = {
 			custom_effect_tooltip = ROH_evacuate_the_westmarch_tt
 			# remove all factories from westmarch and place them elsewhere in the realm
@@ -1915,6 +1915,7 @@ focus_tree = {
 		completion_reward = {
 			# make it more expensive to declare small council members
 			add_ideas = ROH_the_kings_council
+			add_political_power = 200
 
 			roh_add_major_theoden_drift = yes
 		}
@@ -1936,6 +1937,7 @@ focus_tree = {
 			# autocompleted on gandralf arrival. pop event
 			custom_effect_tooltip = autocompleted_on_event_tt
 			custom_effect_tooltip = ROH_gandalfs_arrival_tt
+			add_political_power = 2--
 		}
 	}
 
@@ -2025,6 +2027,7 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			event_option_tooltip = rohan.86.a
+			add_political_power = 200
 
 			hidden_effect = {
 				country_event = rohan.86
@@ -2056,7 +2059,7 @@ focus_tree = {
 		x =-1
 		y =1
 		mutually_exclusive = { focus = ROH_execute_grima }
-		cost = 5
+		cost = 3
 		completion_reward = {
 			ROH_grima = {
 				lotr_retire_character = yes
@@ -2167,7 +2170,7 @@ focus_tree = {
 		x =0
 		y =2
 		mutually_exclusive = { }
-		cost = 5
+		cost = 3
 		completion_reward = {
 			# Unlock decisions to remove grima's advisors
 			unlock_decision_tooltip = ROH_purge_grima_conspirors_small_council
@@ -2668,7 +2671,7 @@ focus_tree = {
 		x =1
 		y =1
 		mutually_exclusive = { focus = ROH_exile_grima }
-		cost = 5
+		cost = 3
 		completion_reward = {
 			add_ideas = ROH_anti_eorl_plot_3
 
@@ -5167,7 +5170,7 @@ focus_tree = {
 					name = special_bonus
 					category = lotr_knowledge_scriptorium
 					uses = 3
-					bonus = 0.35
+					bonus = 0.150
 				}
 			}
 			else_if = {
@@ -5176,7 +5179,7 @@ focus_tree = {
 					name = special_bonus
 					category = lotr_knowledge_scriptorium
 					uses = 2
-					bonus = 0.35
+					bonus = 0.75
 					ahead_reduction = 1.0
 				}
 			}
@@ -5185,7 +5188,7 @@ focus_tree = {
 					name = special_bonus
 					category = lotr_knowledge_scriptorium
 					uses = 2
-					bonus = 0.35
+					bonus = 0.75
 				}
 			}
 		}
@@ -5382,7 +5385,7 @@ focus_tree = {
 		x =2
 		y =1
 		mutually_exclusive = { }
-		cost = 7
+		cost = 5
 		completion_reward = {
 			rohan_set_research_tree_cooldown = yes
 			custom_effect_tooltip = ROH_road_network_expansion_tt
@@ -5553,6 +5556,7 @@ focus_tree = {
 		completion_reward = {
 			rohan_set_research_tree_cooldown = yes
 			# bonus to doctrine and cav research
+			improve_royal_guard = yes
 			add_tech_bonus = {
 				name = special_bonus
 				category = cat_mobile_warfare
@@ -5721,32 +5725,11 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = ROH_strengthen_the_royal_guard
-		icon = GFX_goal_lth_elven_cavalry
-		relative_position_id = ROH_advanced_cavalry_tactics 
-		prerequisite = { focus = ROH_advanced_cavalry_tactics }
-		available = {
-			rohan_research_tree_cooldown = yes
-		}
-		search_filters = { FOCUS_FILTER_ROH_STATESCRAFT }
-		ai_will_do = { factor = 5 }
-		x =0
-		y =2
-		mutually_exclusive = { }
-		cost = 5
-		completion_reward = {
-			rohan_set_research_tree_cooldown = yes
-			# improve the royal guard division
-			improve_royal_guard = yes
-		}
-	}
 
 	focus = {
 		id = ROH_horse_breeding_program
 		icon = GFX_goal_generic_horse_studs
 		relative_position_id = ROH_advanced_cavalry_tactics 
-		prerequisite = { focus = ROH_strengthen_the_royal_guard }
 		prerequisite = { focus = ROH_shock_cavalry focus = ROH_mounted_skirmishers }
 		available = {
 			rohan_research_tree_cooldown = yes

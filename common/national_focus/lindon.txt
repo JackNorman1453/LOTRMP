@@ -14,10 +14,12 @@ focus_tree = {
 	default = no
 	reset_on_civilwar = no
 #############################################default focuses
+shared_focus = whc_rekindlewhitecouncil
 shared_focus = political_effort
 shared_focus = army_effort
 shared_focus = aviation_effort
 shared_focus = naval_effort
+
 shared_focus = industrial_effort
 
 shared_focus = ea_theelvenalliance

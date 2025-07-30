@@ -24,7 +24,7 @@ focus = {
 	}
 	x = 38
 	y = 0
-	cost = 10
+	cost = 7
 	completion_reward = {
 		navy_experience = 35
 	}
@@ -40,7 +40,7 @@ focus = {
 	relative_position_id = navy_focus
   	mutually_exclusive = { focus = HAR_submarine_effort }
   	prerequisite = { focus = navy_focus}
-  	cost = 10
+  	cost = 7
    	available_if_capitulated = yes
 	completion_reward = {
 		navy_experience = 5
@@ -73,7 +73,7 @@ focus = {
 	relative_position_id = navy_focus
 	mutually_exclusive = { focus = HAR_battleship_effort}
   	prerequisite = { focus = navy_focus}
-  	cost = 10
+  	cost = 7
    	available_if_capitulated = yes
 	completion_reward = {
 		navy_experience = 5
@@ -108,7 +108,7 @@ focus = {
 	y = 0
 	mutually_exclusive = { }
 	prerequisite = { }
-	cost = 10
+	cost = 7
 	available_if_capitulated = yes
 	completion_reward = {
         add_tech_bonus = {
@@ -130,7 +130,7 @@ focus = {
 	relative_position_id = constructionpursuits
 	mutually_exclusive = { }
 	prerequisite = { focus = constructionpursuits }
-	cost = 10
+	cost = 7
 	available_if_capitulated = yes
 	completion_reward = {
 		random_owned_state = {
@@ -150,7 +150,7 @@ focus = {
 	relative_position_id = constructionpursuits
 	mutually_exclusive = { }
 	prerequisite = { focus = constructionpursuits }
-	cost = 10
+	cost = 7
 	available_if_capitulated = yes
 	completion_reward = {
 		random_owned_state = {
@@ -174,7 +174,7 @@ focus = {
 	x = 4
 	y = 1
 	relative_position_id = constructionpursuits
-	cost = 10
+	cost = 7
 	available_if_capitulated = yes
 	available = {
 		controls_state = 123
@@ -210,7 +210,7 @@ focus = {
 	x = 0
 	y = 1
 	relative_position_id = HAR_infrastructure_east
-	cost = 10
+	cost = 7
 	available_if_capitulated = yes
 	available = {
 		controls_state = 115
@@ -260,7 +260,7 @@ focus = {
 	x = 0
 	y = 1
 	relative_position_id = HAR_railway_system_east
-	cost = 10
+	cost = 7
 	available_if_capitulated = yes
 	completion_reward = {
 		add_ideas = HAR_mobile_supply
@@ -278,7 +278,7 @@ focus = {
 	y = 1
 	relative_position_id = civilianconstructioneffort
 	prerequisite = { focus = civilianconstructioneffort }
-	cost = 10
+	cost = 7
 	available_if_capitulated = yes
 	completion_reward = {
 		add_tech_bonus = {
@@ -302,7 +302,7 @@ focus = {
 	y = 1
 	relative_position_id = HAR_invest_in_industry
 	prerequisite = { focus = HAR_invest_in_industry }
-	cost = 10
+	cost = 7
 	available_if_capitulated = yes
 	completion_reward = {
 		add_resource = { type = chromium amount = 16 state = 109 }
@@ -322,7 +322,7 @@ focus = {
 	y = 1
 	relative_position_id = importrareminerals
 	prerequisite = { focus = importrareminerals }
-	cost = 10
+	cost = 7
 	available_if_capitulated = yes
 	completion_reward = {
 		random_owned_state = {
@@ -347,7 +347,7 @@ focus = {
 	y = 1
 	relative_position_id = HAR_build_industry
 	prerequisite = { focus = HAR_build_industry }
-	cost = 10
+	cost = 7
 	available_if_capitulated = yes
 	completion_reward = {
 		add_research_slot = 1
@@ -361,7 +361,7 @@ focus = {
 	ai_will_do = { base = 20 }
 	x = 0
 	y = 1
-	cost = 10
+	cost = 7
 	available = {
 		num_of_factories > 50
 	}
@@ -380,7 +380,7 @@ focus = {
 	}
 	x = 26
 	y = 0
-	cost = 10
+	cost = 7
 	available_if_capitulated = yes
 	completion_reward = {
 		army_experience = 20
@@ -405,7 +405,7 @@ focus = {
 	y = 1
 	relative_position_id = hai_armymodernization
 	prerequisite = { focus = hai_armymodernization }
-	cost = 10
+	cost = 7
 	available_if_capitulated = yes
 	completion_reward = {
 		add_tech_bonus = {
@@ -426,7 +426,7 @@ focus = {
 	y = 1
 	relative_position_id = warbredmmakil
 	prerequisite = { focus = warbredmmakil}
-	cost = 10
+	cost = 7
 	available_if_capitulated = yes
 	completion_reward = {
 		add_doctrine_cost_reduction = {
@@ -446,7 +446,7 @@ focus = {
 	y = 1
 	relative_position_id = militaryconstructioneffort
 	prerequisite = { focus = militaryconstructioneffort}
-	cost = 10
+	cost = 7
 	available_if_capitulated = yes
 	completion_reward = {
 		random_owned_state = {
@@ -483,7 +483,7 @@ focus = {
 			has_completed_focus = join_the_dark_pact
 		}
 	}
-	cost = 10
+	cost = 7
 	completion_reward = {
 		107 = {
 			add_building_construction = {	type = bunker level = 3 instant_build = yes province = 4126 }
@@ -506,7 +506,7 @@ focus = {
 	x = -1
 	y = 1
 	ai_will_do = { base = 20 }
-	cost = 10
+	cost = 7
 	completion_reward = {
 		random_owned_state = {
 			limit = { is_core_of = HAR }
@@ -532,7 +532,7 @@ focus = {
 	x = 0
 	y = 1
 	ai_will_do = { base = 25 }
-	cost = 10
+	cost = 7
 	completion_reward = {
 		add_ideas = HAR_invest_in_military
 	}
@@ -547,7 +547,7 @@ focus = {
 	x = -1
 	y = 1
 	ai_will_do = { base = 25 }
-	cost = 10
+	cost = 7
 	completion_reward = {
 		add_ideas = HAR_invest_in_industry
 	}
@@ -567,7 +567,7 @@ focus = {
 	y = 1
 	relative_position_id = invest_in_military_industry
 	prerequisite = { focus = invest_in_military_industry}
-	cost = 10
+	cost = 7
 	available_if_capitulated = yes
 	completion_reward = {
 		107 = { add_building_construction = {	type = bunker level = 3 instant_build = yes province = 5523 } }
@@ -598,7 +598,7 @@ focus = {
 	relative_position_id = learn_strategies
 	prerequisite = { focus = learn_strategies }
 	prerequisite = { focus = defense_against_Gondor }
-	cost = 10
+	cost = 7
 	available_if_capitulated = yes
 	completion_reward = {
         add_tech_bonus = {
@@ -619,7 +619,7 @@ focus = {
  		y =0
  		mutually_exclusive = { }
  		prerequisite = { }
- 		cost = 10
+ 		cost = 7
   		available_if_capitulated = yes
 		completion_reward = { add_political_power = 100 }
  }
@@ -635,7 +635,7 @@ focus = {
 	y = 1
 	relative_position_id = politicalamelioration
 	prerequisite = { focus = politicalamelioration }
-	cost = 10
+	cost = 7
 	completion_reward = {
 		add_ideas = HAR_follower_of_the_dark_lord
 	}
@@ -673,7 +673,7 @@ focus = {
 	bypass = {
 		has_government = belligerent
 	}
-	cost = 10
+	cost = 7
 	completion_reward = {
 		add_stability = -0.05
 		set_politics = {
@@ -707,7 +707,7 @@ focus = {
 			has_war_with = MOR
 		}
 	}
-	cost = 10
+	cost = 7
 	completion_reward = {
 		MOR = {
 			country_event = { id = mordor.46 }
@@ -726,7 +726,7 @@ focus = {
     available = {
         is_in_faction_with = MOR
     }
-    cost = 10
+    cost = 7
     completion_reward = {
         add_to_tech_sharing_group = mordor_research
     }
@@ -784,7 +784,7 @@ focus = {
 	relative_position_id = go_solo
 	prerequisite = { focus = join_the_dark_pact focus = go_solo }
 	ai_will_do = { factor = 25 }
-	cost = 10
+	cost = 7
 	completion_reward = {
 		add_ideas = MOR_servant_morgoth
 	}
@@ -844,7 +844,7 @@ focus = {
 			date > 3022.1.1
 		}
 	}
-	cost = 10
+	cost = 7
 	completion_reward = {
 		GON = {
 			country_event = { id = gondor.6 }
@@ -860,7 +860,7 @@ focus = {
 	y = 1
 	relative_position_id = demand_south_ithilien
 	ai_will_do = { factor = 25 }
-	cost = 10
+	cost = 7
 	available = {
 		GON = {
 			NOT = {
@@ -930,7 +930,7 @@ focus = {
 		}
 	}
 	will_lead_to_war_with = RHU
-	cost = 10
+	cost = 7
 	completion_reward = {
 		RHU = {
 			country_event = rhun.6
@@ -948,7 +948,7 @@ focus = {
 	ai_will_do = {
 		base = 50
 	}
-	cost = 10
+	cost = 7
 	completion_reward = {
 		army_experience = 10
 		random_owned_state = {
@@ -968,7 +968,7 @@ focus = {
 	ai_will_do = {
 		factor = 25
 	}
-	cost = 10
+	cost = 7
 	completion_reward = {
 		add_ideas = HAR_ready_the_army
 	}
@@ -994,7 +994,7 @@ focus = {
 		}
 	}
 	will_lead_to_war_with = MOR
-	cost = 10
+	cost = 7
 	completion_reward = {
 		if = {
 			limit = {
@@ -1022,7 +1022,7 @@ focus = {
  		y =1
  		mutually_exclusive = { }
  		prerequisite = { focus = politicalamelioration }
- 		cost = 10
+ 		cost = 7
   		available_if_capitulated = yes
 		completion_reward = { add_political_power = 100 }
  }
@@ -1036,7 +1036,7 @@ focus = {
  y =2
  mutually_exclusive = { focus = autonomouscommunities }
  prerequisite = { focus = regionalhierarchy }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = { add_ideas = HAR_merciless_union }
  }
@@ -1050,7 +1050,7 @@ focus = {
  y =2
  mutually_exclusive = { focus = standasone }
  prerequisite = { focus = regionalhierarchy }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 		completion_reward = {
 			remove_ideas = HAR_fractured_nation
@@ -1066,7 +1066,7 @@ focus = {
  y =3
  mutually_exclusive = { }
  prerequisite = { focus = standasone }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = {
 			 	every_owned_state = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
@@ -1083,7 +1083,7 @@ focus = {
  y =3
  mutually_exclusive = { focus = authoritarianfederation }
  prerequisite = { focus = autonomouscommunities }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = {
 		create_faction = southern_confederacy
@@ -1102,7 +1102,7 @@ focus = {
  y =3
  mutually_exclusive = { focus = liberalunion }
  prerequisite = { focus = autonomouscommunities }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = {
 		add_stability = -0.1
@@ -1119,7 +1119,7 @@ focus = {
  y =4
  mutually_exclusive = { focus = appealtothenumenoreans }
  prerequisite = { focus = cohesionthroughinfrastructure }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = {
 		add_war_support = 0.2
@@ -1139,7 +1139,7 @@ focus = {
  y =4
  mutually_exclusive = { focus = appealtotheharadrim }
  prerequisite = { focus = cohesionthroughinfrastructure }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = {
 		add_state_core = 112
@@ -1157,7 +1157,7 @@ focus = {
  y =4
  mutually_exclusive = { }
  prerequisite = { focus = liberalunion focus = authoritarianfederation }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = {
 		if = { limit = { has_completed_focus = liberalunion }
@@ -1182,7 +1182,7 @@ focus = {
  y =4
  mutually_exclusive = { }
  prerequisite = { focus = liberalunion focus = authoritarianfederation }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = {
 		if = { limit = { has_completed_focus = liberalunion }
@@ -1207,7 +1207,7 @@ focus = {
  y =4
  mutually_exclusive = { }
  prerequisite = { focus = liberalunion focus = authoritarianfederation }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = {
 		if = { limit = { has_completed_focus = liberalunion }
@@ -1231,7 +1231,7 @@ focus = {
  y =4
  mutually_exclusive = { }
  prerequisite = { focus = authoritarianfederation }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = { add_ideas = HAR_subject_taxation }
  }
@@ -1245,7 +1245,7 @@ focus = {
  y =5
  mutually_exclusive = { }
  prerequisite = { focus = appealtotheharadrim }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = { add_stability = 0.15 add_war_support = -0.1 }
  }
@@ -1259,7 +1259,7 @@ focus = {
  y =5
  mutually_exclusive = { }
  prerequisite = { focus = appealtothenumenoreans }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = { add_stability = 0.15 add_war_support = -0.1 }
  }
@@ -1274,7 +1274,7 @@ focus = {
  y =5
  mutually_exclusive = { }
  prerequisite = { focus = releasekhand }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = {
 		KND = {
@@ -1295,7 +1295,7 @@ focus = {
  y =5
  mutually_exclusive = { }
  prerequisite = { focus = releasepellardur }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = {
 		PEL = {
@@ -1316,7 +1316,7 @@ focus = {
  y =5
  mutually_exclusive = { }
  prerequisite = { focus = releaseumbar }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = {
 		UMB = {
@@ -1336,7 +1336,7 @@ focus = {
  y =6
  mutually_exclusive = { }
  prerequisite = { focus = subjugatekhand focus = subjugateumbar }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = { remove_ideas = HAR_fractured_nation }
  }
@@ -1351,7 +1351,7 @@ focus = {
  y =6
  mutually_exclusive = { }
  prerequisite = { focus = thekhandendeavour }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = {
 		add_ideas = HAR_joined_recruitment
@@ -1370,7 +1370,7 @@ focus = {
  mutually_exclusive = { }
  prerequisite = { focus = thekhandendeavour }
  prerequisite = { focus = thepellardurendeavour }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = {
 			add_tech_bonus = { name = manufacturing_effort bonus = 0.5 uses = 1 category = industry }
@@ -1390,7 +1390,7 @@ focus = {
  mutually_exclusive = { }
  prerequisite = { focus = thepellardurendeavour }
  prerequisite = { focus = theumbarendeavour }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = {
 			105 = { add_building_construction = {	type = infrastructure level = 2 instant_build = yes } }
@@ -1410,7 +1410,7 @@ focus = {
  y =6
  mutually_exclusive = { }
  prerequisite = { focus = theumbarendeavour }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = { add_ideas = ROH_trade_reforms }
  }
@@ -1424,7 +1424,7 @@ focus = {
  y =7
  mutually_exclusive = { }
  prerequisite = { focus = unitetherealm }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = { add_ideas = HAR_common_interests }
  }
@@ -1439,7 +1439,7 @@ focus = {
  y =7
  mutually_exclusive = { }
  prerequisite = { focus = joinedrecruitmenteffort }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = {
 		add_ideas = HAR_joined_production
@@ -1457,7 +1457,7 @@ focus = {
  y =7
  mutually_exclusive = { }
  prerequisite = { focus = thekhandendeavour }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = {
 		add_resource = { type = oil amount = 8 state = 117 }
@@ -1475,7 +1475,7 @@ focus = {
  y =7
  mutually_exclusive = { }
  prerequisite = { focus = thepellardurendeavour }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = {
 			112 = { add_extra_state_shared_building_slots = 5 add_building_construction = { type = dockyard level = 5 instant_build = yes } }
@@ -1494,7 +1494,7 @@ focus = {
  y =7
  mutually_exclusive = { }
  prerequisite = { focus = theumbarendeavour }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = {
 			108 = { add_extra_state_shared_building_slots = 5 add_building_construction = { type = dockyard level = 5 instant_build = yes } }
@@ -1512,7 +1512,7 @@ focus = {
  y =8
  mutually_exclusive = { }
  prerequisite = { focus = committeeofcommoninterests }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = {
 			add_political_power = 100
@@ -1530,7 +1530,7 @@ focus = {
  y =8
  mutually_exclusive = { }
  prerequisite = { focus = khandoilreserves }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = {
 		add_resource = { type = oil amount = 12 state = 117 }
@@ -1550,7 +1550,7 @@ focus = {
  y =8
  mutually_exclusive = { }
  prerequisite = { focus = theumbararmada focus = thepellardurarmada }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = {
 		106 = { add_extra_state_shared_building_slots = 3 add_building_construction = { type = dockyard level = 3 instant_build = yes } }
@@ -1568,7 +1568,7 @@ focus = {
  y =9
  mutually_exclusive = { }
  prerequisite = { focus = afleettofear }
- cost = 10
+ cost = 7
   available_if_capitulated = yes
 	completion_reward = {
 		navy_experience = 50

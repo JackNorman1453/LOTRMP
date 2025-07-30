@@ -73,4 +73,14 @@ white_council_members_tt = {
 		limit = { LTH = { is_white_council_member = yes } }
 		custom_effect_tooltip = "   Galadriel"
 	}
+	if = {
+		limit = { LIN = { is_white_council_member = yes } }
+		custom_effect_tooltip = "   Cirdan"
+	}
+	if = {
+		limit = { MIR = { is_white_council_member = yes } }
+		custom_effect_tooltip = "   Radagast"
+	}
+	
+	
 }

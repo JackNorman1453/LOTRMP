@@ -20,13 +20,26 @@ shared_focus = {
 			has_focus_tree = rivendell
 		}
 	}
+	
 	offset = {
-		x =28
-		y =0
-		trigger = {
-			has_focus_tree = isengard
+		x = 43
+		y = 0
+	trigger = {
+		tag = LIN
 		}
 	}
+	
+	
+	offset = {
+		x = 39
+		y = 0
+		trigger = {
+		has_focus_tree = mirkwood
+		
+		}
+	}
+	
+
 
 	ai_will_do = {
 		factor = 15
@@ -58,10 +71,7 @@ shared_focus = {
 			limit = { white_council_exists = no }
 			create_white_council = yes
 
-			if = {
-				limit = { NOT = { tag = ISE } NOT = { ise_is_evil = yes } NOT = { ISE = { has_war_with = ROOT } } }
-				ISE = { country_event = { id = whitecouncil.1 days = 3 random_days = 3 } }
-			}
+			
 			if = {
 				limit = { NOT = { tag = RIV } NOT = { riv_is_evil = yes } NOT = { RIV = { has_war_with = ROOT } } }
 				RIV = { country_event = { id = whitecouncil.1 days = 3 random_days = 3 } }
@@ -70,6 +80,16 @@ shared_focus = {
 				limit = { NOT = { tag = LTH } NOT = { LTH = { has_war_with = ROOT } } }
 				LTH = { country_event = { id = whitecouncil.1 days = 3 random_days = 3 } }
 			}
+			if = {
+				limit = { NOT = { tag = MIR } NOT = { MIR = { has_war_with = ROOT } } }
+				MIR = { country_event = { id = whitecouncil.1 days = 3 random_days = 3 } }
+			}
+			if = {
+				limit = { NOT = { tag = LIN } NOT = { LIN = { has_war_with = ROOT } } }
+				LIN = { country_event = { id = whitecouncil.1 days = 3 random_days = 3 } }
+			}
+			
+			
 		}
 
 		add_to_white_council = yes
@@ -79,8 +99,8 @@ shared_focus = {
 }
 
 joint_focus = {
-	id = whc_sarumanthewise
-	icon = GFX_goal_lth_white_council_saruman
+	id = whc_radagast1
+	icon = GFX_goal_mir_radagast_the_brown
 	text_icon = joint_focus_style
 	prerequisite = { focus = whc_rekindlewhitecouncil }
 
@@ -88,7 +108,7 @@ joint_focus = {
 	x = -4
 	y = 1
 
-	cost = 10
+	cost = 5
 
 	ai_will_do = {
 		factor = 15
@@ -104,8 +124,8 @@ joint_focus = {
 
 	available = {
 		
-		tag = ISE
-		ISE = { is_white_council_member = yes }
+		tag = MIR
+		MIR = { is_white_council_member = yes }
 	}
 
 	search_filters = {}
@@ -138,32 +158,32 @@ joint_focus = {
 }
 
 joint_focus = {
-	id = whc_thewizardswisdom
-	icon = GFX_goal_lth_white_council_saruman_with_palantir
+	id = whc_radagast2
+	icon = GFX_goal_entwood_treebeard
 	text_icon = joint_focus_style
-	prerequisite = { focus = whc_sarumanthewise }
+	prerequisite = { focus = whc_radagast1 }
 
 	relative_position_id = whc_rekindlewhitecouncil
 	x = -4
 	y = 3
 
-	cost = 10
+	cost = 5
 
 	ai_will_do = {
 		factor = 15
 		modifier = {
-			factor = 2
+			factor = 5
 			LTH = { is_ai = no is_white_council_member = yes }
 		}
 		modifier = {
-			factor = 2
+			factor = 5
 			RIV = { is_ai = no is_white_council_member = yes }
 		}
 	}
 
 	available = {
-		tag = ISE
-		ISE = { is_white_council_member = yes }
+		tag = MIR
+		MIR = { is_white_council_member = yes }
 	}
 
 	search_filters = {}
@@ -173,17 +193,195 @@ joint_focus = {
 	}
 
 	completion_reward = {
-
-	}
+	
+		
+		} 
 
 	completion_reward_joint_originator = {
+		add_ideas = {whc_tree_friend}
+		set_technology = {
+		learn_from_oak=1
+		}
+		29 = { add_extra_state_shared_building_slots = 3 }
+		29 = {add_building_construction = { type = industrial_complex level = 3 instant_build = yes } }
+				
+		ENT = {
+		add_to_tech_sharing_group = white_council_group
+		}
+	
 		add_to_tech_sharing_group = white_council_group
 	}
 
 	completion_reward_joint_member = {
-		add_to_tech_sharing_group = white_council_group
+	
+	set_technology = {
+	learn_from_oak=1
+	}
+	add_ideas = {whc_tree_friend}
+	add_to_tech_sharing_group = white_council_group
 	}
 }
+
+
+joint_focus = {
+	id = whc_cirdan
+	icon = GFX_goal_lth_celeborn_supreme_leader
+	text_icon = joint_focus_style
+	prerequisite = { focus = whc_rekindlewhitecouncil }
+
+	relative_position_id = whc_rekindlewhitecouncil
+	x = 6
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 5
+			LTH = { is_ai = no is_white_council_member = yes }
+		}
+		modifier = {
+			factor = 5
+			RIV = { is_ai = no is_white_council_member = yes }
+		}
+	}
+
+	available = {
+		tag = LIN
+		LIN = { is_white_council_member = yes }
+	}
+
+	search_filters = {}
+
+	joint_trigger = {
+		is_white_council_member = yes
+	}
+
+	completion_reward = {
+	 
+
+	}
+
+	completion_reward_joint_originator = {
+
+			army_experience = 100
+			# Will research the enxt level of arty (up to level 3)
+			if = {
+				limit = { can_research = interwar_artillery }
+				set_technology = { interwar_artillery = 1 }
+			}
+			else_if = {
+				limit = { can_research = artillery1 }
+				set_technology = { artillery1 = 1 }
+			}
+			else_if = {
+				limit = { can_research = artillery2 }
+				set_technology = { artillery2 = 1 }
+			}
+			else_if = {
+				limit = { can_research = artillery3 }
+				set_technology = { artillery3 = 1 }
+			}
+			else = {
+				add_tech_bonus = {
+					name = special_bonus
+					category = lotr_infantry_archery_bow
+					bonus = 0.75
+					uses = 1
+				}
+			}
+	}
+
+	completion_reward_joint_member = {
+	
+			army_experience = 50
+			# Will research the enxt level of arty (up to level 3)
+			if = {
+				limit = { can_research = interwar_artillery }
+				set_technology = { interwar_artillery = 1 }
+			}
+			else_if = {
+				limit = { can_research = artillery1 }
+				set_technology = { artillery1 = 1 }
+			}
+			else_if = {
+				limit = { can_research = artillery2 }
+				set_technology = { artillery2 = 1 }
+			}
+			else_if = {
+				limit = { can_research = artillery3 }
+				set_technology = { artillery3 = 1 }
+			}
+			else = {
+				add_tech_bonus = {
+					name = special_bonus
+					category = lotr_infantry_archery_bow
+					bonus = 0.75
+					uses = 1
+				}
+			}
+	}
+}
+
+joint_focus = {
+	id = whc_cirdan_2
+	icon = GFX_goal_lth_ring_nenya
+	text_icon = joint_focus_style
+	prerequisite = { focus = whc_cirdan }
+
+	relative_position_id = whc_cirdan
+	x = 0
+	y = 2
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 5
+			LTH = { is_ai = no is_white_council_member = yes }
+		}
+		modifier = {
+			factor = 5
+			RIV = { is_ai = no is_white_council_member = yes }
+		}
+	}
+
+	available = {
+		tag = LIN
+		LIN = { is_white_council_member = yes }
+	}
+
+	search_filters = {}
+
+	joint_trigger = {
+		is_white_council_member = yes
+	}
+
+	completion_reward = {
+	 
+
+	}
+
+	completion_reward_joint_originator = {
+		set_technology = {
+		enchantments_of_narya = 1
+	}
+	add_ideas = LTH_unflinching_defender
+	add_ideas = LTH_aegis_of_light
+			
+	}
+
+	completion_reward_joint_member = {
+	
+	set_technology = {
+	enchantments_of_narya = 1
+	}
+	}
+}
+
+
 
 joint_focus = {
 	id = whc_elrondofrivendell
@@ -195,7 +393,7 @@ joint_focus = {
 	x = -2
 	y = 1
 
-	cost = 10
+	cost = 7
 
 	ai_will_do = {
 		factor = 15
@@ -261,7 +459,7 @@ joint_focus = {
 	x = -2
 	y = 3
 
-	cost = 10
+	cost = 7
 
 	ai_will_do = {
 		factor = 15
@@ -311,7 +509,7 @@ joint_focus = {
 	x = 2
 	y = 1
 
-	cost = 10
+	cost = 5
 
 	ai_will_do = {
 		factor = 15
@@ -321,7 +519,7 @@ joint_focus = {
 		}
 		modifier = {
 			factor = 2
-			ISE = { is_ai = no is_white_council_member = yes }
+			LIN = { is_white_council_member = yes }
 		}
 		modifier = {
 			factor = 2
@@ -378,7 +576,7 @@ joint_focus = {
 	x = 2
 	y = 3
 
-	cost = 10
+	cost = 5
 
 	ai_will_do = {
 		factor = 15
@@ -479,7 +677,7 @@ joint_focus = {
 	x = 4
 	y = 1
 
-	cost = 10
+	cost = 7
 
 	ai_will_do = {
 		factor = 15
@@ -535,7 +733,7 @@ joint_focus = {
 	x = 4
 	y = 3
 
-	cost = 10
+	cost = 7
 
 	ai_will_do = {
 		factor = 15
@@ -588,7 +786,7 @@ joint_focus = {
 	x = 0
 	y = 2
 
-	cost = 10
+	cost = 7
 
 	ai_will_do = {
 		factor = 5
@@ -641,7 +839,7 @@ joint_focus = {
 	x = 0
 	y = 3
 
-	cost = 10
+	cost = 7
 
 	ai_will_do = {
 		factor = 15
@@ -709,22 +907,23 @@ joint_focus = {
 	id = whc_unitethecause
 	icon = GFX_goal_lth_lothlorien_rivendell_isengard_union
 	text_icon = joint_focus_style
-	prerequisite = { focus = whc_thewizardswisdom }
+	prerequisite = { focus = whc_cirdan_2 }
+	prerequisite = {focus = whc_radagast2}
 	prerequisite = { focus = whc_theinfluenceofrivendell }
 	prerequisite = { focus = whc_supportofthegreateagles }
 	prerequisite = { focus = whc_theladysmight }
 
 	relative_position_id = whc_rekindlewhitecouncil
 	x = 0
-	y = 4
+	y = 6
 
-	cost = 10
+	cost = 7
 
 	ai_will_do = {
 		factor = 15
 		modifier = {
 			factor = 2
-			ISE = { is_ai = no is_white_council_member = yes }
+		LIN = { is_white_council_member = yes }
 		}
 		modifier = {
 			factor = 2
@@ -738,7 +937,8 @@ joint_focus = {
 
 
 	available = {
-		ISE = { is_white_council_member = yes }
+		LIN = { is_white_council_member = yes }
+		MIR = { is_white_council_member = yes }
 		RIV = { is_white_council_member = yes }
 		LTH = { is_white_council_member = yes }
 	}

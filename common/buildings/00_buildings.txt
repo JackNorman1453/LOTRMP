@@ -421,7 +421,7 @@ buildings = {
 
 	library = {
 		#show_on_map = 1
-		base_cost = 40000
+		base_cost = 30000
 		icon_frame = 20
 		disabled_in_dmz = no
 		damage_factor = 0.25
@@ -446,7 +446,7 @@ buildings = {
 
 	laboratory = {
 		show_on_map = 0
-		base_cost = 21000
+		base_cost = 16000
 		per_controlled_building_extra_cost = 3000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 21

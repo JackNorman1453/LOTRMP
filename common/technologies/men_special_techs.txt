@@ -210,7 +210,7 @@ technologies = {
     bomber_eagle_men = {
 
         enable_equipments = {
-            bomber_eagle_airframe_0
+            bomber_eagle_airframe_1
         }
 
 		enable_equipment_modules = {
@@ -285,7 +285,7 @@ technologies = {
     bomber_eagle_2_men = {
 
         enable_equipments = {
-            bomber_eagle_airframe_1
+            bomber_eagle_airframe_0
         }
 
 		research_cost = 1.5

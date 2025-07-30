@@ -82,6 +82,17 @@ whc_coordinatedresistance:0 "Coordinate Resistance"
 whc_coordinatedresistance_desc:0 "United under the Council's banner, we may share our battle tactics and strategies."
 whc_unitethecause:0 "Unite the Cause"
 whc_unitethecause_desc:0 "The White Council shall stand together as it did int he days of old."
+whc_radagast1:0 "Radagast The Brown"
+whc_radagast1_desc:0 "Radagast (Adûnaic: Tender Of Beasts) the Brown was one of five Wizards sent to Middle-earth to contest the will of Sauron. Originally a Maia of Yavanna, Radagast mainly concerned himself with the well-being of the plant and animal worlds, and thus did not participate heavily in the War of the Ring."
+whc_radagast2:0 "Support the Trees"
+whc_radagast2_desc:0 "Radagast is then seen investigating the Greenwood, noticing that much of the vegetation is beginning to decay and much of the animal life is sick or dying. Radagast brings one of them, a hedgehog he calls Sebastian, back to his woodland house at Rhosgobel where he is able to nurse the hedgehog back to health. Radagast comes to the realization that a type of powerful witchcraft has caused the decay of the Greenwood and its transformation into what would now become known as Mirkwood. After Rhosgobel is swarmed by Giant Spiders and he manages to save Sebastian, Radagast investigates and identifies the origin of the evil as the supposedly abandoned fortress of Dol Guldur."
+whc_tree_friend:0 "Friend of the Trees"
+whc_tree_friend_desc:0 "We have redoubled our commitment to supporting the Ents"
+
+whc_cirdan:0 "Círdan the Shipwright"
+whc_cirdan_desc:0 "Círdan, also known as Nowë and Círdan the Shipwright, was one of the highest and most noble of the Sindar, Lord of the Falathrim during the First Age, and Master of the Grey Havens through the Second, Third, and Fourth Age. He was one of the wisest and most clairvoyant of the Elves, and by the Second Age the oldest known elf in Middle-earth, to remain so throughout that age and into the Fourth Age as well. He was also gifted Narya, one of the Three Rings, by Celebrimbor until he surrendered it to Gandalf."
+whc_cirdan_2:0 "The Powers of Narya"
+whc_cirdan_2_dec:0: "Narya, also known as the Ring of Fire, was one of the three Rings of Power made originally for the Elves."
 
 whc_oathtothefellowship_tt:0 "Every white council member will promise not to harm the fellowship or be removed from the council."
 

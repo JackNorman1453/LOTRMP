@@ -10,7 +10,6 @@ focus_tree = {
 
 	continuous_focus_position = { x = 50 y = 2000 }
 
-	shared_focus = whc_rekindlewhitecouncil
 
 	default = no
 
@@ -912,7 +911,7 @@ focus_tree = {
 		}
 		
 		available = {
-		date >3022.01.01
+		date >3022.03.01
 		}
 		
 		bypass = { has_war_with = LTH }
@@ -963,13 +962,13 @@ focus_tree = {
 		}
 		bypass = { has_war_with = ROH }
 		available = { NOT = { is_in_faction_with = ROH } NOT = { ROH= { has_completed_focus = ROH_pledge_to_saruman } } 
-		 date > 3021.01.01
+		 date > 3021.06.01
 		}
 		x =12
 		y =8
 		mutually_exclusive = { }
 		prerequisite = { focus = takethefordsofisen}
-		cost = 7
+		cost = 5
 		completion_reward = { create_wargoal = { type = annex_everything target = ROH } add_threat = 50}
 	}
 

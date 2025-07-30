@@ -1,7 +1,7 @@
 state_categories={
 	elven_paradise = {
 		local_building_slots = 25
-		production_speed_library_factor = 0.45
+		
 	
 			color = { 0 240 240 }
 

@@ -66,7 +66,7 @@ ithc_pp_war_support = {
 	base = 0
 	modifier = {
 		set_temp_variable = { temp_pp = has_war_support }
-		multiply_temp_variable = { temp_pp = 100 }
+		multiply_temp_variable = { temp_pp = 50 }
 		add = temp_pp
 	}
 }
@@ -261,7 +261,7 @@ ithc_manpower_deployed_in_state_gon = {
 
 	modifier = {
 		set_temp_variable = { temp_pp = num_armies_in_state@PREV }
-		multiply_temp_variable = { temp_pp = 2 }
+		multiply_temp_variable = { temp_pp = 45 }
 		add = temp_pp
 	}
 }
@@ -275,7 +275,7 @@ ithc_manpower_deployed_nearby_mor = {
 		204 = { is_coontrolled_by_THIS_or_ally = yes }
 
 		set_temp_variable = { temp_pp = num_armies_in_state@204 }
-		multiply_temp_variable = { temp_pp = 2 }
+		multiply_temp_variable = { temp_pp = 5 }
 		add = temp_pp
 	}
 	# minas morgul
@@ -284,7 +284,7 @@ ithc_manpower_deployed_nearby_mor = {
 		5 = { is_coontrolled_by_THIS_or_ally = yes }
 		
 		set_temp_variable = { temp_pp = num_armies_in_state@5 }
-		multiply_temp_variable = { temp_pp = 2 }
+		multiply_temp_variable = { temp_pp = 5 }
 		add = temp_pp
 	}
 	# Harad 1
@@ -293,7 +293,7 @@ ithc_manpower_deployed_nearby_mor = {
 		107 = { is_coontrolled_by_THIS_or_ally = yes }
 		
 		set_temp_variable = { temp_pp = num_armies_in_state@107 }
-		multiply_temp_variable = { temp_pp = 2 }
+		multiply_temp_variable = { temp_pp = 5 }
 		add = temp_pp
 	}
 	# Harad 2
@@ -302,7 +302,7 @@ ithc_manpower_deployed_nearby_mor = {
 		105 = { is_coontrolled_by_THIS_or_ally = yes }
 		
 		set_temp_variable = { temp_pp = num_armies_in_state@105 }
-		multiply_temp_variable = { temp_pp = 2 }
+		multiply_temp_variable = { temp_pp = 5 }
 		add = temp_pp
 	}
 }
@@ -322,11 +322,11 @@ ithc_from_focus = {
 	modifier = {
 		tag = GON
 		PREV = { has_state_flag = ithc_gondor_focus }
-		add = 15
+		add = 50
 	}
 	modifier = {
 		has_completed_focus = GON_ithc_hold_firm
-		add = 10
+		add = 50
 	}
 	modifier = {
 		has_completed_focus = second_wave

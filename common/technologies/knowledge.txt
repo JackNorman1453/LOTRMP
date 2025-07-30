@@ -43,7 +43,7 @@ technologies = {
 	library = {
 
 		# small boost to research speed
-		research_speed_factor = 0.03
+		research_speed_factor = 0.05
 
 		enable_building = {
 			building = library
@@ -55,7 +55,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.8
 		start_year = 3018
 		folder = {
 			name = electronics_folder
@@ -388,7 +388,7 @@ technologies = {
 
 	distilling = {
 		# small boost to research speed
-		research_speed_factor = 0.03
+		research_speed_factor = 0.05
 
 		enable_equipment_modules = {
 			inflamable_coating_module
@@ -403,7 +403,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.8
 		start_year = 3018
 		folder = {
 			name = electronics_folder
@@ -423,7 +423,7 @@ technologies = {
 	candles = {
 
 		# small boost to research speed
-		research_speed_factor = 0.03
+		research_speed_factor = 0.05
 
 		# lmao
 		land_night_attack = 0.05
@@ -476,7 +476,7 @@ technologies = {
 	sulfide_decomposition = {
 
 		# small boost to research speed
-		research_speed_factor = 0.02
+		research_speed_factor = 0.04
 		local_resources_factor = 0.05
 
 		path = {
@@ -488,7 +488,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.7
 		start_year = 3019
 		folder = {
 			name = electronics_folder
@@ -725,7 +725,7 @@ technologies = {
 	magic = {
 
 		# small boost to research speed
-		research_speed_factor = 0.02
+		research_speed_factor = 0.04
 
 		enable_building = {
 			building = laboratory
@@ -741,7 +741,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 3019
 		folder = {
 			name = electronics_folder

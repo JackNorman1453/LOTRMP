@@ -9,8 +9,12 @@ state={
 	history={
 		owner = MOR
 		buildings = {
-			infrastructure = 2
-			air_base = 0
+			infrastructure = 3
+			air_base = 2
+			5097 = {
+			bunker = 2
+			laboratory = 1
+			}
 
 		}
 		add_core_of = MOR
@@ -24,6 +28,6 @@ state={
 	}
 	manpower=50000
 	buildings_max_level_factor=1.000
-	state_category=wasteland
+	state_category=darkground 
 	local_supplies=1.000
 }

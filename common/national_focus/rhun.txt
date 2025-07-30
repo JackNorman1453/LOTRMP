@@ -49,7 +49,7 @@ focus = {
     available = { }
     relative_position_id = RHUN_mapcharting_expeditions
     prerequisite = { focus = RHUN_mapcharting_expeditions }
-    cost = 10
+    cost = 7
     ai_will_do = { factor = 25 }
     completion_reward = {
         add_ideas = RHU_army_of_the_east
@@ -69,7 +69,7 @@ focus = {
     }
     relative_position_id = RHUN_mapcharting_expeditions
     prerequisite = { focus = RHUN_army_of_the_east }
-    cost = 10
+    cost = 7
     ai_will_do = { factor = 25 }
     completion_reward = {
 	131 = {
@@ -104,7 +104,7 @@ focus = {
 	mutually_exclusive = { focus = RHUN_heavy_cavalry }
     relative_position_id = RHUN_mapcharting_expeditions
     prerequisite = { focus = RHUN_army_of_the_east }
-    cost = 10
+    cost = 7
     ai_will_do = { factor = 25 }
     completion_reward = {
 		add_tech_bonus = {
@@ -124,7 +124,7 @@ focus = {
 	mutually_exclusive = { focus = RHUN_light_cavalry }
     relative_position_id = RHUN_mapcharting_expeditions
     prerequisite = { focus = RHUN_army_of_the_east }
-    cost = 10
+    cost = 7
     ai_will_do = { factor = 15 }
     completion_reward = {
 		add_tech_bonus = {
@@ -148,7 +148,7 @@ focus = {
     y = 4
     relative_position_id = RHUN_mapcharting_expeditions
     prerequisite = { focus = RHUN_light_cavalry focus = RHUN_heavy_cavalry }
-    cost = 10
+    cost = 7
     ai_will_do = { factor = 5 }
     completion_reward = {
         add_tech_bonus = {
@@ -167,7 +167,7 @@ focus = {
 	mutually_exclusive = { focus = RHUN_crossbow }
     relative_position_id = RHUN_mapcharting_expeditions
     prerequisite = { focus = RHUN_ballista }
-    cost = 10
+    cost = 7
     ai_will_do = { factor = 15 }
     completion_reward = {
         add_tech_bonus = {
@@ -187,7 +187,7 @@ focus = {
 	mutually_exclusive = { focus = RHUN_archery }
     relative_position_id = RHUN_mapcharting_expeditions
     prerequisite = { focus = RHUN_ballista }
-    cost = 10
+    cost = 7
     ai_will_do = { factor = 15 }
     completion_reward = {
         add_tech_bonus = {
@@ -209,7 +209,7 @@ focus = {
 	y = 1
 	mutually_exclusive = { focus = RHUN_subsidize_mountain_logging }
 	prerequisite = { focus = RHUN_mapcharting_expeditions }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 	add_resource = {
@@ -229,7 +229,7 @@ focus = {
 	y = 1
 	mutually_exclusive = { focus = RHUN_exploit_rhudel_mines }
 	prerequisite = { focus = RHUN_mapcharting_expeditions }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 	add_resource = {
@@ -249,7 +249,7 @@ focus = {
 	y = 2
 	mutually_exclusive = { }
 	prerequisite = { focus = RHUN_exploit_rhudel_mines focus = RHUN_subsidize_mountain_logging }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 	131 = {
@@ -268,7 +268,7 @@ focus = {
     relative_position_id = RHUN_mapcharting_expeditions
     prerequisite = { focus = RHUN_forge_of_mistrand }
     ai_will_do = { factor = 25 }
-    cost = 10
+    cost = 7
     completion_reward = {
         add_ideas = RHU_state_investment
     }
@@ -282,7 +282,7 @@ focus = {
 	relative_position_id = RHUN_mapcharting_expeditions
     prerequisite = { focus = RHUN_state_investment }
     ai_will_do = { factor = 25 }
-    cost = 10
+    cost = 7
 	available = {
 	controls_state = 130
 	controls_state = 128 }
@@ -318,7 +318,7 @@ focus = {
 	relative_position_id = RHUN_mapcharting_expeditions
     prerequisite = { focus = RHUN_state_investment }
     ai_will_do = { factor = 25 }
-    cost = 10
+    cost = 7
 	available = {
 	controls_state = 104
 	controls_state = 124
@@ -364,7 +364,7 @@ focus = {
 	relative_position_id = RHUN_mapcharting_expeditions
 	prerequisite = { focus = RHUN_strengthen_the_north focus = RHUN_modernize_the_south }
     ai_will_do = { factor = 25 }
-    cost = 10
+    cost = 7
     completion_reward = {
         add_tech_bonus = {
 			name = special_bonus
@@ -385,7 +385,7 @@ focus = {
 	y = 1
 	mutually_exclusive = { focus = RHUN_market_of_kelepar }
 	prerequisite = { focus = RHUN_mapcharting_expeditions }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 	131 = {
@@ -407,7 +407,7 @@ focus = {
 	y = 2
 	mutually_exclusive = { }
 	prerequisite = { focus = RHUN_market_of_mistrand }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = { 
 	132 = {
@@ -429,7 +429,7 @@ focus = {
 	y = 3
 	mutually_exclusive = { }
 	prerequisite = { focus = RHUN_market_of_mistrand }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 	131 = {
@@ -451,7 +451,7 @@ focus = {
 	y = 4
 	mutually_exclusive = { }
 	prerequisite = { focus = RHUN_construct_barracks }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 	131 = {
@@ -519,7 +519,7 @@ focus = {
 	y = 1
 	mutually_exclusive = { focus = RHUN_market_of_mistrand }
 	prerequisite = { focus = RHUN_mapcharting_expeditions }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 	130 = {
@@ -541,7 +541,7 @@ focus = {
 	y = 2
 	mutually_exclusive = { }
 	prerequisite = { focus = RHUN_market_of_kelepar }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 	128 = {
@@ -563,7 +563,7 @@ focus = {
 	y = 2
 	mutually_exclusive = { }
 	prerequisite = { focus = RHUN_market_of_kelepar }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 	129 = {
@@ -586,7 +586,7 @@ focus = {
 	mutually_exclusive = { }
 	prerequisite = { focus = RHUN_fishing_industry_of_the_north }
 	prerequisite = { focus = RHUN_granary_for_the_north }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 	130 = {
@@ -613,7 +613,7 @@ focus = {
 	y = 5
 	mutually_exclusive = { }
 	prerequisite = { focus = RHUN_university_of_kelepar }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 	130 = {
@@ -656,7 +656,7 @@ focus = {
 	y = 0
 	mutually_exclusive = { focus = RHUN_break_free_from_mordor }
 	prerequisite = { }
-	cost = 10
+	cost = 7
  	available_if_capitulated = yes
 	completion_reward = { 
 	add_political_power = 50
@@ -670,7 +670,7 @@ focus = {
 	y = 1
 	mutually_exclusive = { focus = RHUN_recognize_sauron }
 	prerequisite = { focus = RHUN_teachings_of_morgoth }
-	cost = 10
+	cost = 7
  	available_if_capitulated = yes
 	completion_reward = {
 	add_timed_idea = {
@@ -685,7 +685,7 @@ focus = {
 	y = 2
 	mutually_exclusive = { focus = RHUN_mend_the_conflict }
 	prerequisite = { focus = RHUN_guide_the_tribes }
-	cost = 10
+	cost = 7
  	available_if_capitulated = yes
 	completion_reward = {
 	add_stability = -0.1
@@ -707,7 +707,7 @@ focus = {
 	y = 3
 	mutually_exclusive = { focus = RHUN_warlord_of_the_east }
 	prerequisite = { focus = RHUN_one_tribe_supremacy focus = RHUN_nation_driven_by_fear }
-	cost = 10
+	cost = 7
  	available_if_capitulated = yes
 	completion_reward = { 
 	add_country_leader_trait = {
@@ -722,7 +722,7 @@ focus = {
 	y = 2
 	mutually_exclusive = { focus = RHUN_one_tribe_supremacy }
 	prerequisite = { focus = RHUN_guide_the_tribes }
-	cost = 10
+	cost = 7
  	available_if_capitulated = yes
 	completion_reward = { 
 	add_stability = 0.1
@@ -745,7 +745,7 @@ focus = {
 	y = 3
 	mutually_exclusive = { }
 	prerequisite = { focus = RHUN_mend_the_conflict }
-	cost = 10
+	cost = 7
  	available_if_capitulated = yes
 	completion_reward = {
 	add_ideas = RHUN_sovereign_pride
@@ -771,7 +771,7 @@ focus = {
 	y = 1
 	mutually_exclusive = { focus = RHUN_guide_the_tribes }
 	prerequisite = { focus = RHUN_teachings_of_morgoth }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 	add_timed_idea = {
@@ -794,7 +794,7 @@ focus = {
 	y = 2
 	mutually_exclusive = { }
 	prerequisite = { focus = RHUN_recognize_sauron }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 	add_ideas = RHUN_nation_driven_by_fear_expanded }
@@ -810,7 +810,7 @@ focus = {
 	y = 3
 	mutually_exclusive = { focus = RHUN_our_own_way }
 	prerequisite = { focus = RHUN_nation_driven_by_fear }
-	cost = 10
+	cost = 7
  	available_if_capitulated = yes
 	completion_reward = {
 	add_country_leader_role = {
@@ -832,7 +832,7 @@ focus = {
     y = 3
 	prerequisite = { focus = RHUN_nation_driven_by_fear }
     ai_will_do = { factor = 25 }
-    cost = 10
+    cost = 7
     completion_reward = {
         MOR = {
             country_event = { id = mordor.50 }
@@ -907,7 +907,7 @@ focus = {
     y = 10
     mutually_exclusive = { }
     prerequisite = { focus = RHUN_eastern_campaign }
-    cost = 10
+    cost = 7
     available_if_capitulated = no
     completion_reward = {
 		if = {
@@ -980,7 +980,7 @@ focus = {
 	mutually_exclusive = { }
 	relative_position_id = RHUN_orders_from_lord_sauron
 	prerequisite = { focus = RHUN_orders_from_lord_sauron }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = { 
 		add_equipment_to_stockpile = {
@@ -1006,7 +1006,7 @@ focus = {
 	mutually_exclusive = { }
 	relative_position_id = RHUN_orders_from_lord_sauron
 	prerequisite = { focus = RHUN_an_army_worthy_of_mordor focus = RHUN_prepare_for_the_conflict }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = { 
 		add_manpower = 10000
@@ -1042,7 +1042,7 @@ focus = {
 	mutually_exclusive = { }
 	relative_position_id = RHUN_orders_from_lord_sauron
 	prerequisite = { focus = RHUN_orders_from_lord_sauron }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 		add_timed_idea = {
@@ -1073,7 +1073,7 @@ focus = {
 	mutually_exclusive = { }
 	relative_position_id = RHUN_orders_from_lord_sauron
 	prerequisite = { focus = RHUN_an_army_worthy_of_mordor focus = RHUN_exploit_dorwinian_resources }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	will_lead_to_war_with = LGT
 	completion_reward = { 
@@ -1113,7 +1113,7 @@ focus = {
 	mutually_exclusive = { }
 	relative_position_id = RHUN_orders_from_lord_sauron
 	prerequisite = { focus = RHUN_conquest_of_the_logath }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = { 
 		custom_effect_tooltip = RHUN_30_tt
@@ -1168,7 +1168,7 @@ focus = {
 	mutually_exclusive = { }
 	relative_position_id = RHUN_orders_from_lord_sauron
 	prerequisite = { focus = RHUN_an_army_worthy_of_mordor }
-	cost = 10
+	cost = 7
 	will_lead_to_war_with = ERE
 	will_lead_to_war_with = DAL
 	will_lead_to_war_with = EGR
@@ -1206,7 +1206,7 @@ focus = {
 	}
 	mutually_exclusive = { focus = RHUN_orders_from_lord_sauron }
 	prerequisite = { focus = RHUN_eastern_campaign }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 	add_war_support = 0.1 }
@@ -1222,7 +1222,7 @@ focus = {
 	relative_position_id = RHUN_northern_ambitions
 	mutually_exclusive = { }
 	prerequisite = { focus = RHUN_northern_ambitions }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 	custom_effect_tooltip = MOR_changing_focus
@@ -1296,7 +1296,7 @@ focus = {
 	mutually_exclusive = { }
 	prerequisite = { focus = RHUN_exploit_dorwinian_resources }
 	prerequisite = { focus = RHUN_conquest_of_the_logath }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = { 
 		create_wargoal = {
@@ -1362,7 +1362,7 @@ focus = {
 	}
 	mutually_exclusive = { focus = RHUN_rhunian_khand}
 	prerequisite = { focus = RHUN_contact_the_variags }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 		123 = {
@@ -1390,7 +1390,7 @@ focus = {
 	}
 	mutually_exclusive = { }
 	prerequisite = { focus = RHUN_khandian_buffer_zone }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 		custom_effect_tooltip = RHUN_28_tt
@@ -1462,7 +1462,7 @@ focus = {
 	}
 	mutually_exclusive = { focus = RHUN_khandian_buffer_zone }
 	prerequisite = { focus = RHUN_contact_the_variags }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 		123 = {
@@ -1500,7 +1500,7 @@ focus = {
 	}
 	mutually_exclusive = { }
 	prerequisite = { focus = RHUN_rhunian_khand }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 		HAR = { 
@@ -1527,7 +1527,7 @@ focus = {
 	}
 	mutually_exclusive = { }
 	prerequisite = { focus = RHUN_ultimatum_of_sturlusta focus = RHUN_khandian_buffer_zone }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = { 
 		custom_effect_tooltip = MOR_changing_focus
@@ -1621,7 +1621,7 @@ focus = {
 	}
 	mutually_exclusive = { }
 	prerequisite = { focus = RHUN_build_up_khand }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 		custom_effect_tooltip = RHUN_26_tt
@@ -1686,7 +1686,7 @@ focus = {
 	}
 	mutually_exclusive = { }
 	prerequisite = { focus = RHUN_build_up_khand }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 		custom_effect_tooltip = RHUN_25_tt
@@ -1764,7 +1764,7 @@ focus = {
 	
 	mutually_exclusive = { focus = RHUN_nurukhizdin_or_war }
 	prerequisite = { focus = RHUN_strike_rhovania }
-	cost = 10
+	cost = 7
 	will_lead_to_war_with = DOR
  	available_if_capitulated = no
 	completion_reward = {
@@ -1792,7 +1792,7 @@ focus = {
 	}
 	mutually_exclusive = { focus = RHUN_tackle_dorwinion }
 	prerequisite = { focus = RHUN_strike_rhovania }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	will_lead_to_war_with = DOR
 	completion_reward = {
@@ -1831,7 +1831,7 @@ focus = {
 	y = 8
 	mutually_exclusive = { focus = RHUN_build_vineyards }
 	prerequisite = { focus = RHUN_tackle_dorwinion focus = RHUN_nurukhizdin_or_war }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 	137 = {
@@ -1863,7 +1863,7 @@ focus = {
 	}
 	mutually_exclusive = { focus = RHUN_expand_wine_trade }
 	prerequisite = { focus = RHUN_militarize_dorwinion focus = RHUN_build_vineyards }
-	cost = 10
+	cost = 7
  	available_if_capitulated = no
 	completion_reward = {
 	add_ideas = RHUN_battle_plan_wine }
@@ -1885,7 +1885,7 @@ focus = {
 			has_government = unaligned 
 		}
 	}
-    cost = 10
+    cost = 7
     completion_reward = {
 		custom_effect_tooltip = MOR_changing_focus
 		if = {
@@ -1963,7 +1963,7 @@ focus = {
 			has_government = unaligned 
 		}
 	}
-    cost = 10
+    cost = 7
     completion_reward = {
         add_ideas = DOR_wine_trade
 	}
@@ -1982,7 +1982,7 @@ focus = {
 	}
     mutually_exclusive = { focus = RHUN_clamp_down_on_resistance }
     prerequisite = { focus = RHUN_expand_wine_trade focus = RHUN_study_dorwinian_doctrine }
-    cost = 10
+    cost = 7
      available_if_capitulated = no
     completion_reward = {
 	208 = {
@@ -2007,7 +2007,7 @@ focus = {
 	}
     mutually_exclusive = { focus = RHUN_establish_colonial_garrisons }
     prerequisite = { focus = RHUN_expand_wine_trade focus = RHUN_study_dorwinian_doctrine }
-    cost = 10
+    cost = 7
      available_if_capitulated = no
     completion_reward = {
     208 = {
@@ -2045,7 +2045,7 @@ focus = {
 	}
     mutually_exclusive = { }
     prerequisite = { focus = RHUN_expand_wine_trade focus = RHUN_study_dorwinian_doctrine }
-    cost = 10
+    cost = 7
      available_if_capitulated = no
     completion_reward = {
 		custom_effect_tooltip = RHUN_27_tt
@@ -2084,7 +2084,7 @@ focus = {
 			has_government = unaligned 
 		}
 	}
-    cost = 10
+    cost = 7
     completion_reward = {
 		RHO = {
 			country_event = {
@@ -2112,7 +2112,7 @@ focus = {
 	mutually_exclusive = { focus = RHUN_demand_rhovanion_submission }
     prerequisite = { focus = RHUN_strike_rhovania }
     ai_will_do = { factor = 25 }
-    cost = 10
+    cost = 7
 	will_lead_to_war_with = RHO
     completion_reward = {
 		create_wargoal = {
@@ -2136,7 +2136,7 @@ focus = {
 			has_government = unaligned 
 		}
 	}
-    cost = 10
+    cost = 7
     completion_reward = { 
 		custom_effect_tooltip = RHUN_29_tt
 		hidden_effect = {
@@ -2180,7 +2180,7 @@ focus = {
 			has_government = unaligned 
 		}
 	}
-    cost = 10
+    cost = 7
     completion_reward = {
 	add_resource = {
     type = oil
@@ -2209,7 +2209,7 @@ focus = {
 	controls_state = 97 
 	controls_state = 96 }
 	RHO = { is_puppet_of = RHU } }
-    cost = 10
+    cost = 7
     completion_reward = { 
 	97 = {
 	add_building_construction = {
@@ -2255,7 +2255,7 @@ focus = {
 			}
 		}
 	}
-    cost = 10
+    cost = 7
     completion_reward = { 
 		build_railway = {
 			level = 2
@@ -2292,7 +2292,7 @@ focus = {
 			}
 		}
 	}
-    cost = 10
+    cost = 7
     completion_reward = {
 		97 = {
 			add_building_construction = {
@@ -2327,7 +2327,7 @@ focus = {
 	controls_state = 137
 	controls_state = 103
 	controls_state = 208 } } }
-    cost = 10
+    cost = 7
     completion_reward = { 
 	RHO = { add_ideas = DOR_wine_trade }
 	}
@@ -2341,7 +2341,7 @@ focus = {
     mutually_exclusive = { focus = RHUN_teachings_of_morgoth }
     x = 33
     y = 0
-    cost = 10
+    cost = 7
 	offset = {
 		x = -12
 		y = 0
@@ -2739,7 +2739,7 @@ focus = {
 	NOT = {
 	has_completed_focus = RHUN_break_free_from_mordor } }
 	available = { }
-    cost = 10
+    cost = 7
      available_if_capitulated = no
     completion_reward = { 
 		add_ideas = RHUN_advanced_chariot_tactics_1
@@ -2755,7 +2755,7 @@ focus = {
 	prerequisite = { focus = RHUN_wainriders_of_rhun }
 	relative_position_id = RHUN_wainriders_of_rhun
 	available = { }
-    cost = 10
+    cost = 7
      available_if_capitulated = no
     completion_reward = {
 		add_tech_bonus = {
@@ -2776,7 +2776,7 @@ focus = {
 	prerequisite = { focus = RHUN_wainriders_of_rhun }
 	relative_position_id = RHUN_wainriders_of_rhun
 	available = { }
-    cost = 10
+    cost = 7
      available_if_capitulated = no
     completion_reward = {
 		add_tech_bonus = {
@@ -2798,7 +2798,7 @@ focus = {
 	prerequisite = { focus = RHUN_wainriders_of_rhun }
 	relative_position_id = RHUN_wainriders_of_rhun
 	available = { }
-    cost = 10
+    cost = 7
      available_if_capitulated = no
     completion_reward = {
 		swap_ideas = {
@@ -2817,7 +2817,7 @@ focus = {
 	prerequisite = { focus = RHUN_commission_expert_craftmanship }
 	relative_position_id = RHUN_wainriders_of_rhun
 	available = { }
-    cost = 10
+    cost = 7
      available_if_capitulated = no
     completion_reward = {
 		swap_ideas = {
@@ -2836,7 +2836,7 @@ focus = {
 	prerequisite = { focus = RHUN_subsidize_production }
 	relative_position_id = RHUN_wainriders_of_rhun
 	available = { }
-    cost = 10
+    cost = 7
      available_if_capitulated = no
     completion_reward = {
 		swap_ideas = {
@@ -2856,7 +2856,7 @@ focus = {
 	mutually_exclusive = { focus = RHUN_way_of_the_wainriders }
 	relative_position_id = RHUN_wainriders_of_rhun
 	available = { }
-    cost = 10
+    cost = 7
      available_if_capitulated = no
     completion_reward = {
 		131 = {
@@ -2901,7 +2901,7 @@ focus = {
 	mutually_exclusive = { focus = RHUN_bow_companies }
 	relative_position_id = RHUN_wainriders_of_rhun
 	available = { }
-    cost = 10
+    cost = 7
      available_if_capitulated = no
     completion_reward = {
 		custom_effect_tooltip = RHUN_21_tt
@@ -2926,7 +2926,7 @@ focus = {
 	mutually_exclusive = { focus = RHUN_skirmisher_companies }
 	relative_position_id = RHUN_wainriders_of_rhun
 	available = { }
-    cost = 10
+    cost = 7
      available_if_capitulated = no
     completion_reward = {
 		custom_effect_tooltip = RHUN_20_tt
@@ -2952,7 +2952,7 @@ focus = {
 	mutually_exclusive = { focus = RHUN_way_of_the_balchoth }
 	relative_position_id = RHUN_wainriders_of_rhun
 	available = { }
-    cost = 10
+    cost = 7
      available_if_capitulated = no
     completion_reward = {
 		131 = {	
@@ -2997,7 +2997,7 @@ focus = {
 	mutually_exclusive = { focus = RHUN_focus_on_war_chariots }
 	relative_position_id = RHUN_wainriders_of_rhun
 	available = { }
-    cost = 10
+    cost = 7
      available_if_capitulated = no
     completion_reward = {
 	custom_effect_tooltip = RHUN_16_tt
@@ -3023,7 +3023,7 @@ focus = {
 	mutually_exclusive = { focus = RHUN_a_balanced_force }
 	relative_position_id = RHUN_wainriders_of_rhun
 	available = { }
-    cost = 10
+    cost = 7
      available_if_capitulated = no
     completion_reward = {
 	custom_effect_tooltip = RHUN_18_tt

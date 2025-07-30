@@ -1,0 +1,17 @@
+ideas = {
+
+	country = {
+		whc_tree_friend = {
+			
+			allowed = {
+				always = no
+			}
+
+			targeted_modifier = {
+				tag = ENT
+				trade_cost_for_target_factor = 0.5
+				opinion_gain_monthly_factor = 0.2
+			}
+		}
+    }
+}

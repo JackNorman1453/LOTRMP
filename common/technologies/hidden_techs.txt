@@ -29,11 +29,27 @@ technologies = {
 		research_cost = 1
 		start_year = 3018
 
-		encryption = 1
+		intelligence_agency_defense = 1.0
 		category_front_line = {
 			defense = 0.1
 		}
 	}
+	
+	enchantments_of_narya = {
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 3018
+		local_resources_factor = 0.1
+		intelligence_agency_defense = 1.0
+		category_front_line = {
+			breakthrough = 0.05
+		}
+	}
+	
 
 	mithril_modules = {
 		

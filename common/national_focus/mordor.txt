@@ -2432,7 +2432,7 @@ focus = {
 	y = 1
 	relative_position_id = seekalliesintheeast
 	prerequisite = { focus = seekalliesintheeast}
-	cost = 7
+	cost = 5
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_ANNEXATION }
 	completion_reward = {
@@ -2504,12 +2504,8 @@ focus = {
 				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
 			}
-		} else_if = { ## Rhun is in faction
-			limit = {
-				RHU = {
-					is_in_faction_with = MOR
-				}
-			}
+		} else = { ## Rhun is in faction
+
 			add_stability = 0.1
 			add_political_power = 50
 			128 = {
@@ -2518,19 +2514,18 @@ focus = {
 				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
 			}
 			RHU = {
+				
 				add_opinion_modifier  = {
                     target = MOR
                     modifier = medium_increase
                 }
+				
+				invite_to_faction = yes
 			}
 			add_opinion_modifier  = {
 				target = RHU
 				modifier = medium_increase
 			}
-		} else = { ## None of the above
-			add_stability = -0.05
-			add_war_support = 0.1
-
 		}
 	}
 }
@@ -2559,7 +2554,7 @@ focus = {
 	relative_position_id = seekalliesintheeast
 	will_lead_to_war_with = HAR
 	prerequisite = { focus = seekalliesintheeast}
-	cost = 7
+	cost = 5
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_ANNEXATION }
 	completion_reward = {
@@ -2605,12 +2600,8 @@ focus = {
 				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
 			}
-		} else_if = { ## Harad is in faction
-			limit = {
-				HAR = {
-					is_in_faction_with = MOR
-				}
-			}
+		} else = { ## Harad is in faction
+			
 			add_stability = 0.1
 			add_political_power = 50
 			109 = {
@@ -2623,15 +2614,13 @@ focus = {
                     target = MOR
                     modifier = medium_increase
                 }
+				
+				invite_to_faction = yes
 			}
 			add_opinion_modifier  = {
 				target = HAR
 				modifier = medium_increase
 			}
-		} else = { ## Non of the above
-			add_stability = -0.1
-			add_war_support = -0.1
-			add_political_power = -50
 		}
 	}
 }
