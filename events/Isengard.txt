@@ -142,38 +142,7 @@ country_event = {
 
 		hidden_effect = {news_event = { hours = 24 id = news.333 }}
 	}
-	option = { # Unite with him
-		name = isengard.1.b
-		ai_chance = {
-			base = 15
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-			modifier = { factor = 0 is_going_cooperative = no }
-		}
-		add_ideas = ISE_commited_to_the_light
-		set_global_flag = gandalf_saruman_united
-
-		# Adjust gameplan flag
-		set_country_flag = gameplan_going_cooperative
-		clr_country_flag = gameplan_going_belligerent
-
-		# Complete focuses
-		if = {
-			limit = { NOT = { has_completed_focus = thefateofisengard } }
-			complete_national_focus = thefateofisengard
-		}
-		if = {
-			limit = { NOT = { has_completed_focus = waysofthelight } NOT = { has_completed_focus = waysofthedark } }
-			complete_national_focus = waysofthelight
-		}
-
-		complete_national_focus = meetwithgandalf
-		complete_national_focus = unitewithgandalf
-
-		hidden_effect = {news_event = { hours = 24 id = news.334 }}
-	}
+	
 }
 
 

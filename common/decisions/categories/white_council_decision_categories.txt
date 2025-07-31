@@ -1,0 +1,7 @@
+mithriel_exctraction_category = {
+icon = military_operation
+visible = {
+always = yes
+}
+
+}

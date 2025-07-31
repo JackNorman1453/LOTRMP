@@ -1,6 +1,7 @@
 capital = 83
 
 oob = "MIR_1936"
+set_convoys = 200
 
 recruit_character = MIR_thranduil
 recruit_character = MIR_legolas

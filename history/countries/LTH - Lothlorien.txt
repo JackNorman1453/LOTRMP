@@ -3,6 +3,8 @@ capital = 75
 oob = "LTH_1936"
 
 set_research_slots = 4
+set_convoys = 200
+
 
 recruit_character = LTH_galadriel
 recruit_character = LTH_celeborn

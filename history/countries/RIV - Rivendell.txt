@@ -3,6 +3,7 @@ capital = 65
 oob = "RIV_1936"
 
 set_research_slots = 3
+set_convoys = 200
 
 recruit_character = RIV_elrond
 recruit_character = RIV_elrohir

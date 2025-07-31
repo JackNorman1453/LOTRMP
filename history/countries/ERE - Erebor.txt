@@ -1,6 +1,7 @@
 capital = 90
 
 oob = "ERE_1936"
+set_convoys = 200
 
 recruit_character = ERE_dain
 recruit_character = ERE_thorin

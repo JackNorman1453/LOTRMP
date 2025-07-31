@@ -35,7 +35,7 @@ focus_tree = {
 				exists = yes
 				has_war_with = MOR
 		}
-		date > 3022.09.01
+		date > 3022.06.01
 		ROH = {
 		surrender_progress > 0.5
 		}
@@ -1644,9 +1644,17 @@ focus_tree = {
 				threat > 0.2
 			}
 		}
-		prerequisite = { focus = lth_territorialadministration  }
+		# must make a political choice first
+		prerequisite = { focus = lth_territorialadministration }
+		prerequisite ={ 
+		focus=lth_totalisoltation
+		focus = lth_limitedintervention
+		focus = lth_thegreatschism
+		focus = lth_beaconofhope
+		}
 		completion_reward = {
 			lth_lower_isolationist_reservations = yes
+
 		}
 	}
 
@@ -6889,9 +6897,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			# Gain civs in every invested state
-					160 = { add_building_slot_and_civ_x3 = yes }
-					76 = { add_building_slot_and_civ_x3 = yes }
-					74 = { add_building_slot_and_civ_x3 = yes }
+					160 = { add_building_slot_and_civ_x2 = yes }
+					76 = { add_building_slot_and_civ_x2 = yes }
+					74 = { add_building_slot_and_civ_x2 = yes }
 				}
 			}
 			

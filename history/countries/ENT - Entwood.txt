@@ -6,7 +6,7 @@ recruit_character = ENT_treebeard
 recruit_character = ENT_fladrif
 recruit_character = ENT_birchseed
 
-set_research_slots = 1
+set_research_slots = 3
 
 set_technology = {
 	ent_infantry = 1

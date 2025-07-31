@@ -1062,6 +1062,29 @@ continuous_focus_position = { x = 50 y = 1700 }
 			}
 		}
 	}
+	
+
+	focus = {
+		id = GON_no_LTH_Player
+		icon =  GFX_goal_lth_tax_collection_reformed
+		ai_will_do = { factor = 30 }
+		relative_position_id = GON_defender_of_the_free_people
+		prerequisite = { focus = GON_defender_of_the_free_people }
+		available = {
+		date > 3021.01.01
+				LTH = { is_ai = yes}
+		}
+		x = 2
+		y = 1
+		cost = 1
+		#available_if_capitulated = no
+		completion_reward = {
+		add_offsite_building = { type = arms_factory level = 20 }
+		add_offsite_building = { type = industrial_complex level = 20 }
+		
+			
+		}
+	}
 
 	focus = {
 		id = GON_historical_claims

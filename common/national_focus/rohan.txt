@@ -212,41 +212,14 @@ focus_tree = {
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		completion_reward = {
+		add_war_support = 0.05
+			add_stability = 0.05
 			# Remove restriction on Knowledge and statecraft tree
 			custom_effect_tooltip = ROH_path_of_tradition2_tt
 		}
 	}
 
-	focus = {
-		id = ROH_unyielding_culture
-		icon = GFX_goal_ROH_unyielding_culture_resistance
-		relative_position_id = ROH_path_of_tradition
-		prerequisite = { focus = ROH_wisdom_and_introspection }
-		available = {
-			rohan_has_bop = no
-		}
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				factor = 1.5
-				is_going_cooperative = yes
-			}
-			modifier = {
-				factor = 0.5
-				is_going_belligerent = yes
-			}
-		}
-		x =0
-		y =2
-		mutually_exclusive = { }
-		cost = 7
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		completion_reward = {
-			add_war_support = 0.05
-			add_stability = 0.05
-		}
-	}
+	
 
 	focus = {
 		id = ROH_path_of_reform
@@ -333,7 +306,7 @@ focus_tree = {
 		x =0
 		y =2
 		mutually_exclusive = { }
-		cost = 7
+		cost = 2
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		completion_reward = {
@@ -2202,6 +2175,9 @@ focus_tree = {
 		mutually_exclusive = { }
 		cost = 5
 		completion_reward = {
+		
+		add_ideas = HAR_invest_in_military
+		add_political_power = 200
 			set_politics = {
 				ruling_party = cooperative
 			}
@@ -5772,7 +5748,7 @@ focus_tree = {
 		x =0
 		y =5
 		mutually_exclusive = { }
-		cost = 7
+		cost = 5
 		completion_reward = {
 			rohan_set_research_tree_cooldown = yes
 			if = {
@@ -6123,6 +6099,7 @@ focus_tree = {
 		mutually_exclusive = { }
 		cost = 5
 		completion_reward = {
+			add_research_slot = 1
 			# research slot
 			183 = {
 				add_building_construction = {

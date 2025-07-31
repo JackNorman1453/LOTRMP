@@ -903,6 +903,83 @@ joint_focus = {
 	}
 }
 
+
+
+
+joint_focus = {
+	id = whc_safeguard_the_mithriel
+	icon = GFX_goal_riv_elrond_ring_vilya
+	text_icon = joint_focus_style
+	prerequisite = { focus = whc_coordinatedresistance   }
+	prerequisite = {focus = whc_theladysmight}
+	prerequisite = {focus = whc_theinfluenceofrivendell}
+
+	relative_position_id = whc_theladysmight
+	x = 0
+	y = 2
+
+	cost = 
+
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 2
+			ISE = { is_ai = no is_white_council_member = yes }
+		}
+		modifier = {
+			factor = 2
+			RIV = { is_ai = no is_white_council_member = yes }
+		}
+		modifier = {
+			factor = 2
+			LTH = { is_ai = no is_white_council_member = yes }
+		}
+	}
+
+	available = {
+		ROOT = { is_white_council_member = yes }
+	}
+
+	search_filters = {}
+
+	joint_trigger = {
+		is_white_council_member = yes
+	}
+
+	completion_reward = {
+	
+	LTH = {
+	set_state_owner =134
+	set_state_controller = 134
+	}
+	
+	RIV = {
+	set_state_owner =73
+	set_state_controller = 73
+	}
+
+	}
+
+	completion_reward_joint_originator = {
+	 declare_war_on = {
+    target = ERE
+    type = annex_everything
+}
+		
+	}
+
+	completion_reward_joint_member = {
+	
+	declare_war_on = {
+    target = ERE
+    type = annex_everything
+}
+		
+		}
+	}
+
+
+
 joint_focus = {
 	id = whc_unitethecause
 	icon = GFX_goal_lth_lothlorien_rivendell_isengard_union

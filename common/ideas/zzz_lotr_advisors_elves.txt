@@ -22,6 +22,39 @@ ideas = {
 
 			traits = { resultdriven_overseer }
 		}
+		
+		arcane_scholar = {
+
+			picture = portrait_elves_generic_40
+
+			allowed = {
+					
+				OR = {
+					original_tag = LTH
+					original_tag = RIV
+				}
+			}
+
+			ai_will_do = {
+            	factor = 0
+        	}
+
+			cost = 25
+			removal_cost = 0
+
+			on_add = {
+				hidden_effect = {
+					lotr_advisors_update_vars_weekly = yes # manually update variables when hired
+			    	add_dynamic_modifier = { modifier = rare_mineral_researcher_modifier }
+					add_dynamic_modifier = { modifier = valuable_luxury_crafter_modifier }
+					add_dynamic_modifier = { modifier = mithril_craftsman_modifier }
+					
+			    }
+			}
+
+			traits = { rare_mineral_researcher valuable_luxury_crafter mithril_craftsman}
+		}
+		
 
 		pedantic_organizer_idea_elves = {
 
@@ -58,7 +91,7 @@ ideas = {
         	}
 
 			modifier = {
-				research_speed_factor = -0.3
+				research_speed_factor = -0.2
 			}
 
 			on_add = {

@@ -3,6 +3,7 @@ capital = 183
 oob = "ROH_1936"
 
 set_research_slots = 3
+set_convoys = 200
 
 recruit_character = ROH_theoden
 recruit_character = ROH_theodred

@@ -1,0 +1,63 @@
+mithriel_exctraction_category = {
+	LTH_dig_deeper = {
+        icon = GFX_decision_generic_civil_support
+		cost = 75
+
+	
+       visible = {
+		tag = LTH
+		}
+        available = {
+			controls_state = 134
+			tag = LTH
+        }
+		modifier = {
+				civilian_factory_use = 12
+			}
+        fixed_random_seed = no
+		days_remove = 100
+		remove_effect = {
+            134 = {
+				add_resource = {
+					type = aluminium
+					amount = 2
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	RIV_dig_deeper = {
+        icon = GFX_decision_generic_civil_support
+		cost = 75
+		
+		
+		visible = {
+		tag = RIV
+		}
+        available = {
+			controls_state = 73
+			tag = RIV
+        }
+		
+		modifier = {
+				civilian_factory_use = 12
+			}
+
+        fixed_random_seed = no
+		days_remove = 100
+		remove_effect = {
+            73 = {
+				add_resource = {
+					type = aluminium
+					amount = 2
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+}

@@ -173,6 +173,23 @@ ideas = {
 				civilian_factory_use = 8
 			}
 		}
+		
+		twelve_civs_cost = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				civilian_factory_use = 12
+			}
+		}
 
 		fortification_focus = {
 			
