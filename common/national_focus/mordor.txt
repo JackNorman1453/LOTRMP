@@ -1120,7 +1120,7 @@ focus = {
 			name = special_bonus
 			bonus = 0.5
 			uses = 1
-			technology = troll
+			category = lotr_orcs_secrets_trolls
 		}
 	}
 }
@@ -1804,7 +1804,7 @@ focus = {
 	y = 1
 	relative_position_id = submittosauron
 	prerequisite = { focus = submittosauron}
-	cost = 7
+	cost = 5
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_ARMY_XP }
 	completion_reward = {
@@ -2056,7 +2056,7 @@ focus = {
 		has_war_with = MIR
 	}
 	prerequisite = { focus = MOR_anti_elves_pact_invite }
-	cost = 7
+	cost = 4
 	available_if_capitulated = yes
 	completion_reward = {
 		every_other_country = {
@@ -2636,7 +2636,7 @@ focus = {
 	y = 1
 	relative_position_id = submittosauron
 	ai_will_do = { factor = 25 }
-	cost = 7
+	cost = 4
 	prerequisite = { focus = submittosauron }
 	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
 	completion_reward = {

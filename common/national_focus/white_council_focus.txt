@@ -206,6 +206,7 @@ joint_focus = {
 		29 = {add_building_construction = { type = industrial_complex level = 3 instant_build = yes } }
 				
 		ENT = {
+		add_ideas = {whc_tree_friend}
 		add_to_tech_sharing_group = white_council_group
 		}
 	

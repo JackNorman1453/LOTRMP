@@ -41,6 +41,7 @@ set_technology = {
 	basic_cav = 1
 	light_cav2 = 1
 	merchant_ship = 1
+	ballista_0 = 1
 	longship_0 = 1
 	war_galley_0 = 1
 	caravel_0 = 1

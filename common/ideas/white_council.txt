@@ -9,9 +9,60 @@ ideas = {
 
 			targeted_modifier = {
 				tag = ENT
-				trade_cost_for_target_factor = 0.5
+				
+				trade_cost_for_target_factor = -0.5
+				opinion_gain_monthly_factor = 0.2
+			}
+			targeted_modifier = {
+		
+				tag = RIV
+	
+				trade_cost_for_target_factor = -0.5
+				opinion_gain_monthly_factor = 0.2
+			}
+			targeted_modifier = {
+		
+				tag = LTH
+	
+				trade_cost_for_target_factor = -0.5
+				opinion_gain_monthly_factor = 0.2
+			}
+			targeted_modifier = {
+		
+				tag = MIR
+	
+				trade_cost_for_target_factor = -0.5
+				opinion_gain_monthly_factor = 0.2
+			}
+			targeted_modifier = {
+		
+				tag = LIN
+	
+				trade_cost_for_target_factor = -0.5
+				opinion_gain_monthly_factor = 0.2
+			}
+			
+			
+			
+		}
+    }
+	
+	country = {
+		whc_tree_friend_ent = {
+			
+			allowed = {
+				always = no
+			}
+
+			targeted_modifier = {
+				tag = RIV
+				tag = LTH
+				tag = MIR
+				tag = LIN
+				trade_cost_for_target_factor = -0.5
 				opinion_gain_monthly_factor = 0.2
 			}
 		}
     }
+	
 }

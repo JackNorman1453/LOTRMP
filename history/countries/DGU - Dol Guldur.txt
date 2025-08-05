@@ -2,7 +2,7 @@ oob = "DGU_1936"
 
 capital = 87
 
-set_research_slots = 2
+set_research_slots = 5
 
 recruit_character = DGU_Gorbag
 recruit_character = DGU_adunaphel

@@ -2536,6 +2536,12 @@ focus_tree = {
 			set_technology = {
 				marchwardens_of_lothlorien = 1
 			}
+			
+			RIV = {
+			set_technology = {
+				marchwardens_of_lothlorien = 1
+			}
+			}
 			# increase nandor influence
 			lthi_increase_influence_nandor_intermediate = yes
 		}

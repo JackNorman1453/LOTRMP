@@ -2176,7 +2176,7 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 		
-		add_ideas = HAR_invest_in_military
+		
 		add_political_power = 200
 			set_politics = {
 				ruling_party = cooperative
@@ -2221,6 +2221,7 @@ focus_tree = {
 		cost = 5
 		available_if_capitulated = no
 		completion_reward = {
+		add_ideas = HAR_invest_in_military
 			# add some barracks
 			random_owned_state = {
 				add_building_construction = {
@@ -2228,6 +2229,12 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				
 			}
 			random_owned_state = {
 				add_building_construction = {
