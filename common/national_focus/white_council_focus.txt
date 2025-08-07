@@ -938,7 +938,11 @@ joint_focus = {
 	}
 
 	available = {
-		ROOT = { is_white_council_member = yes }
+	OR = {
+	
+		tag = LTH
+		tag = RIV
+		}
 	}
 
 	search_filters = {}

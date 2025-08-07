@@ -2188,7 +2188,7 @@ focus = {
 	relative_position_id = warpreparations
 	mutually_exclusive = { }
 	prerequisite = { focus = warpreparations}
-	cost = 7
+	cost = 3
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
@@ -2367,7 +2367,7 @@ focus = {
 			}
 		}
 	}
-	cost = 7
+	cost = 5
 	search_filters = { FOCUS_FILTER_ANNEXATION }
 	will_lead_to_war_with = DAG
 	completion_reward = {
@@ -2766,7 +2766,7 @@ focus = {
 		 relative_position_id = warpreparations
  		mutually_exclusive = { }
  		prerequisite = { focus = warpreparations}
- 		cost = 7
+ 		cost = 3
   		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -2788,7 +2788,7 @@ focus = {
 	relative_position_id = raisetheblackgate
 	mutually_exclusive = { }
 	prerequisite = { focus = raisetheblackgate}
-	cost = 7
+	cost = 3
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
@@ -2806,7 +2806,7 @@ focus = {
 	y = 1
 	relative_position_id = raisetheblackgate
 	prerequisite = { focus = raisetheblackgate}
-	cost = 7
+	cost = 3
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
@@ -2825,7 +2825,7 @@ focus = {
 	relative_position_id = raisetheblackgate
 	mutually_exclusive = { }
 	prerequisite = { focus = raisetheblackgate}
-	cost = 7
+	cost = 3
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {

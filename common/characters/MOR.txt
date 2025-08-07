@@ -85,10 +85,10 @@ characters={
 			cost = 150
 			traits = { lord_of_the_nazgul }
 			available = {
-				always = yes
+				has_completed_focus = gatherthenazgl
 			}
 			visible = {
-				has_completed_focus = gatherthenazgl
+				
 				NOT = { has_global_flag = fs_nazgul_sent_to_shire }
 				NOT = { has_global_flag = fs_ring_destroyed }
 				ANG = {
@@ -295,7 +295,6 @@ characters={
 			idea_token = MOR_Adunaphel
 			slot = army_chief 
 			cost = 150
-			traits = { army_chief_entrenchment_1 }
 			available = {
 				custom_trigger_tooltip = {
     				tooltip = MOR_tooltip_has_not_send_adunaphel_away
@@ -333,22 +332,7 @@ characters={
 				has_completed_focus = gatherthenazgl
 			}
 		}
-		advisor = {
-			idea_token = MOR_Akhorahil
-			slot = army_chief 
-			cost = 150
-			traits = { army_chief_maneuver_1 }
-			available = {
-				has_government = belligerent
-				has_completed_focus = gatherthenazgl
-			}
-			visible = {
-				NOT = { has_global_flag = fs_nazgul_sent_to_shire }
-				NOT = { has_global_flag = fs_ring_destroyed }
-				has_government = belligerent
-				has_completed_focus = gatherthenazgl
-			}
-		}
+		
 	}
 
 	MOR_Ji_Indur = {
@@ -373,22 +357,7 @@ characters={
 				has_completed_focus = gatherthenazgl
 			}
 		}
-		advisor = {
-			idea_token = MOR_Ji_Indur
-			slot = army_chief 
-			cost = 150
-			traits = { army_chief_planning_1 }
-			available = {
-				has_government = belligerent
-				has_completed_focus = gatherthenazgl
-			}
-			visible = {
-				NOT = { has_global_flag = fs_nazgul_sent_to_shire }
-				NOT = { has_global_flag = fs_ring_destroyed }
-				has_government = belligerent
-				has_completed_focus = gatherthenazgl
-			}
-		}
+		
 	}
 
 	MOR_Ren = {
@@ -416,7 +385,7 @@ characters={
 		advisor = {
 			idea_token = MOR_Ren
 			slot = high_command
-			cost = 150
+			cost = 75
 			traits = { ring_catcher }
 			available = {
 				has_government = belligerent
@@ -448,15 +417,7 @@ characters={
 			planning_skill=5
 			logistics_skill=4
 		}
-		advisor = {
-			idea_token = MOR_gothmog
-			slot = army_chief 
-			cost = 150
-			traits = { army_chief_drill_1 }
-			available = {
-				always = yes
-			}
-		}
+		
 	}
 	MOR_muzgash={
 		name="Muzgash"
@@ -474,15 +435,7 @@ characters={
 			planning_skill=2
 			logistics_skill=3
 		}
-		advisor = {
-			idea_token = MOR_muzgash
-			slot = high_command
-			cost = 150
-			traits = { army_entrenchment_1 }
-			available = {
-				always = yes
-			}
-		}
+
 	}
 	MOR_shagrat={
 		name="Shagrat"
@@ -500,15 +453,7 @@ characters={
 			planning_skill=1
 			logistics_skill=2
 		}
-		advisor = {
-			idea_token = MOR_shagrat
-			slot = army_chief
-			cost = 150
-			traits = { army_chief_old_guard }
-			available = {
-				always = yes
-			}
-		}
+		
 	}
 	MOR_grishnakh={
 		name="Grishnákh"
@@ -530,7 +475,7 @@ characters={
 			idea_token = MOR_grishnakh
 			slot = high_command
 			cost = 150
-			traits = { army_concealment_1 }
+			traits = { army_concealment_3 }
 			available = {
 				always = yes
 			}
@@ -576,6 +521,14 @@ characters={
 			traits  = {
 				orc_insurgent
 			}
+			visible = {
+			original_tag  = MOR
+				has_government = revolutionary
+				has_civil_war = no
+			
+			}
+			}
+			
 		}
 		portraits={
 			army={
@@ -596,6 +549,13 @@ characters={
 				has_government = revolutionary
 				has_civil_war = no
 			}
+			visible = {
+			original_tag  = MOR
+				has_government = revolutionary
+				has_civil_war = no
+			
+			}
+			
 			traits  = {
 				great_survivor
 			}

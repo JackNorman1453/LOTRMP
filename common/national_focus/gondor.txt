@@ -854,7 +854,7 @@ continuous_focus_position = { x = 50 y = 1700 }
 		cost = 7
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-		add_research_slot = 1
+	
 			add_ideas = GON_kingdom_of_gondor
 		}
 	}

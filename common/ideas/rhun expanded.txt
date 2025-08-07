@@ -471,8 +471,8 @@ ideas = {
 			picture = generic_resistance_locked
 
 			modifier = {
-				offence = -0.25
-				defence = -0.25
+				army_attack_factor = -0.25
+				army_defence_factor = -0.25
 			}
 		}
 		########################

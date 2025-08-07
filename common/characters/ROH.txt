@@ -1091,12 +1091,7 @@ characters={
 				small="GFX_idea_portrait_rohan_fram"
 			}
 		}
-		advisor = {
-			idea_token = ROH_fram
-			slot = political_advisor 
-			cost = 150
-			traits = { inexperienced_organizer }
-		}
+		
 	}
 
 	ROH_holdred={

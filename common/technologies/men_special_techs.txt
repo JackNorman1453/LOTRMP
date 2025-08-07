@@ -503,6 +503,7 @@ technologies = {
         enable_subunits = {
             rangers_infantry
         }
+		 special_forces_cap = 0.02
 
 		research_cost = 1.5
 		start_year = 3020

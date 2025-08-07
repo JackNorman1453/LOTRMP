@@ -282,12 +282,12 @@ equipments = {
 			tank_armor_upgrade
 			tank_gun_upgrade
 		}
-		build_cost_ic = 130
+		build_cost_ic = 40
 		resources = {
-			steel = 4
-			chromium = 11
+			steel = 2
+			chromium = 2
 		}
 
-		fuel_consumption = 12
+		fuel_consumption = 4
 	}
 }

@@ -34,6 +34,14 @@ ideas = {
 					original_tag = RIV
 				}
 			}
+			available = {
+			OR = {
+			LTH = {has_completed_focus = whc_safeguard_the_mithriel}
+			
+			RIV = {has_completed_focus = whc_safeguard_the_mithriel}
+			}
+			}
+			
 
 			ai_will_do = {
             	factor = 0
@@ -698,31 +706,7 @@ ideas = {
 			traits = { elves_secret_tech_expert }
 		}
 
-		hectic_kickstarter_idea_elves = {
-
-			picture = portrait_elves_generic_80
-
-			allowed = {
-				is_elves_init = yes
-				#default yes, exceptions:
-				NOT = { original_tag = LTH }
-				NOT = { original_tag = LIN }
-			}
-
-			ai_will_do = {
-            	factor = 2
-        	}
-
-			cost = 150
-			removal_cost = 10
-
-			modifier = {
-				production_factory_start_efficiency_factor = 0.1
-				production_factory_max_efficiency_factor = -0.05
-			}
-
-			traits = { hectic_kickstarter }
-		}
+		
 
 		secret_society_member_idea_elves = {
 

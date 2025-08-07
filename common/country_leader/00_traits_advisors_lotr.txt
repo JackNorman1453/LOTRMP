@@ -373,7 +373,8 @@ leader_traits = {
         sprite = 12
 
         belligerent_drift = 0.05
-        war_support_weekly = 0.005
+        stability_factor = 0.15
+		war_support_weekly = 0.005
         opinion_gain_monthly_same_ideology_factor = 0.3
 
         ai_will_do = {
@@ -411,8 +412,8 @@ leader_traits = {
         random = no
         sprite = 12
 
-        offence = 0.05
-        defence = 0.05
+        army_attack_factor = 0.05
+        army_defence_factor = 0.05
         army_chief_cost_factor = -0.2
         cavalry_chief_cost_factor = -0.2
         navy_chief_cost_factor = -0.2
@@ -428,8 +429,8 @@ leader_traits = {
         random = no
         sprite = 12
 
-        offence = 0.05
-        defence = 0.05
+        army_attack_factor = 0.05
+        army_defence_factor = 0.05
         army_chief_cost_factor = -0.2
         cavalry_chief_cost_factor = -0.2
         navy_chief_cost_factor = -0.2

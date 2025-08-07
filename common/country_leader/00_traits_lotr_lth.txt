@@ -302,14 +302,14 @@ leader_traits = {
         random = no
 
         stability_weekly = 0.01
-        defence = 0.05
+        army_defence_factor = 0.05
     }
 
     dreadful_as_storm_and_lightning = {
         random = no
 
         war_support_weekly = 0.01
-        offence = 0.05
+        army_attack_factor = 0.05
     }
 
     supreme_leader = {

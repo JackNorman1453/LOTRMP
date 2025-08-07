@@ -14,6 +14,9 @@ NDefines.NPolitics.BASE_POLITICAL_POWER_INCREASE = 2.3
 NDefines.NDeployment.BASE_DEPLOYMENT_TRAINING = 2
 -- Less civs required for agency
 NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 3					-- Number of factories used to create an intelligence agency
+NDefines.NOperatives.BECOME_SPYMASTER_PP_COST = 25
+NDefines.NOperatives.BOOST_IDEOLOGY_DAILY_XP_GAIN	= 0.05
+NDefines.NOperatives.PROPAGANDA_DAILY_XP_GAIN	= 0.005
 
 -- Advisor and general changes
 NDefines.NCharacter.OFFICER_CORP_ADVISOR_ENTRIES_IN_MENU = { "high_command", "theorist", "army_chief", "cavalry_chief", "navy_chief" }
@@ -29,7 +32,7 @@ NDefines.NMilitary.BASE_LEADER_TRAIT_GAIN_XP = 0.52
 NDefines.NMilitary.ARMY_LEADER_XP_GAIN_PER_UNIT_IN_COMBAT = 0.15
 
 -- lowered minimum land-unit speed
-NDefines.NMilitary.SLOWEST_SPEED = 2
+NDefines.NMilitary.SLOWEST_SPEED = 4
 
 -- single fort = encampment. Castle = 7 forts
 NDefines.NMilitary.BASE_FORT_PENALTY = -0.05
@@ -38,7 +41,7 @@ NDefines.NMilitary.BASE_FORT_PENALTY = -0.05
 NDefines.NBuildings.AIRBASE_CAPACITY_MULT = 10
 
 -- Max slots shared by factories
-NDefines.NBuildings.MAX_SHARED_SLOTS = 75
+NDefines.NBuildings.MAX_SHARED_SLOTS = 99
 
 
 -- Shore bombardment buff (this is 3x vanilla)
@@ -131,9 +134,11 @@ NDefines.NProduction.MIN_FIELD_TO_TRAINING_MANPOWER_RATIO = 0.5
 
 -- Speed at which scientists give spell points
 NDefines.NProject.BREAKTHROUGH_DAILY_SCIENTIST_SKILL_GAIN = 16
+NDefines.NProject.SCIENTIST_BASIC_RESEARCH_DAILY_XP_GAIN	= 0.35 -- vanilla is 0.28
 
 -- Food consumption etc.
 NDefines.NMilitary.ARMY_IDLE_FUEL_MULT = 0.05						-- fuel consumption ratio while just existing
+NDefines.NMilitary.FIELD_EXPERIENCE_MAX_PER_DAY	 = 2.0
 
 -- Resistance
 NDefines.NResistance.RESISTANCE_ACTIVITY_CHANCE_AT_MAX_RESISTANCE = 0.08 -- was 0.312
@@ -158,6 +163,11 @@ NDefines.NResistance.MIN_DAMAGE_TO_GARRISONS_MODIFIER = 0.05 -- was 0.1
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 999 -- (72) Divisions per general
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 999 -- Divisions per field marshal directly leading troop
 NDefines.NMilitary.UNIT_LEADER_USE_NONLINEAR_XP_GAIN = false -- faster general grind
+
+NDefines.NProduction.EQUIPMENT_MODULE_ADD_XP_COST	= 0
+NDefines.NProduction.EQUIPMENT_MODULE_REPLACE_XP_COST = 0	
+NDefines.NProduction.EQUIPMENT_MODULE_CONVERT_XP_COST= 0
+NDefines.NProduction.EQUIPMENT_MODULE_REMOVE_XP_COST	= 0
 
 -- Supply definers stolen from tzarmod belwo
 NDefines.NCountry.VP_TO_SUPPLY_BASE = 1.5
@@ -188,6 +198,7 @@ NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0 -- 0xp, was 25
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 0 -- 0xp, was 5
 NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 0 -- 0xp, was 10
 NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 2 -- Number of support companies allowed per division
+NDefines.NMilitary.EXPERIENCE_LOSS_FACTOR	= 0.85 -- divison veterancy manpower loss multiplier, vanilla is 1.00
 
 NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT = 0 -- 0% consumger goods possible
 NDefines.NMilitary.LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 0.50 -- eagle cap adjustment
@@ -196,6 +207,7 @@ NDefines.NMilitary.LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 0.50 -- eagle ca
 NDefines.NCountry.BASE_MOBILIZATION_SPEED = 0.02 -- double that of avnilla
 
 -- changing xp cost 
+NDefines.NMilitary.FIELD_EXPERIENCE_SCALE	 = 0.003 --vanilla is 0.0015, this is army xp from combat
 NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 9999             -- WAS 500
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 9999
 NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 9999
