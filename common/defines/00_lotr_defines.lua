@@ -200,9 +200,28 @@ NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 9999             -- WAS 500
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 9999
 NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 9999
 
+
+
+-- land combat target selection 
+NDefines.NMilitary.COMBAT_VALUE_ORG_IMPORTANCE = 5 --vanilla is 1
+NDefines.NMilitary.SOFT_ATTACK_TARGETING_FACTOR = 2.0	
+NDefines.NMilitary.HARD_ATTACK_TARGETING_FACTOR = 4.0	 -- more likely for hard attack units to target units with hardness aka cav targets cav
+
+
+
+NDefines.NMilitary.INFRA_ORG_IMPACT = 0.25				-- scale factor of infra on org regain.
+NDefines.NMilitary.LAND_SPEED_MODIFIER = 0.0375                    -- basic speed control
+
 -- More days for inactive research and focus for QOL
+NDefines.NTechnology.BASE_YEAR_AHEAD_PENALTY_FACTOR = 3.1  -- vanila is 2.0
 NDefines.NTechnology.BASE_RESEARCH_POINTS_SAVED = 50.0 -- Vanilla is 30.0, increased because ahead of time penalty also increased
 
+
+NDefines.NMilitary.RETREAT_SPEED_FACTOR = 0.5    -- vanilla is 0.25
+NDefines.NMilitary.WITHDRAWING_SPEED_FACTOR = 0.35   -- vanilla is 0.15
+NDefines.NMilitary.ORG_LOSS_FACTOR_ON_CONQUER = 0.3 
+NDefines.NMilitary.PLAYER_ORDER_PLANNING_DECAY = 0.01 
+NDefines.NMilitary.REINFORCE_CHANCE = 0.05
 
 NDefines.NMilitary.RIVER_CROSSING_PENALTY = -0.25
 NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE = -0.45

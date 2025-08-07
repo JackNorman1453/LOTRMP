@@ -18,6 +18,7 @@ continuous_focus_position = { x = 50 y = 1700 }
 
 	focus = {
 		id = GON_delegitimize_aragorns_claim
+		id = GON_delegitimize_aragorns_claim
 		icon = GFX_goal_generic_crown_smashed
 		ai_will_do = { factor = 3 }
 		x = 14
@@ -853,6 +854,7 @@ continuous_focus_position = { x = 50 y = 1700 }
 		cost = 7
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+		add_research_slot = 1
 			add_ideas = GON_kingdom_of_gondor
 		}
 	}
@@ -2357,12 +2359,14 @@ continuous_focus_position = { x = 50 y = 1700 }
 		cost = 7
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+		add_research_slot = 1
 			remove_ideas = GON_weary_armed_forces
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 2
 				category = lotr_infantry
 			}
+			
 			add_tech_bonus = {
 				bonus = 0.75
 				uses = 1

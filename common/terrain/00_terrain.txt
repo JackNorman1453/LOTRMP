@@ -99,7 +99,7 @@ categories =  {
 		match_value = 0.5
 		sound_type = plains
 		units = {
-			attack = -0.05
+			attack = -0.10
 		}
 		
 	}

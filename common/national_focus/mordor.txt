@@ -2650,9 +2650,9 @@ focus = {
 	icon = GFX_goal_mor_nazgul_ringwraiths
 	ai_will_do = { factor = 100 }
 	x = 0
-	y = 1
-	relative_position_id = submittosauron
-	prerequisite = { focus = submittosauron}
+	y = 2
+	relative_position_id = establishahierarchy
+	prerequisite = { focus = establishahierarchy}
 	cost = 3
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -3169,7 +3169,7 @@ focus = {
 	prerequisite = { focus = MOR_claim_black_gate_outskirts }
 	cost = 7
 	completion_reward = {
-		add_ideas = MOR_attack_on_gondor
+		add_timed_idea = {idea = MOR_attack_on_gondor days = 180}
 	}
 }
 

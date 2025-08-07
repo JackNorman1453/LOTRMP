@@ -36,7 +36,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.0
 		start_year = 3018
 		folder = {
 			name = orcs_special_folder
@@ -177,7 +177,7 @@ technologies = {
 			warhawk_talions
 		}
 
-		research_cost = 1.5
+		research_cost = 1.0
 		start_year = 3020
 		folder = {
 			name = orcs_special_folder
@@ -226,7 +226,7 @@ technologies = {
 			eag_cargo_harness
 		}
 
-		research_cost = 1.5
+		research_cost = 1.0
 		start_year = 3020
 		folder = {
 			name = orcs_special_folder
@@ -493,7 +493,7 @@ technologies = {
 		}
 
 		research_cost = 1.5
-		start_year = 3020
+		start_year = 3021
 		folder = {
 			name = orcs_special_folder
 			position = { x = 0 y = 4 }
@@ -518,7 +518,7 @@ technologies = {
         }
 
 		research_cost = 1.5
-		start_year = 3022
+		start_year = 3025
 		folder = {
 			name = orcs_special_folder
 			position = { x = 0 y = 8 }
