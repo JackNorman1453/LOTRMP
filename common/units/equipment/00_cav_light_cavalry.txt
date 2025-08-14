@@ -152,7 +152,7 @@ equipments = {
 		hardness = 0.2
 		ap_attack = 2
 
-		build_cost_ic = 0
+		build_cost_ic = 2
 		fuel_consumption = 1.0
 
 		resources = {
@@ -200,7 +200,7 @@ equipments = {
 		hardness = 0.3
 		ap_attack = 2
 
-		build_cost_ic = 6
+		build_cost_ic = 2
 		fuel_consumption = 1.0
 
 		resources = {
@@ -252,7 +252,7 @@ equipments = {
 		hardness = 0.4
 		ap_attack = 2
 
-		build_cost_ic = 8
+		build_cost_ic = 4
 		fuel_consumption = 1.25
 
 		resources = {
@@ -290,7 +290,7 @@ equipments = {
 		hardness = 0.5
 		ap_attack = 3
 
-		build_cost_ic = 10
+		build_cost_ic = 7
 		fuel_consumption = 1.5
 
 		resources = {

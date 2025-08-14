@@ -1037,7 +1037,7 @@ continuous_focus_position = { x = 50 y = 1700 }
 		relative_position_id = GON_everyone_is_welcome
 		prerequisite = { focus = GON_everyone_is_welcome }
 		available = {
-			threat > 0.5
+			date > 3022.06.01
 		}
 		x = 0
 		y = 1
@@ -1045,23 +1045,16 @@ continuous_focus_position = { x = 50 y = 1700 }
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 
-			
-			every_other_country = {
-				limit = {
-					has_government = belligerent
-					has_added_tension_amount > 5
-					NOT = { tag = NEP }
-					NOT = { tag = MOR }
-					NOT = { tag = ISE }
-				}
-				random_select_amount = 4
-				ROOT = {
-					create_wargoal = {
-						type = topple_government
-						target = PREV
-					}
-				}
+			add_corps_commander_role = {
+				character = GON_general_aragorn
+				traits = {fortress_buster panzer_leader cavalry_leader trait_engineer trait_mountaineer trickster guerilla_fighter urban_assault_specialist infantry_leader ambusher }
+				skill = 7
+				attack_skill = 8
+				defense_skill = 6
+				planning_skill = 6
+				logistics_skill = 6
 			}
+			
 		}
 	}
 	
@@ -2296,8 +2289,9 @@ continuous_focus_position = { x = 50 y = 1700 }
 		ai_will_do = { factor = 3 }
 		relative_position_id = GON_reinforce_osgilliath
 		prerequisite = { focus = GON_reinforce_osgilliath }
-		mutually_exclusive = { focus = GON_defense_is_the_best_attack }
+		
 		available = {
+			has_war_with = MOR
 			is_denethor_paranoid = no
 		}
 		x = -2
@@ -2331,6 +2325,9 @@ continuous_focus_position = { x = 50 y = 1700 }
 		ai_will_do = { factor = 3 }
 		relative_position_id = GON_rally_the_people
 		prerequisite = { focus = GON_rally_the_people }
+		available = {
+		date > 3023.01.01
+		}
 		x = 0
 		y = 3
 		cost = 7
@@ -2381,7 +2378,7 @@ continuous_focus_position = { x = 50 y = 1700 }
 		ai_will_do = { factor = 3 }
 		relative_position_id = GON_reinforce_osgilliath
 		prerequisite = { focus = GON_reinforce_osgilliath }
-		mutually_exclusive = { focus = GON_hit_before_you_get_hit }
+		
 		x = 2
 		y = 1
 		cost = 7

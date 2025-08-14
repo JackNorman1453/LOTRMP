@@ -908,7 +908,7 @@ leader_traits = {
 		}
 		cost = 1000
 		field_marshal_modifier = {
-			max_dig_in_factor = 0.30
+			max_dig_in_factor = 0.15
 		}
 		slot = army_chief
 		specialist_advisor_trait = army_chief_entrenchment_1
@@ -1038,7 +1038,7 @@ leader_traits = {
 		}
 		cost = 1000
 		field_marshal_modifier = {
-			land_reinforce_rate = 0.02
+			land_reinforce_rate = 0.04
 		}
 
 		slot = army_chief
@@ -1061,7 +1061,7 @@ leader_traits = {
 		}
 		cost = 1000
 		field_marshal_modifier = {
-			army_morale_factor = 0.10
+			army_morale_factor = 0.075
 		}
 
 		slot = army_chief
@@ -1171,7 +1171,7 @@ leader_traits = {
 
 		cost = 1000
 		modifier = {
-			army_infantry_defence_factor = 0.13
+			army_infantry_defence_factor = 0.10
 		}
 
 		slot = high_command
@@ -1355,7 +1355,7 @@ leader_traits = {
 		cost = 700
 		modifier = {
 			army_armor_speed_factor = 0.025
-			army_armor_attack_factor = 0.08
+			army_armor_attack_factor = 0.10
 		}
 		ai_will_do = {
 			factor = 1
@@ -1406,8 +1406,8 @@ leader_traits = {
 		modifier = {
 			desert = {
 				movement = 0.05
-				attack = 0.1
-				defence = 0.1
+				attack = 0.05
+				defence = 0.05
 			}
 		}
 		new_commander_weight = {
@@ -1434,8 +1434,8 @@ leader_traits = {
 		modifier = {
 			marsh = {
 				movement = 0.05
-				attack = 0.1
-				defence = 0.1
+				attack = 0.05
+				defence = 0.05
 			}
 		}
 
@@ -1455,8 +1455,8 @@ leader_traits = {
 		modifier = {
 			mountain = {
 				movement = 0.05
-				attack = 0.1
-				defence = 0.1
+				attack = 0.075
+				defence = 0.075
 			}
 		}
 
@@ -1476,8 +1476,8 @@ leader_traits = {
 		modifier = {
 			hills = {
 				movement = 0.05
-				attack = 0.1
-				defence = 0.1
+				attack = 0.05
+				defence = 0.05
 			}
 		}
 
@@ -1497,8 +1497,8 @@ leader_traits = {
 		modifier = {
 			jungle = {
 				movement = 0.05
-				attack = 0.1
-				defence = 0.1
+				attack = 0.075
+				defence = 0.075
 			}
 		}
 
@@ -1518,8 +1518,8 @@ leader_traits = {
 		modifier = {
 			forest = {
 				movement = 0.05
-				attack = 0.1
-				defence = 0.1
+				attack = 0.05
+				defence = 0.05
 			}
 		}
 
@@ -1539,8 +1539,8 @@ leader_traits = {
 		modifier = {
 			urban = {
 				movement = 0.05
-				attack = 0.1
-				defence = 0.1
+				attack = 0.05
+				defence = 0.075
 			}
 		}
 
@@ -1672,7 +1672,7 @@ leader_traits = {
 		cost = 700
 		modifier = {
 			fort = {
-				attack = 0.15
+				attack = 0.075
 			}
 		}
 		enable_ability = siege_artillery
@@ -1721,7 +1721,7 @@ leader_traits = {
 		}
 		cost = 500
 		modifier = {
-			army_infantry_attack_factor = 0.10
+			army_infantry_attack_factor = 0.075
 		}
 
 		ai_will_do = {
@@ -1742,8 +1742,7 @@ leader_traits = {
 		}
 		cost = 500
 		modifier = {
-			max_dig_in = 5
-			recon_factor_while_entrenched = 0.25
+			max_dig_in = 4
 		}
 
 		ai_will_do = {
@@ -1926,7 +1925,7 @@ leader_traits = {
 		}
 		cost = 500
 		modifier = {
-			dig_in_speed_factor = 0.5
+			dig_in_speed_factor = 0.25
 		}
 
 		ai_will_do = {

@@ -36,12 +36,12 @@ characters={
 			id=-1
 		}
 		field_marshal={
-			traits = { defensive_doctrine  organisational_leader }
-			skill=4
-			attack_skill=1
-			defense_skill=4
-			planning_skill=2
-			logistics_skill=4
+			traits = { defensive_doctrine  organisational_leader organizer infantry_leader ambusher trickster cavalry_expert combined_arms_expert logistics_wizard ranger forest_skirmisher }
+			skill=7
+			attack_skill=8
+			defense_skill=6
+			planning_skill=4
+			logistics_skill=6
 		}
 	}
 	MIR_elros={
@@ -130,10 +130,10 @@ characters={
 			}
 		}
 		corps_commander={
-			traits = { jungle_rat }
-			skill=3
-			attack_skill=3
-			defense_skill=3
+			traits = { ranger jungle_rat bearer_of_artillery infantry_leader infantry_expert }
+			skill=5
+			attack_skill=7
+			defense_skill=4
 			planning_skill=2
 			logistics_skill=2
 

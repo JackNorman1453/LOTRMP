@@ -32,11 +32,11 @@ characters={
 			id=-1
 		}
 		field_marshal={
-			traits={ fast_planner inspirational_leader }
+			traits={ fast_planner unyielding_defender inflexible_strategist organizer ambusher urban_assault_specialist trait_mountaineer logistics_wizard inspirational_leader organisational_leader}
 			skill=5
-			attack_skill=4
-			defense_skill=2
-			planning_skill=5
+			attack_skill= 3
+			defense_skill= 7
+			planning_skill=3
 			logistics_skill=3
 		}
 	}
@@ -132,12 +132,12 @@ characters={
 			id=-1
 		}
 		corps_commander={
-			traits={ eorl_loyalist_p panzer_leader }
-			skill=4
-			attack_skill=3
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=2
+			traits={ eorl_loyalist_p panzer_leader urban_assault_specialist}
+			skill= 3
+			attack_skill= 3
+			defense_skill=4
+			planning_skill= 3
+			logistics_skill= 6
 		}
 		advisor = {
 			idea_token = ROH_eomer
@@ -201,18 +201,18 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ eorl_loyalist }
-			skill=2
+			traits={ eorl_loyalist urban_assault_specialist ambusher trickster commando}
+			skill= 3
 			attack_skill=2
 			defense_skill=5
-			planning_skill=2
-			logistics_skill=2
+			planning_skill=3
+			logistics_skill=3
 		}
 		advisor = {
 			idea_token = ROH_elfhelm
 			slot = high_command 
 			cost = 150
-			traits = { army_infantry_1 }
+			traits = { army_infantry_2 }
 			available = {
 				always = yes
 			}
@@ -253,11 +253,11 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ eorl_loyalist }
-			skill=1
+			traits={ eorl_loyalist urban_assault_specialist ambusher trickster commando}
+			skill= 3
 			attack_skill=2
-			defense_skill=3
-			planning_skill=2
+			defense_skill=5
+			planning_skill=3
 			logistics_skill=3
 		}
 	}
@@ -478,12 +478,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ harsh_leader trait_cautious }
-			skill=3
+			traits={ eorl_loyalist urban_assault_specialist ambusher trickster commando}
+			skill= 3
 			attack_skill=2
-			defense_skill=3
+			defense_skill=5
 			planning_skill=3
-			logistics_skill=2
+			logistics_skill=3
 		}
 	}
 
@@ -655,7 +655,7 @@ characters={
 			idea_token = ROH_erkenor
 			slot = army_chief 
 			cost = 150
-			traits = { hardline_disciplinarian }
+			traits = { army_chief_offensive_2 }
 			available = {
 				always = yes
 			}
@@ -831,7 +831,7 @@ characters={
 		}
 		advisor = {
 			slot = political_advisor
-			cost = 150
+			cost = 25
 			idea_token = ROH_gandalf_token_political_advisor
 			traits = {
 				the_white
@@ -1120,9 +1120,9 @@ characters={
 		}
 
 		advisor = {
-			idea_token = ROH_merry
+			idea_token = ROH_merry_advisor
 			slot = political_advisor
-			cost = 150
+			cost = 25
 			traits = { fool_of_a_took }
 
             visible = {
@@ -1146,8 +1146,8 @@ characters={
 
         advisor = {
 			idea_token = ROH_pippin
-			slot = political_advisor
-			cost = 150
+			slot = spymaster
+			cost = 25
 			traits = { courageous_trickster }
 
             visible = {

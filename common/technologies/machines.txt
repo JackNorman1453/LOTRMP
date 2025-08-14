@@ -608,7 +608,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 1.5
 		start_year = 3019
 
 		folder = {

@@ -116,21 +116,21 @@ units = {
 		location = 4109
 		division_template = "Infantry Division"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.6
+		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "5th Rohan Regiment"
 		location = 2231
 		division_template = "Infantry Division"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "6th Rohan Regiment"
 		location = 4227
 		division_template = "Infantry Division"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "7th Rohan Regiment"
@@ -165,35 +165,35 @@ units = {
 		location = 6781
 		division_template = "Rohirrim Cavalry"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.4
+		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "Cavalry Division"
 		location = 4628
 		division_template = "Rohirrim Cavalry"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "Cavalry Division"
 		location = 4613
 		division_template = "Rohirrim Cavalry"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.6
+		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "Cavalry Division"
 		location = 2275
 		division_template = "Rohirrim Cavalry"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.6
+		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "Cavalry Division"
 		location = 715
 		division_template = "Rohirrim Cavalry"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "Cavalry Division"
@@ -230,6 +230,30 @@ units = {
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.8
 	}
+	division = {
+		name = "Mountain Division"
+		location = 2006
+		division_template = "Mountain Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	
+	division = {
+		name = "Mountain Division"
+		location = 2006
+		division_template = "Mountain Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	
+	division = {
+		name = "Mountain Division"
+		location = 2006
+		division_template = "Mountain Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	
 }
 
 

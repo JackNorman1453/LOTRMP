@@ -2863,7 +2863,7 @@ focus = {
 	cost = 7
 	available_if_capitulated = yes
 	completion_reward = { 
-		add_timed_idea = { idea = MOR_rallying_cry days = 250 } 
+	add_ideas = MOR_rallying_cry
 	}
 }
 

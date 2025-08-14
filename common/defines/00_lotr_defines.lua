@@ -28,7 +28,7 @@ NDefines.NCharacter.EXPERT_ADVISOR_MIN_RANK = 5
 
 NDefines.NCharacter.GENIUS_ADVISOR_MIN_RANK = 7
 NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 20       
-NDefines.NMilitary.BASE_LEADER_TRAIT_GAIN_XP = 0.52
+NDefines.NMilitary.BASE_LEADER_TRAIT_GAIN_XP = 0.01
 NDefines.NMilitary.ARMY_LEADER_XP_GAIN_PER_UNIT_IN_COMBAT = 0.15
 
 -- lowered minimum land-unit speed
@@ -162,7 +162,6 @@ NDefines.NResistance.MIN_DAMAGE_TO_GARRISONS_MODIFIER = 0.05 -- was 0.1
 -- QOL, unlimited units per general
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 999 -- (72) Divisions per general
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 999 -- Divisions per field marshal directly leading troop
-NDefines.NMilitary.UNIT_LEADER_USE_NONLINEAR_XP_GAIN = false -- faster general grind
 
 NDefines.NProduction.EQUIPMENT_MODULE_ADD_XP_COST	= 0
 NDefines.NProduction.EQUIPMENT_MODULE_REPLACE_XP_COST = 0	
@@ -198,16 +197,19 @@ NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0 -- 0xp, was 25
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 0 -- 0xp, was 5
 NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 0 -- 0xp, was 10
 NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 2 -- Number of support companies allowed per division
-NDefines.NMilitary.EXPERIENCE_LOSS_FACTOR	= 0.85 -- divison veterancy manpower loss multiplier, vanilla is 1.00
+NDefines.NMilitary.EXPERIENCE_LOSS_FACTOR = 0.20 -- (1.00)-- divison veterancy manpower loss multiplier, vanilla is 1.00
+NDefines.NMilitary.TRAINING_ATTRITION = 0.04 -- (0.06) Because losing tons of equipment to training is not fun
+NDefines.NMilitary.AIR_SUPPORT_BASE = 0.35 --(0.25)
 
 NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT = 0 -- 0% consumger goods possible
-NDefines.NMilitary.LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 0.50 -- eagle cap adjustment
+NDefines.NMilitary.LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 0.25 -- eagle cap adjustment
 
 -- Base speed of manpower mobilization  #in 1/1000 of 1 %
 NDefines.NCountry.BASE_MOBILIZATION_SPEED = 0.02 -- double that of avnilla
 
 -- changing xp cost 
-NDefines.NMilitary.FIELD_EXPERIENCE_SCALE	 = 0.003 --vanilla is 0.0015, this is army xp from combat
+NDefines.NMilitary.FIELD_EXPERIENCE_SCALE	 = 0.004 --vanilla is 0.0015, this is army xp from combat
+NDefines.NMilitary.ARMY_LEADER_XP_GAIN_PER_UNIT_IN_COMBAT = 0.00 -- no more grinding..
 NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 9999             -- WAS 500
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 9999
 NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 9999
@@ -228,6 +230,9 @@ NDefines.NMilitary.LAND_SPEED_MODIFIER = 0.0375                    -- basic spee
 NDefines.NTechnology.BASE_YEAR_AHEAD_PENALTY_FACTOR = 3.1  -- vanila is 2.0
 NDefines.NTechnology.BASE_RESEARCH_POINTS_SAVED = 50.0 -- Vanilla is 30.0, increased because ahead of time penalty also increased
 
+NDefines.NMilitary.UNIT_LEADER_MODIFIER_COOLDOWN_ON_GROUP_CHANGE = 0 -- WAS 15 | This prevents reassignment memes | This is the number of days it takes to REASSIGN a general. 
+NDefines.NMilitary.UNIT_LEADER_ASSIGN_TRAIT_COST = 999.00               -- WAS 15 | no trait assigning 
+NDefines.NMilitary.PROMOTE_LEADER_CP_COST = 999.0 --0.0, 999 for balancing
 
 NDefines.NMilitary.RETREAT_SPEED_FACTOR = 0.5    -- vanilla is 0.25
 NDefines.NMilitary.WITHDRAWING_SPEED_FACTOR = 0.35   -- vanilla is 0.15
@@ -245,6 +250,7 @@ NDefines.NMilitary.TRAINING_EXPERIENCE_SCALE = 156.0 -- vanilla 62.0  how fast y
 NDefines.NMilitary.BATALION_CHANGED_EXPERIENCE_DROP = 0 -- no vet loss when converting units
 
 
-NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 15				-- WAS 30 | This many divisions are required for the country to be able to send volunteers.
+NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 10				-- WAS 30 | This many divisions are required for the country to be able to send volunteers.
+NDefines.NDiplomacy.VOLUNTEERS_PER_COUNTRY_ARMY = 0.3
 NDefines.NDiplomacy.VOLUNTEERS_RETURN_EQUIPMENT = 1		-- Returning volunteers keep this much equipment
-NDefines.NDiplomacy.VOLUNTEERS_TRANSFER_SPEED = 0			-- days to transfer a unit to another nation
+NDefines.NDiplomacy.VOLUNTEERS_TRANSFER_SPEED = 1			-- days to transfer a unit to another nation

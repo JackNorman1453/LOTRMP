@@ -136,13 +136,13 @@ characters={
 				small = "GFX_idea_portrait_lothlorien_haldir"
 			}
 		}
-		corps_commander={
-			traits={ ranger bearer_of_artillery nandor_trait }
-			skill=4
-			attack_skill=3
-			defense_skill=3
-			planning_skill=1
-			logistics_skill=2
+		field_marshal ={
+			traits={ ranger desert_fox bearer_of_artillery noldor_trait infantry_leader harsh_leader organizer fast_planner}
+			skill=5
+			attack_skill= 3
+			defense_skill= 6
+			planning_skill= 4
+			logistics_skill= 5
 			visible = {
 				NOT = {
 					has_global_flag = fs_lothlorien_haldir
@@ -185,12 +185,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ panzer_leader sindar_trait }
-			skill=2
-			attack_skill=3
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=2
+			traits={ panzer_leader noldor_trait panzer_expert cavalry_leader trickster hill_fighter }
+			skill= 5
+			attack_skill= 6
+			defense_skill= 4
+			planning_skill= 4
+			logistics_skill= 4
 		}
 		advisor = {
 			idea_token = LTH_lethsael
@@ -223,12 +223,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ trickster nandor_trait }
-			skill=2
-			attack_skill=2
-			defense_skill=1
+			traits={ trickster bearer_of_artillery infantry_leader infantry_expert commando noldor_trait hill_fighter }
+			skill= 5
+			attack_skill= 6
+			defense_skill= 4
 			planning_skill=3
-			logistics_skill=1
+			logistics_skill= 4
 			visible = {
 				NOT = {
 					has_global_flag = fs_lothlorien_orophin
@@ -332,6 +332,17 @@ characters={
 			planning_skill=1
 			logistics_skill=1
 		}
+		scientist = {
+			traits = {  }
+			skills = {
+				specialization_laboratory = 2
+			}
+
+			visible = {
+				always = yes
+			}
+		}
+		
 	}
 
 	LTH_aelrindel={
@@ -343,12 +354,13 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ noldor_trait }
-			skill=2
-			attack_skill=3
-			defense_skill=0
-			planning_skill=0
-			logistics_skill=3
+			traits={ trickster bearer_of_artillery infantry_leader infantry_expert commando noldor_trait hill_fighter }
+			skill= 5
+			attack_skill= 4
+			defense_skill= 7
+			planning_skill=3
+			logistics_skill= 4
+			
 		}
 		advisor = {
 			idea_token = LTH_aelrindel

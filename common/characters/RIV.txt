@@ -44,6 +44,17 @@ characters={
 				always = yes
 			}
 		}
+		scientist = {
+			traits = {  }
+			skills = {
+				specialization_laboratory = 2
+			}
+
+			visible = {
+				always = yes
+			}
+		}
+		
 	}
 	RIV_erestor={
 		name="Erestor"
@@ -116,12 +127,12 @@ characters={
 			id=-1
 		}
 		field_marshal={
-			traits={ inspirational_leader defensive_doctrine }
-			skill=5
-			attack_skill=4
-			defense_skill=4
+			traits={ trickster inspirational_leader cavalry_leader hill_fighter ambusher panzer_leader combined_arms_expert defensive_doctrine organizer logistics_wizard }
+			skill=6
+			attack_skill=5
+			defense_skill= 5
 			planning_skill=5
-			logistics_skill=3
+			logistics_skill=5
 		}
 	}
 	RIV_arwen={
@@ -142,12 +153,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ trait_cautious }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=1
+			traits={ trait_cautious cavalry_leader combined_arms combined_arms_expert}
+			skill=6
+			attack_skill= 7
+			defense_skill=5
+			planning_skill=5
+			logistics_skill= 5
 		}
 	}
 	RIV_felaul={
@@ -185,12 +196,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ bearer_of_artillery }
-			skill=2
-			attack_skill=2
-			defense_skill=3
+			traits={ bearer_of_artillery infantry_leader infantry_expert trickster commando hill_fighter ranger}
+			skill= 5
+			attack_skill=7
+			defense_skill=4
 			planning_skill=4
-			logistics_skill=2
+			logistics_skill=3
 		}
 		advisor = {
 			idea_token = RIV_thilsyl

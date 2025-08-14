@@ -1,4 +1,18 @@
 characters={
+
+	GON_general_aragorn = {
+		name = "General Aragorn"
+	 
+	 portraits = {
+		army = {
+			large = "GFX_Portrait_Gondor_Aragorn" 
+		}
+	 }
+	 
+	 visible = {has_completed_focus = GON_defeat_evil_once_and_for_all}
+	 
+	}
+
 	GON_denethor={
 		name="Denethor II"
 		portraits={
@@ -88,12 +102,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ commando urban_assault_specialist }
-			skill=6
+			traits={ commando ranger urban_assault_specialist engineer fortress_buster infantry_leader ambusher infantry_expert }
+			skill= 4
 			attack_skill=4
-			defense_skill=4
-			planning_skill=2
-			logistics_skill=3
+			defense_skill=8
+			planning_skill=4
+			logistics_skill=4
 			visible = {
 				NOT = { has_government = revolutionary }
 			}
@@ -120,12 +134,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ ranger }
-			skill=3
-			attack_skill=3
-			defense_skill=4
-			planning_skill=2
-			logistics_skill=2
+			traits={ commando ranger urban_assault_specialist engineer fortress_buster infantry_leader ambusher infantry_expert }
+			skill= 4
+			attack_skill=4
+			defense_skill= 8
+			planning_skill=4
+			logistics_skill=4
 			visible = {
 				NOT = { has_government = revolutionary }
 			}
@@ -173,12 +187,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ ranger }
-			skill=3
-			attack_skill=3
-			defense_skill=4
+			traits={ ranger panzer_leader  urban_assault_specialist guerilla_fighter }
+			skill=4
+			attack_skill=5
+			defense_skill= 3
 			planning_skill=4
-			logistics_skill=3
+			logistics_skill= 5
 			visible = {
 				NOT = { has_government = revolutionary }
 			}
@@ -205,12 +219,15 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ panzer_leader }
-			skill=2
-			attack_skill=3
-			defense_skill=1
-			planning_skill=2
-			logistics_skill=2
+			traits={ ranger panzer_leader  urban_assault_specialist guerilla_fighter }
+			skill=4
+			attack_skill=5
+			defense_skill= 3
+			planning_skill=4
+			logistics_skill= 5
+			visible = {
+				NOT = { has_government = revolutionary }
+			}
 		}
 		advisor = {
 			idea_token = GON_angbor
@@ -231,12 +248,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ ranger }
-			skill=1
-			attack_skill=1
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=1
+			traits={  urban_assault_specialist ranger infantry_leader ambusher }
+			skill= 3
+			attack_skill= 2
+			defense_skill= 8
+			planning_skill= 3
+			logistics_skill= 5
 		}
 		advisor = {
 			idea_token = GON_mablung
@@ -257,12 +274,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ ranger }
-			skill=1
-			attack_skill=2
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=2
+			traits={  urban_assault_specialist ranger infantry_leader ambusher }
+			skill= 3
+			attack_skill= 2
+			defense_skill= 8
+			planning_skill= 3
+			logistics_skill= 5
 		}
 	}
 	GON_golasgil={
@@ -285,7 +302,7 @@ characters={
 			idea_token = GON_golasgil
 			slot = high_command
 			cost = 150
-			traits = { army_artillery_1 }
+			traits = { army_infantry_2 }
 			available = {
 				always = yes
 			}
@@ -360,12 +377,12 @@ characters={
 			}
 		}
 		field_marshal={
-			traits={ }
-			skill=1
-			attack_skill=2
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=2
+			traits={ defensive_specialist organisational_leader ambusher urban_assault_specialist scavenger engineer commando}
+			skill= 4
+			attack_skill= 3
+			defense_skill= 7
+			planning_skill= 4
+			logistics_skill= 4
 			visible = {
 				NOT = { has_government = revolutionary }
 			}
@@ -453,18 +470,18 @@ characters={
 			}
 		}
 		field_marshal={
-			traits={ offensive_doctrine }
-			skill=2
-			attack_skill=3
-			defense_skill=2
-			planning_skill=1
+			traits={ offensive_doctrine aggressive_assaulter organisational_leader urban_assault_specialist}
+			skill=4
+			attack_skill= 7
+			defense_skill= 4
+			planning_skill= 3
 			logistics_skill=3
 		}
 		advisor = {
 			idea_token = GON_ferdand
 			slot = army_chief 
 			cost = 150
-			traits = { army_chief_offensive_1 }
+			traits = { army_chief_offensive_2 }
 			available = {
 				always = yes
 			}

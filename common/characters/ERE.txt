@@ -91,12 +91,12 @@ characters={
 			traits = { dislikes_mirkwood }
 		}
 		field_marshal={
-			traits={ offensive_doctrine }
-			skill=3
-			attack_skill=4
-			defense_skill=2
+			traits={ offensive_doctrine cavalry_leader combined_arms_expert organizer logistics_wizard unyielding_defender ambusher trickster trait_mountaineer hill_fighter}
+			skill=5
+			attack_skill=5
+			defense_skill=7
 			planning_skill=4
-			logistics_skill=3
+			logistics_skill=4
 		}
 	}
 	ERE_gimli={
@@ -160,18 +160,18 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ old_guard }
+			traits={ old_guard infantry_leader ambusher trait_mountaineer hill_fighter}
 			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=3
+			attack_skill=4
+			defense_skill=7
+			planning_skill=4
+			logistics_skill=7
 		}
 		advisor = {
 			idea_token = ERE_bifur
 			slot = army_chief
 			cost = 150
-			traits = { army_chief_old_guard }
+			traits = { army_chief_defensive_2 }
 			available = {
 				always = yes
 			}
@@ -212,12 +212,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ panzer_leader }
-			skill=1
+			traits={ panzer_leader cavalry_leader combined_arms_expert trickster ambusher hill_fighter trait_mountaineer}
+			skill=5
 			attack_skill=3
-			defense_skill=1
+			defense_skill=7
 			planning_skill=2
-			logistics_skill=3
+			logistics_skill=7
 		}
 		advisor = {
 			idea_token = ERE_gorli

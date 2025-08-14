@@ -4,6 +4,7 @@ oob = "GON_3018"
 
 set_research_slots = 3
 
+recruit_character = GON_general_aragorn
 recruit_character = GON_denethor
 recruit_character = GON_gothmog
 recruit_character = GON_ivriniel

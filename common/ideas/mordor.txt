@@ -15,8 +15,7 @@ ideas = {
 			picture = saf_history_of_segregation_2
 
 			modifier = {
-				 stability_factor = -0.10
-				 land_reinforce_rate = -0.1
+				 stability_factor = -0.15
 				 training_time_army_factor = -0.15
 				 army_attack_factor = 0.1
 			}
@@ -35,8 +34,7 @@ ideas = {
 			picture = YUG_federal_defense_council
 
 			modifier = {
-				 stability_factor = 0.10
-				 land_reinforce_rate = 0.1
+				 stability_factor = 0.05
 				 training_time_army_factor = 0.15
 				 army_defence_factor = 0.1
 			}
@@ -97,9 +95,9 @@ ideas = {
 			picture = FRA_army_of_aggression_focus
 
 			modifier = {
-				army_attack_factor = 0.1
-				land_reinforce_rate = 0.2
-				supply_consumption_factor = -0.20
+				army_attack_factor = 0.05
+				land_reinforce_rate = 0.1
+				supply_consumption_factor = -0.1
 			}
 		}
 

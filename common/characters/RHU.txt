@@ -19,12 +19,12 @@ characters={
 			id=-1
 		}
 		field_marshal={
-			traits = { offensive_doctrine }
-			skill=4
-			attack_skill=3
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=2
+			traits = { offensive_doctrine aggressive_assaulter desert_fox organizer logistics_wizard cavalry_leader combined_arms_expert}
+			skill= 5
+			attack_skill=5
+			defense_skill=5
+			planning_skill=5
+			logistics_skill=5
 			legacy_id=-1
 		}
 	}
@@ -61,11 +61,11 @@ characters={
 			}
 		}
 		corps_commander={
-			traits = { }
+			traits = { infantry_leader cavalry_leader infantry_expert desert_fox}
 			skill=4
-			attack_skill=2
-			defense_skill=3
-			planning_skill=2
+			attack_skill=6
+			defense_skill=5
+			planning_skill=4
 			logistics_skill=4
 			
 			visible = {

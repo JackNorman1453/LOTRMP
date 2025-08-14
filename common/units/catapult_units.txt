@@ -72,13 +72,15 @@ sub_units = {
 
 		manpower = 50
 		need = {
-			catapult_chassis = 25
+			catapult_chassis = 18
 		}
 
-		max_strength = 0.6
-		max_organisation = -5
-		default_morale = 0.05
+		max_strength = 4.0
+		max_organisation = 65
+		default_morale = 0.35
 		training_time = 120
+		breakthrough = 8
+		defence = 0.25
 		weight = 0.5
 		supply_consumption = 0.23
 
@@ -110,10 +112,12 @@ sub_units = {
 
 		urban = {
 			attack = 0.25
+			defense = 0.25
 		}
 
 		fort = {
 			attack = 0.25
+			defense = 0.25
 		}
 
 		river = {

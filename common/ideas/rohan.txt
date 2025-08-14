@@ -20,6 +20,26 @@ ideas = {
 				army_org_factor = -0.2
 			}
 		}
+		ROH_rallying_cry= {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_army_of_aggression_focus
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.1
+				land_reinforce_rate = 0.075
+				supply_consumption_factor = -0.1
+			}
+		}
+		
 
 		ROH_orc_pillage_0 = {
 			

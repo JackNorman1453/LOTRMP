@@ -428,26 +428,26 @@ focus_tree = {
 		completion_reward = { add_manpower = 25000 add_ideas = ISE_orc_breeding2 }
 	}
 
-	#Focus for Select the Strongest Few
 	focus = {
-		id = selectthestrongesfew
-		icon = GFX_goal_lth_orc_warrior
-		ai_will_do = { factor = 50 }
-		x =16
-		y =7
-		mutually_exclusive = { }
-		prerequisite = { focus = moreorcs }
-		cost = 3
-		available_if_capitulated = no
+		id = ISE_select_the_strongest_few
+		icon = GFX_goal_generic_position_armies
+		ai_will_do = { factor = 5 }
+		available = { 31 = { is_controlled_by = ISE } }
+		prerequisite = { focus = ISE_establish_orc_breeding_grounds }
+		relative_position_id = ISE_establish_orc_breeding_grounds
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
 		completion_reward = {
 			add_corps_commander_role = {
 				character = ISE_ugluk
-				traits = { panzer_leader }
-				skill = 2
-				attack_skill = 1
-				defense_skill = 2
+				traits = { cavalry_leader panzer_leader harsh_leader trickster trait_mountaineer }
+				skill = 6
+				attack_skill = 5
+				defense_skill = 1
 				planning_skill = 4
-				logistics_skill = 3
+				logistics_skill = 6
 			}
 			add_advisor_role = {
 				character = ISE_ugluk
@@ -460,11 +460,11 @@ focus_tree = {
 			}
 			add_corps_commander_role = {
 				character = ISE_lurtz
-				traits = { ranger trickster }
-				skill = 4
+				traits = { trickster commando guerilla_fighter trait_mountaineer ranger trickster panzer_leader cavalry_leader }
+				skill = 6
 				attack_skill = 5
-				defense_skill = 3
-				planning_skill = 2
+				defense_skill = 5
+				planning_skill = 3
 				logistics_skill = 3
 			}
 			add_advisor_role = {
@@ -478,12 +478,12 @@ focus_tree = {
 			}
 			add_corps_commander_role = {
 				character = ISE_hargor
-				traits = { trait_engineer }
-				skill = 3
-				attack_skill = 1
-				defense_skill = 2
-				planning_skill = 3
-				logistics_skill = 1
+				traits = { trait_engineer infantry_leader infantry_expert urban_assault_specialist trickster}
+				skill = 6
+				attack_skill = 4
+				defense_skill = 4
+				planning_skill = 4
+				logistics_skill = 4
 			}
 			add_advisor_role = {
 				character = ISE_hargor
@@ -496,12 +496,12 @@ focus_tree = {
 			}
 			add_corps_commander_role = {
 				character = ISE_mauhur
-				traits = { urban_assault_specialist }
-				skill = 2
-				attack_skill = 2
-				defense_skill = 1
-				planning_skill = 3
-				logistics_skill = 2
+				traits = {fortress_buster trait_engineer trait_mountaineer trickster guerilla_fighter urban_assault_specialist infantry_leader ambusher }
+				skill = 6
+				attack_skill = 3
+				defense_skill = 7
+				planning_skill = 2
+				logistics_skill = 6
 			}
 			add_advisor_role = {
 				character = ISE_mauhur
@@ -514,12 +514,12 @@ focus_tree = {
 			}
 			add_field_marshal_role = {
 				character = ISE_gara
-				traits = { old_guard }
-				skill = 3
+				traits = { inspirational_leader thorough_planner infantry_leader trickster guerilla_fighter offensive_doctrine trait_mountaineer }
+				skill = 6
 				attack_skill = 2
-				defense_skill = 2
-				planning_skill = 4
-				logistics_skill = 3
+				defense_skill = 7
+				planning_skill = 5
+				logistics_skill = 5
 			}
 			add_advisor_role = {
 				character = ISE_gara
@@ -532,12 +532,12 @@ focus_tree = {
 			}
 			add_field_marshal_role = {
 				character = ISE_lugdush
-				traits = { offensive_doctrine }
-				skill = 2
-				attack_skill = 2
-				defense_skill = 1
-				planning_skill = 1
-				logistics_skill = 2
+				traits = { cavalry_leader organisational_leader infantry_leader commando  defensive_doctrine offensive_doctrine organizer thorough_planner aggressive_assaulter}
+				skill = 6
+				attack_skill = 4
+				defense_skill = 6
+				planning_skill = 4
+				logistics_skill = 6
 			}
 			add_advisor_role = {
 				character = ISE_lugdush

@@ -27,12 +27,12 @@ sub_units = {
 			archetype_troll_equipment = 50
 		}
 		manpower = 50
-		max_organisation = 10
-		max_strength = 2
-		default_morale = 0.3
+		max_organisation = 30
+		max_strength = 3
+		default_morale = 0.35
 		training_time = 180
 		weight = 1.25
-		supply_consumption = 0.8
+		supply_consumption = 0.2
 
 		#Tanks are awesome
 		# soft_attack = 1

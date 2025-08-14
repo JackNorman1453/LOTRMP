@@ -83,6 +83,8 @@ set_technology = {
 	mobile_warfare = 1
 	basic_cav = 1
 	light_cav2=1
+	siege_equipment_0 = 1
+	basic_siege_tactics = 1
 	heavy_cav1=1
 	trade_caravan = 1
 

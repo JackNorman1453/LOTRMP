@@ -864,7 +864,7 @@ rohan_lords_region_2_demands_met_more_than_2 = {
 		OR = {
 			is_ai = yes
 			check_variable = {
-				region_2_demands_met > 2
+				region_2_demands_met > 1
 			}
 		}
 	}
@@ -876,7 +876,7 @@ rohan_lords_region_3_demands_met_more_than_2 = {
 		OR = {
 			is_ai = yes
 			check_variable = {
-				region_3_demands_met > 2
+				region_3_demands_met > 1
 			}
 		}
 	}
@@ -888,7 +888,7 @@ rohan_lords_region_4_demands_met_more_than_2 = {
 		OR = {
 			is_ai = yes
 			check_variable = {
-				region_4_demands_met > 2
+				region_4_demands_met > 1
 			}
 		}
 	}
@@ -900,7 +900,7 @@ rohan_lords_region_5_demands_met_more_than_2 = {
 		OR = {
 			is_ai = yes
 			check_variable = {
-				region_5_demands_met > 2
+				region_5_demands_met > 1
 			}
 		}
 	}

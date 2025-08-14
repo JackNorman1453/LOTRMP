@@ -369,7 +369,7 @@ leader_traits = {
     }
 
     follower_of_morgoth = {
-        random = no
+        random = no 
         sprite = 12
 
         belligerent_drift = 0.05
@@ -1344,7 +1344,7 @@ leader_traits = {
             factor = 100
         }
 
-        defence = 0.1
+        army_defence_factor = 0.1
         army_morale_factor = 0.1
         research_speed_factor = 0.1
     }
@@ -1357,8 +1357,8 @@ leader_traits = {
             factor = 0
         }
 
-        stability_factor = 0.05
-        war_support_factor = 0.05
+        stability_factor = 0.15
+        war_support_factor = 0.25
     }
 
     courageous_trickster = {
@@ -1368,10 +1368,23 @@ leader_traits = {
         ai_will_do = {
             factor = 0
         }
-
+		consumer_goods_factor = -0.15
         subversive_activites_upkeep = -0.35
         operation_outcome = 0.5
         operation_risk = 0.25
+		experience_gain_army = 0.15
+    }
+	
+	courageous_trickster = {
+        random = no
+        sprite = 8
+
+        ai_will_do = {
+            factor = 0
+        }
+	 resistance_target = -0.1
+        subversive_activites_upkeep = -0.35
+        operation_outcome = 0.5
     }
 
     the_merciful = {

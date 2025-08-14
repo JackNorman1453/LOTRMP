@@ -57,7 +57,7 @@ country_event = {
 
 	trigger = {
 		tag = ROH
-		date > 3020.9.1 # Sometimes (Looking at you Weathertop) the Ring gets captured very early. This stops Rohan from being able to turbo-rush their focuses
+		date > 3020.6.1 # Sometimes (Looking at you Weathertop) the Ring gets captured very early. This stops Rohan from being able to turbo-rush their focuses
 		OR = {
 			#has_global_flag = fs_gandalf_left_fellowship # Old version. No longer in use because this *should* happen after fellowship breakup.
 			has_global_flag = fs_fellowship_breakup
@@ -67,30 +67,30 @@ country_event = {
 				ring_gandalf_in_fellowship = yes
 			}
 			has_global_flag = fs_ring_seized
-			date > 3022.2.1 # This is here as a stop-gap measure. If gandalf is bugged for some reason, this will keep Rohan remotely playable
+			date > 3020.9.1 # This is here as a stop-gap measure. If gandalf is bugged for some reason, this will keep Rohan remotely playable
 		}
 	}
 
 	mean_time_to_happen = {
-		days = 30
+		days = 1
 		modifier = {
-			factor = 2
-			date < 3022.1.1
+			factor = 10
+			date > 3022.1.1
 		}
 		modifier = {
-			factor = 2
-			date < 3021.1.1
+			factor = 10
+			date > 3021.1.1
 		}
 		modifier = {
-			factor = 5
+			factor = 50
 			ROH = { has_war = yes }
 		}
 		modifier = {
-			factor = 5
+			factor = 50
 			ROH = { surrender_progress > 0.2 }
 		}
 		modifier = {
-			factor = 5
+			factor = 50
 			ROH = { surrender_progress > 0.35 }
 		}
 	}
@@ -200,7 +200,8 @@ country_event = {
 
 	option = {
 		name = rohan.4.a
-		ROH_theodred = { lotr_kill_character = yes }
+		
+		
 		hidden_effect = {news_event = { hours = 48 id = news.336 }}
 	}
 
@@ -247,7 +248,7 @@ country_event = {
 		name = rohan.2.a
 		unlock_decision_tooltip = ROH_bop_administer_medicine
 		set_politics = { ruling_party = unaligned elections_allowed = no }
-		ROH_theoden = { remove_unit_leader = yes }
+		
 		hidden_effect = { news_event = { hours = 48 id = news.337 } }
 
 		set_country_leader_portrait = {
@@ -427,7 +428,6 @@ country_event = {
 
 	option = {
 		name = rohan.11.a
-		ROH_theodred = { lotr_kill_character = yes }
 
 		ROH = { rohan_lords_replace_characters_on_death = yes }
 
@@ -448,7 +448,7 @@ country_event = {
 
 	option = {
 		name = rohan.12.a
-		ROH_eomer = { lotr_kill_character = yes }
+
 
 		ROH = { rohan_lords_replace_characters_on_death = yes }
 	}
@@ -658,9 +658,7 @@ country_event = {
 		name = rohan.61.a
 		add_ideas = ROH_erkenor
 		ROH_erkenor = {
-			set_can_be_fired_in_advisor_role = {
-				value = no
-			}	
+				
 		}
 	}
 }
@@ -679,9 +677,7 @@ country_event = {
 		name = rohan.62.a
 		add_ideas = ROH_freca
 		ROH_freca = {
-			set_can_be_fired_in_advisor_role = {
-				value = no
-			}	
+				
 		}
 	}
 }
@@ -700,9 +696,7 @@ country_event = {
 		name = rohan.63.a
 		add_ideas = ROH_heoere
 		ROH_heoere = {
-			set_can_be_fired_in_advisor_role = {
-				value = no
-			}	
+
 		}
 	}
 }
@@ -721,9 +715,7 @@ country_event = {
 		name = rohan.64.a
 		add_ideas = ROH_herethain
 		ROH_herethain = {
-			set_can_be_fired_in_advisor_role = {
-				value = no
-			}	
+			
 		}
 	}
 }
@@ -741,10 +733,7 @@ country_event = {
 	option = {
 		name = rohan.65.a
 		add_ideas = ROH_leoheort
-		ROH_leoheort = {
-			set_can_be_fired_in_advisor_role = {
-				value = no
-			}	
+		
 		}
 	}
 }
@@ -831,10 +820,7 @@ country_event = {
 		name = rohan.67.a
 
 		move_bop_to_grima = yes
-		random_unit_leader = {
-			limit = { has_trait = eorl_loyalist }
-			lotr_retire_character = yes
-		}
+		
 	}
 }
 
@@ -1015,14 +1001,12 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 60
+		days = 180
 	}
 
 	option = {
 		name = rohan.75.a
 
-		ROH_gandalf = {
-			lotr_retire_character = yes
 		}
 
 		set_global_flag = gandalf_left_rohan

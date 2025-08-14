@@ -36,7 +36,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.8
 		start_year = 3018
 		folder = {
 			name = men_special_folder
@@ -87,7 +87,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.0
 		start_year = 3021
 		folder = {
 			name = men_special_folder
@@ -171,7 +171,7 @@ technologies = {
 			warhawk_talions
 		}
 
-		research_cost = 1.5
+		research_cost = 1.0
 		start_year = 3020
 		folder = {
 			name = men_special_folder
@@ -221,7 +221,7 @@ technologies = {
 			eag_cargo_harness
 		}
 
-		research_cost = 1.5
+		research_cost = 1.0
 		start_year = 3020
 		folder = {
 			name = men_special_folder
@@ -503,10 +503,10 @@ technologies = {
         enable_subunits = {
             rangers_infantry
         }
-		 special_forces_cap = 0.02
+		 special_forces_cap = 0.10
 
-		research_cost = 1.5
-		start_year = 3020
+		research_cost = 1.0
+		start_year = 3019
 		folder = {
 			name = men_special_folder
 			position = { x = 2 y = 4 }
@@ -533,12 +533,12 @@ technologies = {
     rangers2_units = {
         special_forces_cap = 0.2
         rangers_infantry = {
-            soft_attack = 0.2
-            max_organisation = 10
+            soft_attack = 0.1
+            max_organisation = 15
         }
 
 		research_cost = 1.5
-		start_year = 3024
+		start_year = 3023
 		folder = {
 			name = men_special_folder
 			position = { x = 2 y = 12 }

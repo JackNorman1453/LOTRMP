@@ -1910,7 +1910,7 @@ focus_tree = {
 			# autocompleted on gandralf arrival. pop event
 			custom_effect_tooltip = autocompleted_on_event_tt
 			custom_effect_tooltip = ROH_gandalfs_arrival_tt
-			add_political_power = 2--
+			add_political_power = 200
 		}
 	}
 
@@ -1931,6 +1931,8 @@ focus_tree = {
 			# but then leaves once MOR declares war on GON
 
 			activate_advisor = ROH_gandalf_token_political_advisor
+			activate_advisor = ROH_merry_advisor
+			activate_advisor = ROH_pippin
 			if = {
 				limit = { SHI = { FS_pippin = { is_dead = no } } }
 				custom_effect_tooltip = ROH_let_gandalf_in_tt_pippin
@@ -1955,16 +1957,8 @@ focus_tree = {
 			}
 
 			hidden_effect = {
-				country_event = { id = rohan.88 days = 80 }	
-				add_field_marshal_role = {
-					character = ROH_theoden
-					traits={ fast_planner inspirational_leader }
-					skill=5
-					attack_skill=4
-					defense_skill=2
-					planning_skill=5
-					logistics_skill=3
-				}
+				country_event = { id = rohan.88 days = 10 }	
+
 			}
 		}
 	}
@@ -1974,7 +1968,7 @@ focus_tree = {
 		icon = GFX_goal_ROH_purge_the_rot
 		relative_position_id = ROH_let_gandalf_in
 		prerequisite = { focus = ROH_form_the_kings_council }
-		available = { date > "3020.6.1" rohan_has_bop = yes rohan_has_very_high_sanity = yes }
+		available = { date > "3020.9.1" rohan_has_bop = yes rohan_has_very_high_sanity = yes }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_COOPERATIVE }
 		cancel_if_invalid = no
 		continue_if_invalid = yes
@@ -2368,6 +2362,8 @@ focus_tree = {
 				ideology = cooperative
 				popularity = 0.12
 			}
+			
+			add_ideas = ROH_rallying_cry
 		}
 	}
 
@@ -4471,7 +4467,7 @@ focus_tree = {
 		y =5
 		mutually_exclusive = { }
 		prerequisite = { focus = ROH_westmarch_construction_projects focus = ROH_westemnet_industry focus = ROH_wold_improve_infrastructure focus = ROH_eastemnet_tax_collection focus = ROH_eastemnet_long_term_investment focus = ROH_eastfold_military_industry focus = ROH_eastfold_civilian_industry }
-		cost = 7
+		cost = 5
 		completion_reward = {
 			rohan_set_horselords_cooldown = yes
 			custom_effect_tooltip = ROH_call_a_landsmeet_tt
@@ -4507,7 +4503,7 @@ focus_tree = {
 		y =1
 		mutually_exclusive = { }
 		prerequisite = { focus = ROH_call_a_landsmeet }
-		cost = 7
+		cost = 3
 		completion_reward = {
 			rohan_set_horselords_cooldown = yes
 			custom_effect_tooltip = ROH_military_consolidation_tt
@@ -4831,7 +4827,7 @@ focus_tree = {
 		y =1
 		mutually_exclusive = { }
 		prerequisite = { focus = ROH_call_a_landsmeet }
-		cost = 7
+		cost = 4
 		completion_reward = {
 			rohan_set_horselords_cooldown = yes
 			custom_effect_tooltip = ROH_political_consolidation_tt
@@ -4896,7 +4892,7 @@ focus_tree = {
 		y =1
 		mutually_exclusive = { focus = ROH_suppress_opposition }
 		prerequisite = { focus = ROH_political_consolidation }
-		cost = 7
+		cost = 4
 		completion_reward = {
 			rohan_set_horselords_cooldown = yes
 			if = {
@@ -4931,7 +4927,7 @@ focus_tree = {
 		y =1
 		mutually_exclusive = { focus = ROH_political_propaganda }
 		prerequisite = { focus = ROH_political_consolidation }
-		cost = 7
+		cost = 4
 		completion_reward = {
 			rohan_set_horselords_cooldown = yes
 			add_political_power = 150 # Award for the most creative focus effect goes to...
@@ -4951,7 +4947,7 @@ focus_tree = {
 		y =2
 		mutually_exclusive = { }
 		prerequisite = { focus = ROH_suppress_opposition focus = ROH_political_propaganda }
-		cost = 7
+		cost = 5
 		completion_reward = {
 			rohan_set_horselords_cooldown = yes
 			# unlock decision
@@ -4989,7 +4985,7 @@ focus_tree = {
 		y =1
 		mutually_exclusive = { }
 		prerequisite = { focus = ROH_call_a_landsmeet }
-		cost = 7
+		cost = 4
 		completion_reward = {
 			rohan_set_horselords_cooldown = yes
 			# Allow us to go higher than medium taxes
@@ -5049,7 +5045,7 @@ focus_tree = {
 		y =1
 		mutually_exclusive = { focus = ROH_selective_investments }
 		prerequisite = { focus = ROH_economic_consolidation }
-		cost = 7
+		cost = 4
 		completion_reward = {
 			rohan_set_horselords_cooldown = yes
 			# All regions get a little investment
@@ -5089,7 +5085,7 @@ focus_tree = {
 		y =1
 		mutually_exclusive = { focus = ROH_broad_investments }
 		prerequisite = { focus = ROH_economic_consolidation }
-		cost = 7
+		cost = 4
 		completion_reward = {
 			rohan_set_horselords_cooldown = yes
 			# get event that lets us select one region for a large investment
@@ -5113,7 +5109,7 @@ focus_tree = {
 		y =2
 		mutually_exclusive = { }
 		prerequisite = { focus = ROH_selective_investments focus = ROH_broad_investments }
-		cost = 7
+		cost = 5
 		completion_reward = {
 			rohan_set_horselords_cooldown = yes
 			# unlock decision

@@ -18,12 +18,12 @@ characters={
 			id=-1
 		}
 		field_marshal={
-			traits={ old_guard }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=2
+			traits={ fortress_buster ambusher infantry_leader logistics_wizard harsh_leader trickster old_guard ranger jungle_rat forest_skirmisher trait_mountaineer }
+			skill=4
+			attack_skill=2
+			defense_skill=10
+			planning_skill=7
+			logistics_skill=10
 		}
 	}
 	ENT_fladrif={
@@ -40,12 +40,12 @@ characters={
 			id=-1
 		}
 		corps_commander={
-			traits={ jungle_rat ranger  }
-			skill=2
+			traits={ fortress_buster ambusher infantry_leader harsh_leader trickster old_guard ranger jungle_rat forest_skirmisher trait_mountaineer }
+			skill=4
 			attack_skill=2
-			defense_skill=1
-			planning_skill=4
-			logistics_skill=2
+			defense_skill=10
+			planning_skill=7
+			logistics_skill=10
 		}
 	}
 	ENT_birchseed={
@@ -62,12 +62,12 @@ characters={
 			id=-1
 		}
 		corps_commander={
-			traits={ fortress_buster }
-			skill=2
+			traits={ fortress_buster ambusher infantry_leader harsh_leader trickster old_guard ranger jungle_rat forest_skirmisher trait_mountaineer }
+			skill=4
 			attack_skill=2
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=1
+			defense_skill=10
+			planning_skill=7
+			logistics_skill=10
 		}
 	}
 }

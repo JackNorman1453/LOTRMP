@@ -36,7 +36,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.8
 		start_year = 3018
 		folder = {
 			name = elves_special_folder
@@ -171,7 +171,7 @@ technologies = {
 			warhawk_talions
 		}
 
-		research_cost = 1.5
+		research_cost = 1.0
 		start_year = 3020
 		folder = {
 			name = elves_special_folder
@@ -221,7 +221,7 @@ technologies = {
 			eag_cargo_harness
 		}
 
-		research_cost = 1.5
+		research_cost = 1.0
 		start_year = 3020
 		folder = {
 			name = elves_special_folder
@@ -257,7 +257,7 @@ technologies = {
             fighter_eagle_airframe_1
         }
 
-		research_cost = 1.5
+		research_cost = 1.0
 		start_year = 3023
 		folder = {
 			name = elves_special_folder
@@ -288,7 +288,7 @@ technologies = {
             bomber_eagle_airframe_0
         }
 
-		research_cost = 1.5
+		research_cost = 1.0
 		start_year = 3023
 		folder = {
 			name = elves_special_folder

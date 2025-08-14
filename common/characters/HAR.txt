@@ -38,12 +38,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ panzer_leader fortress_buster }
+			traits={ panzer_leader fortress_buster desert_fox trickster cavalry_leader combined_arms_expert }
 			skill=5
 			attack_skill=4
 			defense_skill=4
-			planning_skill=2
-			logistics_skill=1
+			planning_skill=4
+			logistics_skill=4
 			
 		}
 		advisor={
@@ -64,12 +64,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ hill_fighter }
-			skill=3
-			attack_skill=1
-			defense_skill=2
-			planning_skill=4
-			logistics_skill=3
+			traits={ hill_fighter commando desert_fox infantry_leader cavalry_leader trickster }
+			skill=4
+			attack_skill=4
+			defense_skill=5
+			planning_skill=5
+			logistics_skill=5
 		}
 	}
 	HAR_nargdryt={
@@ -81,12 +81,12 @@ characters={
 			}
 		}
 		field_marshal={
-			traits={ }
-			skill=3
-			attack_skill=2
+			traits={ organizer thorough_planner commando offensive_doctrine inspirational_leader trickster desert_fox }
+			skill=4
+			attack_skill=3
 			defense_skill=5
-			planning_skill=1
-			logistics_skill=2
+			planning_skill=2
+			logistics_skill=4
 		}
 		advisor={
 			idea_token = HAR_nargdryt

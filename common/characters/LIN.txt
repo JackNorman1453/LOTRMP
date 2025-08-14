@@ -20,13 +20,24 @@ characters={
 			id=-1
 		}
 		field_marshal={
-			traits={ old_guard inflexible_strategist }
-			skill=2
-			attack_skill=1
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=1
+			traits={ old_guard inflexible_strategist unyielding_defender bearer_of_artillery infantry_leader infantry_expert hill_fighter trait_mountaineer trickster organizer harsh_leader }
+			skill=6
+			attack_skill=5
+			defense_skill=7
+			planning_skill=3
+			logistics_skill=3
 		}
+		scientist = {
+			traits = {  }
+			skills = {
+				specialization_laboratory = 2
+			}
+
+			visible = {
+				always = yes
+			}
+		}
+		
 	}
 	LIN_glorfindel={
 		name="Glorfindel"
@@ -42,12 +53,12 @@ characters={
 			id=-1
 		}
 		corps_commander={
-			traits={ brilliant_strategist }
+			traits={ infantry_expert bearer_of_artillery infantry_leader ranger trickster }
 			skill=5
-			attack_skill=5
-			defense_skill=2
+			attack_skill=7
+			defense_skill=4
 			planning_skill=4
-			logistics_skill=3
+			logistics_skill=4
 		}
 	}
 	LIN_galdor={
@@ -134,11 +145,11 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ fortress_buster }
-			skill=1
-			attack_skill=2
-			defense_skill=1
-			planning_skill=1
+			traits={ fortress_buster panzer_leader cavalry_expert combined_arms_expert trickster hill_fighter ranger}
+			skill=5
+			attack_skill=5
+			defense_skill=3
+			planning_skill=2
 			logistics_skill=2
 		}
 		advisor = {
